@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-trip-aibiying';
+  contents : number[] = [1,2,3,4,5,6];
 }
