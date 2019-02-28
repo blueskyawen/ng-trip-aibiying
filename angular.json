@@ -27,7 +27,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.less",
+              "./node_modules/ng-shadow-cat-d/ng-shadow-cat-d.css"
             ],
             "scripts": []
           },
