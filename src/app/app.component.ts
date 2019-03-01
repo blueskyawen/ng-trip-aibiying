@@ -19,6 +19,11 @@ export class AppComponent implements OnInit {
       disable: false,
       callback: () => {console.log('callback3');}}
   ];
+  slideOptionTitle : any = {
+    head: '趁花开 邂逅日本',
+    description:'领取缤纷赏樱礼金券'
+  };
+  searchText : string = '';
 
   constructor() {
 
