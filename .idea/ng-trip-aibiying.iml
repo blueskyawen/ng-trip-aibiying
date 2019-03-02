@@ -4,5 +4,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< Updated upstream
+=======
+    <orderEntry type="library" name="ng-trip-aibiying node_modules" level="project" />
+    <orderEntry type="library" name="ng-trip-aibiying node_modules" level="project" />
+>>>>>>> Stashed changes
   </component>
 </module>
