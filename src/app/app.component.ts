@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,8 @@ import { Component,OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'ng-trip-aibiying';
-  contents : number[] = [1,2,3,4,5,6];
-  slideOptions : any[] = [
+  contents: number[] = [1,2,3,4,5,6];
+  slideOptions: any[] = [
     {url: 'https://z1.muscache.cn/pictures/00b12c64-0851-40e7-83aa-6bba10221435.jpg',
       disable: false,
       callback: () => {console.log('callback1');}},
@@ -19,11 +19,18 @@ export class AppComponent implements OnInit {
       disable: false,
       callback: () => {console.log('callback3');}}
   ];
-  slideOptionTitle : any = {
-    head: '趁花开 邂逅日本',
-    description:'领取缤纷赏樱礼金券'
+  slideOptionTitle: any = {
+    head: '领取赏樱礼金券',
+    subHead: '趁花开 邂逅日本',
+    description: '领取缤纷赏樱礼金券'
   };
-  searchText : string = '';
+  slideProcess: any[] = [
+    {curValue: 0, total: 100, isdynamic: true},
+    {curValue: 0, total: 100, isdynamic: false},
+    {curValue: 0, total: 100, isdynamic: false}
+  ];
+  curSlideIndex = 0;
+  slideStep = 10;
 
   constructor() {
 
@@ -32,4 +39,34 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  clearCurrentSlide() {
+    this.slideProcess[this.curSlideIndex].isdynamic = false;
+  }
+
+  handleSlideChange(index: number) {
+    this.clearCurrentSlide();
+    this.curSlideIndex = index;
+    if (index === 0) {
+      this.slideOptionTitle = {
+        head: '领取赏樱礼金券',
+        subHead: '趁花开 邂逅日本',
+        description: '领取缤纷赏樱礼金券'
+      };
+    }
+    if (index === 1) {
+      this.slideOptionTitle = {
+        head: '来九州看樱花',
+        subHead: '在大自然间畅快呼吸',
+        description: '避开人潮看花泡温泉，利用小长假去日本吧'
+      };
+    }
+    if (index === 2) {
+      this.slideOptionTitle = {
+        head: '五月北海道',
+        subHead: '自由自在 悠然赏樱',
+        description: '抓住樱花季的尾巴，特色民宿等你选'
+      };
+    }
+    this.slideProcess[this.curSlideIndex].isdynamic = true;
+  }
 }

@@ -4,41 +4,7 @@
     position: absolute;
     top:0;
     z-index:10;
-    width:100%;
-    display: flex;
-    align-items: center;
-    padding:15px;
-    box-sizing: border-box;
-    .header-oper-left {
-      display: inline-flex;
-      align-items: center;
-      .oper-item {
-        display: inline-block;
-        float: left;
-        color:#fff;
-        &:first-child {
-          font-size: 30px;
-          margin-right: 10px;
-        }
-      }
-    }
-    .header-oper-right {
-      position: relative;
-      display: inline-flex;
-      justify-content: flex-end;
-      align-items: center;
-      .oper-item {
-        font-size:14px;
-        color:#fff;
-        display: inline-block;
-        padding: 15px;
-        border-bottom: solid 2px transparent;
-        cursor: pointer;
-        &:hover {
-          border-bottom-color: #fff;
-        }
-      }
-    }
+    width: inherit;
   }
   .lay-header-carousel {
     position: relative;
@@ -50,6 +16,10 @@
       left:150px;
       p {
         color:#fff;
+      }
+      .carousel-title-process {
+        position: relative;
+        top: 50px;
       }
     }
   }
