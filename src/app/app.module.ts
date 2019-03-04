@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CoreModule } from './core/core.module';
 import { ShareModule } from './share/share.module';
 
-import { PageHeadModule } from './page-head/page-head.module';
+import { HomePageModule } from './home-page/home-page.module';
 
 import { AppComponent } from './app.component';
 
@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule, CoreModule, ShareModule, PageHeadModule
+    BrowserModule, CoreModule, ShareModule, HomePageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,11 +11,17 @@
   <div class="nc-xl-col-6 nc-lg-col-6 nc-md-col-8 nc-sm-col-12 nc-xs-col-12 header-oper-right">
     <div class="oper-item">人民币-¥</div>
     <div class="oper-item">手机端</div>
-    <div class="oper-item">出租房源</div>
-    <div class="oper-item">开展体验</div>
+    <div class="oper-item" *ngIf="type === 'loginOut'">出租房源</div>
+    <div class="oper-item" *ngIf="type === 'loginOut'">开展体验</div>
+    <div class="oper-item" *ngIf="type === 'loginIn'">成为房东/体验达人</div>
     <div class="oper-item">故事</div>
+    <div class="oper-item" *ngIf="type === 'loginIn'">心愿单</div>
+    <div class="oper-item" *ngIf="type === 'loginIn'">行程</div>
     <div class="oper-item">帮助</div>
-    <div class="oper-item">注册</div>
-    <div class="oper-item">登录 </div>
+    <div class="oper-item" *ngIf="type === 'loginOut'">注册</div>
+    <div class="oper-item" *ngIf="type === 'loginOut'">登录 </div>
+    <div class="oper-item" *ngIf="type === 'loginIn'">
+      <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
+    </div>
   </div>
 </div>

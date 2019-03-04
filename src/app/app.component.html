@@ -2,22 +2,9 @@
 <div class="nc-layout">
   <div class="nc-header lay-header">
     <div class="lay-header-oper">
-      <app-head-login-out></app-head-login-out>
+      <app-page-head></app-page-head>
     </div>
-    <div class="lay-header-carousel">
-      <nc-carousel [captions]="slideOptions" [effect]="'fade'" [height]="'520px'"
-                   [timerlen]="10000" (carouselChange)="handleSlideChange($event)"></nc-carousel>
-      <div class="header-carousel-title">
-        <h2>{{slideOptionTitle.head}}</h2>
-        <h2>{{slideOptionTitle.subHead}}</h2>
-        <p>{{slideOptionTitle.description}}</p>
-        <div class="carousel-title-process">
-          <nc-progress *ngFor="let processitem of slideProcess" [value]="processitem.curValue"
-                       [total]="processitem.total" [isDynamic]="processitem.isdynamic" [width]="'60px'"
-                       [height]="4" [showProcValue]="false"></nc-progress>
-        </div>
-      </div>
-    </div>
+    <app-page-carousel></app-page-carousel>
   </div>
 
   <div class="nc-content nc-flex nc-content-center">
@@ -29,16 +16,9 @@
     </div>
   </div>
 
-  <div class="nc-footer nc-flex nc-content-center nc-align-item-center">
+  <div class="nc-footer nc-flex nc-content-center">
     <div class="lay-foot nc-flex nc-xl-col-9 nc-lg-col-9 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
-      <div class="lay-foot-item nc-flex nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        Ng-Cat@Angular,Ng-Cat@Angular,Ng-Cat@Angular,Ng-Cat@Angular</div>
-      <div class="lay-foot-item nc-flex nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        Ng-Cat@Angular</div>
-      <div class="lay-foot-item nc-flex nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        Ng-Cat@Angular</div>
-      <div class="lay-foot-item nc-flex nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        Ng-Cat@Angular</div>
+      <app-page-foot style="width:100%;"></app-page-foot>
     </div>
   </div>
 </div>
