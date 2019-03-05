@@ -12,19 +12,23 @@
     <nc-dropdown>
       <span class="oper-item" nc-dropdown-btn>人民币-¥</span>
       <ul nc-dropdown-menu class="dropdown-items">
-        <li>人民币</li>
-        <li>人民币</li>
-        <li>人民币</li>
-        <li>人民币</li>
-        <li>人民币</li>
+        <li *ngFor="let CcyOption of CCYOptions" [class.selected]="selectedCCY === CcyOption.value">
+          <span>{{CcyOption.label}}</span><span>√</span></li>
       </ul>
     </nc-dropdown>
     <nc-dropdown>
-      <span class="oper-item" nc-dropdown-btn>手机端</span>
-      <span nc-dropdown-menu class="dropdown-items">
-        <span>人民币</span>
-        <span>人民币</span>
-      </span>
+      <div class="oper-item" nc-dropdown-btn>手机端</div>
+      <div nc-dropdown-menu class="dropdown-phone">
+        <div class="app-image">
+          <img src="https://z1.muscache.cn/airbnb/static/wechat/download_app_p1-d5a89ad77e2aa488af81f28cf870233e.png" alt="" width="160" height="160">
+          <div class="app-text">下载手机客户端</div>
+        </div>
+        <div class="app-image">
+          <img src="https://z1.muscache.cn/airbnb/static/wechat/service_account_qr_code_header_p1-3b21bb9e7d2f035e3a26a406ea9e598e.png" alt="" width="160" height="160">
+          <div class="app-text">关注微信服务号</div>
+          <div class="app-text">id：AirbnbOfficial</div>
+        </div>
+      </div>
     </nc-dropdown>
     <div class="oper-item" *ngIf="type === 'loginOut'">出租房源</div>
     <div class="oper-item" *ngIf="type === 'loginOut'">开展体验</div>
@@ -40,3 +44,4 @@
     </div>
   </div>
 </div>
+
