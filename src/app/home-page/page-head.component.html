@@ -30,13 +30,37 @@
         </div>
       </div>
     </nc-dropdown>
-    <div class="oper-item" *ngIf="type === 'loginOut'">出租房源</div>
-    <div class="oper-item" *ngIf="type === 'loginOut'">开展体验</div>
-    <div class="oper-item" *ngIf="type === 'loginIn'">成为房东/体验达人</div>
-    <div class="oper-item">故事</div>
+    <nc-dropdown>
+      <div class="oper-item" nc-dropdown-btn>成为房东/体验达人</div>
+      <div nc-dropdown-menu class="dropdown-fd">
+        <div class="dropdown-fd-item">
+          <div class="item-f-head">房源</div>
+          <div class="item-f-content">
+            <div>
+              <span>发布房源</span>
+              <span><svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 24px; width: 24px; display: block; fill: currentcolor;"><path d="m23.06 11.4-1.75-1.76-3.85-3.87-3.85-3.87-1.27-1.27-.36-.36-.09-.09c-.23-.23-.55-.23-.75-.02l-1.68 1.75-3.68 3.87-3.68 3.87-1.67 1.75a1.47 1.47 0 0 0 -.43 1.05v.02c.01.38.15.76.44 1.05l.55.55a1.49 1.49 0 0 0 2.01.08v8.4c0 .81.68 1.45 1.5 1.45h14c .82 0 1.5-.65 1.5-1.45v-8.86l.38.38a1.5 1.5 0 0 0 2.13-.01l.55-.55c.59-.59.59-1.54.01-2.13zm-4.06 11.15c0 .24-.22.45-.5.45h-14c-.28 0-.5-.21-.5-.45v-9.41l7.51-7.93 7.49 7.48v9.85zm3.35-9.74-.55.55c-.2.2-.52.2-.71.01l-9.24-9.22a.5.5 0 0 0 -.72.01l-8.73 9.22a.5.5 0 0 1 -.7-.02l-.55-.55a.5.5 0 0 1 -.01-.71l1.68-1.77 3.69-3.86 3.68-3.87 1.32-1.39c.03.03.07.07.12.12l1.27 1.27 3.85 3.87 3.85 3.87 1.75 1.76a.51.51 0 0 1 -.01.71zm-10.85-.81a.5.5 0 0 1 .5.5v3.5h3.5a.5.5 0 1 1 0 1h-3.5v3.5a.5.5 0 0 1 -1 0v-3.5h-3.5a.5.5 0 0 1 0-1h3.5v-3.5a.5.5 0 0 1 .5-.5z" fill-rule="evenodd"></path></svg></span>
+            </div>
+            <div>在上海接待房客，每月为您带来高达￥5,500的收入
+              了解如何出租您的房源</div>
+          </div>
+          <div class="item-f-foot">了解如何出租您的房源</div>
+        </div>
+        <div class="dropdown-fd-item">
+          <div class="item-f-head">体验</div>
+          <div class="item-f-content">
+            <div>
+              <span>开展体验</span>
+              <span><img src="https://z1.muscache.cn/airbnb/static/bb6d49e059b6c7d8791e9b4e30f8d4cd.svg" alt="" height="23"></span>
+            </div>
+            <div>带领别人做自己热爱的事并赚取收入</div>
+          </div>
+        </div>
+      </div>
+    </nc-dropdown>
+    <div class="oper-item" (click)="goToStory()">故事</div>
     <div class="oper-item" *ngIf="type === 'loginIn'">心愿单</div>
     <div class="oper-item" *ngIf="type === 'loginIn'">行程</div>
-    <div class="oper-item">帮助</div>
+    <div class="oper-item" (click)="isShowHelp = !isShowHelp">帮助</div>
     <div class="oper-item" *ngIf="type === 'loginOut'">注册</div>
     <div class="oper-item" *ngIf="type === 'loginOut'">登录 </div>
     <div class="oper-item" *ngIf="type === 'loginIn'">
@@ -44,4 +68,7 @@
     </div>
   </div>
 </div>
+
+<app-page-help [(isDisplay)]="isShowHelp"></app-page-help>
+
 

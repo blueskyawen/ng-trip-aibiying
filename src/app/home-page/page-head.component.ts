@@ -23,9 +23,14 @@ export class PageHeadComponent implements OnInit {
     {label: '丹麦克朗-Dkr',value: 'DKK',disable: false},
     {label: '卢布-₽',value: 'RUB ',disable: false},
     {label: '墨西哥比索-Mex.$',value: 'MXP',disable: false}];
+  isShowHelp: boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  goToStory() {
+    window.open('https://www.airbnb.cn/content','_black')
   }
 
 }

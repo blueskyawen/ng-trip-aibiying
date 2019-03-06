@@ -1,0 +1,34 @@
+.help-container {
+  width:380px;
+  position: relative;
+  height: 100%;
+  .help-head {
+    font-size: 16px;
+    font-weight: 600;
+    color:#4d4d4d;
+    position: absolute;
+    top: -40px;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .help-content {
+    margin: 20px 0;
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    max-height: calc(100% - 170px);
+    overflow-y: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .help-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    a {
+      font-size: 14px;
+      color:#008ae6;
+      margin-top: 10px;
+    }
+  }
+}
