@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./page-help-detail.component.less']
 })
 export class PageHelpDetailComponent implements OnInit {
-
+  @Input() question: string;
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,28 @@
+<nc-dialog [header]="'注册爱彼迎账号'" [style]="'normal'" [(isShow)]="isDisplay" (isShowChange)="showChange()">
+  <div class="content">
+    <form>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-3 nc-xs-col-3" [required]="true">用户名</nc-form-label>
+        <nc-form-control class="nc-xl-col-9 nc-lg-col-9 nc-md-col-9 nc-sm-col-9 nc-xs-col-9">
+          <nc-input [type]="'text'" [(modelValue)]="name" [required]="true">
+          </nc-input>
+        </nc-form-control>
+      </nc-form-group>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-3 nc-xs-col-3" [required]="true">技能</nc-form-label>
+        <nc-form-control class="nc-xl-col-9 nc-lg-col-9 nc-md-col-9 nc-sm-col-9 nc-xs-col-9">
+          <nc-input [type]="'text'" [(modelValue)]="skill" [required]="true">
+          </nc-input>
+        </nc-form-control>
+      </nc-form-group>
+    </form>
+  </div>
+  <div class="footer">
+        <span class="form-btn-group">
+          <nc-button (click)="isDisplay=false">确定</nc-button>
+        </span>
+    <span class="form-btn-group">
+          <nc-button [type]="'cancel'" (click)="isDisplay=false">取消</nc-button>
+        </span>
+  </div>
+</nc-dialog>

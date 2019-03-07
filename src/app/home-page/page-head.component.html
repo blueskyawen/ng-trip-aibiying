@@ -10,10 +10,11 @@
   </div>
   <div class="nc-xl-col-6 nc-lg-col-6 nc-md-col-8 nc-sm-col-12 nc-xs-col-12 header-oper-right">
     <nc-dropdown>
-      <span class="oper-item" nc-dropdown-btn>人民币-¥</span>
+      <span class="oper-item" nc-dropdown-btn>{{selectedCCY.label}}</span>
       <ul nc-dropdown-menu class="dropdown-items">
-        <li *ngFor="let CcyOption of CCYOptions" [class.selected]="selectedCCY === CcyOption.value">
-          <span>{{CcyOption.label}}</span><span>√</span></li>
+        <li *ngFor="let CcyOption of CCYOptions" [class.selected]="selectedCCY.value === CcyOption.value" (click)="selectCCY(CcyOption)">
+          <span>{{CcyOption.label}}</span>
+          <span><svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 16px; width: 16px; display: block;" class="__web-inspector-hide-shortcut__"><path d="m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z" fill-rule="evenodd"></path></svg></span></li>
       </ul>
     </nc-dropdown>
     <nc-dropdown>
@@ -60,9 +61,9 @@
     <div class="oper-item" (click)="goToStory()">故事</div>
     <div class="oper-item" *ngIf="type === 'loginIn'">心愿单</div>
     <div class="oper-item" *ngIf="type === 'loginIn'">行程</div>
-    <div class="oper-item" (click)="isShowHelp = !isShowHelp">帮助</div>
-    <div class="oper-item" *ngIf="type === 'loginOut'">注册</div>
-    <div class="oper-item" *ngIf="type === 'loginOut'">登录 </div>
+    <div class="oper-item" (click)="isShowHelp = true">帮助</div>
+    <div class="oper-item" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
+    <div class="oper-item" *ngIf="type === 'loginOut'" (click)="isShowLogin = true">登录 </div>
     <div class="oper-item" *ngIf="type === 'loginIn'">
       <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
     </div>
@@ -70,5 +71,7 @@
 </div>
 
 <app-page-help [(isDisplay)]="isShowHelp"></app-page-help>
+<app-page-register [(isDisplay)]="isShowRegister"></app-page-register>
+<app-page-login [(isDisplay)]="isShowLogin"></app-page-login>
 
 
