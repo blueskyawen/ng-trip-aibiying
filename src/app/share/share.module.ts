@@ -7,6 +7,6 @@ import { LibModule } from 'ng-shadow-cat-d';
   imports: [
     CommonModule, LibModule
   ],
-  exports: [LibModule]
+  exports: [LibModule,CommonModule]
 })
 export class ShareModule { }

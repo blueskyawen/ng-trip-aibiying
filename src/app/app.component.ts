@@ -7,7 +7,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'ng-trip-aibiying';
-  contents: number[] = [1,2,3];
 
   constructor() {
 

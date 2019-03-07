@@ -1,0 +1,23 @@
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <div class="lay-header-oper">
+      <app-page-head></app-page-head>
+    </div>
+    <app-page-carousel></app-page-carousel>
+  </div>
+
+  <div class="nc-content nc-flex nc-content-center">
+    <div class="lay-body nc-xl-col-9 nc-lg-col-9 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
+      <div *ngFor="let item of contents" class="lay-body-item nc-content nc-flex nc-content-center nc-align-item-center"
+           style="height:300px;">
+        content
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-footer nc-flex nc-content-center">
+    <div class="lay-foot nc-flex nc-xl-col-9 nc-lg-col-9 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
+      <app-page-foot style="width:100%;"></app-page-foot>
+    </div>
+  </div>
+</div>

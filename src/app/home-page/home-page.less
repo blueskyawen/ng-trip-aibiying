@@ -1,3 +1,35 @@
+.nc-layout {
+  .lay-header {
+    position: relative;
+    .lay-header-oper {
+      position: absolute;
+      top:0;
+      z-index:10;
+      width: inherit;
+    }
+  }
+  .nc-content {
+    position: relative;
+    width: 100%;
+    .lay-body {
+      padding: 10px;
+      border:solid 1px #999;
+      .lay-body-item {
+        border:solid 1px #666;
+      }
+    }
+  }
+  .nc-footer {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-top:solid 1px #e6e6e6;
+    .lay-foot {
+      padding: 10px;
+    }
+  }
+}
+
 .page-head-container {
   width:100%;
   display: flex;
