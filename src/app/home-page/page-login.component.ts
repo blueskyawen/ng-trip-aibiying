@@ -8,6 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PageLoginComponent implements OnInit {
   @Input() isDisplay: boolean = false;
   @Output() isDisplayChange = new EventEmitter<boolean>();
+  name: string = 'jack';
+  skill: string = 'gongfu';
   constructor() { }
 
   ngOnInit() {
