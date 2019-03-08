@@ -1,5 +1,6 @@
 <nc-dialog [header]="'登录爱彼迎'" [style]="'normal'" [(isShow)]="isDisplay" (isShowChange)="showChange()">
   <div class="content">
+    <div class="login-head">还没有账号？<span (click)="goRegister()">注册</span></div>
     <form>
       <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
         <nc-form-label class="nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-3 nc-xs-col-3" [required]="true">用户名</nc-form-label>

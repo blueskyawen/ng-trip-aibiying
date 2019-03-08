@@ -52,4 +52,13 @@ export class PageHeadComponent implements OnInit {
     this.selectedCCY = option;
   }
 
+  handleToLoginEvnent() {
+    console.log('handleToLoginEvnent');
+    this.isShowLogin = true;
+  }
+
+  handleToRegisterEvnent() {
+    console.log('handleToRegisterEvnent');
+    this.isShowRegister = true;
+  }
 }

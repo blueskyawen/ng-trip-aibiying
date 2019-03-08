@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class PageLoginComponent implements OnInit {
   @Input() isDisplay: boolean = false;
   @Output() isDisplayChange = new EventEmitter<boolean>();
+  @Output() toRegisterEvent = new EventEmitter<boolean>();
   name: string = 'jack';
   skill: string = 'gongfu';
   constructor() { }
@@ -17,5 +18,11 @@ export class PageLoginComponent implements OnInit {
 
   showChange() {
     this.isDisplayChange.emit(this.isDisplay);
+  }
+
+  goRegister() {
+    this.isDisplay = false;
+    this.isDisplayChange.emit(this.isDisplay);
+    this.toRegisterEvent.emit();
   }
 }

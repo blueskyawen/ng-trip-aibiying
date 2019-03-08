@@ -1,0 +1,63 @@
+.register-head {
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color:#333;
+  span {
+    cursor: pointer;
+    color:#1a75ff;
+  }
+}
+.register-button {
+  margin: 10px 0;
+  span {
+    position: relative;
+    top: 2px;
+    right: 10px;
+  }
+}
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .register-foot {
+    color:#666;
+    font-size: 14px;
+    &:not(.register-foot-others):hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    &.register-foot-others {
+      position: relative;
+      width: 100%;
+      padding: 20px 5px 0;
+      border-top: solid 1px #ccc;
+      display: inline-block;
+      box-sizing: border-box;
+      margin-top: 10px;
+      .register-foot-head {
+        font-size: 14px;
+        color:#666;
+        position: absolute;
+        top:-10px;
+        display: inline-block;
+        background: #fff;
+        left:50%;
+        transform: translateX(-50%);
+      }
+      .register-items {
+        display: flex;
+        width: inherit;
+        justify-content: space-around;
+        .register-item {
+          border: none;
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
