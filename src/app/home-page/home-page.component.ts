@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
   contents: number[] = [1,2,3];
   constructor() { }
-
+  searchData: any = {site: '', date: new Date(), person: {}};
   ngOnInit() {
   }
 

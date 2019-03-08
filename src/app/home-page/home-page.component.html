@@ -8,7 +8,23 @@
 
   <div class="nc-content nc-flex nc-content-center">
     <div class="lay-body nc-xl-col-9 nc-lg-col-9 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
-      <div *ngFor="let item of contents" class="lay-body-item nc-content nc-flex nc-content-center nc-align-item-center"
+      <div class="lay-body-item nc-content trip-search">
+        <div class="trip-search-item trip-search-site nc-xl-col-5 nc-lg-col-5 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+          <nc-input [type]="'text'" [(modelValue)]="searchData.site"
+                    [placeHolder]="'输入目的地、城市或景点'">
+          </nc-input>
+        </div>
+        <div class="trip-search-item trip-search-date nc-xl-col-3 nc-lg-col-3 nc-md-col-2 nc-sm-col-12 nc-xs-col-12">
+
+        </div>
+        <div class="trip-search-item trip-search-person nc-xl-col-3 nc-lg-col-3 nc-md-col-2 nc-sm-col-12 nc-xs-col-12">
+
+        </div>
+        <div class="trip-search-item trip-search-button nc-xl-col-1 nc-lg-col-1 nc-md-col-2 nc-sm-col-12 nc-xs-col-12">
+
+        </div>
+      </div>
+      <div *ngFor="let item of contents" class="lay-body-item2 nc-content nc-flex nc-content-center nc-align-item-center"
            style="height:300px;">
         content
       </div>
