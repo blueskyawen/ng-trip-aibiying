@@ -42,4 +42,13 @@ export class PageRegisterComponent implements OnInit {
   isDisableRegister() {
     return !this.registerData.phone || !this.registerData.password;
   }
+
+  checkFlag(flag: number) {
+    if(flag === 1) {
+      return flag = 0;
+    }
+    if(flag === 0) {
+      return flag = 1;
+    }
+  }
 }

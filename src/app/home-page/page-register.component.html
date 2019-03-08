@@ -37,8 +37,8 @@
           <nc-form-control
                   class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
             <div class="nc-flex nc-align-item-center">
-              <span style="margin:10px 0;font-size: 12px;color:#666;">
-                <nc-checkbox [(checked)]="registerData.checkFlag"></nc-checkbox>
+              <span style="font-size: 12px;color:#666;">
+                <nc-checkbox [(checked)]="registerData.checkFlag" (click)="checkFlag(registerData.checkFlag)"></nc-checkbox>
                 <span>我希望通过短信和电话收到爱彼迎与其合作伙伴的礼金券、推广信息、问卷调查和最新动态。</span>
               </span>
             </div>

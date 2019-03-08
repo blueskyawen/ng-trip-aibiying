@@ -7,3 +7,74 @@
     color:#1a75ff;
   }
 }
+.login-body {
+  width: 100%;
+  margin: 10px 0;
+  .phone-login-body {
+    width: inherit;
+  }
+  .login-divider {
+    position: relative;
+    width: inherit;
+    height: 0;
+    border-top: solid 1px #ccc;
+    margin: 15px 0;
+    span {
+      font-size: 14px;
+      color:#666;
+      position: absolute;
+      top:-9px;
+      display: inline-block;
+      background: #fff;
+      left:50%;
+      transform: translateX(-50%);
+    }
+  }
+  .wecat-login-body {
+    margin: 10px 0;
+    span {
+      position: relative;
+      top: 2px;
+      right: 10px;
+    }
+  }
+}
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .login-foot {
+    width: 100%;
+    color:#666;
+    font-size: 14px;
+    position: relative;
+    padding: 20px 5px 0;
+    border-top: solid 1px #ccc;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 10px;
+    .login-foot-head {
+      font-size: 14px;
+      color:#666;
+      position: absolute;
+      top:-10px;
+      display: inline-block;
+      background: #fff;
+      left:50%;
+      transform: translateX(-50%);
+    }
+    .login-items {
+      display: flex;
+      width: inherit;
+      justify-content: space-around;
+      .login-item {
+        border: none;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+

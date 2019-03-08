@@ -9,8 +9,9 @@ export class PageLoginComponent implements OnInit {
   @Input() isDisplay: boolean = false;
   @Output() isDisplayChange = new EventEmitter<boolean>();
   @Output() toRegisterEvent = new EventEmitter<boolean>();
-  name: string = 'jack';
-  skill: string = 'gongfu';
+  loginData: any = {phone: '', password: '', checkFlag: 1};
+  isLoading: boolean = false;
+  showMsg: boolean = false;
   constructor() { }
 
   ngOnInit() {
@@ -24,5 +25,32 @@ export class PageLoginComponent implements OnInit {
     this.isDisplay = false;
     this.isDisplayChange.emit(this.isDisplay);
     this.toRegisterEvent.emit();
+  }
+
+  checkFlag(flag: number) {
+    if(flag === 1) {
+      return flag = 0;
+    }
+    if(flag === 0) {
+      return flag = 1;
+    }
+  }
+
+  isDisableLogin() {
+    return !this.loginData.phone || !this.loginData.password;
+  }
+
+  login() {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+      this.showMsg = true;
+      this.isDisplay = false;
+      this.isDisplayChange.emit(this.isDisplay);
+    },2000);
+  }
+
+  getPasswdBack() {
+    console.log('getPasswdBack');
   }
 }
