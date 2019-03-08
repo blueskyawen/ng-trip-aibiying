@@ -20,15 +20,17 @@
       <form novalidate>
         <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
           <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
-            <nc-input [type]="'text'" [(modelValue)]="registerData.phone"
+            <nc-input [type]="'text'" [(modelValue)]="registerData.phone" [iconffix]="'pre'"
                       [required]="true" [placeHolder]="'手机号'">
+              <nc-input-icon class="nc-input-icon-preffix"><span class="fa fa-phone"></span></nc-input-icon>
             </nc-input>
           </nc-form-control>
         </nc-form-group>
         <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
           <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
-            <nc-input [type]="'password'" [(modelValue)]="registerData.password"
+            <nc-input [type]="'password'" [(modelValue)]="registerData.password" [iconffix]="'pre'"
                       [required]="true" [placeHolder]="'密码'">
+              <nc-input-icon class="nc-input-icon-preffix"><span class="fa fa-lock"></span></nc-input-icon>
             </nc-input>
           </nc-form-control>
         </nc-form-group>
