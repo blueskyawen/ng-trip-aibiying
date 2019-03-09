@@ -1,0 +1,41 @@
+<div class="trip-search nc-flex">
+  <div class="trip-search-item trip-search-site nc-xl-col-5 nc-lg-col-5 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <nc-input [type]="'text'" [(modelValue)]="searchData.site" [showHint]="false" [noBorder]="true" [iconffix]="'pre'"
+              [height]="'100%'" [placeHolder]="'输入目的地、城市或景点'">
+      <nc-input-icon class="nc-input-icon-preffix"><span class="fa fa-map-marker"></span></nc-input-icon>
+    </nc-input>
+  </div>
+  <div  [class.expend]="isShowDateRange" class="trip-search-item trip-search-date nc-flex nc-align-item-center nc-xl-col-3 nc-lg-col-3 nc-md-col-2 nc-sm-col-12 nc-xs-col-12">
+    <span (click)="openDateSelector()">
+      <span class="fa fa-calendar"></span><span>{{tripDateRange}}</span>
+    </span>
+    <nc-range-date-selector *ngIf="isShowDateRange" class="date-selector" [(dateRange)]="searchData.dateRange"
+                            (dateRangeChange)="dateRangeChange()"></nc-range-date-selector>
+  </div>
+  <div [class.expend]="isShowPersonSet" class="trip-search-item trip-search-person nc-flex nc-align-item-center nc-xl-col-3 nc-lg-col-3 nc-md-col-2 nc-sm-col-12 nc-xs-col-12">
+    <span (click)="openPersonSet()">
+      <span class="fa fa-user-plus"></span><span>{{personData}}</span>
+    </span>
+    <div class="trip-person-set nc-flex nc-row-column" *ngIf="isShowPersonSet">
+      <div class="trip-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span>成人</span>
+        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="searchData.person.adult"></nc-number-put></span>
+      </div>
+      <div class="trip-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span><span>儿童</span><span>2-12岁</span></span>
+        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="searchData.person.child"></nc-number-put></span>
+      </div>
+      <div class="trip-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span><span>婴儿</span><span>2岁以下</span></span>
+        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="searchData.person.baby"></nc-number-put></span>
+      </div>
+      <div class="trip-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span class="t-cancel" (click)="clearPersonSt()">取消</span>
+        <span class="t-confirm" (click)="confirmPersonSt()">确认</span>
+      </div>
+    </div>
+  </div>
+  <div class="trip-search-item trip-search-button nc-flex nc-content-center nc-align-item-center nc-xl-col-1 nc-lg-col-1 nc-md-col-2 nc-sm-col-12 nc-xs-col-12">
+    <nc-button [type]="'major'">搜索</nc-button>
+  </div>
+</div>

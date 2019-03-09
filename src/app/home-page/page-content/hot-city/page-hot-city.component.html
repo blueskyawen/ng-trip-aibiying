@@ -1,0 +1,19 @@
+<div class="trip-hot-city nc-flex nc-row-column">
+  <div class="hot-city-head">热门目的地</div>
+  <div class="hot-city-list">
+    <nc-list-group-horizontal [stepWidth]="150" [hideOper]="true" [operation]="cityOper">
+      <ul class="nc-list-group list-group-horizontal">
+        <li class="nc-list-group-item" *ngFor="let city of cityList">
+          <button class="nc-list-button" (click)="selectCity(city)" [class.active]="city.active">
+            {{city.title}}</button>
+        </li>
+      </ul>
+    </nc-list-group-horizontal>
+  </div>
+  <div class="hot-city-body">
+    <app-hot-city-house></app-hot-city-house>
+  </div>
+  <div class="hot-city-foot">
+    <span>查看更多{{selectedCity.title}}房源<span class="fa fa-angle-right"></span></span>
+  </div>
+</div>
