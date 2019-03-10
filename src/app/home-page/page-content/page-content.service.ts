@@ -17,6 +17,12 @@ export class PageContentService {
     );
   }
 
+  getSakuraTrips() {
+    return this.http.get('assets/japan-sakura-trip.json').pipe(
+        map(res => {return res['trips'] || []; })
+    );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

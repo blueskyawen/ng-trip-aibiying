@@ -14,6 +14,6 @@
     <app-hot-city-house [houseList]="selectCityHouses"></app-hot-city-house>
   </div>
   <div class="hot-city-foot">
-    <span (click)="goMoreHouses()">查看更多{{selectedCity.title}}房源<span class="fa fa-angle-right"></span></span>
+    <span (click)="goMoreHouses()">查看更多{{selectedCity?.title}}房源<span class="fa fa-angle-right"></span></span>
   </div>
 </div>

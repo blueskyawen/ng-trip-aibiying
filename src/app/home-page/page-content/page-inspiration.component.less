@@ -14,7 +14,42 @@
     }
   }
   .trip-inspiration-list {
-    height: 200px;
-    border: solid 1px #ccc;
+    width: 100%;
+    .trip-inspira-item {
+      padding: 6px;
+      display: inline-block;
+      box-sizing: border-box;
+      &:hover {
+        cursor:pointer;
+      }
+      .trip-item-img {
+        width: 100%;
+        margin-bottom: 10px;
+        img {
+          width: inherit;
+          height: 260px;
+        }
+      }
+      .trip-item-foot {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        div {
+          margin-bottom: 5px;
+          &:first-child {
+            font-size: 12px;
+            color:#666;
+          }
+          &:nth-child(2) {
+            font-weight: 600;
+            color: #404040;
+          }
+          &:last-child {
+            font-size: 13px;
+            color:#666;
+          }
+        }
+      }
+    }
   }
 }

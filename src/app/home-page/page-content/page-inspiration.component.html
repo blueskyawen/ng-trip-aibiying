@@ -4,5 +4,16 @@
     <span>住进不一样的樱花季</span>
   </div>
   <div class="trip-inspiration-list">
+    <div *ngFor="let trip of tripList" (click)="goTripDetai()"
+         class="trip-inspira-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="trip-item-img">
+        <img [src]="trip.imgUrl" [alt]="trip.name">
+      </div>
+      <div class="trip-item-foot">
+        <div>{{trip.title}}</div>
+        <div>{{trip.name}}</div>
+        <div>{{trip.description}}</div>
+      </div>
+    </div>
   </div>
 </div>
