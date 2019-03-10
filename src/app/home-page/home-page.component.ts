@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.less']
 })
 export class HomePageComponent implements OnInit {
-  contents: number[] = [1,2];
-
   constructor() {
   }
 
