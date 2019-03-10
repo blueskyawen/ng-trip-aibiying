@@ -1,8 +1,20 @@
 <div class="city-house-container">
   <div *ngFor="let house of houseList"
        class="city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-    <div class="city-house-content">
-      {{house}}
+    <div class="city-house-content" (click)="goDetail(house)">
+      <div class="house-img">
+        <img [src]="house.imgUrl" [alt]="house.text" />
+      </div>
+      <div class="house-foot">
+        <div>{{house.type}}.{{house.bedNum}}张床</div>
+        <div>{{house.text}}</div>
+        <div>¥{{house.price}}每晚.免费取消预订</div>
+        <div>
+          <span><nc-rate [size]="'10px'" [color]="'#1a1aff'" [totalRate]="5" [(curRate)]="house.star"></nc-rate></span>
+          <span title="{{house.comment}}条评价">{{house.comment}}.超赞房东</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

@@ -1,0 +1,674 @@
+{
+  "citylist": [
+    {
+      "id": "1",
+      "name_zh": "成都",
+      "name_en": "Chengdu",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "漫漫|拿铁 楼下就是太古里春熙路/市中心双地铁/家庭影院/北欧风精致套房",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 268,
+          "star": 5,
+          "comment": 168,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/d1316854-23e4-4db8-9f13-2a4cc3b835a6.jpg?aki_policy=xx_large"
+        },
+        {
+          "id": 2,
+          "text": "【和の町】春熙/太古里/兰桂坊 传统日式-和服主题",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 268,
+          "star": 5,
+          "comment": 59,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/910ef0d0-0871-436e-aef8-2a44d1af66a7.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "独立投影观影室+花园露台房+近地铁1号线高新站+7号线三瓦窑站+距太古里站20分钟",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 298,
+          "star": 5,
+          "comment": 234,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/1f07ff6d-8f1e-46c0-a963-1e7d233ea85f.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "MOHUANG|对面就是太古里春熙路和地铁站 下楼就吃小龙坎",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 198,
+          "star": 5,
+          "comment": 179,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/931c8ced-a8d0-4aa2-8b8c-138938006feb.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "【樱の屋】春熙路/太古里/兰桂坊地铁2/3号线直达日式和服榻榻米metro line 2/3",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 259,
+          "star": 5,
+          "comment": 198,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/96ec935a-91aa-4795-a616-87e4bf869927.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "【老鸟家】宽窄巷子/文殊院/春熙路太古里/武侯祠锦里-日式榻榻米房间  metro line4",
+          "type": "独立房间",
+          "bedNum": 1,
+          "price": 137,
+          "star": 5,
+          "comment": 131,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/1870d7f9-839c-4c53-a1eb-d9eafb8d8d8f.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name_zh": "上海",
+      "name_en": "Shanghai",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "#2 SHANGHIGH HOME * 外滩边的创意空间 坐在窗口享受外滩风景",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 550,
+          "star": 5,
+          "comment": 347,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/717fef15-755d-4d52-b9c4-ed12e2300db5.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "拥天井花园､私人影院的石库门阁楼式套房",
+          "type": "独立房子",
+          "bedNum": 2,
+          "price": 628,
+          "star": 5,
+          "comment": 226,
+          "imgUrl": "https://z1.muscache.cn/4ea/air/v2/pictures/997b02ab-9522-4500-a0de-6e67a94bbe9b.jpg?t=r:w1200-h720-sfit"
+        },
+        {
+          "id": 3,
+          "text": "隐-迪士尼 世博 新天地 三轨直达 优质私家花园套房",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 630,
+          "star": 5,
+          "comment": 313,
+          "imgUrl": "https://z1.muscache.cn/4ea/air/v2/pictures/b163aa99-8f3e-45f7-80c1-c1dd267b72c9.jpg?t=r:w1200-h720-sfit,e:fjpg-c90"
+        },
+        {
+          "id": 4,
+          "text": "#1 SHANGHIGH STUDIO * 高层超级江景工作室 体验外滩的设计师生活",
+          "type": "整间阁楼",
+          "bedNum": 2,
+          "price": 750,
+          "star": 5,
+          "comment": 440,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/64015832/e10b10f8_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "保留老式上海石庫門 挑高全玻璃透明陽光房  10分鐘至地鐵站 鄰靜安區 外灘田子坊新天地各景點",
+          "type": "整栋平房",
+          "bedNum": 2,
+          "price": 388,
+          "star": 5,
+          "comment": 295,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/137e6464-dca6-4d51-8db4-56e33f89a608.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "｢同区最低｣FC法 租界独门独用精品LOFT 胡歌成长地经典石库门淮海路复兴路思南路衡山路田子坊附近",
+          "type": "整间阁楼",
+          "bedNum": 1,
+          "price": 236,
+          "star": 5,
+          "comment": 205,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/d4089962-20c5-4939-95c5-e7b43d431f4b.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name_zh": "杭州",
+      "name_en": "Hangzhou",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "卓小花【初雪】城西loft公寓步行至银泰商圈,近西湖/西溪湿地/黄龙中心/浙大/运河景区,可开发票",
+          "type": "整间阁楼",
+          "bedNum": 3,
+          "price": 368,
+          "star": 5,
+          "comment": 250,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/efc8494b-0000-40f3-8b29-9c14e617a536.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "Lisen2·林森公寓银泰旁榻榻米巨屏投影舒适两床环境优美",
+          "type": "整间阁楼",
+          "bedNum": 2,
+          "price": 278,
+          "star": 4,
+          "comment": 143,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/c0e0e56a-22c6-4054-aa74-f4c3359ee925.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "卓小花【蒂凡尼】城西轻奢loft步行可达银泰,近西湖/西溪湿地/黄龙中心/浙大/运河景区,可开发票",
+          "type": "整间阁楼",
+          "bedNum": 4,
+          "price": 368,
+          "star": 5,
+          "comment": 265,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/8717db36-fa7a-4c3a-87e9-e1a2316fd201.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "西湖之巅 零距离湖景房| 西湖､地铁站､河坊街､湖滨银泰",
+          "type": "整套酒店式公寓",
+          "bedNum": 2,
+          "price": 458,
+          "star": 5,
+          "comment": 193,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/cc82f4ce-5037-477f-a1f7-c365828ef05e.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "杭州半园·六艺馆  东方禅意小院  西湖9公里",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 398,
+          "star": 5,
+          "comment": 263,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/888e5268-ab20-4378-858e-8318c48077fc.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "ELE JANE-2/西湖边/定安路地铁口/重庆森林灵感/带浴缸",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 298,
+          "star": 5,
+          "comment": 169,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/7cbfb666-f087-4d91-86ab-5ec65a3112c2.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name_zh": "大理",
+      "name_en": "Dali",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "大理洱海门1号酒店星空房",
+          "type": "独立房间",
+          "bedNum": 1,
+          "price": 270,
+          "star": 5,
+          "comment": 288,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/85b4835d-08e6-4962-a233-2ceca64524d1.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "直面苍山洱海一线180度海景带浴缸大床房",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 268,
+          "star": 5,
+          "comment": 133,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/f437694f-6f64-4e41-ab80-2fd734aac320.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "预定两晚免费接高铁站 机场附近 洱海【依恋】简约艺术海景2居室",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 258,
+          "star": 5,
+          "comment": 48,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/00166e8b-9429-4a3c-bf76-915002e72b5e.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "预定两晚免费接高铁站 洱海【沐心】北欧简约复式LOFT套房两卧室",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 198,
+          "star": 4,
+          "comment": 57,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/3152fa8a-15e8-4890-bd42-0f77b219dc3b.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "躺在床上看苍山洱海【30平】环海线最开阔的视野 离机场最近的海景房",
+          "type": "独立房间",
+          "bedNum": 1,
+          "price": 480,
+          "star": 5,
+          "comment": 125,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/97805bfe-8603-4287-acaa-2ad9012a26fb.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "small house 一念 . 尘 大理古城内 雅致 安静 生活超级便利的别墅",
+          "type": "整栋别墅",
+          "bedNum": 4,
+          "price": 998,
+          "star": 5,
+          "comment": 162,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/2629b549-a2c0-400f-ae9b-0abe99eb2225.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name_zh": "台北",
+      "name_en": "Taipei",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "101景觀套房/近動物園及貓空纜車",
+          "type": "整套公寓",
+          "bedNum": 3,
+          "price": 489,
+          "star": 5,
+          "comment": 451,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/55113277/8e202e00_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "Best location!雙捷运大安站Da'an MRT 1min【Da'an B】",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 423,
+          "star": 5,
+          "comment": 239,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/0fcbe15b-1437-42b2-923b-2fd84c5fcd10.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "Best location!雙捷运大安站Da'an MRT 3min【Da'an A】",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 464,
+          "star": 5,
+          "comment": 265,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/f42f6869-7504-4097-a524-6d2f47fd8607.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "Taipei 101 Central*Wu's Casita, 台北101步行5分鐘捷運站",
+          "type": "整套公寓",
+          "bedNum": 6,
+          "price": 174,
+          "star": 4,
+          "comment": 399,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/43284050/86d5466e_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "HUADESIGN APT 02. 捷運站旁景觀房,貓空山嵐,九份,十分,平溪一日遊",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 370,
+          "star": 5,
+          "comment": 154,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/d26c5aaa-540c-4a46-a52d-c4d82178e1f4.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "HUADESIGN APT 01. 捷運站旁貓空景觀,享受一邊泡湯看山嵐,九份,十分一日遊,整套房",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 403,
+          "star": 5,
+          "comment": 166,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/455734c6-22ce-4080-a87e-46459692a430.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name_zh": "重庆",
+      "name_en": "Chongqin",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "【竹里·禅潺】解放碑最中心/紧邻地铁口/超赞江景/榻榻米电影屋",
+          "type": "整套房子",
+          "bedNum": 2,
+          "price": 327,
+          "star": 5,
+          "comment": 143,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/d3a1fb34-ccb1-42e8-852e-71bdf37ca011.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "雾舍里~Daydream 1205-解放碑洪崖洞.地铁口.270度落地窗.超棒江景房| 雨落疏桐 |",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 198,
+          "star": 5,
+          "comment": 106,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/4ff5df17-1b69-4b3d-90fa-e7b76f09949f.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "解放碑附近超级江景房(谢小姐的家1号)地铁沿线+紧挨解放碑､洪崖洞､长江索道､朝天门､八一美食街",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 268,
+          "star": 5,
+          "comment": 226,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/544c05ba-5cae-4218-bb28-b68897e1f6e3.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "【猪圈】桃花来了解放碑中心——AAAA级景区洪崖洞/两江索道/轨道交通/江景房",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 188,
+          "star": 4,
+          "comment": 73,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/23acb82a-2a87-42ef-baa5-f4dcd0a00e2c.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "漫时光-Color.解放碑江边的超大落地玻璃赏一线重庆长江夜景屋,10分钟到朝天门洪崖洞",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 403,
+          "star": 5,
+          "comment": 248,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/51b91f8e-a827-4767-86be-b1f363af6014.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "【Miss.riverview】超赞江景吧台&amp;榻榻米电影屋/洪崖洞2分钟/解放碑最中心/临江门D号口",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 238,
+          "star": 5,
+          "comment": 170,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/cc4f8d2d-a10d-42b1-8499-efe3e3744e04.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name_zh": "曼谷",
+      "name_en": "Bangkok",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "地理位置便利,1 分钟可达 BTS 空铁,提供 WiFi",
+          "type": "独立房间",
+          "bedNum": 1,
+          "price": 301,
+          "star": 5,
+          "comment": 285,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/99115515/cdfe720f_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "Beautiful One Bedroom Apartment Near skytrain",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 275,
+          "star": 5,
+          "comment": 333,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/15767a43-c74f-4079-9174-b47036fcf7b1.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "3 Bedr Penthouse with River Views, Free Wifi!",
+          "type": "整套公寓",
+          "bedNum": 3,
+          "price": 1201,
+          "star": 5,
+          "comment": 170,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/623382/3460624d_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "J. No 14 雅致古色古香 B&amp;B_6",
+          "type": "独立房间",
+          "bedNum": 1,
+          "price": 318,
+          "star": 5,
+          "comment": 282,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/60989579/ce425952_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "地理位置极佳,1 分钟可达 BTS 空铁",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 302,
+          "star": 4,
+          "comment": 284,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/5319661a-f44b-4015-9f25-eb9d5af973cb.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "High floor 1BR - Rooftop Pool - 150m to MRT",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 371,
+          "star": 5,
+          "comment": 241,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/a6e8099a-d078-41c5-b84c-70a5d8583914.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name_zh": "洛杉矶",
+      "name_en": "Los Angeles",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "Private Pool House with Amazing Views!",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 907,
+          "star": 5,
+          "comment": 155,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/75756707/5d76182c_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "Ocean View Malibu Hideaway",
+          "type": "整套客房",
+          "bedNum": 3,
+          "price": 1512,
+          "star": 5,
+          "comment": 141,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/62102550/3450e4d7_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "BEST Downtown Loft on Airbnb!",
+          "type": "整套阁楼",
+          "bedNum": 1,
+          "price": 867,
+          "star": 54,
+          "comment": 564,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/c0295a06-9c1c-4540-a2b9-3e510855c94c.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "Pirates of the Caribbean Getaway",
+          "type": "整栋乡村小屋",
+          "bedNum": 1,
+          "price": 639,
+          "star": 5,
+          "comment": 520,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/21303889/bf80a075_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "Rustic Bungalow Perched in the Hollywood Hills",
+          "type": "整套公寓",
+          "bedNum": 1,
+          "price": 1143,
+          "star": 5,
+          "comment": 410,
+          "imgUrl": "https://z1.muscache.cn/4ea/air/v2/pictures/ac0252bc-810e-4764-8ccf-5a23ac469727.jpg?t=r:w1200-h720-sfit,e:fjpg-c90"
+        },
+        {
+          "id": 6,
+          "text": "Licensed luxurious guesthouse with Parking Garage",
+          "type": "整套房子",
+          "bedNum": 1,
+          "price": 1174,
+          "star": 4,
+          "comment": 215,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/a85d04ad-adac-4ed2-951b-b40730d8ea9e.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name_zh": "纽约",
+      "name_en": "New York",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "Manhattan Lux Loft.Like.Love.Lots.Look !",
+          "type": "独立房间",
+          "bedNum": 2,
+          "price": 665,
+          "star": 5,
+          "comment": 511,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/12426057/2292b61c_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "The Country&quot; &amp; the NYC Waterfront!",
+          "type": "整套房子",
+          "bedNum": 2,
+          "price": 1243,
+          "star": 5,
+          "comment": 215,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/66285187/1973c1a5_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "Studio Apartment Minutes Away from Times Square",
+          "type": "整套房子",
+          "bedNum": 1,
+          "price": 639,
+          "star": 5,
+          "comment": 115,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/255bc11b-e3d8-44cc-973f-255ed6b34ae7.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "Magic Manhattan with Rooftop",
+          "type": "整套房子",
+          "bedNum": 1,
+          "price": 1274,
+          "star": 4,
+          "comment": 201,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/27720090/20bd06e4_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "Soho 2 Bedroom Private Terrace",
+          "type": "整套房子",
+          "bedNum": 3,
+          "price": 2688,
+          "star": 5,
+          "comment": 515,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/195be587-4d7e-452e-9f8c-34c02186944a.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "Brownstone Studio",
+          "type": "整套房子",
+          "bedNum": 1,
+          "price": 739,
+          "star": 5,
+          "comment": 93,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/c3ea4623-9f14-44d8-9426-ef58d3bd8acf.jpg?aki_policy=large"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name_zh": "东京",
+      "name_en": "Tokyo",
+      "houseList": [
+        {
+          "id": 1,
+          "text": "J 的公寓,2 间卧室 + 免费便携式 Wi-Fi",
+          "type": "整套公寓",
+          "bedNum": 4,
+          "price": 713,
+          "star": 5,
+          "comment": 240,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/61566443/79e8ff67_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 2,
+          "text": "新宿附近!免费 Wifi,舒适公寓!",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 659,
+          "star": 5,
+          "comment": 207,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/aff0abe1-8b0b-45d6-882a-6f7906a916e8.jpg?aki_policy=large"
+        },
+        {
+          "id": 3,
+          "text": "2 个卧室+2 个卫生间+免费的袖珍式 WiFi 设备!",
+          "type": "整套房子",
+          "bedNum": 4,
+          "price": 786,
+          "star": 5,
+          "comment": 293,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/97555979/877f8f00_original.jpg?aki_policy=large"
+        },
+        {
+          "id": 4,
+          "text": "Lovely&amp;near Shinjuku/Shibuya#105",
+          "type": "整套公寓",
+          "bedNum": 2,
+          "price": 363,
+          "star": 5,
+          "comment": 110,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/b8d2c410-84f9-439c-9eba-6d4bb337bedb.jpg?aki_policy=large"
+        },
+        {
+          "id": 5,
+          "text": "舒适&amp;靠近新宿/涩谷#301",
+          "type": "整套房子",
+          "bedNum": 4,
+          "price": 725,
+          "star": 5,
+          "comment": 193,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/48d97e17-8a7a-4e11-92b2-80512484f52b.jpg?aki_policy=large"
+        },
+        {
+          "id": 6,
+          "text": "特价!6分钟到车站*新宿舒适房 设施完备,出行方便,地理位置优越 提供免费便携式Wi-Fi#7",
+          "type": "整套房子",
+          "bedNum": 2,
+          "price": 121,
+          "star": 4,
+          "comment": 48,
+          "imgUrl": "https://z1.muscache.cn/im/pictures/8d7b18b5-636f-4ad8-8e8c-cd739125aa37.jpg?aki_policy=large"
+        }
+      ]
+    }
+  ]
+}

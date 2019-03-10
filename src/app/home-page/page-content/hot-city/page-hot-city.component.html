@@ -11,9 +11,9 @@
     </nc-list-group-horizontal>
   </div>
   <div class="hot-city-body">
-    <app-hot-city-house></app-hot-city-house>
+    <app-hot-city-house [houseList]="selectCityHouses"></app-hot-city-house>
   </div>
   <div class="hot-city-foot">
-    <span>查看更多{{selectedCity.title}}房源<span class="fa fa-angle-right"></span></span>
+    <span (click)="goMoreHouses()">查看更多{{selectedCity.title}}房源<span class="fa fa-angle-right"></span></span>
   </div>
 </div>

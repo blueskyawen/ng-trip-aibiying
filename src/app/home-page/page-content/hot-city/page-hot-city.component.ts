@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { PageContentService } from '../page-content.service';
 
 class CityOption {
+  id: string;
   title: string;
   name: string;
   active: boolean;
-  constructor(title: string, name: string, active: boolean) {
+  constructor(id: string, title: string, name: string, active: boolean) {
+    this.id = id;
     this.title = title;
     this.name = name;
     this.active = active;
@@ -17,36 +20,56 @@ class CityOption {
   styleUrls: ['./page-hot-city.component.less']
 })
 export class PageHotCityComponent implements OnInit {
-  cityList : CityOption[] = [new CityOption('北京','Beijing',false),new CityOption('重庆','Chongqing',false),
-    new CityOption('成都','Chengdu',true),new CityOption('大理','Dali',false),
-    new CityOption('东京','Tokyo',false),new CityOption('伦敦','London',false),
-    new CityOption('洛杉矶','Los Angeles',false),new CityOption('巴黎','Paris',false)];
-  cityOper : string;
-  curIndex = 2;
+  cityList: CityOption[] = [];
+  hostCityList: any[] = [];
+  cityOper: string;
+  curIndex = 0;
   selectedCity: CityOption;
-  constructor() {
-    this.selectedCity = this.cityList[this.curIndex];
+  selectCityHouses: any[] = [];
+  constructor(private pageContentService: PageContentService) {
   }
 
   ngOnInit() {
+    this.pageContentService.getHostCityList().subscribe((res: any) => {
+      this.hostCityList = res;
+      this.setCityList();
+    });
   }
 
-  selectCity(item : any) {
+  setCityList() {
+    this.hostCityList.forEach((city) => {
+      this.cityList.push(new CityOption(city.id, city.name_zh, city.name_en, false));
+    });
+    this.cityList[0].active = true;
+    this.selectCityHouses = this.hostCityList[0].houseList;
+    this.selectedCity = this.cityList[this.curIndex];
+  }
+
+  selectCity(item: any) {
     this.selectedCity = item;
-    this.cityList.forEach((city) => {city.active = false;});
+    this.cityList.forEach((city) => {city.active = false; });
     item.active = true;
-    let itemIndex = this.cityList.indexOf(item);
+    const itemIndex = this.cityList.indexOf(item);
     this.cityOper = '';
-    if(itemIndex > this.curIndex) {
+    if (itemIndex > this.curIndex) {
       setTimeout(() => {
         this.cityOper = 'prev';
-      },100);
+      }, 100);
     }
-    if(itemIndex < this.curIndex) {
+    if (itemIndex < this.curIndex) {
       setTimeout(() => {
         this.cityOper = 'next';
-      },100);
+      }, 100);
     }
     this.curIndex = itemIndex;
+    this.setSelectCityHouses();
+  }
+
+  setSelectCityHouses() {
+    this.selectCityHouses = this.hostCityList[this.curIndex].houseList;
+  }
+
+  goMoreHouses() {
+    window.alert('查看更多的房源!');
   }
 }
