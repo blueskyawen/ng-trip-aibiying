@@ -1,0 +1,25 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "name": "避开人潮，来九州探索自然乐趣",
+      "title": "赏樱目的地推荐",
+      "description": "这里有悠久的历史，也有电影中的乡野景色。泡温泉，赏樱花，亲近自然，放松一下吧。",
+      "imgUrl": "https://z1.muscache.cn/im/pictures/1e4b4764-05d1-4425-9e26-3279a62f5c00.jpg?aki_policy=large"
+    },
+    {
+      "id": 2,
+      "name": "趁樱花开，开启日本之旅",
+      "title": "领取赏樱礼金券",
+      "description": "从繁华都市到自然乡野，我们精选多个日本赏樱目的地，配合各具特色的当地民宿，带你体验不一样的赏樱之旅。",
+      "imgUrl": "https://z1.muscache.cn/im/pictures/4af224b5-3cb8-4246-bd1d-1312aa346cca.jpg?aki_policy=large"
+    },
+    {
+      "id":3,
+      "name": "去北海道，抓住樱花季的尾巴",
+      "title": "赏樱季目的地推荐",
+      "description": "4 月底，北海道春天才刚刚到来。不必匆忙追赶樱前线，悠然享受冰雪溶化后生机盎然的北方岛屿。",
+      "imgUrl": "https://z1.muscache.cn/im/pictures/610bc35c-382a-4f72-a72a-6bdb14cc0d57.jpg?aki_policy=large"
+    }
+  ]
+}
