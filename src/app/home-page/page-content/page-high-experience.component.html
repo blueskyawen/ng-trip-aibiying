@@ -3,6 +3,26 @@
     <span>高分体验</span>
     <span>在下趟旅程中，不妨预订由本地达人组织的体验活动</span>
   </div>
-  <div class="trip-high-expen-list">
+  <div class="trip-high-exper-list">
+    <div *ngFor="let exper of experList" (click)="goExperStory(exper)"
+         class="trip-high-exper nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12" >
+      <div class="exper-img">
+        <img [src]="exper.imgUrl" [alt]="exper.title" />
+      </div>
+      <div class="exper-foot">
+        <div>{{exper.type}} . {{exper.site}}</div>
+        <div>{{exper.title}}}</div>
+        <div>每人 ¥{{exper.price}}</div>
+        <div>
+          <span><nc-rate [size]="'12px'" [color]="'#1a1aff'" [totalRate]="1" [(curRate)]="curStar"></nc-rate></span>
+          <span>({{exper.comment}})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trip-high-exper-foot">
+    <span (click)="goMoreExper()">显示所有体验
+      <span class="fa fa-angle-right"></span></span>
   </div>
 </div>
+

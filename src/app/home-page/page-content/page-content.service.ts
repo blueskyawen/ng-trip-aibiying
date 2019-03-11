@@ -35,6 +35,12 @@ export class PageContentService {
     );
   }
 
+  getTripExperList() {
+    return this.http.get('assets/high-exper-list.json').pipe(
+        map(res => res['experList'] || [])
+    );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

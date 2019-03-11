@@ -13,8 +13,75 @@
       color: #666;
     }
   }
-  .trip-high-expen-list {
-    height: 200px;
-    border: solid 1px #ccc;
+  .trip-high-exper-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .trip-high-exper {
+      padding: 6px;
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: pointer;
+      float: left;
+      .exper-img {
+        width: 100%;
+        margin-bottom: 5px;
+        position: relative;
+        img {
+          width: inherit;
+          height: 200px;
+          border-radius: 4px;
+        }
+      }
+      .exper-foot {
+        width: 100%;
+        margin-bottom: 5px;
+        div {
+          font-size: 14px;
+          margin-bottom: 5px;
+          &:first-child {
+            font-size: 12px;
+            color: #999;
+          }
+          &:nth-child(2) {
+            font-size: 16px;
+            color: #333333;
+            font-weight: 800;
+          }
+          &:nth-child(3) {
+            font-size: 13px;
+            color: #666666;
+          }
+          &:last-child {
+            display: inline-flex;
+            align-items: center;
+            margin-left: -10px;
+            margin-top: -10px;
+            span {
+              color:#999;
+              font-size: 12px;
+              &:last-child {
+                margin-left: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .trip-high-exper-foot {
+    span {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a75ff;
+      margin-top: 10px;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .fa {
+        margin-left: 5px;
+      }
+    }
   }
 }
