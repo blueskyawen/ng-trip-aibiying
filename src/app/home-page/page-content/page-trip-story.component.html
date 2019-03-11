@@ -3,5 +3,28 @@
     <span>精彩旅行故事</span>
   </div>
   <div class="trip-story-list">
+    <div *ngFor="let story of storyList" (click)="goStory(story)"
+         class="trip-story-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="story-img">
+        <img [src]="story.imgUrl" [alt]="story.title" />
+        <span class="story-img-press">a</span>
+        <span class="story-img-type">{{storyType[story.type]}}</span>
+      </div>
+      <div class="story-foot">
+        <div class="story-text">
+          <span>{{story.city_zh}}</span>{{story.title}}
+        </div>
+        <div class="story-user">
+          <span>A</span>
+          <span>{{story.good_press}}</span>
+          <span>{{story.comment}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trip-story-foot">
+    <span (click)="goMoreStory()">显示全部
+      <span class="fa fa-angle-right"></span></span>
   </div>
 </div>
+

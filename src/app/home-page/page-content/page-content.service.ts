@@ -29,6 +29,12 @@ export class PageContentService {
     );
   }
 
+  getTripStoryList() {
+    return this.http.get('assets/trip-storys.json').pipe(
+        map(res => res['storyList'] || [])
+    );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

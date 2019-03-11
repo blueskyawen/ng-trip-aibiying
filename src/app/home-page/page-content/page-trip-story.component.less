@@ -10,7 +10,69 @@
     }
   }
   .trip-story-list {
-    height: 200px;
-    border: solid 1px #ccc;
+    width: 100%;
+    .trip-story-body {
+      padding: 6px;
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: pointer;
+      float: left;
+      .story-img {
+        width: 100%;
+        margin-bottom: 5px;
+        position: relative;
+        img {
+          width: inherit;
+          height: 260px;
+          border-radius: 4px;
+        }
+        .story-img-press {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+        .story-img-type {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+        }
+      }
+      .story-foot {
+        width: 100%;
+        margin-bottom: 5px;
+        .story-text {
+          width: inherit;
+          font-size: 14px;
+          color:#666;
+          span {
+            color:#333;
+            font-weight: 600;
+            margin-right: 10px;
+          }
+        }
+        .story-user {
+          width: inherit;
+          span {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .trip-story-foot {
+    span {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a75ff;
+      margin-top: 10px;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .fa {
+        margin-left: 5px;
+      }
+    }
   }
 }
+
