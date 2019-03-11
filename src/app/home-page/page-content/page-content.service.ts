@@ -23,6 +23,12 @@ export class PageContentService {
     );
   }
 
+  getClassicCityList() {
+    return this.http.get('assets/classic-trip-city.json').pipe(
+        map(res => res['citylist'] || [])
+    );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

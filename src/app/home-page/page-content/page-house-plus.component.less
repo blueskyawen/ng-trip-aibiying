@@ -14,7 +14,22 @@
     }
   }
   .trip-house-plus-body {
-    height: 200px;
-    border: solid 1px #ccc;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    img {
+      width: inherit;
+      height: 360px;
+    }
+    .trip-house-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: #666;
+      .fa {
+        margin-left: 10px;
+      }
+    }
   }
 }

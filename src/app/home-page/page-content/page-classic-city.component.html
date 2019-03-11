@@ -3,5 +3,15 @@
     <span>经典旅行城市</span>
   </div>
   <div class="trip-classic-city-list">
+    <div *ngFor="let city of cityList" (click)="goCity(city)"
+         class="trip-classic-city-body nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-6 nc-xs-col-6">
+      <div class="city-img">
+        <img [src]="city.imgUrl" [alt]="city.city" />
+      </div>
+      <div class="city-foot">
+        <div>{{city.city}} {{city.title}}</div>
+        <div>人均¥{{city.price}}/晚</div>
+      </div>
+    </div>
   </div>
 </div>

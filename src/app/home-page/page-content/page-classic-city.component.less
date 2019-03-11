@@ -10,7 +10,33 @@
     }
   }
   .trip-classic-city-list {
-    height: 200px;
-    border: solid 1px #ccc;
+    width: 100%;
+    .trip-classic-city-body {
+      padding: 6px;
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: pointer;
+      .city-img {
+        width: 100%;
+        margin-bottom: 5px;
+        img {
+          width: inherit;
+          height: 260px;
+        }
+      }
+      .city-foot {
+        width: 100%;
+        margin-bottom: 5px;
+        div {
+          color:#595959;
+          &:first-child {
+            font-size: 14px;
+          }
+          &:last-child {
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 }
