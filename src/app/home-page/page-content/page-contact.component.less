@@ -1,0 +1,33 @@
+.trip-contact {
+  width: 100%;
+  margin-top: 20px;
+  .trip-contact-item {
+    padding: 6px;
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    .contact-item-img {
+      margin-right: 30px;
+      img {
+        height: 33px;
+        width: 33px;
+      }
+    }
+    .contact-item-content {
+      display: inline-flex;
+      flex-direction: column;
+      div {
+        font-size: 14px;
+        line-height: 20px;
+        &:first-child {
+          font-weight: 600;
+          color:#333;
+        }
+        &:last-child {
+          color:#666;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

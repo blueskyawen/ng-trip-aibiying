@@ -10,15 +10,17 @@ import { PageHousePlusComponent } from './page-house-plus.component';
 import { PageClassicCityComponent } from './page-classic-city.component';
 import { PageTripStoryComponent } from './page-trip-story.component';
 import { PageHighExperienceComponent } from './page-high-experience.component';
+import { PageContactComponent } from './page-contact.component';
 
 
 @NgModule({
     declarations: [PageSearchComponent, PageInspirationComponent, PageHousePlusComponent, PageClassicCityComponent,
-        PageTripStoryComponent, PageHighExperienceComponent],
+        PageTripStoryComponent, PageHighExperienceComponent, PageContactComponent],
     imports: [
         ShareModule
     ],
     exports: [PageSearchComponent, HotCityModule, PageInspirationComponent, PageHousePlusComponent,
-        PageClassicCityComponent, PageTripStoryComponent, PageHighExperienceComponent]
+        PageClassicCityComponent, PageTripStoryComponent, PageHighExperienceComponent,
+        PageContactComponent]
 })
 export class PageContentModule { }
