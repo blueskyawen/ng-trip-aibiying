@@ -1,15 +1,15 @@
-<div class="trip-inspiration nc-flex nc-row-column">
-  <div class="trip-inspiration-head nc-flex nc-row-column">
+<div class="trip-block-container trip-inspiration nc-flex nc-row-column">
+  <div class="trip-block-head trip-inspiration-head nc-flex nc-row-column">
     <span>日本赏樱灵感集</span>
     <span>住进不一样的樱花季</span>
   </div>
-  <div class="trip-inspiration-list">
+  <div class="trip-block-img-list trip-inspiration-list">
     <div *ngFor="let trip of tripList" (click)="goTripDetai()"
-         class="trip-inspira-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-      <div class="trip-item-img">
+         class="trip-block-img-body nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="trip-block-img trip-item-img">
         <img [src]="trip.imgUrl" [alt]="trip.name">
       </div>
-      <div class="trip-item-foot">
+      <div class="trip-block-img-foot trip-item-foot">
         <div>{{trip.title}}</div>
         <div>{{trip.name}}</div>
         <div>{{trip.description}}</div>

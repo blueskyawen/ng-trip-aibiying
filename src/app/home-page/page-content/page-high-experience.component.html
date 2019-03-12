@@ -1,15 +1,15 @@
-<div class="trip-high-expen nc-flex nc-row-column">
-  <div class="trip-high-expen-head nc-flex nc-row-column">
+<div class="trip-block-container trip-high-expen nc-flex nc-row-column">
+  <div class="trip-block-head trip-high-expen-head nc-flex nc-row-column">
     <span>高分体验</span>
     <span>在下趟旅程中，不妨预订由本地达人组织的体验活动</span>
   </div>
-  <div class="trip-high-exper-list">
+  <div class="trip-block-img-list trip-high-exper-list">
     <div *ngFor="let exper of experList" (click)="goExperStory(exper)"
-         class="trip-high-exper nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12" >
-      <div class="exper-img">
+         class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12" >
+      <div class="trip-block-img exper-img">
         <img [src]="exper.imgUrl" [alt]="exper.title" />
       </div>
-      <div class="exper-foot">
+      <div class="trip-block-img-foot exper-foot">
         <div>{{exper.type}} . {{exper.site}}</div>
         <div>{{exper.title}}}</div>
         <div>每人 ¥{{exper.price}}</div>
@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-  <div class="trip-high-exper-foot">
+  <div class="trip-block-foot">
     <span (click)="goMoreExper()">显示所有体验
       <span class="fa fa-angle-right"></span></span>
   </div>

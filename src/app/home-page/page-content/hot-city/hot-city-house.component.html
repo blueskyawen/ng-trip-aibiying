@@ -1,11 +1,11 @@
-<div class="city-house-container">
-  <div *ngFor="let house of houseList"
-       class="city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-    <div class="city-house-content" (click)="goDetail(house)">
-      <div class="house-img">
+<div class="trip-block-container">
+  <div class="trip-block-img-list city-house-list">
+    <div *ngFor="let house of houseList"
+         class="trip-block-img-body nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="trip-block-img city-house-img">
         <img [src]="house.imgUrl" [alt]="house.text" />
       </div>
-      <div class="house-foot">
+      <div class="trip-block-img-foot city-house-foot">
         <div>{{house.type}}.{{house.bedNum}}张床</div>
         <div>{{house.text}}</div>
         <div>¥{{house.price}}每晚.免费取消预订</div>
@@ -17,4 +17,5 @@
     </div>
   </div>
 </div>
+
 

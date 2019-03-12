@@ -2,7 +2,6 @@
   width: 100%;
   margin-top: 20px;
   .trip-inspiration-head {
-    margin-bottom: 20px;
     span:first-child {
       font-size: 24px;
       font-weight: 800;
@@ -14,41 +13,28 @@
     }
   }
   .trip-inspiration-list {
-    width: 100%;
-    .trip-inspira-item {
-      padding: 6px;
-      display: inline-block;
-      box-sizing: border-box;
-      float: left;
-      &:hover {
-        cursor:pointer;
+    .trip-item-img {
+      margin-bottom: 10px;
+      img {
+        height: 260px;
       }
-      .trip-item-img {
-        width: 100%;
-        margin-bottom: 10px;
-        img {
-          width: inherit;
-          height: 260px;
+    }
+    .trip-item-foot {
+      display: inline-flex;
+      flex-direction: column;
+      div {
+        margin-bottom: 5px;
+        &:first-child {
+          font-size: 12px;
+          color:#666;
         }
-      }
-      .trip-item-foot {
-        width: 100%;
-        display: inline-flex;
-        flex-direction: column;
-        div {
-          margin-bottom: 5px;
-          &:first-child {
-            font-size: 12px;
-            color:#666;
-          }
-          &:nth-child(2) {
-            font-weight: 600;
-            color: #404040;
-          }
-          &:last-child {
-            font-size: 13px;
-            color:#666;
-          }
+        &:nth-child(2) {
+          font-weight: 600;
+          color: #404040;
+        }
+        &:last-child {
+          font-size: 13px;
+          color:#666;
         }
       }
     }

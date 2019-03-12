@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+.trip-block-container {
+  width: 100%;
+  .trip-block-head {
+    margin-bottom: 20px;
+    span {
+      font-size: 14px;
+    }
+  }
+  .trip-block-img-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .trip-block-img-body {
+      padding: 6px;
+      display: inline-block;
+      box-sizing: border-box;
+      cursor: pointer;
+      .trip-block-img {
+        width: 100%;
+        margin-bottom: 5px;
+        position: relative;
+        img {
+          width: inherit;
+          height: 200px;
+        }
+      }
+      .trip-block-img-foot {
+        width: 100%;
+        margin-bottom: 2px;
+      }
+    }
+  }
+  .trip-block-foot {
+    span {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1a75ff;
+      margin-top: 10px;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .fa {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
