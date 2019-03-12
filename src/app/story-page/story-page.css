@@ -1,0 +1,8 @@
+.story-tab >>> .tabbars-container {
+    width: 100% !important;
+    padding: 0 !important;
+}
+.story-tab >>> .tab-content {
+    width: 100% !important;
+    padding: 0 !important;
+}

@@ -1,0 +1,36 @@
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <app-page-head [scene]="'story'" [showSearch]="false"></app-page-head>
+  </div>
+  <div class="nc-content nc-flex nc-content-center">
+    <div class="lay-body nc-xl-col-9 nc-lg-col-9 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
+      <div class="lay-body-item nc-content">
+        <div class="story-head">故事</div>
+      </div>
+      <div class="lay-body-item nc-content">
+        <nc-tab class="story-tab" [tabs]="storyTabs" [type]="'line'" [(selectTab)] = "curTab"  [id]="'tab-story'">
+          <div class="story-tab-content" *ngIf="curTab === 'carefully chosen'">
+            <div class="story-tab-item">
+              <div class="story-tab-item-head">推荐搜索</div>
+              <div class="story-tab-item-body">
+                <app-story-recomend></app-story-recomend>
+              </div>
+            </div>
+            <div class="story-tab-item">
+              <div class="story-tab-item-head">故事集</div>
+              <div class="story-tab-item-body"></div>
+            </div>
+            <div class="story-tab-item">
+              <div class="story-tab-item-head">精选故事</div>
+              <div class="story-tab-item-body"></div>
+            </div>
+          </div>
+          <div class="story-tab-content" *ngIf="isShowOtherTabs()">
+            BB
+          </div>
+        </nc-tab>
+      </div>
+    </div>
+  </div>
+</div>
+

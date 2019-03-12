@@ -19,6 +19,6 @@ import { HomePageComponent } from './home-page.component';
     imports: [
         ShareModule, HomePageRoutingModule, PageHelpModule, PageRegisterLoginModule, PageContentModule
     ],
-    exports: [HomePageComponent]
+    exports: [HomePageComponent, PageHeadComponent]
 })
 export class HomePageModule { }

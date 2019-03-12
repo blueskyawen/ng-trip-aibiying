@@ -5,6 +5,7 @@ import { ShareModule } from './share/share.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HomePageModule } from './home-page/home-page.module';
+import { StoryPageModule } from './story-page/story-page.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found.component';
@@ -15,7 +16,7 @@ import { NotFoundComponent } from './not-found.component';
     NotFoundComponent
   ],
   imports: [
-    BrowserModule, CoreModule, ShareModule, HomePageModule, AppRoutingModule
+    BrowserModule, CoreModule, ShareModule, HomePageModule, StoryPageModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

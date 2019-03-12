@@ -18,6 +18,8 @@ class CcyOption {
 })
 export class PageHeadComponent implements OnInit {
   @Input() type: string = 'loginOut';
+  @Input() scene: string = 'home';
+  @Input() showSearch: boolean = true;
   searchText = '';
   userImg: string = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551707882841&di=66ee26cdc981feac8194e697a58e220e&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201409%2F02%2F20140902122803_cjEEi.thumb.700_0.jpeg';
   selectedCCY: CcyOption;
@@ -37,15 +39,15 @@ export class PageHeadComponent implements OnInit {
   isShowHelp: boolean = false;
   isShowRegister: boolean = false;
   isShowLogin: boolean = false;
+  presentStyle : any = {};
+  operStyle : any = {};
   constructor() {
     this.selectedCCY = this.CCYOptions[0];
   }
 
   ngOnInit() {
-  }
-
-  goToStory() {
-    window.open('https://www.airbnb.cn/content','_black')
+    this.presentStyle = {'color': this.scene === 'home' ? '#fff' : '#ff4d4d'};
+    this.operStyle = {'color': this.scene === 'home' ? '#fff' : '#666'};
   }
 
   selectCCY(option: CcyOption) {
