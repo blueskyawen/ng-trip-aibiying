@@ -11,14 +11,10 @@
         <nc-tab class="story-tab" [tabs]="storyTabs" [type]="'line'" [(selectTab)] = "curTab"  [id]="'tab-story'">
           <div class="story-tab-content" *ngIf="curTab === 'carefully chosen'">
             <div class="story-tab-item">
-              <div class="story-tab-item-head">推荐搜索</div>
-              <div class="story-tab-item-body">
-                <app-story-recomend></app-story-recomend>
-              </div>
+              <app-story-recomend></app-story-recomend>
             </div>
             <div class="story-tab-item">
-              <div class="story-tab-item-head">故事集</div>
-              <div class="story-tab-item-body"></div>
+              <app-story-album></app-story-album>
             </div>
             <div class="story-tab-item">
               <div class="story-tab-item-head">精选故事</div>

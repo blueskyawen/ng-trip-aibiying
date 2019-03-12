@@ -1,0 +1,12 @@
+<div class="story-album">
+  <div class="story-album-head">故事集</div>
+  <div class="story-album-body">
+    <div *ngFor="let album of albums"
+         class="story-album-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <img [src]="album.imgUrl" [alt]="album.name" />
+      <span>{{album.name}}</span>
+      <span>{{album.title[0]}}</span>
+      <span>{{album.title[1]}}</span>
+    </div>
+  </div>
+</div>

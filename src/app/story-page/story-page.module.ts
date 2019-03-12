@@ -6,9 +6,10 @@ import { HomePageModule } from '../home-page/home-page.module';
 
 import { StoryPageComponent } from './story-page.component';
 import { StoryRecomendComponent } from './story-recomend.component';
+import { StoryAlbumComponent } from './story-album.component';
 
 @NgModule({
-  declarations: [StoryPageComponent, StoryRecomendComponent],
+  declarations: [StoryPageComponent, StoryRecomendComponent, StoryAlbumComponent],
   imports: [
     ShareModule, StoryPageRoutingModule, HomePageModule
   ]
