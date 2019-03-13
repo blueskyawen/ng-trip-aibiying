@@ -14,7 +14,9 @@
         <div>{{exper.title}}}</div>
         <div>每人 ¥{{exper.price}}</div>
         <div>
-          <span><nc-rate [size]="'12px'" [color]="'#1a1aff'" [totalRate]="1" [(curRate)]="curStar"></nc-rate></span>
+          <span>
+            <nc-rate [size]="'12px'" [color]="'#1a1aff'" [totalRate]="5" [(curRate)]="curStar" [showTitle]="false"></nc-rate>
+          </span>
           <span>({{exper.comment}})</span>
         </div>
       </div>
