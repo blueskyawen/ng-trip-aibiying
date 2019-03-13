@@ -4,11 +4,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StoryPageComponent } from './story-page.component';
+import { StoryHomeComponent } from './story-home.component';
+import { StoryRecommendDetailComponent } from './story-recommend-detail.component';
 
 const routes: Routes = [
     {
         path: 'story',
-        component: StoryPageComponent
+        component: StoryPageComponent,
+        children: [
+            {
+                path: 'home',
+                component: StoryHomeComponent,
+            },
+            {
+                path: 'recommend/:name',
+                component: StoryRecommendDetailComponent,
+            }
+        ]
     }
 ];
 

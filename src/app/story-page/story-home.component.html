@@ -1,0 +1,24 @@
+<div class="story-home">
+  <div class="lay-body-item">
+    <div class="story-head">故事</div>
+  </div>
+  <div class="lay-body-item">
+    <nc-tab class="story-tab" [tabs]="storyTabs" [type]="'line'" [(selectTab)] = "curTab"
+            (selectTabChange)="selectTabChange()" [id]="'tab-story'">
+      <div class="story-tab-content" *ngIf="curTab === 'carefully chosen'">
+        <div class="story-tab-item">
+          <app-story-recomend></app-story-recomend>
+        </div>
+        <div class="story-tab-item">
+          <app-story-album></app-story-album>
+        </div>
+        <div class="story-tab-item">
+          <app-story-list></app-story-list>
+        </div>
+      </div>
+      <div class="story-tab-content" *ngIf="isShowOtherTab">
+        <app-story-list [type]="curTab"></app-story-list>
+      </div>
+    </nc-tab>
+  </div>
+</div>

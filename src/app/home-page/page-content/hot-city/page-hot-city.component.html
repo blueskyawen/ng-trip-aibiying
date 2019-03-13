@@ -1,7 +1,7 @@
-<div class="trip-hot-city nc-flex nc-row-column" *ngIf="!showLoading">
+<div class="trip-hot-city nc-flex nc-row-column"  *ngIf="!showLoading">
   <div class="hot-city-head">热门目的地</div>
   <div class="hot-city-list">
-    <nc-list-group-horizontal [stepWidth]="150" [hideOper]="true" [operation]="cityOper">
+    <nc-list-group-horizontal [stepWidth]="150" [hideOper]="true" [operation]="cityOper" [resetGroup]="!showLoading">
       <ul class="nc-list-group list-group-horizontal">
         <li class="nc-list-group-item" *ngFor="let city of cityList">
           <button class="nc-list-button" (click)="selectCity(city)" [class.active]="city.active">
