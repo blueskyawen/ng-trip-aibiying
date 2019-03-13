@@ -1,4 +1,4 @@
-<div class="trip-hot-city nc-flex nc-row-column">
+<div class="trip-hot-city nc-flex nc-row-column" *ngIf="!showLoading">
   <div class="hot-city-head">热门目的地</div>
   <div class="hot-city-list">
     <nc-list-group-horizontal [stepWidth]="150" [hideOper]="true" [operation]="cityOper">
@@ -16,4 +16,7 @@
   <div class="hot-city-foot">
     <span (click)="goMoreHouses()">查看更多{{selectedCity?.title}}房源<span class="fa fa-angle-right"></span></span>
   </div>
+</div>
+<div class="list-loading" *ngIf="showLoading">
+  <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
 </div>

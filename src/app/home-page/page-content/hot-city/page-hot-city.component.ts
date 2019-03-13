@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PageContentService } from '../page-content.service';
 
 class CityOption {
@@ -19,13 +19,14 @@ class CityOption {
   templateUrl: './page-hot-city.component.html',
   styleUrls: ['./page-hot-city.component.less']
 })
-export class PageHotCityComponent implements OnInit {
+export class PageHotCityComponent implements OnInit, AfterViewInit {
   cityList: CityOption[] = [];
   hostCityList: any[] = [];
   cityOper: string;
   curIndex = 0;
   selectedCity: CityOption;
   selectCityHouses: any[] = [];
+  showLoading: boolean = false;
   constructor(private pageContentService: PageContentService) {
   }
 
@@ -34,6 +35,10 @@ export class PageHotCityComponent implements OnInit {
       this.hostCityList = res;
       this.setCityList();
     });
+  }
+
+  ngAfterViewInit() {
+    this.showLoading = false;
   }
 
   setCityList() {

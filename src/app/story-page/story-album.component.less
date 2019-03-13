@@ -3,11 +3,24 @@
   margin-bottom: 20px;
   .story-album-head {
     width: inherit;
-    font-size: 26px;
-    font-weight: 800;
-    color: #333;
     position: relative;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    span {
+      color: #333;
+      &:first-child {
+        font-size: 26px;
+        font-weight: 800;
+      }
+      &:last-child {
+        font-size: 14px;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
   }
   .story-album-body {
     width: inherit;

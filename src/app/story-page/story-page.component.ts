@@ -16,6 +16,7 @@ export class StoryPageComponent implements OnInit {
     {name:'店铺',label:'shop',isActive:false,isDisable:false}
   ];
   curTab: string = '';
+  isShowOtherTab: boolean = false;
   constructor() {
     this.curTab = this.storyTabs[0].label;
   }
@@ -23,7 +24,20 @@ export class StoryPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  isShowOtherTabs() {
+  selectTabChange() {
+    if(this.isInwOtherTabs()) {
+      if(!this.isShowOtherTab) {
+        this.isShowOtherTab = true;
+      } else {
+        this.isShowOtherTab = false;
+        setTimeout(() => {this.isShowOtherTab = true;},100);
+      }
+    } else{
+      this.isShowOtherTab = false;
+    }
+  }
+
+  isInwOtherTabs() {
     return ['house resource','scenic spot','cate','custom culture','activity','shop'].includes(this.curTab);
   }
 }
