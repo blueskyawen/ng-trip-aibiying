@@ -22,6 +22,60 @@
       </nc-list-group-horizontal>
     </div>
   </div>
+  <div class="recommend-category">
+    <div class="recommend-category-head">住·北欧极简</div>
+    <div class="recomd-story-content">
+      <app-story-list [resList]="recomStoryView.houseResource" [type]="'recomd'"></app-story-list>
+    </div>
+    <div class="recomd-story-foot">
+      <span>显示所有故事
+        <span class="fa fa-angle-right"></span></span>
+    </div>
+  </div>
+  <div class="recommend-category">
+    <div class="recommend-category-head">食·咖啡店</div>
+    <div class="recomd-story-content">
+      <app-story-list [resList]="recomStoryView.cate" [type]="'recomd'"></app-story-list>
+    </div>
+    <div class="recomd-story-foot">
+      <span>显示所有故事
+        <span class="fa fa-angle-right"></span></span>
+    </div>
+  </div>
+  <div class="recommend-category">
+    <div class="recommend-category-head">玩·展览</div>
+    <div class="recomd-story-content">
+      <app-story-list [resList]="recomStoryView.customCulture" [type]="'recomd'"></app-story-list>
+    </div>
+    <div class="recomd-story-foot">
+      <span>显示所有故事
+        <span class="fa fa-angle-right"></span></span>
+    </div>
+  </div>
+  <div class="recommend-category">
+    <div class="recommend-category-head">更多标签</div>
+    <div class="recommend-category-list">
+      <nc-list-group-horizontal [stepWidth]="160" [hideOper]="true">
+        <ul class="nc-list-group list-group-horizontal">
+          <li *ngFor="let label of cityStory.otherLabel"
+              class="nc-list-group-item nc-inline-flex nc-align-item-center">
+            <div class="recomd-item-img">
+              <img [src]="label.img" [alt]="label.title" />
+            </div>
+            <div class="recomd-item-text">
+              <div>{{label.name}}</div>
+            </div>
+          </li>
+        </ul>
+      </nc-list-group-horizontal>
+    </div>
+  </div>
+  <div class="recommend-category">
+    <div class="recommend-category-head">全部故事</div>
+    <div class="recomd-story-content">
+      <app-story-list [resList]="cityStory.storyList" [type]="'recomd'"></app-story-list>
+    </div>
+  </div>
 </div>
 <div class="list-loading" *ngIf="showLoading">
   <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { StoryPageService } from './story-page.service';
 
@@ -7,7 +7,7 @@ import { StoryPageService } from './story-page.service';
   templateUrl: './story-recommend-detail.component.html',
   styleUrls: ['./story-recommend-detail.component.less']
 })
-export class StoryRecommendDetailComponent implements OnInit {
+export class StoryRecommendDetailComponent implements OnInit, AfterViewInit {
   cityStory: any = {};
   recommendName: string = '';
   categorys: any[] = [
@@ -49,6 +49,12 @@ export class StoryRecommendDetailComponent implements OnInit {
     }
   ];
   showLoading: boolean = false;
+  recomStoryView: any = {
+    'houseResource': [],
+    'cate': [],
+    'customCulture': []
+  };
+  showLabel: boolean = false;
   constructor(private route: ActivatedRoute, private storyPageService: StoryPageService) { }
 
   ngOnInit() {
@@ -57,9 +63,26 @@ export class StoryRecommendDetailComponent implements OnInit {
       this.showLoading = true;
       this.storyPageService.getCityStoryList().subscribe(res => {
         this.cityStory = res.find(item => {return item['name_en'] === this.recommendName;});
+        this.setCategoryNum();
+        this.setStoryView();
         this.showLoading = false;
       });
     });
+  }
+
+  ngAfterViewInit(): void {
+  }
+
+  setCategoryNum() {
+    this.categorys.forEach(item => {
+      item.num = this.cityStory.category[item.title];
+    });
+  }
+
+  setStoryView() {
+    this.recomStoryView['houseResource'] = this.cityStory.storyList.slice(0, 4);
+    this.recomStoryView['cate'] = this.cityStory.storyList.slice(4, 8);
+    this.recomStoryView['customCulture'] = this.cityStory.storyList.slice(8, 12);
   }
 
 }

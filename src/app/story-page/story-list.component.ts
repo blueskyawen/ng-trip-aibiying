@@ -8,6 +8,7 @@ import { PageContentService } from '../home-page/page-content/page-content.servi
 })
 export class StoryListComponent implements OnInit {
   @Input() type: string;
+  @Input() resList: any[] = [];
   storyList: any[] = [];
   storyType: any = {
     'house resource': '房源',
@@ -19,24 +20,27 @@ export class StoryListComponent implements OnInit {
   };
   showLoading: boolean = false;
   curIndex: number = 0;
-  resList: any[] = [];
   constructor(private pageContentService: PageContentService) { }
 
   ngOnInit() {
-    this.pageContentService.getTripStoryList().subscribe(res => {
-      this.resList = this.type ? res.filter(item => {return item.type === this.type;}) : res;
-      this.showLoading = true;
+    if (this.resList.length === 0) {
+      this.pageContentService.getTripStoryList().subscribe(res => {
+        this.resList = this.type ? res.filter(item => {return item.type === this.type;}) : res;
+        this.showLoading = true;
+        this.setStoryList(this.resList);
+      });
+    } else {
       this.setStoryList(this.resList);
-    });
+    }
   }
 
   setStoryList(items: any[]) {
     for(let index = 0;index < 8;index++) {
+      this.storyList.push(items[this.curIndex]);
       this.curIndex++;
       if(this.curIndex >= items.length) {
         break;
       }
-      this.storyList.push(items[this.curIndex]);
     }
     if(this.curIndex >= items.length) {
       this.showLoading = false;
