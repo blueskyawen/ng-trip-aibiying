@@ -1,6 +1,29 @@
-<div class="story-recommend-detail">
+<div class="story-recommend-detail" *ngIf="!showLoading">
   <div class="recommend-detail-head">
-    <span>{{recommendName}}</span>
+    <span>{{cityStory.name_zh}}</span>
     <span [routerLink]="['/story/home']"><nc-button [type]="'cancel'">返回故事</nc-button></span>
   </div>
+  <div class="recommend-category">
+    <div class="recommend-category-head">故事类别</div>
+    <div class="recommend-category-list">
+      <nc-list-group-horizontal [stepWidth]="160" [hideOper]="true">
+        <ul class="nc-list-group list-group-horizontal">
+          <li *ngFor="let categ of categorys"
+              class="nc-list-group-item nc-inline-flex nc-align-item-center">
+            <div class="recomd-item-img">
+              <img [src]="categ.imgUrl" [alt]="categ.title" />
+            </div>
+            <div class="recomd-item-text">
+              <div>{{categ.name}}</div>
+              <div>{{categ.num}}</div>
+            </div>
+          </li>
+        </ul>
+      </nc-list-group-horizontal>
+    </div>
+  </div>
 </div>
+<div class="list-loading" *ngIf="showLoading">
+  <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
+</div>
+

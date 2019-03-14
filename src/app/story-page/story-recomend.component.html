@@ -1,7 +1,7 @@
 <div class="story-recomend">
   <div class="story-recomend-head">推荐搜索</div>
   <div class="story-recomend-body">
-    <div class="story-recomend-item" *ngFor="let recomd of recommends" [routerLink]="['/story/recommend',recomd.name_zh]">
+    <div class="story-recomend-item" *ngFor="let recomd of recommends" [routerLink]="['/story/recommend',recomd.name_en]">
       <img [src]="recomd.imgUrl" [alt]="recomd.name_zh" />
       <span class="recomend-item-title">{{recomd.name_zh}}</span>
       <span class="recomend-item-type">{{recomd.title}}</span>

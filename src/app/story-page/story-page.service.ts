@@ -15,4 +15,10 @@ export class StoryPageService {
         map(res => res['siteList'] || [])
     );
   }
+
+  getCityStoryList() {
+    return this.http.get('assets/city-story-list.json').pipe(
+        map(res => res['cityList'] || [])
+    );
+  }
 }
