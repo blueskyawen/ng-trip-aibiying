@@ -11,6 +11,7 @@ export class StoryDetailComponent implements OnInit {
   storyData: any;
   showLoading: boolean = false;
   textArea: string = '';
+  otherStorys: any = [1,2,3,4,5,6,7,8];
   constructor(private storyPageService: StoryPageService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -50,6 +51,13 @@ export class StoryDetailComponent implements OnInit {
           comment.timeText = this.getSiteTime(comment.time);
         }
       }
+      if (comment.user.name.length === 1) {
+        comment.nameText = comment.user.name[0] === this.storyData.user.name ? `${comment.user.name[0]}(作者)` : comment.user.name[0];
+      } else {
+        comment.nameText = comment.user.name[0] === this.storyData.user.name ? `${comment.user.name[0]}(作者) 回复 ${comment.user.name[1]}` :
+            `${comment.user.name[0]} 回复 ${comment.user.name[1]}`;
+      }
     });
   }
+
 }
