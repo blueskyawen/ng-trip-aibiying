@@ -22,7 +22,7 @@ const routes: Routes = [
                 component: StoryRecommendDetailComponent,
             },
             {
-                path: 'detail/:name',
+                path: 'detail/:id',
                 component: StoryDetailComponent,
             }
         ]

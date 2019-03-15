@@ -21,4 +21,10 @@ export class StoryPageService {
         map(res => res['cityList'] || [])
     );
   }
+
+  getStoryById(id: string) {
+    return this.http.get('assets/story-detail-info.json').pipe(
+        map(res => res['story'] || {})
+    );
+  }
 }

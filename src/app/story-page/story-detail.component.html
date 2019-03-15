@@ -1,16 +1,86 @@
 <div class="story-detail-container">
-  <div class="story-detail-head">1</div>
-  <div class="story-detail-photo">2</div>
-  <div class="story-detail-content">
-    <div class="story-content-head">3</div>
-    <div class="story-content-text">3</div>
-    <div class="story-content-foot">3</div>
+  <div *ngIf="!showLoading"
+       class="story-detail nc-xl-col-8 nc-lg-col-8 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
+    <div class="story-detail-head">
+      <span class="detail-head-user">
+        <span>
+          <nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="storyData.user.avatar"></nc-avater>
+        </span>
+        <span>
+          <span>{{storyData.user.name}}</span>
+          <span>{{storyData.site_time}}</span>
+        </span>
+      </span>
+      <span class="detail-head-button">
+        <nc-button [type]="'cancel'">关注</nc-button>
+      </span>
+    </div>
+    <div class="story-detail-photo">
+      <img *ngFor="let photo of storyData.photos" [src]="photo" alt="photo" />
+    </div>
+    <div class="story-detail-site">
+      <img [src]="storyData.siteMap" alt="site"/>
+      <span>
+        <span>{{storyData.city_en}}</span>
+        <span>{{storyData.city_zh}}，{{storyData.country}}</span>
+      </span>
+    </div>
+    <div class="story-detail-content">
+      <div class="story-content-text">
+        <p *ngFor="let item of storyData.posts">{{item}}</p>
+      </div>
+      <div class="story-content-foot">
+        <span>{{storyData.good_press}}人已赞</span>
+        <span>举报</span>
+      </div>
+    </div>
+    <div class="story-detail-house">
+      <div class="detail-house-head">{{storyData.user.name}}本次旅行选择的房源</div>
+      <div class="detail-house-body">
+        <img [src]="storyData.resHouse.img" alt="房源"/>
+        <span>
+          <span>{{storyData.resHouse.text}}</span>
+          <span>{{storyData.resHouse.type}}</span>
+          <span>
+            <nc-rate [size]="'10px'" [totalRate]="5" [(curRate)]="storyData.resHouse.star" [showTitle]="false"></nc-rate>
+            <span>{{storyData.resHouse.comment}}条评价</span>
+          </span>
+        </span>
+        <span>
+          <svg style="height:32px;width:32px;display:block;overflow:visible" viewBox="0 0 32 32" fill="currentColor" fill-opacity="0" stroke="#dbdbdb" stroke-width="1.5" focusable="false" aria-label="添加至心愿单" role="img" stroke-linecap="round" stroke-linejoin="round"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg>
+        </span>
+      </div>
+    </div>
+    <div class="story-detail-evaluate">
+      <span class="detail-evaluate">
+        <span>
+          <span>
+            <svg viewBox="0 0 16 16" role="img" aria-label="赞" focusable="false" style="height:24px;width:24px;display:block;fill:#767676"><path d="m8.37 1c-.34 0-.53.43-.64.79l-.04.17c-.17.74-.56 2.47-3.76 3.58-1.97.68-2.93 2.31-2.93 4.96 0 1.68.56 4.5 4.3 4.5h6.2c.3 0 1-.06 1-.63 0-.41-.26-.63-.5-.63a.5.5 0 1 1 0-1c .92 0 1-.31 1-.63 0-.52-.38-.61-.54-.63a.5.5 0 0 1 -.46-.52.5.5 0 0 1 .5-.48c1 0 1-.41 1-.63s0-.62-1-.62a.5.5 0 1 1 0-1c1 0 1-.47 1-.63 0-.58-.77-.63-1-.63h-4.5a1 1 0 0 1 -.83-1.56c.05-.07.16-.19.31-.35.34-.35.92-.93 1.21-1.58.24-.52.35-1.25.28-1.78 0-.01-.12-.74-.62-.74m3.15 15.04h-6.2c-3.32 0-5.3-2.06-5.3-5.5 0-3.09 1.21-5.08 3.61-5.91 2.67-.93 2.97-2.23 3.11-2.86.02-.08.04-.16.05-.22.37-1.31 1.16-1.51 1.6-1.51 1.02 0 1.52.96 1.61 1.61.09.71-.06 1.64-.37 2.32-.37.81-1.02 1.47-1.41 1.86-.09.1-.17.17-.2.21h4.5c1.2 0 2 .65 2 1.63 0 .46-.16.84-.45 1.11.39.37.45.86.45 1.14 0 .34-.09.98-.74 1.35.15.23.24.53.24.9 0 .41-.12 1.01-.74 1.36.15.26.24.56.24.89 0 .97-.8 1.63-2 1.63"></path></svg>
+          </span>
+          <span>赞</span>
+        </span>
+        <span>
+          <span>
+            <svg style="height:24px;width:24px;display:block;overflow:visible" viewBox="0 0 32 32" fill="currentColor" fill-opacity="0" stroke="#767676" stroke-width="1.5" focusable="false" aria-label="添加至心愿单" role="img" stroke-linecap="round" stroke-linejoin="round"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg>
+          </span>
+          <span>收藏</span>
+        </span>
+      </span>
+    </div>
+    <div class="story-detail-comment">
+      <div class="story-comment-head">{{storyData.comments.length}}条评论</div>
+      <div class="story-comment-input">
+        <nc-text-area [(modelValue)]="textArea"></nc-text-area>
+      </div>
+      <div class="story-comment-list">
+        <div *ngFor="let commet of storyData.comments" class="comment-item">
+          {{commet.text}}
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="story-detail-house">4</div>
-  <div class="story-detail-evaluate">5</div>
-  <div class="story-detail-comment">
-    <div class="story-comment-head">6</div>
-    <div class="story-comment-input">6</div>
-    <div class="story-comment-list">6</div>
+  <div class="list-loading">
+    <nc-loading *ngIf="showLoading" [type]="'horizontal'" [loadSize]="'medium'"></nc-loading>
   </div>
 </div>
+

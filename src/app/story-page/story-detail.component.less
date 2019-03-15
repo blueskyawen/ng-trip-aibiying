@@ -1,0 +1,178 @@
+.story-detail-container {
+  width: 100%;
+  .list-loading {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+  }
+  .story-detail {
+    margin: 10px auto 10px;
+    .story-detail-head {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      .detail-head-user {
+        display: inline-flex;
+        align-items: center;
+        > span {
+          display: inline-block;
+          &:last-child {
+            display: inline-flex;
+            flex-direction: column;
+            margin-left: 10px;
+            span {
+              font-size: 14px;
+              font-weight: 400;
+              color: #484848;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    .story-detail-photo {
+      width: 100%;
+      img {
+        display: inline-block;
+        width: inherit;
+        height: 600px;
+        margin-bottom: 20px;
+      }
+    }
+    .story-detail-site {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: solid 1px #e6e6e6;
+      img {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+      }
+      > span {
+        margin-left: 20px;
+        display: inline-flex;
+        flex-direction: column;
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          color: #484848;
+          line-height: 18px;
+        }
+      }
+    }
+    .story-detail-content {
+      width: 100%;
+      //margin: 20px 0 30px 0;
+      border-bottom: solid 1px #e6e6e6;
+      .story-content-text {
+        width: inherit;
+        p {
+          font-size: 19px;
+          font-weight: 300;
+          color: #565a5c;
+          line-height: 1.7em;
+          margin: 1.7em 0;
+          &:first-child {
+            color: #484848;
+            font-size: 24px;
+            font-weight: bold;
+          }
+        }
+      }
+      .story-content-foot {
+        width: inherit;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-size: 14px;
+          color: #484848;
+          cursor: pointer;
+          &:first-child {
+            color:#0099ff;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .story-detail-house {
+      width: 100%;
+      margin: 10px 0;
+      .detail-house-head {
+        width: inherit;
+        padding: 10px;
+        font-size: 14px;
+        color: #484848;
+        border-bottom: solid 1px #e6e6e6;
+      }
+      .detail-house-body {
+        width: inherit;
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: solid 1px #e6e6e6;
+        img {
+          display: inline-block;
+          height: 60px;
+          width: 60px;
+        }
+        > span:first-of-type {
+          width: calc(100% - 100px);
+          display: inline-flex;
+          flex-direction: column;
+          > span {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .story-detail-evaluate {
+      width: 100%;
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: solid 1px #e6e6e6;
+      .detail-evaluate {
+        > span {
+          display: inline-flex;
+          flex-direction: column;
+          > span {
+            cursor: pointer;
+            &:first-child {
+              margin-right: 30px;
+            }
+          }
+        }
+      }
+    }
+    .story-detail-comment {
+      width: 100%;
+      margin: 20px 0;
+      .story-comment-head {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.44em;
+        color: #333;
+      }
+      .story-comment-input {
+        width: inherit;
+      }
+      .story-comment-list {
+        width: inherit;
+        .comment-item {
+          width: inherit;
+          display: flex;
+          flex-direction: column;
+          padding: 10px 0;
+          border-bottom: solid 1px #e6e6e6;
+        }
+      }
+    }
+  }
+}
