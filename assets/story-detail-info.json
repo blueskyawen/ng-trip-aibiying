@@ -1,0 +1,100 @@
+{
+  "story": {
+    "id":111,
+    "type":"cate",
+    "city_zh":"成都",
+    "city_en":"Chengdu",
+    "country":"中国",
+    "siteMap":"https://z1.muscache.cn/im/pictures/88a9332e-f464-4fb1-920f-81cadb1269af.jpg?aki_policy=large",
+    "time":"4/18/2018, 3:10:54 PM",
+    "user":{
+      "userId":"666",
+      "name":"Yu Yun",
+      "avatar":"https://z1.muscache.cn/im/pictures/user/d481576c-bed9-4974-939f-9f62602d9d75.jpg?aki_policy=profile_x_medium"
+    },
+    "photos": [
+      "https://z1.muscache.cn/im/pictures/f32aca22-34c0-4195-a548-a12985fef712.jpg?aki_policy=x_large",
+      "https://z1.muscache.cn/im/pictures/6d69290d-fc64-404b-8f9e-ca6574c29683.jpg?aki_policy=x_large",
+      "https://z1.muscache.cn/im/pictures/13734807-57bb-477f-b452-8dd8d2f33f79.jpg?aki_policy=x_large",
+      "https://z1.muscache.cn/im/pictures/6adc2785-3fc6-4e6f-81f3-d6f09f6e3187.jpg?aki_policy=x_large"
+    ],
+    "posts": [
+      "转角遇见家一般的日式喫茶屋",
+      "成都的下午适合喝茶谈天，街边不难发现喝茶嗑瓜子的“老成都”。年轻人关注环境和氛围体验，独具特色的新派下午茶相对而言更受欢迎了。",
+      "发现无早是晚上去Lotus喝酒的时候，偶然知道这家十分有名的小食店原来相隔仅仅几十米。不得不感叹青莲上街真是个好地方，可以喝茶看书喝酒（附近还有超好吃的串串）。",
+      "无早所分享的都是朴素却心意满满的小食，身着围裙的小姐姐呈上甜点时，都会报以温婉亲切的微笑。限时供应的蔓越莓松饼，味道酸酸甜甜，松饼的软硬程度恰到好处，和香浓的南瓜拿铁简直绝配。",
+      "无早在2014年创办，是源于老板娘Rosa与室友Sharon在英国留学时的小约定：以后要开间属于自己的小店，“无早”就是给没有早上的人吃的饭。 “想要制作简单、温暖的餐食，是无早小食的初衷。”",
+      "这样毫无造作的风格，让无早小食稳坐成都咖啡馆第一的排名，开店近四年，无早已成为许多文艺青年到成都必打卡的一家店铺。因为Rosa和她的团队所做的，不仅是开好一家店，更是分享一种温暖而向上的生活态度。"
+    ],
+    "good_press":37,
+    "resHouse":{
+      "type":"整套房子/公寓",
+      "text":"【设计师的家】room5入住高端小区,市中心五星级公寓,地铁300米,近太古里东站,宽窄巷子锦里",
+      "img":"https://z1.muscache.cn/im/pictures/32a8c153-5da6-43f4-acb9-9d536f15d189.jpg?aki_policy=large",
+      "star":5,
+      "comment":215
+    },
+    "comments":[
+      {
+        "user":{
+          "id":"666",
+          "avatar":"https://z1.muscache.cn/im/pictures/user/d481576c-bed9-4974-939f-9f62602d9d75.jpg?aki_policy=profile_x_medium",
+          "name":["Yu Yun","Li"]
+        },
+        "press":2,
+        "time":"2/16/2019, 3:10:54 PM",
+        "text":"这么神奇吗,哈哈 ,毕竟无早算是成都神店了"
+      },
+      {
+        "user":{
+          "id":"555",
+          "avatar":"https://z1.muscache.cn/im/pictures/950e4032-231e-4cc1-aaaa-a56af4f2080a.jpg?aki_policy=profile_x_medium",
+          "name":["Li"]
+        },
+        "press":0,
+        "time":"2/5/2019, 8:10:54 PM",
+        "text":"哈哈哈,这张图片居然是你拍的,我在微博上见过"
+      },
+      {
+        "user":{
+          "id":"777",
+          "avatar":"https://z1.muscache.cn/im/pictures/user/5c31d26a-86b5-4e94-aac5-c328258a3d8e.jpg?aki_policy=profile_x_medium",
+          "name":["璐"]
+        },
+        "press":1,
+        "time":"1/26/2019, 1:10:54 PM",
+        "text":"在哪里呀"
+      },
+      {
+        "user":{
+          "id":"666",
+          "avatar":"https://z1.muscache.cn/im/pictures/user/d481576c-bed9-4974-939f-9f62602d9d75.jpg?aki_policy=profile_x_medium",
+          "name":["Yu Yun","姿"]
+        },
+        "press":0,
+        "time":"12/05/2018, 5:10:54 PM",
+        "text":"无早小食"
+      },
+      {
+        "user":{
+          "id":"888",
+          "avatar":"https://z1.muscache.cn/im/pictures/user/b819c718-5324-468a-bf94-7961c97969e3.jpg?aki_policy=profile_x_medium",
+          "name":["姿"]
+        },
+        "press":1,
+        "time":"11/15/2018, 5:10:54 PM",
+        "text":"喝茶这里是哪里?"
+      },
+      {
+        "user":{
+          "id":"999",
+          "avatar":"https://z1.muscache.cn/im/pictures/user/7260ff39-3952-40de-a8ea-a1ab62cc304d.jpg?aki_policy=profile_x_medium",
+          "name":["MeiNi"]
+        },
+        "press":5,
+        "time":"5/16/2019, 3:10:54 PM",
+        "text":"棒棒哒~"
+      }
+    ]
+  }
+}
