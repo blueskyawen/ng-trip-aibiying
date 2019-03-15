@@ -10,10 +10,12 @@ import { StoryAlbumComponent } from './story-album.component';
 import { StoryListComponent } from './story-list.component';
 import { StoryHomeComponent } from './story-home.component';
 import { StoryRecommendDetailComponent } from './story-recommend-detail.component';
+import { StoryDetailComponent } from './story-detail.component';
 
 @NgModule({
   declarations: [StoryPageComponent, StoryRecomendComponent, StoryAlbumComponent, StoryListComponent, StoryHomeComponent,
-    StoryRecommendDetailComponent],
+    StoryRecommendDetailComponent,
+    StoryDetailComponent],
   imports: [
     ShareModule, StoryPageRoutingModule, HomePageModule
   ]

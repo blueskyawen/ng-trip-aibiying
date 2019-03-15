@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { StoryPageComponent } from './story-page.component';
 import { StoryHomeComponent } from './story-home.component';
 import { StoryRecommendDetailComponent } from './story-recommend-detail.component';
+import { StoryDetailComponent } from './story-detail.component';
 
 const routes: Routes = [
     {
@@ -19,6 +20,10 @@ const routes: Routes = [
             {
                 path: 'recommend/:name',
                 component: StoryRecommendDetailComponent,
+            },
+            {
+                path: 'detail/:name',
+                component: StoryDetailComponent,
             }
         ]
     }
