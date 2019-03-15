@@ -1,6 +1,6 @@
 <div class="trip-block-container picked-storys">
   <div class="trip-block-head picked-storys-head" *ngIf="!type">精选故事</div>
-  <div class="trip-block-img-list story-list">
+  <div *ngIf="storyList.length !== 0" class="trip-block-img-list story-list">
     <div  *ngFor="let story of storyList"
           class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
       <div class="trip-block-img story-img">
@@ -27,6 +27,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div *ngIf="storyList.length === 0" class="trip-block-img-list story-list story-nodata">
+    <span class="fa fa-skyatlas fa-3x"></span>
+    <span>无记录</span>
   </div>
   <div class="list-loading">
     <nc-loading *ngIf="showLoading" [type]="'horizontal'" [loadSize]="'medium'"></nc-loading>

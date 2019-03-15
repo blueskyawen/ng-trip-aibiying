@@ -54,7 +54,12 @@ export class StoryRecommendDetailComponent implements OnInit, AfterViewInit {
     'cate': [],
     'customCulture': []
   };
-  showLabel: boolean = false;
+  isShowAlbumList: boolean = false;
+  albumList: any = {
+    name: '',
+    list: []
+  };
+  albumStoryList: any[] = [];
   constructor(private route: ActivatedRoute, private storyPageService: StoryPageService) { }
 
   ngOnInit() {
@@ -85,4 +90,33 @@ export class StoryRecommendDetailComponent implements OnInit, AfterViewInit {
     this.recomStoryView['customCulture'] = this.cityStory.storyList.slice(8, 12);
   }
 
+  backToStoryView() {
+    this.isShowAlbumList = false;
+    this.showLoading = true;
+    setTimeout(() => {this.showLoading = false;},200);
+  }
+
+  goAlbumView(item: any) {
+    this.albumList.name = item.name;
+    this.albumStoryList = this.cityStory.storyList.filter(story => {
+      return story.type === item.title;
+    });
+    this.showLoading = true;
+    this.isShowAlbumList = true;
+    setTimeout(() => {
+      this.showLoading = false;
+    },200);
+  }
+
+  goAlbumView2(name: string, type: string) {
+    this.albumList.name = `${this.cityStory['name_zh']}·${name}`;
+    this.albumStoryList = this.cityStory.storyList.filter(story => {
+      return story.type === type;
+    });
+    this.showLoading = true;
+    this.isShowAlbumList = true;
+    setTimeout(() => {
+      this.showLoading = false;
+    },200);
+  }
 }

@@ -35,6 +35,10 @@ export class StoryListComponent implements OnInit {
   }
 
   setStoryList(items: any[]) {
+    if(items.length === 0) {
+      this.showLoading = false;
+      return;
+    }
     for(let index = 0;index < 8;index++) {
       this.storyList.push(items[this.curIndex]);
       this.curIndex++;

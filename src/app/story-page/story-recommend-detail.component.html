@@ -1,4 +1,4 @@
-<div class="story-recommend-detail" *ngIf="!showLoading">
+<div class="story-recommend-detail" *ngIf="!showLoading && !isShowAlbumList">
   <div class="recommend-detail-head">
     <span>{{cityStory.name_zh}}</span>
     <span [routerLink]="['/story/home']"><nc-button [type]="'cancel'">返回故事</nc-button></span>
@@ -8,7 +8,7 @@
     <div class="recommend-category-list">
       <nc-list-group-horizontal [stepWidth]="160" [hideOper]="true">
         <ul class="nc-list-group list-group-horizontal">
-          <li *ngFor="let categ of categorys"
+          <li *ngFor="let categ of categorys" (click)="goAlbumView(categ)"
               class="nc-list-group-item nc-inline-flex nc-align-item-center">
             <div class="recomd-item-img">
               <img [src]="categ.imgUrl" [alt]="categ.title" />
@@ -28,7 +28,7 @@
       <app-story-list [resList]="recomStoryView.houseResource" [type]="'recomd'"></app-story-list>
     </div>
     <div class="recomd-story-foot">
-      <span>显示所有故事
+      <span (click)="goAlbumView2('北欧极简','house resource')">显示所有故事
         <span class="fa fa-angle-right"></span></span>
     </div>
   </div>
@@ -38,7 +38,7 @@
       <app-story-list [resList]="recomStoryView.cate" [type]="'recomd'"></app-story-list>
     </div>
     <div class="recomd-story-foot">
-      <span>显示所有故事
+      <span (click)="goAlbumView2('咖啡店','cate')">显示所有故事
         <span class="fa fa-angle-right"></span></span>
     </div>
   </div>
@@ -48,7 +48,7 @@
       <app-story-list [resList]="recomStoryView.customCulture" [type]="'recomd'"></app-story-list>
     </div>
     <div class="recomd-story-foot">
-      <span>显示所有故事
+      <span (click)="goAlbumView2('展览','custom culture')">显示所有故事
         <span class="fa fa-angle-right"></span></span>
     </div>
   </div>
@@ -74,6 +74,18 @@
     <div class="recommend-category-head">全部故事</div>
     <div class="recomd-story-content">
       <app-story-list [resList]="cityStory.storyList" [type]="'recomd'"></app-story-list>
+    </div>
+  </div>
+</div>
+<div class="story-recommend-detail" *ngIf="!showLoading && isShowAlbumList">
+  <div class="recommend-detail-head">
+    <span>{{albumList.name}}</span>
+    <span (click)="backToStoryView()"><nc-button [type]="'cancel'">返回</nc-button></span>
+  </div>
+  <div class="recommend-category">
+    <div class="recommend-category-head">全部故事</div>
+    <div class="recomd-story-content">
+      <app-story-list [resList]="albumStoryList" [type]="'recomd'"></app-story-list>
     </div>
   </div>
 </div>
