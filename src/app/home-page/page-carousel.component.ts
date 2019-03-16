@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-carousel',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageCarouselComponent implements OnInit {
   slideOptions: any[] = [
-    {url: 'https://z1.muscache.cn/pictures/00b12c64-0851-40e7-83aa-6bba10221435.jpg',
+    {url: 'https://z1.muscache.cn/pictures/55a5bf2f-99fc-4a62-96de-8e3235353466.jpg',
       disable: false,
       callback: () => {console.log('callback1');}},
-    {url: 'https://z1.muscache.cn/pictures/9bd8f08c-2e78-4665-ab7b-e4952673dabd.jpg',
+    {url: 'https://z1.muscache.cn/pictures/b42cd76b-edec-4f88-8dfe-3f20933c7a60.jpg',
       disable: false,
       callback: () => {console.log('callback2');}},
     {url: 'https://z1.muscache.cn/pictures/30c10f87-af4b-45e5-8b6d-1a95c88fd5dd.jpg',
@@ -18,9 +19,9 @@ export class PageCarouselComponent implements OnInit {
       callback: () => {console.log('callback3');}}
   ];
   slideOptionTitle: any = {
-    head: '领取赏樱礼金券',
-    subHead: '趁花开 邂逅日本',
-    description: '领取缤纷赏樱礼金券'
+    head: '48 小时踏青玩个够',
+    subHead: '领取礼券 扑向春天',
+    description: '挑个周末逃离恒温都市，让初春叫醒你'
   };
   slideProcess: any[] = [
     {curValue: 0, total: 100, isdynamic: true},
@@ -28,7 +29,7 @@ export class PageCarouselComponent implements OnInit {
     {curValue: 0, total: 100, isdynamic: false}
   ];
   curSlideIndex = 0;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -43,16 +44,16 @@ export class PageCarouselComponent implements OnInit {
     this.curSlideIndex = index;
     if (index === 0) {
       this.slideOptionTitle = {
-        head: '领取赏樱礼金券',
-        subHead: '趁花开 邂逅日本',
-        description: '领取缤纷赏樱礼金券'
+        head: '48 小时踏青玩个够',
+        subHead: '领取礼券 扑向春天',
+        description: '挑个周末逃离恒温都市，让初春叫醒你'
       };
     }
     if (index === 1) {
       this.slideOptionTitle = {
-        head: '来九州看樱花',
-        subHead: '在大自然间畅快呼吸',
-        description: '避开人潮看花泡温泉，利用小长假去日本吧'
+        head: '在花香与暖阳里',
+        subHead: '发现国内赏花目的地',
+        description: '趁着好天气，与明媚的春日来张同框合影'
       };
     }
     if (index === 2) {
@@ -63,5 +64,12 @@ export class PageCarouselComponent implements OnInit {
       };
     }
     this.slideProcess[this.curSlideIndex].isdynamic = true;
+  }
+
+  goExhibition() {
+    if(this.curSlideIndex === 0) {
+      return;
+    }
+    this.router.navigate(['/exhibit']);
   }
 }

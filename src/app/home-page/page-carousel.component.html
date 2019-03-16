@@ -1,10 +1,11 @@
 <div class="page-carousel-container">
   <nc-carousel [captions]="slideOptions" [effect]="'fade'" [height]="'520px'"
                [timerlen]="10000" (carouselChange)="handleSlideChange($event)"></nc-carousel>
-  <div class="header-carousel-title">
+  <div class="header-carousel-title" (click)="goExhibition()">
     <h2>{{slideOptionTitle.head}}</h2>
     <h2>{{slideOptionTitle.subHead}}</h2>
     <p>{{slideOptionTitle.description}}</p>
+    <span *ngIf="curSlideIndex === 0"><nc-button [type]="'major'">立即领取</nc-button></span>
     <div class="carousel-title-process">
       <nc-progress *ngFor="let processitem of slideProcess" [value]="processitem.curValue"
                    [total]="processitem.total" [isDynamic]="processitem.isdynamic" [width]="'60px'"
