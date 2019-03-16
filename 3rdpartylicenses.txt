@@ -300,6 +300,9 @@ MIT
 @angular/router
 MIT
 
+@angular/forms
+MIT
+
 zone.js
 MIT
 The MIT License
