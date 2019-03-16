@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageContentService } from './page-content.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-trip-story',
@@ -16,7 +17,7 @@ export class PageTripStoryComponent implements OnInit {
     'activity': '活动',
     'shop': '店铺'
   };
-  constructor(private pageContentService: PageContentService) { }
+  constructor(private pageContentService: PageContentService, private router: Router) { }
 
   ngOnInit() {
     this.pageContentService.getTripStoryList().subscribe(res => {
@@ -24,11 +25,7 @@ export class PageTripStoryComponent implements OnInit {
     });
   }
 
-  goStory(item: any) {
-    window.alert('goStory:'+item.title);
-  }
-
   goMoreStory() {
-    window.alert('goMoreStory');
+    this.router.navigate(['/story/home']);
   }
 }
