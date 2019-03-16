@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./trip-story-card.component.less']
 })
 export class TripStoryCardComponent implements OnInit {
-  @Input() story: any[] = [];
+  @Input() story: any = {};
   storyType: any = {
     'house resource': '房源',
     'scenic spot': '景点',

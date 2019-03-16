@@ -1,0 +1,17 @@
+<div class="hot-city-house-card">
+  <div class="hot-city-house-img">
+    <img [src]="house.imgUrl" [alt]="house.text" />
+  </div>
+  <div class="hot-city-house-foot">
+    <div>{{house.type}}.{{house.bedNum}}张床</div>
+    <div>{{house.text}}</div>
+    <div>¥{{house.price}}每晚.免费取消预订</div>
+    <div>
+      <span><nc-rate [size]="'10px'" [color]="'#3399ff'" [totalRate]="5" [(curRate)]="house.star"></nc-rate></span>
+      <span title="{{house.comment}}条评价">{{house.comment}}.超赞房东</span>
+    </div>
+  </div>
+</div>
+
+
+

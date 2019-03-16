@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StoryPageService } from './story-page.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { PageContentService } from '../home-page/page-content/page-content.service';
 
 @Component({
   selector: 'app-story-detail',
@@ -11,20 +12,24 @@ export class StoryDetailComponent implements OnInit {
   storyData: any;
   showLoading: boolean = false;
   textArea: string = '';
-  otherStorys: any = [1,2,3,4,5,6,7,8];
-  constructor(private storyPageService: StoryPageService, private route: ActivatedRoute) { }
+  otherStorys: any = [];
+  constructor(private storyPageService: StoryPageService,
+              private pageContentService: PageContentService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       let id = params.get('id');
       this.showLoading = true;
       this.storyPageService.getStoryById(id).subscribe(res => {
-        console.log(res);
         this.storyData = res;
         this.storyData.site_time = this.storyData['city_zh'] + ' ' +
             this.getSiteTime(this.storyData.time);
         this.setComments();
         this.showLoading = false;
+      });
+      this.pageContentService.getTripStoryList().subscribe(res2 => {
+        this.otherStorys = res2.filter(item => {return 'cate' === item.type;});
       });
     });
   }

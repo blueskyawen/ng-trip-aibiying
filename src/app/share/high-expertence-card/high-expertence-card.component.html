@@ -1,0 +1,17 @@
+<div class="high-expertence-card">
+  <div class="high-expert-img">
+    <img [src]="exper.imgUrl" [alt]="exper.title" />
+  </div>
+  <div class="high-expert-foot">
+    <div>{{exper.type}} . {{exper.site}}</div>
+    <div>{{exper.title}}}</div>
+    <div>每人 ¥{{exper.price}}</div>
+    <div>
+      <span>
+        <nc-rate [size]="'12px'" [color]="'#3399ff'" [totalRate]="5" [(curRate)]="curStar" [showTitle]="false"></nc-rate>
+      </span>
+      <span>({{exper.comment}})</span>
+    </div>
+  </div>
+</div>
+

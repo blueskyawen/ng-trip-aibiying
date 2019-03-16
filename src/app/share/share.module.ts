@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LibModule } from 'ng-shadow-cat-d';
 import { TripStoryCardComponent } from './trip-story-card/trip-story-card.component';
+import { HotCityHouseCardComponent } from './hot-city-house-card/hot-city-house-card.component';
+import { HighExpertenceCardComponent } from './high-expertence-card/high-expertence-card.component';
 
 @NgModule({
-  declarations: [TripStoryCardComponent],
+  declarations: [TripStoryCardComponent, HotCityHouseCardComponent, HighExpertenceCardComponent],
   imports: [
     CommonModule, LibModule
   ],
   exports: [LibModule, CommonModule, HttpClientModule, RouterModule, FormsModule,
-    TripStoryCardComponent]
+    TripStoryCardComponent, HotCityHouseCardComponent, HighExpertenceCardComponent]
 })
 export class ShareModule { }

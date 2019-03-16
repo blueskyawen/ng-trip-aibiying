@@ -6,20 +6,7 @@
   <div class="trip-block-img-list trip-high-exper-list">
     <div *ngFor="let exper of experList" (click)="goExperStory(exper)"
          class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12" >
-      <div class="trip-block-img exper-img">
-        <img [src]="exper.imgUrl" [alt]="exper.title" />
-      </div>
-      <div class="trip-block-img-foot exper-foot">
-        <div>{{exper.type}} . {{exper.site}}</div>
-        <div>{{exper.title}}}</div>
-        <div>每人 ¥{{exper.price}}</div>
-        <div>
-          <span>
-            <nc-rate [size]="'12px'" [color]="'#1a1aff'" [totalRate]="5" [(curRate)]="curStar" [showTitle]="false"></nc-rate>
-          </span>
-          <span>({{exper.comment}})</span>
-        </div>
-      </div>
+      <app-high-expertence-card [exper]="exper"></app-high-expertence-card>
     </div>
   </div>
   <div class="trip-block-foot">

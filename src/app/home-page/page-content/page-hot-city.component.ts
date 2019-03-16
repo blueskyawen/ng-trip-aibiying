@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { PageContentService } from '../page-content.service';
+import { PageContentService } from './page-content.service';
 
 class CityOption {
   id: string;
@@ -41,7 +41,7 @@ export class PageHotCityComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       this.showLoading = false;
-    },50);
+    },100);
   }
 
   setCityList() {

@@ -11,7 +11,10 @@
     </nc-list-group-horizontal>
   </div>
   <div class="hot-city-body">
-    <app-hot-city-house [houseList]="selectCityHouses"></app-hot-city-house>
+    <div *ngFor="let cityHouse of selectCityHouses"
+         class="hot-city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <app-hot-city-house-card [house]="cityHouse"></app-hot-city-house-card>
+    </div>
   </div>
   <div class="hot-city-foot">
     <span (click)="goMoreHouses()">查看更多{{selectedCity?.title}}房源<span class="fa fa-angle-right"></span></span>

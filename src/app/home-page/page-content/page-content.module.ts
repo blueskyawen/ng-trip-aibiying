@@ -3,7 +3,7 @@
  */
 import { NgModule } from '@angular/core';
 import { ShareModule } from '../../share/share.module';
-import { HotCityModule } from './hot-city/hot-city.module';
+
 import { PageSearchComponent } from './page-search.component';
 import { PageInspirationComponent } from './page-inspiration.component';
 import { PageHousePlusComponent } from './page-house-plus.component';
@@ -11,16 +11,17 @@ import { PageClassicCityComponent } from './page-classic-city.component';
 import { PageTripStoryComponent } from './page-trip-story.component';
 import { PageHighExperienceComponent } from './page-high-experience.component';
 import { PageContactComponent } from './page-contact.component';
+import { PageHotCityComponent } from './page-hot-city.component';
 
 
 @NgModule({
     declarations: [PageSearchComponent, PageInspirationComponent, PageHousePlusComponent, PageClassicCityComponent,
-        PageTripStoryComponent, PageHighExperienceComponent, PageContactComponent],
+        PageTripStoryComponent, PageHighExperienceComponent, PageContactComponent, PageHotCityComponent],
     imports: [
         ShareModule
     ],
-    exports: [PageSearchComponent, HotCityModule, PageInspirationComponent, PageHousePlusComponent,
+    exports: [PageSearchComponent, PageInspirationComponent, PageHousePlusComponent,
         PageClassicCityComponent, PageTripStoryComponent, PageHighExperienceComponent,
-        PageContactComponent]
+        PageContactComponent, PageHotCityComponent]
 })
 export class PageContentModule { }

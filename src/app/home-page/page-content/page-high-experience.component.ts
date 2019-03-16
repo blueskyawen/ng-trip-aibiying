@@ -8,7 +8,6 @@ import { PageContentService } from './page-content.service';
 })
 export class PageHighExperienceComponent implements OnInit {
   experList: any[] = [];
-  curStar = 5;
   constructor(private pageContentService: PageContentService) { }
 
   ngOnInit() {
