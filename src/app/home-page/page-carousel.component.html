@@ -1,6 +1,6 @@
 <div class="page-carousel-container">
   <nc-carousel [captions]="slideOptions" [effect]="'fade'" [height]="'520px'"
-               [timerlen]="10000" (carouselChange)="handleSlideChange($event)"></nc-carousel>
+               [timerlen]="10000" (showIndexChange)="handleSlideChange($event)"></nc-carousel>
   <div class="header-carousel-title" (click)="goExhibition()">
     <h2>{{slideOptionTitle.head}}</h2>
     <h2>{{slideOptionTitle.subHead}}</h2>
