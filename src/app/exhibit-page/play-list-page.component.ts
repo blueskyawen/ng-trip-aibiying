@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ExhibitPageService } from './exhibit-page.service';
 
 @Component({
   selector: 'app-play-list-page',
@@ -25,13 +26,36 @@ export class PlayListPageComponent implements OnInit {
     }
   };
   showLoading: boolean = false;
-  constructor(private route: ActivatedRoute) { }
+  playSite: any = {};
+  playList: any[] = [];
+  constructor(private route: ActivatedRoute, private exhibitPageService: ExhibitPageService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.imgId = params.get('id');
       this.showLoading = true;
+      this.exhibitPageService.getPlatList().subscribe(res => {
+        this.playSite = res.find(item => { return item.id === this.imgId; });
+        if(this.playSite) {
+          this.InitPlayData();
+        }
+      });
     });
   }
 
+  private InitPlayData() {
+    this.playList = this.playSite.list;
+    this.playList.forEach(play => {
+      play.houses.forEach(house => {
+        house.imgOption = [];
+        house.imgs.forEach(image => {
+          house.imgOption.push({
+            url: image,
+            disable: false,
+            callback: () => {}
+          });
+        });
+      });
+    });
+  }
 }

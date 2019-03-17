@@ -20,6 +20,36 @@
         <nc-button [type]="'major'">去领取</nc-button>
       </span>
     </div>
-    <div class="play-list-content"></div>
+    <div class="play-list-content">
+      <div class="play-list-item" *ngFor="let playItem of playList">
+        <div class="play-item-head">
+          <div>{{playItem.city_zh}}</div>
+          <div>{{playItem.title}}</div>
+        </div>
+        <div class="play-items">
+          <div *ngFor="let houseItem of playItem.houses"
+               class="play-item nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+            <div class="play-item-img">
+              <nc-carousel [captions]="houseItem.imgOption"  [height]="'200px'" [effect]="'fade'"></nc-carousel>
+            </div>
+            <div class="play-item-foot">
+              <div>{{houseItem.type}}.{{playItem.city_zh}}</div>
+              <div>{{houseItem.text}}</div>
+              <div>¥{{houseItem.price}}每晚.免费取消预订</div>
+              <div>
+                <span><nc-rate [size]="'12px'" [color]="'#3399ff'" [totalRate]="5"
+                               [(curRate)]="houseItem.good_press" [showTitle]="false"></nc-rate></span>
+                <span>{{houseItem.comment}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="play-list-foot">
+          <span (click)="goMoreLocalHouse()">查看更多当地房源
+            <span class="fa fa-angle-right"></span></span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+

@@ -1,7 +1,7 @@
 {
   "playList": [
     {
-      "id": 1,
+      "id": "11",
       "country": "China",
       "country_zh": "中国",
       "list": [
@@ -563,7 +563,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "22",
       "country": "Japan",
       "country_zh": "日本",
       "list": [
@@ -785,6 +785,339 @@
                 "https://z1.muscache.cn/im/pictures/d38b7ef4-8185-4b1e-b7b9-d357ac2c111c.jpg?aki_policy=large",
                 "https://z1.muscache.cn/im/pictures/9f324b73-f31c-4f7f-ab03-f3e64488689b.jpg?aki_policy=large",
                 "https://z1.muscache.cn/im/pictures/9e11c9bb-6835-4ba5-bce9-35f6c8e93d0a.jpg?aki_policy=large"
+              ]
+            }
+          ]
+        },
+        {
+          "city_zh": "札幌",
+          "city_en": "Zhahuang",
+          "title": "出门即枢纽，网罗吃喝玩乐好去处",
+          "houses": [
+            {
+              "id": "11",
+              "type": "整套公寓",
+              "text": "506】札幌市中心附近   免费 Wi-Fi",
+              "price": 246,
+              "good_press": 4,
+              "comment": 19,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/284b352d-a839-4905-a0a0-4ef1f9426b54.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/83d7e3e1-8508-4968-a893-409beef37931.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/3dad5bd1-fc47-4b49-8270-8b6056cfee2b.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "22",
+              "type": "整套公寓",
+              "text": "412Welcome to Sapporo! Please stop by my apartment",
+              "price": 246,
+              "good_press": 4,
+              "comment": 10,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/9fad0a28-48a7-40d6-aa09-27d8e47a0de9.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/5f9b4adb-035f-4dc7-8d95-251769562293.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/f96daaed-f470-4563-8a8f-c1293b7fed37.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "33",
+              "type": "整套公寓",
+              "text": "521Welcome to Hokkaido!Please stop by my apartment",
+              "price": 271,
+              "good_press": 5,
+              "comment": 13,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/0e761005-115a-4fc1-baef-db795cdae68e.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/40b683eb-4151-4a3a-8ac8-dfffe8f07aec.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/5a6845b4-ff1f-4f63-ad20-a36742d12d2d.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "44",
+              "type": "整套公寓",
+              "text": "便携式WiFi!离札幌站很近!",
+              "price": 348,
+              "good_press": 4,
+              "comment": 29,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/67b6f8fd-a797-4edc-bc8e-542c5a0d48df.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/79f183be-e58a-4593-949a-ccc9a9a332d9.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/e9410b1e-9c41-427c-be89-91832d4649ab.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "55",
+              "type": "整套公寓",
+              "text": "✰New open✰Heart of Sapporo!!",
+              "price": 361,
+              "good_press": 4,
+              "comment": 11,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/fc7cfad4-9d36-498e-a59c-fa9196034cc8.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/4083de75-b239-4c54-9528-a06aa0f301df.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/e7f24bc2-2f73-430e-9b80-2226851012d8.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "66",
+              "type": "整套公寓",
+              "text": "JR札幌駅5分★子ども無料★1R4人最高の立地ｽｷｰ場1時間#46",
+              "price": 384,
+              "good_press": 4,
+              "comment": 19,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/d04c0fd5-13f2-4998-a72d-86a480cd7062.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/50912390-e399-4ea3-b9b4-08b04ad0626b.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/502a3edb-fe03-4b27-b435-be31bd78fe0c.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "77",
+              "type": "整套公寓",
+              "text": "★子ども無料★1R4人最高の立地ｽｷｰ場1時間#22",
+              "price": 397,
+              "good_press": 4,
+              "comment": 12,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/63f3dc95-1d60-496b-b44c-e40303e306a2.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/8fe9c6c5-bde3-4688-9409-140eaf29b112.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/b8108e10-a621-4b38-bb0c-f4265aa6583a.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "88",
+              "type": "整套公寓",
+              "text": "北大北の赤ﾚﾝｶﾞ(北24条駅近隣)redbrik house",
+              "price": 397,
+              "good_press": 4,
+              "comment": 12,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/6a0e8ca7-0692-45c0-986e-1ac980fb009b.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/8fe9c6c5-bde3-4688-9409-140eaf29b112.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/b8108e10-a621-4b38-bb0c-f4265aa6583a.jpg?aki_policy=large"
+              ]
+            }
+          ]
+        },
+        {
+          "city_zh": "小樽",
+          "city_en": "Xiaozhun",
+          "title": "感受古老运河风情，步行可达人气景点",
+          "houses": [
+            {
+              "id": "11",
+              "type": "整套公寓",
+              "text": "No.402(B) Opening price! Modern apt in Otaru",
+              "price": 215,
+              "good_press": 4,
+              "comment": 42,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/146e0696-db20-4fed-8313-ea79c139ecea.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/bd6b0b16-920c-4b7d-a239-92ac3c7cbca4.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/9f85095d-1dc6-4484-85f4-cda935806ed3.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "22",
+              "type": "整套公寓",
+              "text": "SUPER SALE!浪漫懷舊的小樽!獨棟房子!可以輕鬆到札幌!AS528",
+              "price": 198,
+              "good_press": 3,
+              "comment": 13,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/84efc316-c2cd-44ce-b70a-7afe93a1fddf.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/add2b1cd-1dd0-4f7b-badd-ebbe42987e5a.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/cc6294e8-e292-44ed-a936-c82243f6b781.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "33",
+              "type": "合住房间",
+              "text": "泊まれるﾋﾞｱﾊﾞｰ Otaru Tap Room 男女混合4人ﾄﾞﾐﾄﾘｰ",
+              "price": 172,
+              "good_press": 4,
+              "comment": 42,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/d2f5b056-5f4e-49e9-863e-b08a4c114f1d.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/b3076645-e0f8-4ba5-b4a1-4de0c04b2473.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/aa0a7497-8459-4ba6-ab54-acb1030295af.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "44",
+              "type": "整套公寓",
+              "text": "Hostel 順風満帆(jumpu-manpan) 洋室 3人部屋 個室",
+              "price": 331,
+              "good_press": 4,
+              "comment": 42,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/d38b7ef4-8185-4b1e-b7b9-d357ac2c111c.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/9f324b73-f31c-4f7f-ab03-f3e64488689b.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/9e11c9bb-6835-4ba5-bce9-35f6c8e93d0a.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "55",
+              "type": "整套公寓",
+              "text": "No.402(B) Opening price! Modern apt in Otaru",
+              "price": 215,
+              "good_press": 4,
+              "comment": 42,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/146e0696-db20-4fed-8313-ea79c139ecea.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/bd6b0b16-920c-4b7d-a239-92ac3c7cbca4.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/9f85095d-1dc6-4484-85f4-cda935806ed3.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "66",
+              "type": "整套公寓",
+              "text": "SUPER SALE!浪漫懷舊的小樽!獨棟房子!可以輕鬆到札幌!AS528",
+              "price": 198,
+              "good_press": 3,
+              "comment": 13,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/84efc316-c2cd-44ce-b70a-7afe93a1fddf.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/add2b1cd-1dd0-4f7b-badd-ebbe42987e5a.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/cc6294e8-e292-44ed-a936-c82243f6b781.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "77",
+              "type": "合住房间",
+              "text": "泊まれるﾋﾞｱﾊﾞｰ Otaru Tap Room 男女混合4人ﾄﾞﾐﾄﾘｰ",
+              "price": 172,
+              "good_press": 4,
+              "comment": 42,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/d2f5b056-5f4e-49e9-863e-b08a4c114f1d.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/b3076645-e0f8-4ba5-b4a1-4de0c04b2473.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/aa0a7497-8459-4ba6-ab54-acb1030295af.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "88",
+              "type": "整套公寓",
+              "text": "Hostel 順風満帆(jumpu-manpan) 洋室 3人部屋 個室",
+              "price": 331,
+              "good_press": 4,
+              "comment": 42,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/d38b7ef4-8185-4b1e-b7b9-d357ac2c111c.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/9f324b73-f31c-4f7f-ab03-f3e64488689b.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/9e11c9bb-6835-4ba5-bce9-35f6c8e93d0a.jpg?aki_policy=large"
+              ]
+            }
+          ]
+        },
+        {
+          "city_zh": "札幌",
+          "city_en": "Zhahuang",
+          "title": "出门即枢纽，网罗吃喝玩乐好去处",
+          "houses": [
+            {
+              "id": "11",
+              "type": "整套公寓",
+              "text": "506】札幌市中心附近   免费 Wi-Fi",
+              "price": 246,
+              "good_press": 4,
+              "comment": 19,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/284b352d-a839-4905-a0a0-4ef1f9426b54.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/83d7e3e1-8508-4968-a893-409beef37931.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/3dad5bd1-fc47-4b49-8270-8b6056cfee2b.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "22",
+              "type": "整套公寓",
+              "text": "412Welcome to Sapporo! Please stop by my apartment",
+              "price": 246,
+              "good_press": 4,
+              "comment": 10,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/9fad0a28-48a7-40d6-aa09-27d8e47a0de9.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/5f9b4adb-035f-4dc7-8d95-251769562293.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/f96daaed-f470-4563-8a8f-c1293b7fed37.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "33",
+              "type": "整套公寓",
+              "text": "521Welcome to Hokkaido!Please stop by my apartment",
+              "price": 271,
+              "good_press": 5,
+              "comment": 13,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/0e761005-115a-4fc1-baef-db795cdae68e.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/40b683eb-4151-4a3a-8ac8-dfffe8f07aec.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/5a6845b4-ff1f-4f63-ad20-a36742d12d2d.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "44",
+              "type": "整套公寓",
+              "text": "便携式WiFi!离札幌站很近!",
+              "price": 348,
+              "good_press": 4,
+              "comment": 29,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/67b6f8fd-a797-4edc-bc8e-542c5a0d48df.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/79f183be-e58a-4593-949a-ccc9a9a332d9.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/e9410b1e-9c41-427c-be89-91832d4649ab.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "55",
+              "type": "整套公寓",
+              "text": "✰New open✰Heart of Sapporo!!",
+              "price": 361,
+              "good_press": 4,
+              "comment": 11,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/fc7cfad4-9d36-498e-a59c-fa9196034cc8.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/4083de75-b239-4c54-9528-a06aa0f301df.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/e7f24bc2-2f73-430e-9b80-2226851012d8.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "66",
+              "type": "整套公寓",
+              "text": "JR札幌駅5分★子ども無料★1R4人最高の立地ｽｷｰ場1時間#46",
+              "price": 384,
+              "good_press": 4,
+              "comment": 19,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/d04c0fd5-13f2-4998-a72d-86a480cd7062.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/50912390-e399-4ea3-b9b4-08b04ad0626b.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/502a3edb-fe03-4b27-b435-be31bd78fe0c.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "77",
+              "type": "整套公寓",
+              "text": "★子ども無料★1R4人最高の立地ｽｷｰ場1時間#22",
+              "price": 397,
+              "good_press": 4,
+              "comment": 12,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/63f3dc95-1d60-496b-b44c-e40303e306a2.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/8fe9c6c5-bde3-4688-9409-140eaf29b112.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/b8108e10-a621-4b38-bb0c-f4265aa6583a.jpg?aki_policy=large"
+              ]
+            },
+            {
+              "id": "88",
+              "type": "整套公寓",
+              "text": "北大北の赤ﾚﾝｶﾞ(北24条駅近隣)redbrik house",
+              "price": 397,
+              "good_press": 4,
+              "comment": 12,
+              "imgs": [
+                "https://z1.muscache.cn/im/pictures/6a0e8ca7-0692-45c0-986e-1ac980fb009b.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/8fe9c6c5-bde3-4688-9409-140eaf29b112.jpg?aki_policy=large",
+                "https://z1.muscache.cn/im/pictures/b8108e10-a621-4b38-bb0c-f4265aa6583a.jpg?aki_policy=large"
               ]
             }
           ]
