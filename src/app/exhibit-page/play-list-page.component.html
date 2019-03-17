@@ -1,0 +1,25 @@
+<div class="play-list-contianer">
+  <div class="play-list-image">
+    <img [src]="image[imgId]" alt="imag-top" />
+  </div>
+  <div class="play-list-body nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+    <div class="play-list-head">
+      <div>{{imgHead[imgId].title}}</div>
+      <div>{{imgHead[imgId].name}}</div>
+      <div>{{imgHead[imgId].text}}</div>
+    </div>
+    <div class="play-list-food nc-flex nc-content-space-between nc-align-item-center">
+      <span class="list-food-item">
+        <img class="_1u6feuz3" src="https://a0.muscache.com/airbnb/static/page3/icon-uc-red-envelope-647af704a4617a6edeab1186c9cceba4.gif" width="32" height="32" alt="">
+        <span>
+          <span>领取踏青礼券</span>
+          <span>春季限时直减</span>
+        </span>
+      </span>
+      <span class="list-food-item">
+        <nc-button [type]="'major'">去领取</nc-button>
+      </span>
+    </div>
+    <div class="play-list-content"></div>
+  </div>
+</div>

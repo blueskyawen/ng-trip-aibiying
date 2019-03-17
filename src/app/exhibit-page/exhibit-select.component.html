@@ -1,0 +1,230 @@
+<div class="exhibit-select">
+  <span class="select-item">
+    <nc-button [type]="showButton.date.type" (click)="showButton.date.flag = !showButton.date.flag">
+      {{showButton.date.text}}</nc-button>
+    <nc-range-date-selector *ngIf="showButton.date.flag" class="date-selector" [(dateRange)]="selectData.dateRange"
+                            (dateRangeChange)="dateRangeChange()"></nc-range-date-selector>
+  </span>
+  <span class="select-item">
+    <nc-button [type]="showButton.person.type" (click)="showButton.person.flag = !showButton.person.flag">
+      {{showButton.person.text}}</nc-button>
+    <div class="select-person-set nc-flex nc-row-column" *ngIf="showButton.person.flag">
+      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span>成人</span>
+        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.person.adult"></nc-number-put></span>
+      </div>
+      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span><span>儿童</span><span>2-12岁</span></span>
+        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.person.child"></nc-number-put></span>
+      </div>
+      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span><span>婴儿</span><span>2岁以下</span></span>
+        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.person.baby"></nc-number-put></span>
+      </div>
+      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
+        <span class="t-cancel" (click)="clearPersonSt()">取消</span>
+        <span class="t-confirm" (click)="confirmPersonSt()">确认</span>
+      </div>
+    </div>
+  </span>
+  <span class="select-item" *ngIf="type === 'more'">
+    <nc-button [type]="showButton.resourceType.type" (click)="showButton.resourceType.flag = !showButton.resourceType.flag">
+      {{showButton.resourceType.text}}</nc-button>
+    <div class="select-resource-type nc-flex nc-row-column" *ngIf="showButton.resourceType.flag">
+      <div class="select-resource-type-item nc-flex nc-row-column">
+        <div>
+          <span><nc-checkbox [(checked)]="selectData.resourceType.entire" (checkedChange)="handleCheckChange()"></nc-checkbox></span>
+          <span>整个房源</span>
+        </div>
+        <div>独享整个房源</div>
+      </div>
+      <div class="select-resource-type-item nc-flex nc-row-column">
+        <div>
+          <span><nc-checkbox [(checked)]="selectData.resourceType.individual" (checkedChange)="handleCheckChange()"></nc-checkbox></span>
+          <span>独立房间</span>
+        </div>
+        <div>有自己的独立房间，共用一些公共空间</div>
+      </div>
+      <div class="select-resource-type-item nc-flex nc-row-column">
+        <div>
+          <span><nc-checkbox [(checked)]="selectData.resourceType.joint" (checkedChange)="handleCheckChange()"></nc-checkbox></span>
+          <span>合住房间</span>
+        </div>
+        <div>入住合用空间，如公共休息室</div>
+      </div>
+      <div class="select-resource-type-item nc-flex nc-content-space-between">
+        <span class="resource-type-item-button">
+          <span (click)="cancelResType()">取消</span>
+          <span *ngIf="showButton.resourceType.showReset"  (click)="resetResType()">重置</span>
+        </span>
+        <span class="resource-type-item-button" (click)="confirmResType()">确定</span>
+      </div>
+    </div>
+  </span>
+  <span class="select-item" *ngIf="type === 'more'">
+    <nc-button [type]="showButton.price.type" (click)="showButton.price.flag = !showButton.price.flag">
+      {{showButton.price.text}}</nc-button>
+    <div class="select-price nc-flex nc-row-column" *ngIf="showButton.price.flag">
+      <div class="select-price-item">平均每晚价格为￥262</div>
+      <div class="select-price-item">
+        <span><nc-number-put [type]="'small'" [(value)]="selectData.price.start"></nc-number-put></span>
+        <span> - </span>
+        <span><nc-number-put [type]="'small'" [(value)]="selectData.price.end"></nc-number-put></span>
+      </div>
+      <div class="select-price-item">￥{{selectData.price.start}} - ￥{{selectData.price.end}}</div>
+      <div class="select-price-item nc-flex nc-content-space-between">
+        <span (click)="cancelPrice()">取消</span>
+        <span class="resource-type-item-button" (click)="confirmPrice()">确定</span>
+      </div>
+    </div>
+  </span>
+  <span class="select-item" *ngIf="type === 'more'">
+    <nc-button [type]="showButton.book.type" (click)="showButton.book.flag = !showButton.book.flag">
+      {{showButton.book.text}}</nc-button>
+    <div class="select-book nc-flex nc-row-column" *ngIf="showButton.book.flag">
+      <div class="select-book-item">
+        <span class="book-item-op">
+          <span>闪订</span>
+          <span>无需等待房东确认，即刻预订心仪房源</span>
+        </span>
+        <span class="book-item-op">
+          <nc-switch [(switch)]="selectData.book"></nc-switch>
+        </span>
+      </div>
+      <div class="select-book-item nc-flex nc-content-space-between">
+        <span (click)="cancelBook()">取消</span>
+        <span class="resource-type-item-button" (click)="confirmBook()">确定</span>
+      </div>
+    </div>
+  </span>
+  <span class="select-item" *ngIf="type === 'more'">
+    <nc-button [type]="showButton.more.type" (click)="showButton.more.flag = !showButton.more.flag">
+      {{showButton.more.text}}</nc-button>
+    <div class="select-more nc-flex nc-row-column" *ngIf="showButton.more.flag">
+      <div class="select-more-content">
+        <div class="more-content-item">
+          <div class="content-item">卧室和床铺</div>
+          <div class="content-item">
+            <span>床铺数量</span>
+            <span>
+              <nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.more.house.bed"></nc-number-put>
+            </span>
+          </div>
+          <div class="content-item">
+            <span>卧室</span>
+            <span>
+              <nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.more.house.bedroom"></nc-number-put>
+            </span>
+          </div>
+          <div class="content-item">
+            <span>卫生间</span>
+            <span>
+              <nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.more.house.toilet"></nc-number-put>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">旅程类型</div>
+          <div class="content-item">
+            <span class="item-type">
+              <span>适合家庭出游</span>
+              <span>探索适合全家入住、拥有5星评分的整套房源，享用厨房和电视等必备设施和服务</span>
+            </span>
+            <span class="item-type">
+              <nc-switch [(switch)]="selectData.more.type.home"></nc-switch>
+            </span>
+          </div>
+          <div class="content-item">
+            <span class="item-type">
+              <span>适合商务差旅</span>
+              <span>探索高分房源，享用办公空间、无线网络和自助入住等差旅必备设施和服务</span>
+            </span>
+            <span class="item-type">
+              <nc-switch [(switch)]="selectData.more.type.business"></nc-switch>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">更多选项</div>
+          <div class="content-item">
+            <span class="item-type">
+              <span>超赞房东</span>
+              <span>向获得认可的房东租住房源</span>
+            </span>
+            <span class="item-type">
+              <nc-switch [(switch)]="selectData.more.moreOption.goodOwner"></nc-switch>
+            </span>
+          </div>
+          <div class="content-item">
+            <span class="item-type">
+              <span>无障碍设施</span>
+              <span>查找满足您灵活需求的房源</span>
+            </span>
+            <span class="item-type">
+              <nc-switch [(switch)]="selectData.more.moreOption.goodFacility"></nc-switch>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">便利设施</div>
+          <div class="content-checklist">
+            <span class="content-check" *ngFor="let item_a of selectData.more.amenity">
+              <nc-checkbox [(checked)]="item_a.checked"></nc-checkbox>
+              <span>{{item_a.name}}</span>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">设施</div>
+          <div class="content-checklist">
+            <span class="content-check" *ngFor="let item_f of selectData.more.facility">
+              <nc-checkbox [(checked)]="item_f.checked"></nc-checkbox>
+              <span>{{item_f.name}}</span>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">建筑类型</div>
+          <div class="content-checklist">
+            <span class="content-check" *ngFor="let item_s of selectData.more.homeType">
+              <nc-checkbox [(checked)]="item_s.checked"></nc-checkbox>
+              <span>{{item_s.name}}</span>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">特色房源</div>
+          <div class="content-checklist">
+            <span class="content-check" *ngFor="let item_ft of selectData.more.feature">
+              <nc-checkbox [(checked)]="item_ft.checked"></nc-checkbox>
+              <span>{{item_ft.name}}</span>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">房屋守则</div>
+          <div class="content-checklist">
+            <span class="content-check" *ngFor="let item_r of selectData.more.rule">
+              <nc-checkbox [(checked)]="item_r.checked"></nc-checkbox>
+              <span>{{item_r.name}}</span>
+            </span>
+          </div>
+        </div>
+        <div class="more-content-item">
+          <div class="content-item">使用语言</div>
+          <div class="content-checklist">
+            <span class="content-check" *ngFor="let item_l of selectData.more.lang">
+              <nc-checkbox [(checked)]="item_l.checked"></nc-checkbox>
+              <span>{{item_l.name}}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="select-more-foot nc-flex nc-content-space-between">
+        <span (click)="cancelMore()">取消</span>
+        <span class="resource-type-item-button" (click)="confirmMore()">确定</span>
+      </div>
+    </div>
+  </span>
+</div>
+

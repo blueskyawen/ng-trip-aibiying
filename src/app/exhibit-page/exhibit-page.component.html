@@ -1,3 +1,13 @@
-<p>
-  exhibit-page works!
-</p>
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <div class="exhibit-head">
+      <app-page-head [scene]="'story'" [showSearch]="true"></app-page-head>
+    </div>
+    <div class="exhibit-head">
+      <app-exhibit-select></app-exhibit-select>
+    </div>
+  </div>
+  <div class="nc-content nc-flex nc-content-center">
+    <router-outlet></router-outlet>
+  </div>
+</div>

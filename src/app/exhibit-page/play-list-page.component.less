@@ -1,0 +1,56 @@
+.play-list-contianer {
+  width: 100%;
+  padding-top: 150px;
+  .play-list-image {
+    width: inherit;
+    img {
+      width: inherit;
+      height: 500px;
+    }
+  }
+  .play-list-body {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+    .play-list-head {
+      width: 100%;
+      padding: 30px 0 50px;
+      border-bottom: solid 1px #e6e6e6;
+      div {
+        font-size: 14px;
+        &:first-child {
+          font-size: 12px;
+          line-height: 24px;
+          color:#ff751a;
+        }
+        &:nth-child(2) {
+          font-size: 24px;
+          line-height: 40px;
+          color:#666;
+          font-weight: 600;
+        }
+        &:last-child {
+          font-size: 20px;
+          line-height: 30px;
+          color:#666;
+        }
+      }
+    }
+    .play-list-food {
+      width: 100%;
+      padding: 15px 0;
+      border-bottom: solid 1px #e6e6e6;
+      .list-food-item {
+        display: inline-flex;
+        align-items: center;
+        &:first-child {
+          > span {
+            display: inline-flex;
+            flex-direction: column;
+            color: #666666;
+          }
+        }
+      }
+    }
+  }
+}

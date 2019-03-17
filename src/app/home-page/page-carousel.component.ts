@@ -70,6 +70,7 @@ export class PageCarouselComponent implements OnInit {
     if(this.curSlideIndex === 0) {
       return;
     }
-    this.router.navigate(['/exhibit']);
+    let index = this.curSlideIndex === 1 ? '11' : '22';
+    this.router.navigate(['/exhibit/playlist', index]);
   }
 }
