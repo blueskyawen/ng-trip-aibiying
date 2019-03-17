@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageContentService } from './page-content.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-inspiration',
@@ -8,7 +9,7 @@ import { PageContentService } from './page-content.service';
 })
 export class PageInspirationComponent implements OnInit {
   tripList: any[] = [];
-  constructor(private pageContentService: PageContentService) { }
+  constructor(private pageContentService: PageContentService, private router: Router) { }
 
   ngOnInit() {
     this.pageContentService.getSakuraTrips().subscribe(res => {
@@ -16,7 +17,11 @@ export class PageInspirationComponent implements OnInit {
     });
   }
 
-  goTripDetai() {
-    window.alert('goTripDetai!');
+  goTripDetai(item: any) {
+    if(item.id === 1) {
+      this.router.navigate(['/exhibit/playlist', '11']);
+    } else {
+      this.router.navigate(['/exhibit/playlist', '22']);
+    }
   }
 }
