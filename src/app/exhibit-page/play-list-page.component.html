@@ -29,19 +29,7 @@
         <div class="play-items">
           <div *ngFor="let houseItem of playItem.houses"
                class="play-item nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-            <div class="play-item-img">
-              <nc-carousel [captions]="houseItem.imgOption"  [height]="'200px'" [effect]="'fade'"></nc-carousel>
-            </div>
-            <div class="play-item-foot">
-              <div>{{houseItem.type}}.{{playItem.city_zh}}</div>
-              <div>{{houseItem.text}}</div>
-              <div>¥{{houseItem.price}}每晚.免费取消预订</div>
-              <div>
-                <span><nc-rate [size]="'12px'" [color]="'#3399ff'" [totalRate]="5"
-                               [(curRate)]="houseItem.good_press" [showTitle]="false"></nc-rate></span>
-                <span>{{houseItem.comment}}</span>
-              </div>
-            </div>
+            <app-play-card [playHouse]="houseItem" [city]="playItem.city_zh"></app-play-card>
           </div>
         </div>
         <div class="play-list-foot">

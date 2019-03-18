@@ -1,0 +1,15 @@
+<div class="play-card">
+  <div class="play-item-img">
+    <nc-carousel [captions]="playHouse.imgOption" [height]="'200px'" [effect]="'fade'"></nc-carousel>
+  </div>
+  <div class="play-item-foot">
+    <div>{{playHouse.type}}.{{city}}</div>
+    <div>{{playHouse.text}}</div>
+    <div>¥{{playHouse.price}}每晚.免费取消预订</div>
+    <div>
+      <span><nc-rate [size]="'12px'" [color]="'#3399ff'" [totalRate]="5"
+                     [(curRate)]="playHouse.good_press" [showTitle]="false"></nc-rate></span>
+      <span>{{playHouse.comment}}</span>
+    </div>
+  </div>
+</div>
