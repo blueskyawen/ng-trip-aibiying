@@ -1,4 +1,4 @@
-<div class="play-list-contianer">
+<div class="play-list-contianer" *ngIf="!showLoading">
   <div class="play-list-image">
     <img [src]="image[imgId]" alt="imag-top" />
   </div>
@@ -40,4 +40,6 @@
     </div>
   </div>
 </div>
-
+<div class="list-loading" *ngIf="showLoading">
+  <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
+</div>

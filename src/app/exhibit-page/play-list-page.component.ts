@@ -39,6 +39,7 @@ export class PlayListPageComponent implements OnInit {
         if(this.playSite) {
           this.InitPlayData();
         }
+        this.showLoading = false;
       });
     });
   }
@@ -57,5 +58,9 @@ export class PlayListPageComponent implements OnInit {
         });
       });
     });
+  }
+
+  goMoreLocalHouse() {
+
   }
 }
