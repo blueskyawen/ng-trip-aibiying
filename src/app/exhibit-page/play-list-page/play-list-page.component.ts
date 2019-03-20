@@ -49,7 +49,8 @@ export class PlayListPageComponent implements OnInit {
   private InitPlayData() {
     this.playList = this.playSite.list;
     this.playList.forEach(play => {
-      play.houses.forEach(house => {
+      play.housess = play.houses.slice(0, 8);
+      play.housess.forEach(house => {
         house.imgOption = [];
         house.imgs.forEach(image => {
           house.imgOption.push({

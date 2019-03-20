@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PageContentService } from './page-content.service';
+import { Router } from '@angular/router';
 
 class CityOption {
   id: string;
@@ -27,7 +28,7 @@ export class PageHotCityComponent implements OnInit, AfterViewInit {
   selectedCity: CityOption;
   selectCityHouses: any[] = [];
   showLoading: boolean = false;
-  constructor(private pageContentService: PageContentService) {
+  constructor(private pageContentService: PageContentService, private router: Router) {
   }
 
   ngOnInit() {
@@ -78,6 +79,6 @@ export class PageHotCityComponent implements OnInit, AfterViewInit {
   }
 
   goMoreHouses() {
-    window.alert('查看更多的房源!');
+    this.router.navigate(['/exhibit/houselist', 'Nanjing']);
   }
 }

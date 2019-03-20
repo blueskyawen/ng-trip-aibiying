@@ -6,8 +6,13 @@
     </span>
   </div>
   <div class="play-item-foot">
-    <div>{{playHouse.type}}.{{city}}</div>
-    <div>{{playHouse.text}}</div>
+    <div *ngIf="!showFality">{{playHouse.type}}.{{city}}</div>
+    <div *ngIf="showFality">{{playHouse.type}}.{{playHouse?.fality?.room}}室{{playHouse?.fality?.toliet}}卫{{playHouse?.fality?.bed}}床</div>
+    <div>{{playHouse.text}}
+      <span [title]="playHouse.user.name" *ngIf="showUser">
+        <nc-avater [type]="'circle'" [size]="'middle'" [imgSrc]="playHouse.user.avatar"></nc-avater>
+      </span>
+    </div>
     <div>¥{{playHouse.price}}每晚.免费取消预订</div>
     <div>
       <span><nc-rate [size]="'12px'" [color]="'#3399ff'" [totalRate]="5"
