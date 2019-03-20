@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { ExhibitPageService } from './exhibit-page.service';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { ExhibitPageService } from '../exhibit-page.service';
 
 @Component({
   selector: 'app-play-list-page',
@@ -28,7 +28,9 @@ export class PlayListPageComponent implements OnInit {
   showLoading: boolean = false;
   playSite: any = {};
   playList: any[] = [];
-  constructor(private route: ActivatedRoute, private exhibitPageService: ExhibitPageService) { }
+  constructor(private route: ActivatedRoute,
+              private exhibitPageService: ExhibitPageService,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -60,7 +62,7 @@ export class PlayListPageComponent implements OnInit {
     });
   }
 
-  goMoreLocalHouse() {
-
+  goMoreLocalHouse(item: any) {
+    this.router.navigate(['/exhibit/houselist', item.city_en]);
   }
 }
