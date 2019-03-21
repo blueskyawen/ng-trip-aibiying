@@ -1,0 +1,40 @@
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <app-page-head [scene]="'invite'" [showSearch]="true"></app-page-head>
+  </div>
+
+  <div class="nc-content">
+    <div class="lay-body">
+      <div class="invite-content">
+        <span class="invite-head">
+          <span>赚取免费的爱彼迎旅行基金!</span>
+          <span>每邀请一位好友，您将获得高达￥75。</span>
+        </span>
+        <span class="invite-button">
+          <nc-button [type]="'cancel'" [style]="'custom'" [width]="'180px'"
+                     [height]="'56px'" (click)="isShowLogin = true">登录以邀请好友</nc-button>
+        </span>
+        <span class="invite-foot">
+          还没有账号？<a href="javascript:void(0);" (click)="isShowRegister = true">注册</a>
+        </span>
+      </div>
+    </div>
+    <div class="lay-text">
+      <p>马上邀请好友加入爱彼迎吧！您可以给好友发邮件，或者在微信或微博中分享邀请码。通过邀请码注册账号，好友￥75。可用的旅行基金会以礼金券的形式自动显示在预订结算页面中。</p>
+      <p (click)="gotoInviteDetail()">好友邀请条款及细则</p>
+    </div>
+  </div>
+
+  <div class="nc-footer nc-flex nc-content-center">
+    <div class="lay-foot nc-flex nc-xl-col-9 nc-lg-col-9 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
+      <app-page-foot></app-page-foot>
+    </div>
+  </div>
+</div>
+
+<app-page-register [(isDisplay)]="isShowRegister"
+                   (toLoginEvent)="handleToLogin()"></app-page-register>
+<app-page-login [(isDisplay)]="isShowLogin"
+                (toRegisterEvent)="handleToRegister()"></app-page-login>
+
+

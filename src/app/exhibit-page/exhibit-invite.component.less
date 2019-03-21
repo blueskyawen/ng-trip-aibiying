@@ -1,0 +1,77 @@
+.nc-layout {
+  .lay-header {
+    position: relative;
+    width: 100%;
+  }
+  .nc-content {
+    position: relative;
+    width: 100%;
+    .lay-body {
+      position: relative;
+      width: inherit;
+      height: 360px;
+      background: #999 url('https://a0.muscache.com/airbnb/static/global_supply/mentor-hero-960afafb1da53528c3e876cde79d239e.png') left top/cover no-repeat padding-box border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .invite-content {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        .invite-head {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          span {
+            font-size: 32px;
+            font-weight: normal;
+            color: #fff;
+            line-height: 1.5em;
+          }
+        }
+        .invite-button {
+          margin: 15px 0;
+        }
+        .invite-foot {
+          margin: 15px 0;
+          font-size: 24px;
+          font-weight: normal;
+          color: #fff;
+          line-height: 1.5em;
+        }
+      }
+    }
+    .lay-text {
+      position: relative;
+      width: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p {
+        margin: 10px 0;
+        &:first-child {
+          font-size: 16px;
+          font-weight: normal;
+          color: #484848;
+          line-height: 1.25em;
+          width: 50%;
+        }
+        &:last-child {
+          font-size: 14px;
+          color: #999;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .nc-footer {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-top:solid 1px #e6e6e6;
+    .lay-foot {
+      padding: 10px;
+    }
+  }
+}

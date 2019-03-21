@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ExhibitPageComponent } from './exhibit-page.component';
 import { PlayListPageComponent } from './play-list-page/play-list-page.component';
 import { HouseListPageComponent } from './house-list-page/house-list-page.component';
+import { ExhibitInviteComponent } from './exhibit-invite.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
         component: HouseListPageComponent
       }
     ]
+  },
+  {
+    path: 'invite',
+    component: ExhibitInviteComponent
   }
 ];
 
