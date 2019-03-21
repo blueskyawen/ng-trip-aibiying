@@ -1,7 +1,7 @@
 <div class="house-list-container">
   <div class="house-list-overview" *ngIf="curPageIndex === 1">
     <div class="list-content">
-      <div *ngFor="let house of cityHouselist1"
+      <div *ngFor="let house of cityHouselist1" [routerLink]="['/house',house.id]"
            class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
         <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [showUser]="true"></app-play-card>
       </div>
@@ -10,7 +10,7 @@
       <app-house-list-invite [imgSrc]="inviteImg"></app-house-list-invite>
     </div>
     <div class="list-content">
-      <div *ngFor="let house of cityHouselist2"
+      <div *ngFor="let house of cityHouselist2" [routerLink]="['/house',house.id]"
            class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
         <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [showUser]="true"></app-play-card>
       </div>
@@ -21,7 +21,7 @@
   </div>
   <div class="house-list-overview" *ngIf="curPageIndex !== 1">
     <div class="list-content">
-      <div *ngFor="let house of cityHouselist"
+      <div *ngFor="let house of cityHouselist" [routerLink]="['/house',house.id]"
            class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
         <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [showUser]="true"></app-play-card>
       </div>

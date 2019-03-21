@@ -4,6 +4,7 @@ import { ShareModule } from '../share/share.module';
 import { HomePageModule } from '../home-page/home-page.module';
 import { PlayListPageModule } from './play-list-page/play-list-page.module';
 import { HouseListPageModule } from './house-list-page/house-list-page.module';
+import { HouseDetailPageModule } from './house-detail-page/house-detail-page.module';
 
 import { ExhibitPageRoutingModule } from './exhibit-page-routing.module';
 import { ExhibitPageComponent } from './exhibit-page.component';
@@ -14,7 +15,7 @@ import { ExhibitInviteComponent } from './exhibit-invite.component';
   declarations: [ExhibitPageComponent, ExhibitSelectComponent, ExhibitInviteComponent],
   imports: [
     ShareModule,
-    ExhibitPageRoutingModule, HomePageModule, PlayListPageModule, HouseListPageModule
+    ExhibitPageRoutingModule, HomePageModule, PlayListPageModule, HouseListPageModule, HouseDetailPageModule
   ]
 })
 export class ExhibitPageModule { }

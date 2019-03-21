@@ -27,7 +27,7 @@
           <div>{{playItem.title}}</div>
         </div>
         <div class="play-items">
-          <div *ngFor="let houseItem of playItem.housess"
+          <div *ngFor="let houseItem of playItem.housess" [routerLink]="['/house',houseItem.id]"
                class="play-item nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
             <app-play-card [playHouse]="houseItem" [city]="playItem.city_zh"></app-play-card>
           </div>

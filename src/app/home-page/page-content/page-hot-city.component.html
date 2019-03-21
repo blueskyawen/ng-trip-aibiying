@@ -11,7 +11,7 @@
     </nc-list-group-horizontal>
   </div>
   <div class="hot-city-body">
-    <div *ngFor="let cityHouse of selectCityHouses"
+    <div *ngFor="let cityHouse of selectCityHouses" [routerLink]="['/house',cityHouse.id]"
          class="hot-city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
       <app-hot-city-house-card [house]="cityHouse"></app-hot-city-house-card>
     </div>
