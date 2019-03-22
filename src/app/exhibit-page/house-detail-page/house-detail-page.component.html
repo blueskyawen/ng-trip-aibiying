@@ -4,7 +4,27 @@
   </div>
 
   <div class="nc-content">
-    详情
+    <div class="house-photo-container">
+      <div class="nc-container photos-container" *ngIf="!isShowPhotoView">
+        <div class="nc-row nc-image-container photos-review">
+          <div class="nc-thumb-picture nc-col nc-xs-col-12 nc-sm-col-12 nc-md-col-8 nc-lg-col-6 nc-xl-col-6">
+            <img (click)="openPhotoView(0)" [src]="photoSrc.src" [alt]="photoSrc.alt" />
+          </div>
+          <div class="nc-flex nc-flex-wrap nc-col nc-xs-col-12 nc-sm-col-12 nc-md-col-8 nc-lg-col-6 nc-xl-col-6">
+            <div class="nc-thumb-picture nc-col nc-xs-col-6 nc-sm-col-6 nc-md-col-6 nc-lg-col-6 nc-xl-col-6"
+                 *ngFor="let photo of photos;let i=index;">
+              <img (click)="openPhotoView(photo.id)" [src]="photo.src" [alt]="photo.alt" />
+            </div>
+          </div>
+        </div>
+        <span class="photos-foot">
+          <nc-button [type]="'cancel'" (click)="openPhotoView(0)">查看全部</nc-button>
+        </span>
+      </div>
+      <nc-photo-view *ngIf="isShowPhotoView" [photos]="houseData.photoOptions" [(isShow)]="isShowPhotoView"
+                     [curIndex]="curImgIndex">
+      </nc-photo-view>
+    </div>
   </div>
 
   <div class="nc-footer nc-flex nc-content-center">
@@ -13,3 +33,7 @@
     </div>
   </div>
 </div>
+<div class="list-loading" *ngIf="showLoading">
+  <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
+</div>
+

@@ -16,4 +16,10 @@ export class ExhibitPageService {
     );
   }
 
+  getHouseData(id: number) {
+    return this.http.get('assets/house-detail-list.json').pipe(
+        map(res => res['list'][id] || {})
+    );
+  }
+
 }

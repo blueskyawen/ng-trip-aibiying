@@ -6,6 +6,44 @@
   .nc-content {
     position: relative;
     width: 100%;
+    .house-photo-container {
+      width: inherit;
+      .photos-container {
+        border:none;
+        position:relative;
+        .photos-review {
+          .nc-thumb-picture {
+            border: solid 1px #666;
+            perspective: 1000px;
+            overflow: hidden;
+            height: 240px;
+            img {
+              display: flex;
+              flex: 1 1 auto;
+              height: 100%;
+              width: 100%;
+              transition: transform 1s;
+              cursor: pointer;
+              -webkit-filter: brightness(90%);
+              filter: brightness(90%);
+              &:hover {
+                transform: translateZ(50px);
+                -webkit-filter: brightness(110%);
+                filter: brightness(110%);
+              }
+            }
+          }
+          > .nc-thumb-picture {
+            height: 480px;
+          }
+        }
+        .photos-foot {
+          position: absolute;
+          bottom:25px;
+          right:25px;
+        }
+      }
+    }
   }
   .nc-footer {
     position: relative;
@@ -16,4 +54,9 @@
       padding: 10px;
     }
   }
+}
+.list-loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
