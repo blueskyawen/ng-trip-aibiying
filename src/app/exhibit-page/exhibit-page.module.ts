@@ -16,6 +16,7 @@ import { ExhibitInviteComponent } from './exhibit-invite.component';
   imports: [
     ShareModule,
     ExhibitPageRoutingModule, HomePageModule, PlayListPageModule, HouseListPageModule, HouseDetailPageModule
-  ]
+  ],
+  exports: [ExhibitSelectComponent]
 })
 export class ExhibitPageModule { }
