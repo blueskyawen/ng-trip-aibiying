@@ -1,0 +1,13 @@
+<nc-dialog [header]="'便利设施'" [style]="'normal'" [(isShow)]="isDisplay" (isShowChange)="showChange()">
+  <div class="content">
+    <div class="fatifys" *ngFor="let fatify of fatifyObs">
+      <div>{{fatify.name}}</div>
+      <div>
+        <span *ngFor="let fatifyitem of fatify.list" class="fatify-item">
+          <span><app-fality-icon [type]="fatifyitem.name"></app-fality-icon></span>
+          <span>{{fatifyitem.label}}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</nc-dialog>

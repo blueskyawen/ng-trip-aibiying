@@ -11,6 +11,7 @@
       .photos-container {
         border:none;
         position:relative;
+        width: inherit;
         .photos-review {
           .nc-thumb-picture {
             border: solid 1px #666;
@@ -41,6 +42,152 @@
           position: absolute;
           bottom:25px;
           right:25px;
+        }
+      }
+    }
+    .house-detail-container {
+      width: inherit;
+      position: relative;
+      .house-detail-info {
+        margin: 0 auto;
+        width: inherit;
+        border-bottom: solid 1px #f2f2f2;
+        .house-detail {
+          float: left;
+          box-sizing: border-box;
+          > .house-detail-item {
+            border-bottom: solid 1px #e6e6e6;
+            &:last-child {
+              border-bottom: none;
+            }
+            &:first-of-type {
+              padding: 15px 0;
+              border-bottom: none;
+              ul {
+                list-style: none;
+                color:red;
+                font-size: 14px;
+                li {
+                  display: inline-block;
+                  a {
+                    color: #1aa3ff;
+                    text-decoration: none;
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                  &.active {
+                    a {
+                      color: #666;
+                    }
+                  }
+                  &:not(:last-child) {
+                    &:after {
+                      content:" · ";
+                      color: #666;
+                      padding: 0 10px;
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-of-type(2) {
+              padding: 20px 0;
+            }
+            &:nth-of-type(4) {
+              padding: 20px 0;
+              .detail-location-head {
+                font-size: 28px;
+                font-weight: bold;
+                margin: 20px 0;
+              }
+              .detail-location-body {
+                margin: 5px 0;
+                div {
+                  font-size: 16px;
+                  line-height: 24px;
+                  &:first-child {
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                  }
+                }
+              }
+            }
+            &:nth-of-type(5) {
+              padding: 20px 0;
+              width: 100%;
+              .notice-head {
+                font-size: 28px;
+                font-weight: bold;
+                margin: 20px 0;
+              }
+              .notice-body {
+                width: inherit;
+                .notice-item {
+                  width: inherit;
+                  display: flex;
+                  align-items: flex-start;
+                  margin: 20px 0;
+                  > div {
+                    font-size: 16px;
+                    display: inline-block;
+                    &:first-child {
+                      width: 30%;
+                      font-weight: 500;
+                    }
+                    &:last-child {
+                      width: 70%;
+                      font-weight: normal;
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-of-type(6) {
+              width: 100%;
+              padding: 20px 0;
+              > .landlord-head {
+                font-size: 28px;
+                font-weight: bold;
+                margin: 20px 0;
+              }
+              > .landlord-item {
+                width: inherit;
+                margin: 15px 0;
+                &.landlord-owner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  .owner-info {
+                    display: inline-flex;
+                    flex-direction: column;
+                    > span {
+                      line-height: 26px;
+                      display: inline-flex;
+                      &:last-child {
+                        span {
+                          margin-right: 10px;
+                          display: inline-flex;
+                          align-items: center;
+                          img {
+                            height: 26px;
+                            width: 26px;
+                            margin-right: 5px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .house-get {
+          height: 50px;
+          border: solid 1px red;
+          float: left;
+          box-sizing: border-box;
         }
       }
     }

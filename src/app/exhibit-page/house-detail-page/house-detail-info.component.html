@@ -1,0 +1,62 @@
+<div class="house-detail-info">
+  <div class="detail-info info-basic">
+    <div class="basic-head">{{houseData.city}}市 · {{houseData.type}}</div>
+    <div class="basic-title">{{houseData.title}}</div>
+    <div class="basic-content">
+      <span><span class="basic-icon fa fa-home"></span>{{houseData.fality?.room}}间卧室</span>
+      <span><span class="basic-icon fa fa-bed"></span>{{houseData.fality?.bed}}张床</span>
+      <span><span class="basic-icon fa fa-bath"></span>{{houseData.fality?.toliet}}间卫生间</span>
+      <span><span class="basic-icon fa fa-users"></span>最多住{{houseData.fality?.maxguest}}人</span>
+    </div>
+    <div class="basic-foot">
+      <span><nc-label [type]="'info'" [title]="starInfo"></nc-label></span>
+      <span *ngFor="let featr of houseData.featrue"><nc-label [title]="featr"></nc-label></span>
+    </div>
+  </div>
+  <div class="detail-info info-owner">
+    <div class="owner-info">
+      <span><nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="houseData.owner?.avatar"></nc-avater></span>
+      <span>
+        <span>房东：{{houseData.owner?.name}}</span>
+        <span>共收到{{houseData.owner?.comment}}条评价 · 已验证</span>
+      </span>
+    </div>
+    <div class="owner-more">
+      <span class="more-text">{{houseData.text}}</span>
+      <span class="more-button" (click)="isShowAbout = true">更多房源介绍</span>
+    </div>
+  </div>
+  <div class="detail-info info-bedroom">
+    <span class="bedroom-info">
+      <span>卧室1</span>
+      <span class="fa fa-bed"></span>
+      <span>{{houseData.fality?.room}}张标准双人床</span>
+    </span>
+  </div>
+  <div class="detail-info info-notify">
+    <div><span>整套房子/公寓</span><span>无需与房东或房客共享空间，独享整个房源</span></div>
+    <div><span>入住/退房</span><span>入住时间 15:00后 · 退房时间 12:00</span></div>
+    <div><span>自助入住</span><span>通过智能门锁自助入住</span></div>
+  </div>
+  <div class="detail-info info-fality">
+    <span class="fatify-item nc-lg-col-2 nc-xl-col-2 nc-md-col-3 nc-xs-col-6 nc-sm-col-6"
+          *ngFor="let fatify of fatifys">
+      <span><app-fality-icon [type]="fatify.name"></app-fality-icon></span>
+      <span>{{fatify.label}}</span>
+    </span>
+    <span class="fatify-item nc-lg-col-2 nc-xl-col-2 nc-md-col-3 nc-xs-col-6 nc-sm-col-6" (click)="isShowFatify = true">
+      <span>{{allFatifys.length}}+</span>
+      <span>更多设施</span>
+    </span>
+  </div>
+</div>
+
+<app-house-detail-about [(isShowsDialog)]="isShowAbout"></app-house-detail-about>
+<app-house-detail-fatify [(isDisplay)]="isShowFatify" [fatify]="houseData.otherfality"></app-house-detail-fatify>
+
+
+
+
+
+
+

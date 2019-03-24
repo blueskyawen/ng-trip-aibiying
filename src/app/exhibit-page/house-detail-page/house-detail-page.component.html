@@ -3,7 +3,7 @@
     <app-page-head [scene]="'houseDetail'" [showSearch]="true"></app-page-head>
   </div>
 
-  <div class="nc-content">
+  <div class="nc-content" *ngIf="houseData">
     <div class="house-photo-container">
       <div class="nc-container photos-container" *ngIf="!isShowPhotoView">
         <div class="nc-row nc-image-container photos-review">
@@ -24,6 +24,79 @@
       <nc-photo-view *ngIf="isShowPhotoView" [photos]="houseData.photoOptions" [(isShow)]="isShowPhotoView"
                      [curIndex]="curImgIndex">
       </nc-photo-view>
+    </div>
+    <div class="house-detail-container">
+      <div class="house-detail-info nc-lg-col-9 nc-xl-col-9 nc-md-col-6 nc-xs-col-12 nc-sm-col-12">
+        <div class="house-detail nc-lg-col-7 nc-xl-col-7 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
+          <div class="house-detail-item">
+            <ul>
+              <li *ngFor="let headItem of houseHeads" [class.active]="headItem.isActive">
+                <a href="{{headItem.label}}">{{headItem.name}}</a>
+              </li>
+            </ul>
+          </div>
+          <div id="detail" class="house-detail-item">
+            <app-house-detail-info [houseData]="houseData"></app-house-detail-info>
+          </div>
+          <div id="comment" class="house-detail-item">
+            <app-house-detail-comment [comment]="houseData.comment"></app-house-detail-comment>
+          </div>
+          <div id="location" class="house-detail-item">
+            <div class="detail-location-head">位置</div>
+            <div class="detail-location-body">
+              <div>{{houseData.city}}市，{{houseData.country}}</div>
+              <div>{{houseData.text2}}</div>
+            </div>
+          </div>
+          <div id="notice" class="house-detail-item">
+            <div class="notice-head">须知</div>
+            <div class="notice-body">
+              <div class="notice-item">
+                <div>基本要求</div>
+                <div>不适合婴幼儿（2岁以下）及宠物入住，或不能为婴幼儿及宠物提供安全的住宿环境<br>
+                  禁止吸烟、派对或活动<br>
+                  15:00后可以随时入住，12:00前退房</div>
+              </div>
+              <div class="notice-item">
+                <div>取消政策</div>
+                <div>中等 - 预订确认后48小时之内可免费取消</div>
+              </div>
+              <div class="notice-item">
+                <div>交易提示</div>
+                <div>为了保护您的账号隐私和付款安全，请不要相信其它任何平台的折扣或礼金券代订，并始终在爱彼迎站内转账和交流。
+                  <a href="javascript:void(0);" (click)="goJiaoyi()">查看详情</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="landlord" class="house-detail-item">
+            <div class="landlord-head">房东</div>
+            <div class="landlord-item landlord-owner">
+              <span class="owner-info">
+                <span>{{houseData.owner.name}}</span>
+                <span>{{houseData.country_en}}, {{houseData.country}} · 注册时间：{{getRegistime(houseData.registerTime)}}</span>
+                <span>
+                  <span>
+                    <nc-badge [type]="'warn'" [count]="7"></nc-badge>
+                    条评价</span>
+                  <span>
+                    <img class="_1u6feuz3" src="https://a0.muscache.com/airbnb/static/badges/verified_badge-6ee370f5ca86a52ed6198fac858ac1f4.png" width="100%" height="100%" alt="已验证">
+                    已验证
+                  </span>
+                </span>
+              </span>
+              <span class="owner-img">
+                <nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="houseData.owner?.avatar"></nc-avater>
+              </span>
+            </div>
+            <div class="landlord-item"></div>
+            <div class="landlord-item"></div>
+          </div>
+        </div>
+        <div class="house-get nc-lg-col-5 nc-xl-col-5 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
+
+        </div>
+      </div>
     </div>
   </div>
 

@@ -1,0 +1,82 @@
+.detail-info-comment {
+  width: 100%;
+  padding: 30px 0;
+  .comment-head {
+    width: inherit;
+    > div {
+      width: inherit;
+      &:first-of-type {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      &:nth-of-type(2) {
+        display: flex;
+        justify-content: space-between;
+        span {
+          &:first-of-type {
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            span {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        width: inherit;
+        margin-top: 15px;
+        .press-item {
+          display: inline-flex;
+          justify-content: space-between;
+          padding: 5px 10px 5px 0;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+  .comment-body {
+    width: inherit;
+    .comment-item {
+      width: inherit;
+      position: relative;
+      padding: 18px 0;
+      border-top: solid 1px #e6e6e6;
+      display: flex;
+      flex-direction: column;
+      .comment-user {
+        display: inline-flex;
+        align-items: center;
+        .comment-user-text {
+          display: inline-flex;
+          flex-direction: column;
+          margin-left: 10px;
+          span {
+            font-size: 14px;
+            color:#666;
+          }
+        }
+      }
+      .comment-jubao {
+        color: #999;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .comment-content {
+        width: inherit;
+        padding: 20px 0 10px 10px;
+        color: #666;
+      }
+    }
+    .comment-foot {
+      width: inherit;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

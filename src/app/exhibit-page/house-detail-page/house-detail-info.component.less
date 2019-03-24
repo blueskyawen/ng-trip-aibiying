@@ -1,0 +1,121 @@
+.house-detail-info {
+  width: 100%;
+  .detail-info {
+    width: inherit;
+    border-bottom: solid 1px #e6e6e6;
+    padding: 0 0 15px;
+    &.info-basic {
+      color: #4d4d4d;
+      div {
+        margin: 10px 0;
+        &.basic-head {
+          font-size: 12px;
+        }
+        &.basic-title {
+          font-size: 28px;
+          font-weight: 600;
+        }
+        &.basic-content {
+          > span {
+            font-size: 14px;
+            margin-right: 20px;
+            .basic-icon {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    &.info-owner {
+      padding: 20px 0;
+      .owner-info {
+        display: inline-flex;
+        align-items: center;
+        > span:last-of-type {
+          display: inline-flex;
+          flex-direction: column;
+          margin-left: 10px;
+          span {
+            font-size: 16px;
+            color: #666;
+            line-height: 24px;
+          }
+        }
+      }
+      .owner-more {
+        background-color: #f2f2f2;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        position: relative;
+        .more-text {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .more-button {
+          margin-top: 10px;
+          color: #0099ff;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+        &:before {
+          content: "";
+          display: inline-block;
+          border: solid 16px;
+          border-color: transparent transparent #f2f2f2;position: absolute;
+          left: 10px;
+          bottom: 100%;
+        }
+      }
+    }
+    &.info-bedroom {
+      padding: 20px 0;
+      .bedroom-info {
+        display: inline-flex;
+        flex-direction: column;
+        padding: 15px;
+        border: solid 1px #ccc;
+        border-radius: 4px;
+        span {
+          line-height: 26px;
+          color: #666666;
+        }
+      }
+    }
+    &.info-notify {
+      padding: 20px 0;
+      div {
+        line-height: 50px;
+        span {
+          display: inline-block;
+          &:first-child {
+            width: 150px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &.info-fality {
+      width: 100%;
+      padding: 20px 0;
+      .fatify-item {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 28px;
+        &:last-child {
+          color:#4db8ff;
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

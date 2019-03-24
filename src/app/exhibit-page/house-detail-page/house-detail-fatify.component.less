@@ -1,0 +1,26 @@
+.content {
+  width: 100%;
+  .fatifys {
+    width: inherit;
+    margin: 20px 0;
+    > div {
+      color: #666666;
+      width: inherit;
+      &:first-of-type {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 20px;
+      }
+      &:last-of-type {
+        font-size: 16px;
+        > .fatify-item {
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          width: 25%;
+          margin: 0 0 13px;
+        }
+      }
+    }
+  }
+}

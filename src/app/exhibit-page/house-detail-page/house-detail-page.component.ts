@@ -16,6 +16,11 @@ export class HouseDetailPageComponent implements OnInit {
   photos: string[] = [];
   isShowPhotoView: boolean = false;
   curImgIndex: number = 0;
+  houseHeads: any[] = [
+    {name: '详情', label: '#detail', isActive: true}, {name: '评价', label: '#comment', isActive: false},
+    {name: '位置', label: '#location', isActive: false}, {name: '须知', label: '#notice', isActive: false},
+    {name: '房东', label: '#landlord', isActive: false}
+  ];
   constructor(private coreService: CoreService,
               private exhibitPageService: ExhibitPageService,
               private route: ActivatedRoute) { }
@@ -40,7 +45,7 @@ export class HouseDetailPageComponent implements OnInit {
     this.houseData.photos.forEach(photo => {
       this.houseData.photoOptions.push({
         id: tmpId++,
-        title: '【野宿·饮马居】 #步行至西湖2分钟# 定安路地铁口旁#开放式厨房#河坊街#南山路#',
+        title: this.houseData.title,
         alt: this.houseData.title.slice(0, 10),
         src: photo
       });
@@ -54,4 +59,12 @@ export class HouseDetailPageComponent implements OnInit {
     this.isShowPhotoView = true;
   }
 
+  goJiaoyi() {
+    window.open('https://www.airbnb.cn/help/article/199', '_blank');
+  }
+
+  getRegistime(time : string) {
+    let regDate = new Date(time);
+    return `${regDate.getFullYear()}年${regDate.getMonth()}月`;
+  }
 }
