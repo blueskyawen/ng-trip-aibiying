@@ -25,6 +25,7 @@
                      [curIndex]="curImgIndex">
       </nc-photo-view>
     </div>
+
     <div class="house-detail-container">
       <div class="house-detail-info nc-lg-col-9 nc-xl-col-9 nc-md-col-6 nc-xs-col-12 nc-sm-col-12">
         <div class="house-detail nc-lg-col-7 nc-xl-col-7 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
@@ -73,7 +74,8 @@
             <div class="landlord-head">房东</div>
             <div class="landlord-item landlord-owner">
               <span class="owner-info">
-                <span>{{houseData.owner.name}}</span>
+                <span>{{houseData.owner.name}}
+                  <span class="contact-land">联系房东</span></span>
                 <span>{{houseData.country_en}}, {{houseData.country}} · 注册时间：{{getRegistime(houseData.registerTime)}}</span>
                 <span>
                   <span>
@@ -89,12 +91,54 @@
                 <nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="houseData.owner?.avatar"></nc-avater>
               </span>
             </div>
-            <div class="landlord-item"></div>
-            <div class="landlord-item"></div>
+            <div class="landlord-item landlord-jieshao">
+              <div>自我介绍</div>
+              <div># 野宿# 这个品牌是我一个 不知名模特和一位杭州知名设计师野草共同建立的｡<br>
+                我们最开始想做民宿的原因其实很简单就是想把自己的想法表达出来｡<br>
+                我是属于那种 一周要出差5天甚至更多的,每次出门呢都是会订民宿,但是这么久了我却一直没有住到过我最满意的房子｡所以我把这个想法告诉了我的搭档野草 我们不谋而合的决定 去做民宿,做我们喜欢的,把我们的心里表达给大家 ｡ </div>
+            </div>
+            <div class="landlord-item landlord-jieshao">
+              <div>与房客的互动</div>
+              <div>入住期间有任何问题可以随时沟通,只要您有需要,我就随时都在｡</div>
+            </div>
           </div>
         </div>
         <div class="house-get nc-lg-col-5 nc-xl-col-5 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
+          <div class="house-get-container">
+            <div class="get-head">
+              <div>￥{{houseData.price}} 每晚</div>
+              <div>
+                <span>
+                  <span><svg viewBox="0 0 32 32" role="presentation" aria-hidden="true" focusable="false" style="height: 12px; width: 12px;fill: rgb(96, 182, 181);"><path d="m13.2651857 19.4498225-5.07154933-5.0715493-2.17401154 2.1740115 7.24670517 7.2467052 2.1740115-2.1740116-.0011443-.0011443 10.649855-10.649855-2.1740115-2.17401155zm2.7348143 12.5501775c-8.836556 0-16-7.163444-16-16s7.163444-16 16-16 16 7.163444 16 16-7.163444 16-16 16z"></path></svg></span>
+                  春季特惠8折
+                </span>
+                <span>
+                  <span><svg viewBox="0 0 32 32" role="presentation" aria-hidden="true" focusable="false" style="height: 12px; width: 12px; fill: rgb(187, 187, 187);"><path d="m13.2651857 19.4498225-5.07154933-5.0715493-2.17401154 2.1740115 7.24670517 7.2467052 2.1740115-2.1740116-.0011443-.0011443 10.649855-10.649855-2.1740115-2.17401155zm2.7348143 12.5501775c-8.836556 0-16-7.163444-16-16s7.163444-16 16-16 16 7.163444 16 16-7.163444 16-16 16z"></path></svg></span>
+                  满7天立享9.3折
+                </span>
+                <span>
+                  <span><svg viewBox="0 0 32 32" role="presentation" aria-hidden="true" focusable="false" style="height: 12px; width: 12px; fill: rgb(187, 187, 187);"><path d="m13.2651857 19.4498225-5.07154933-5.0715493-2.17401154 2.1740115 7.24670517 7.2467052 2.1740115-2.1740116-.0011443-.0011443 10.649855-10.649855-2.1740115-2.17401155zm2.7348143 12.5501775c-8.836556 0-16-7.163444-16-16s7.163444-16 16-16 16 7.163444 16 16-7.163444 16-16 16z"></path></svg></span>
+                  满28天立享9折
+                </span>
+              </div>
+              <div>
+                <nc-rate [size]="'12px'" [color]="'#33adff'" [totalRate]="5" [(curRate)]="houseData.comment.press.good" [showTitle]="false"></nc-rate>
+                <span>{{houseData.comment.num}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      7条
+
+      <div class="other-house-info nc-lg-col-9 nc-xl-col-9 nc-md-col-6 nc-xs-col-12 nc-sm-col-12">
+        <div>类似房源</div>
+        <div class="other-list">
+          <div *ngFor="let cityHouse of cityOtherHouses" [routerLink]="['/house',cityHouse.id]"
+               class="hot-city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+            <app-hot-city-house-card [house]="cityHouse"></app-hot-city-house-card>
+          </div>
         </div>
       </div>
     </div>
