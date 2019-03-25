@@ -8,24 +8,9 @@
   <span class="select-item">
     <nc-button [type]="showButton.person.type" (click)="showButton.person.flag = !showButton.person.flag">
       {{showButton.person.text}}</nc-button>
-    <div class="select-person-set nc-flex nc-row-column" *ngIf="showButton.person.flag">
-      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
-        <span>成人</span>
-        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.person.adult"></nc-number-put></span>
-      </div>
-      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
-        <span><span>儿童</span><span>2-12岁</span></span>
-        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.person.child"></nc-number-put></span>
-      </div>
-      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
-        <span><span>婴儿</span><span>2岁以下</span></span>
-        <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="selectData.person.baby"></nc-number-put></span>
-      </div>
-      <div class="select-person-set-item nc-flex nc-content-space-between nc-align-item-center">
-        <span class="t-cancel" (click)="clearPersonSt()">取消</span>
-        <span class="t-confirm" (click)="confirmPersonSt()">确认</span>
-      </div>
-    </div>
+    <app-roomer-set-card *ngIf="showButton.person.flag" class="select-person-set" [(person)]="selectData.person"
+                         (personChange)="personChange($event)">
+    </app-roomer-set-card>
   </span>
   <span class="select-item" *ngIf="type === 'more'">
     <nc-button [type]="showButton.resourceType.type" (click)="showButton.resourceType.flag = !showButton.resourceType.flag">

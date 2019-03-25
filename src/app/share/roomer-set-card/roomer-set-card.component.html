@@ -1,0 +1,19 @@
+<div class="roomer-set-card nc-flex nc-row-column">
+  <div class="roomer-set-item nc-flex nc-content-space-between nc-align-item-center">
+    <span>成人</span>
+    <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="person.adult"></nc-number-put></span>
+  </div>
+  <div class="roomer-set-item nc-flex nc-content-space-between nc-align-item-center">
+    <span><span>儿童</span><span>2-12岁</span></span>
+    <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="person.child"></nc-number-put></span>
+  </div>
+  <div class="roomer-set-item nc-flex nc-content-space-between nc-align-item-center">
+    <span><span>婴儿</span><span>2岁以下</span></span>
+    <span><nc-number-put [mode]="'horizontal'" [type]="'middle'" [(value)]="person.baby"></nc-number-put></span>
+  </div>
+  <div class="roomer-set-item nc-flex nc-content-space-between nc-align-item-center">
+    <span class="t-cancel" (click)="cancel()">取消</span>
+    <span class="t-confirm" (click)="confirm()">确认</span>
+  </div>
+</div>
+

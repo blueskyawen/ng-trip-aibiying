@@ -23,6 +23,8 @@ export class HouseDetailPageComponent implements OnInit {
     {name: '房东', label: '#landlord', isActive: false}
   ];
   cityOtherHouses: any[] = [];
+  isShowLogin: boolean = false;
+  isShowRegister: boolean = false;
   constructor(private coreService: CoreService,
               private exhibitPageService: ExhibitPageService,
               private route: ActivatedRoute,
@@ -73,5 +75,17 @@ export class HouseDetailPageComponent implements OnInit {
   getRegistime(time : string) {
     let regDate = new Date(time);
     return `${regDate.getFullYear()}年${regDate.getMonth()}月`;
+  }
+
+  handleToLoginEvnent() {
+    this.isShowLogin = true;
+  }
+
+  handleToRegisterEvnent() {
+    this.isShowRegister = true;
+  }
+
+  informChange() {
+    this.isShowLogin = true;
   }
 }

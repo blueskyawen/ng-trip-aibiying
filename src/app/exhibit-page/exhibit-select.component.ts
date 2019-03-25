@@ -79,20 +79,20 @@ export class ExhibitSelectComponent implements OnInit {
     this.showButton.date.type = 'normal';
   }
 
-  clearPersonSt() {
-    this.selectData.person.adult = 0;
-    this.selectData.person.child = 0;
-    this.selectData.person.baby = 0;
-    this.showButton.person.text = this.showButton.person.title;
-    this.showButton.person.flag  = false;
-    this.showButton.person.type = 'cancel';
-  }
-
-  confirmPersonSt() {
-    this.showButton.person.text = (this.selectData.person.adult + this.selectData.person.child) + '人, ' +
-        this.selectData.person.baby + '名婴幼儿';
-    this.showButton.person.flag = false;
-    this.showButton.person.type = 'normal';
+  personChange(item: any) {
+    if(item) {
+      this.showButton.person.text = (this.selectData.person.adult + this.selectData.person.child) + '人, ' +
+          this.selectData.person.baby + '名婴幼儿';
+      this.showButton.person.flag = false;
+      this.showButton.person.type = 'normal';
+    } else {
+      this.selectData.person.adult = 0;
+      this.selectData.person.child = 0;
+      this.selectData.person.baby = 0;
+      this.showButton.person.text = this.showButton.person.title;
+      this.showButton.person.flag  = false;
+      this.showButton.person.type = 'cancel';
+    }
   }
 
   handleCheckChange() {

@@ -1,0 +1,62 @@
+<div class="house-order-container">
+  <div class="house-order-head">
+    <div>￥{{houseData.price}} 每晚</div>
+    <div>
+      <span>
+        <span><svg viewBox="0 0 32 32" role="presentation" aria-hidden="true" focusable="false" style="height: 12px; width: 12px;fill: rgb(96, 182, 181);"><path d="m13.2651857 19.4498225-5.07154933-5.0715493-2.17401154 2.1740115 7.24670517 7.2467052 2.1740115-2.1740116-.0011443-.0011443 10.649855-10.649855-2.1740115-2.17401155zm2.7348143 12.5501775c-8.836556 0-16-7.163444-16-16s7.163444-16 16-16 16 7.163444 16 16-7.163444 16-16 16z"></path></svg></span>
+        春季特惠8折
+      </span>
+      <span>
+        <span><svg viewBox="0 0 32 32" role="presentation" aria-hidden="true" focusable="false" style="height: 12px; width: 12px; fill: rgb(187, 187, 187);"><path d="m13.2651857 19.4498225-5.07154933-5.0715493-2.17401154 2.1740115 7.24670517 7.2467052 2.1740115-2.1740116-.0011443-.0011443 10.649855-10.649855-2.1740115-2.17401155zm2.7348143 12.5501775c-8.836556 0-16-7.163444-16-16s7.163444-16 16-16 16 7.163444 16 16-7.163444 16-16 16z"></path></svg></span>
+        满7天立享9.3折
+      </span>
+      <span>
+        <span><svg viewBox="0 0 32 32" role="presentation" aria-hidden="true" focusable="false" style="height: 12px; width: 12px; fill: rgb(187, 187, 187);"><path d="m13.2651857 19.4498225-5.07154933-5.0715493-2.17401154 2.1740115 7.24670517 7.2467052 2.1740115-2.1740116-.0011443-.0011443 10.649855-10.649855-2.1740115-2.17401155zm2.7348143 12.5501775c-8.836556 0-16-7.163444-16-16s7.163444-16 16-16 16 7.163444 16 16-7.163444 16-16 16z"></path></svg></span>
+        满28天立享9折
+      </span>
+    </div>
+    <div>
+      <nc-rate [size]="'12px'" [color]="'#33adff'" [totalRate]="5" [(curRate)]="houseData.comment.press.good" [showTitle]="false"></nc-rate>
+      <span>{{houseData.comment.num}}</span>
+    </div>
+  </div>
+  <div class="house-order-content">
+    <form novalidate>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start">用户名</nc-form-label>
+        <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12" (click)="openDateSelector()">
+          <nc-input [type]="'text'" [(modelValue)]="tripDateRange" [required]="true" [iconffix]="'pre'" [showHint]="false">
+            <nc-input-icon><span class="fa fa-calendar"></span></nc-input-icon>
+          </nc-input>
+        </nc-form-control>
+        <nc-range-date-selector *ngIf="isShowDateRange" class="date-selector" [(dateRange)]="orderData.dateRange"
+                                (dateRangeChange)="dateRangeChange()"></nc-range-date-selector>
+      </nc-form-group>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start nc-content-start">密码</nc-form-label>
+        <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12" (click)="openPersonSet()">
+          <nc-input [type]="'text'" [(modelValue)]="personData" [required]="true" [iconffix]="'pre'" [showHint]="false">
+            <nc-input-icon><span class="fa fa-lock"></span></nc-input-icon>
+          </nc-input>
+        </nc-form-control>
+        <app-roomer-set-card *ngIf="isShowPersonSet" class="trip-person-set" [(person)]="orderData.person"
+                             (personChange)="personChange($event)">
+        </app-roomer-set-card>
+      </nc-form-group>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-control class="order-button">
+          <nc-button [width]="'100%'">登录</nc-button>
+        </nc-form-control>
+      </nc-form-group>
+    </form>
+  </div>
+</div>
+<div class="house-order-jubao">
+  <span>
+    <span class="img-jubao">
+      <svg viewBox="0 0 24 24" role="img" aria-label="举报" focusable="false" style="height: 1em; width: 1em; display: block; fill: rgb(118, 118, 118);"><path d="m22.39 5.8-.27-.64a207.86 207.86 0 0 0 -2.17-4.87.5.5 0 0 0 -.84-.11 7.23 7.23 0 0 1 -.41.44c-.34.34-.72.67-1.13.99-1.17.87-2.38 1.39-3.57 1.39-1.21 0-2-.13-3.31-.48l-.4-.11c-1.1-.29-1.82-.41-2.79-.41a6.35 6.35 0 0 0 -1.19.12c-.87.17-1.79.49-2.72.93-.48.23-.93.47-1.35.71l-.11.07-.17-.49a.5.5 0 1 0 -.94.33l7 20a .5.5 0 0 0 .94-.33l-2.99-8.53a21.75 21.75 0 0 1 1.77-.84c.73-.31 1.44-.56 2.1-.72.61-.16 1.16-.24 1.64-.24.87 0 1.52.11 2.54.38l.4.11c1.39.37 2.26.52 3.57.52 2.85 0 5.29-1.79 5.97-3.84a.5.5 0 0 0 0-.32c-.32-.97-.87-2.36-1.58-4.04zm-4.39 7.2c-1.21 0-2-.13-3.31-.48l-.4-.11c-1.1-.29-1.82-.41-2.79-.41-.57 0-1.2.09-1.89.27a16.01 16.01 0 0 0 -2.24.77c-.53.22-1.04.46-1.51.7l-.21.11-3.17-9.06c.08-.05.17-.1.28-.17.39-.23.82-.46 1.27-.67.86-.4 1.7-.7 2.48-.85.35-.06.68-.1.99-.1.87 0 1.52.11 2.54.38l.4.11c1.38.36 2.25.51 3.56.51 1.44 0 2.85-.6 4.18-1.6.43-.33.83-.67 1.18-1.02a227.9 227.9 0 0 1 1.85 4.18l.27.63c.67 1.57 1.17 2.86 1.49 3.79-.62 1.6-2.62 3.02-4.97 3.02z" fill-rule="evenodd"></path></svg>
+    </span>
+    <span (click)="jubao()">举报此房源</span>
+  </span>
+</div>
+

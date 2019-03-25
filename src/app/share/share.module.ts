@@ -9,14 +9,16 @@ import { HotCityHouseCardComponent } from './hot-city-house-card/hot-city-house-
 import { HighExpertenceCardComponent } from './high-expertence-card/high-expertence-card.component';
 import { PlayCardComponent } from './play-card/play-card.component';
 import { FalityIconComponent } from './fality-icon/fality-icon.component';
+import { RoomerSetCardComponent } from './roomer-set-card/roomer-set-card.component';
 
 @NgModule({
   declarations: [TripStoryCardComponent, HotCityHouseCardComponent, HighExpertenceCardComponent,
-    PlayCardComponent, FalityIconComponent],
+    PlayCardComponent, FalityIconComponent, RoomerSetCardComponent],
   imports: [
     CommonModule, LibModule
   ],
   exports: [LibModule, CommonModule, HttpClientModule, RouterModule, FormsModule,
-    TripStoryCardComponent, HotCityHouseCardComponent, HighExpertenceCardComponent, PlayCardComponent, FalityIconComponent]
+    TripStoryCardComponent, HotCityHouseCardComponent, HighExpertenceCardComponent, PlayCardComponent,
+    FalityIconComponent, RoomerSetCardComponent]
 })
 export class ShareModule { }

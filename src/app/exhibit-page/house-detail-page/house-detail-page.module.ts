@@ -7,9 +7,10 @@ import { HouseDetailInfoComponent } from './house-detail-info.component';
 import { HouseDetailAboutComponent } from './house-detail-about.component';
 import { HouseDetailFatifyComponent } from './house-detail-fatify.component';
 import { HouseDetailCommentComponent } from './house-detail-comment.component';
+import { HouseDetailOrderComponent } from './house-detail-order.component';
 
 @NgModule({
-  declarations: [HouseDetailPageComponent, HouseDetailInfoComponent, HouseDetailAboutComponent, HouseDetailFatifyComponent, HouseDetailCommentComponent],
+  declarations: [HouseDetailPageComponent, HouseDetailInfoComponent, HouseDetailAboutComponent, HouseDetailFatifyComponent, HouseDetailCommentComponent, HouseDetailOrderComponent],
   imports: [
     ShareModule, HomePageModule
   ]

@@ -15,7 +15,6 @@ export class PageSearchComponent implements OnInit {
   isShowDateRange: boolean = false;
   personData = '人数';
   isShowPersonSet: boolean = false;
-  value3: number = 3;
   constructor() { }
 
   ngOnInit() {
@@ -47,5 +46,13 @@ export class PageSearchComponent implements OnInit {
     this.personData = (this.searchData.person.adult + this.searchData.person.child) + '人, ' +
         this.searchData.person.baby + '名婴幼儿';
     this.isShowPersonSet = false;
+  }
+
+  personChange(item: any) {
+    if(item) {
+      this.confirmPersonSt();
+    } else {
+      this.clearPersonSt();
+    }
   }
 }

@@ -1,0 +1,74 @@
+.house-order-container {
+  width: 100%;
+  border: solid 1px #e6e6e6;
+  border-radius: 2px;
+  padding: 16px;
+  box-sizing: border-box;
+  .house-order-head {
+    width: inherit;
+    border-bottom: solid 1px #f2f2f2;
+    div {
+      margin: 10px 0;
+      &:first-child {
+        font-size: 24px;
+        font-weight: 400;
+        color: #008ae6;
+      }
+      &:nth-child(2) {
+        > span {
+          font-size: 12px;
+        }
+      }
+      &:last-child {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .house-order-content {
+    width: inherit;
+    form {
+      width: 100%;
+      > .nc-form-item {
+        position: relative;
+        .date-selector {
+          position: absolute;
+          top: 100%;
+          right: 0%;
+          z-index: 1;
+        }
+        .trip-person-set {
+          position: absolute;
+          top: 100%;
+          left: 0%;
+          z-index: 1;
+        }
+        .order-button {
+          margin-top: 15px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.house-order-jubao {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  > span {
+    font-size: 14px;
+    color: #666;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    span {
+      display: inline-block;
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+}
