@@ -1,0 +1,94 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "title": "Loft公寓",
+      "num": 30,
+      "text": "在敞亮的Loft公寓里享受一下它高高的天花板和超大的窗户吧",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/08703e8a-411a-40f2-8e20-da8b8b49a652.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/9ecd5a83-e13c-4a70-8e1b-ee1c56ca43f1.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "露台小聚",
+      "num": 40,
+      "text": "在这些带露台的房子里，你能独享僻静，也能和朋友家人小聚一番",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/bd21b8ee-9d81-46b8-98b9-e08f40fd36fc.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/dcc70e6f-8d50-40c8-97ff-0cc71c0c9be0.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "无边美景",
+      "num": 20,
+      "text": "准备好相机，在这些坐拥完美景色的房子里捕捉一下绝美瞬间吧",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/1a48c8eb-c049-4877-afa9-f003208e7705.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/f607f323-73fc-4e7a-9e9b-68e2fa12fd21.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "风格别致",
+      "num": 30,
+      "text": "入住这些色彩明快、风格有趣的独特房源，好好放松一下吧",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/4017358c-d0c9-485c-bf5a-b456adec8ea4.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/43e84324-6912-401f-b85c-f26303984afd.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "极简之美",
+      "num": 20,
+      "text": "在这些设计精心的现代房源中，享受极简风和最大程度的舒适",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/ad30a6f4-d914-4567-ab3f-eea912dfa4b1.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/5fde1b76-bfa5-4841-95a7-9c6484c9fc1b.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "大厨最爱",
+      "num": 30,
+      "text": "想烤布朗尼蛋糕、亲自操刀做美食吗？这里有专门为你定制的超棒烹饪体验",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/6fc2c9f0-0ffc-4771-baa3-12eb9c5346e9.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/0d57a927-e26f-449f-993b-e79bc6870411.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "精致卫浴",
+      "num": 30,
+      "text": "入住这些高档房源，私享舒适宁静的洗浴空间，洗净风尘、一扫疲惫",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/69f2b001-21fc-429f-9a42-012a494c611c.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/95185884-37c4-4b6e-8c81-b47cd3126fcb.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "宽敞庭院",
+      "num": 30,
+      "text": "在草地上玩玩游戏，或者在这些让人舒心的房子的后院里美美地睡它一觉",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/36f45778-4d18-44c7-8650-516fdb9b7c07.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/1fefcbb3-a763-46ea-95a6-a60dfa0f1aae.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "泳池房源",
+      "num": 50,
+      "text": "想通过旅行给自己充充电？选择那些带泳池的好房子吧",
+      "images": [
+        "https://z1.muscache.cn/4ea/air/v2/pictures/8854f0f9-50e4-4933-9581-dbe0b40f86bf.jpg?t=r:w654-h400-sfit,e:fjpg-c90",
+        "https://z1.muscache.cn/4ea/air/v2/pictures/19b91d29-c038-4da0-aeb0-416d3e3f6f16.jpg?t=c:w3393-h1029,r:w3393-h1029-sfit,e:fjpg-c75"
+      ]
+    }
+  ]
+}
