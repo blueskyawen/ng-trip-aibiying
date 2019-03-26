@@ -1,0 +1,38 @@
+.plus-contianer {
+  width: 100%;
+  padding-top: 150px;
+  .plus-image {
+    width: inherit;
+    position: relative;
+    img {
+      width: inherit;
+      height: 500px;
+    }
+    .plus-main {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: fit-content;
+      span {
+        margin-bottom: 20px;
+        &.plus-main-text {
+          color: #333333;
+        }
+        &.plus-main-foot {
+          color: #666666;
+        }
+      }
+    }
+  }
+  .plus-body {
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+  }
+}
