@@ -26,10 +26,10 @@
       </nc-photo-view>
     </div>
 
-    <div class="house-detail-container">
+    <div class="house-detail-container"  #HouseContent>
       <div class="house-detail-info nc-lg-col-10 nc-xl-col-10 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
         <div class="house-detail nc-lg-col-7 nc-xl-col-7 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
-          <div class="house-detail-item">
+          <div class="house-detail-item" [class.detail-head-fixed]="isHeadFixed">
             <ul>
               <li *ngFor="let headItem of houseHeads" [class.active]="headItem.isActive">
                 <a href="{{headItem.label}}">{{headItem.name}}</a>
@@ -104,14 +104,14 @@
           </div>
         </div>
         <div class="house-get nc-lg-col-5 nc-xl-col-5 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
-          <div class="house-get-container">
+          <div class="house-get-container" [ngClass]="{'order-fixed':isHeadFixed,'order-fix-bottom':isOrderBottom}">
             <app-house-detail-order [houseData]="houseData" (informChange)="informChange()"></app-house-detail-order>
           </div>
         </div>
       </div>
 
       <div class="other-house-info nc-lg-col-10 nc-xl-col-10 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
-        <div>类似房源</div>
+        <div #OtherHouse>类似房源</div>
         <div class="other-list">
           <div *ngFor="let cityHouse of cityOtherHouses" [routerLink]="['/house',cityHouse.id]"
                class="hot-city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">

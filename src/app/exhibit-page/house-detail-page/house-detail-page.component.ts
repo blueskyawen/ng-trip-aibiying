@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterViewInit, Renderer2, ViewChild } from '@angular/core';
 import { CoreService } from '../../core/core.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ExhibitPageService } from '../exhibit-page.service';
@@ -9,7 +9,7 @@ import { PageContentService } from '../../home-page/page-content/page-content.se
   templateUrl: './house-detail-page.component.html',
   styleUrls: ['./house-detail-page.component.less']
 })
-export class HouseDetailPageComponent implements OnInit {
+export class HouseDetailPageComponent implements OnInit, AfterViewInit {
   houseId: number;
   showLoading: boolean = false;
   houseData: any;
@@ -25,10 +25,19 @@ export class HouseDetailPageComponent implements OnInit {
   cityOtherHouses: any[] = [];
   isShowLogin: boolean = false;
   isShowRegister: boolean = false;
+
+  isHeadFixed: boolean = false;
+  isOrderFixed: boolean = false;
+  isOrderBottom: boolean = false;
+  @ViewChild('HouseContent')
+      HouseContentRef: ElementRef;
+  @ViewChild('OtherHouse')
+      OtherHouseRef: ElementRef;
   constructor(private coreService: CoreService,
               private exhibitPageService: ExhibitPageService,
               private route: ActivatedRoute,
-              private pageContentService: PageContentService) { }
+              private pageContentService: PageContentService,
+              private renderer: Renderer2) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -46,6 +55,44 @@ export class HouseDetailPageComponent implements OnInit {
         this.showLoading = false;
       });
     });
+  }
+
+  ngAfterViewInit() {
+    this.renderer.listen('document', 'scroll',
+        () => {this.checkDetailHead();});
+  }
+
+  checkDetailHead() {
+    if(!this.isHeadFixed) {
+      if(this.HouseContentRef.nativeElement.getBoundingClientRect().top < 50) {
+        this.isHeadFixed = true;
+      }
+    } else {
+      if(this.HouseContentRef.nativeElement.getBoundingClientRect().top > 50) {
+        this.isHeadFixed = false;
+      }
+    }
+    if(!this.isOrderFixed) {
+      if(this.isOrderBottom) {
+        if(this.OtherHouseRef.nativeElement.getBoundingClientRect().top > 560) {
+          this.isOrderBottom = false;
+          this.isOrderFixed = true;
+        }
+      } else {
+        if(this.HouseContentRef.nativeElement.getBoundingClientRect().top < 50) {
+          this.isOrderFixed = true;
+        }
+      }
+    } else {
+      if(this.HouseContentRef.nativeElement.getBoundingClientRect().top > 50) {
+        this.isOrderFixed = false;
+        this.isOrderBottom = false;
+      }
+      if(this.OtherHouseRef.nativeElement.getBoundingClientRect().top < 560) {
+        this.isOrderFixed = false;
+        this.isOrderBottom = true;
+      }
+    }
   }
 
   initHouseData() {
