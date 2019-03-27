@@ -1,4 +1,4 @@
-<div class="plus-contianer" *ngIf="!showLoading">
+<div class="plus-contianer">
   <div class="plus-image">
     <img [src]="plusImg" alt="imag-top" />
     <div class="plus-main">
@@ -12,6 +12,9 @@
     </div>
   </div>
   <div class="plus-body nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+    <div class="plus-item">
+      <app-plus-dest-group></app-plus-dest-group>
+    </div>
   </div>
 </div>
 <div class="list-loading" *ngIf="showLoading">
