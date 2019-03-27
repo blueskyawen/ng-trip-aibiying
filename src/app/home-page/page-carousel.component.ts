@@ -10,13 +10,13 @@ export class PageCarouselComponent implements OnInit {
   slideOptions: any[] = [
     {url: 'https://z1.muscache.cn/pictures/55a5bf2f-99fc-4a62-96de-8e3235353466.jpg',
       disable: false,
-      callback: () => {console.log('callback1');}},
+      callback: () => {this.goExhibition(); }},
     {url: 'https://z1.muscache.cn/pictures/b42cd76b-edec-4f88-8dfe-3f20933c7a60.jpg',
       disable: false,
-      callback: () => {console.log('callback2');}},
+      callback: () => {this.goExhibition(); }},
     {url: 'https://z1.muscache.cn/pictures/30c10f87-af4b-45e5-8b6d-1a95c88fd5dd.jpg',
       disable: false,
-      callback: () => {console.log('callback3');}}
+      callback: () => {this.goExhibition(); }}
   ];
   slideOptionTitle: any = {
     head: '48 小时踏青玩个够',

@@ -25,13 +25,13 @@ export class PlusPageService {
 
   getPlusInspireList() {
     return this.http.get('assets/plus-inspire-list.json').pipe(
-        map(res => res['houses'] || [])
+        map(res => res['list'] || [])
     );
   }
 
   getPlusHouseList() {
     return this.http.get('assets/plus-house-list.json').pipe(
-        map(res => res['houses'] || [])
+        map(res => res['houseList'] || [])
     );
   }
 

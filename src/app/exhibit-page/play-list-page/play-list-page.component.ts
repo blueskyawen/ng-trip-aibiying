@@ -56,7 +56,7 @@ export class PlayListPageComponent implements OnInit {
           house.imgOption.push({
             url: image,
             disable: false,
-            callback: () => {}
+            callback: () => {this.router.navigate(['/house', house.id]); }
           });
         });
       });

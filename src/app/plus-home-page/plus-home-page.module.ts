@@ -11,10 +11,11 @@ import { PlusHomeDetailComponent } from './plus-home-detail.component';
 import { PlusHomeMainComponent } from './plus-home-main.component';
 import { PlusDestGroupComponent } from './plus-dest-group.component';
 import { PlusSpecialHouseGroupComponent } from './plus-special-house-group.component';
+import { PlusInpireGroupComponent } from './plus-inpire-group.component';
 
 @NgModule({
   declarations: [PlusHomeComponent, PlusHomeGroupComponent, PlusHomeListComponent,
-    PlusHomeDetailComponent, PlusHomeMainComponent, PlusDestGroupComponent, PlusSpecialHouseGroupComponent],
+    PlusHomeDetailComponent, PlusHomeMainComponent, PlusDestGroupComponent, PlusSpecialHouseGroupComponent, PlusInpireGroupComponent],
   imports: [
     ShareModule, ExhibitPageModule, HomePageModule, PlusHomePageRoutingModule
   ]

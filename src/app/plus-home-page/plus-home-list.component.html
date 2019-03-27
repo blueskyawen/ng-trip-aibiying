@@ -1,3 +1,16 @@
-<p>
-  plus-home-list works!
-</p>
+<div class="plus-home-list">
+  <div class="plus-home-head">
+    <span>300+个爱彼迎Plus房源</span>
+    <span>探索世界各地品质和舒适性经过验证的房源</span>
+  </div>
+  <div class="plus-home-content">
+    <div *ngFor="let home of homeList"
+         class="plus-home-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <app-plus-house-card [plusHouse]="home"></app-plus-house-card>
+    </div>
+  </div>
+  <div class="list-loading" *ngIf="showLoading">
+    <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
+  </div>
+</div>
+

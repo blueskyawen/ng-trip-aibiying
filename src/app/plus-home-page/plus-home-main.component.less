@@ -36,6 +36,37 @@
     .plus-item {
       width: 100%;
       padding: 20px 0;
+      .plus-tablus {
+        width: inherit;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: #d6e0f5;
+        img {
+          width: inherit;
+          height: 300px;
+          border-radius: 5px;
+          display: inherit;
+        }
+        .plus-tab-text {
+          position: absolute;
+          display: inline-flex;
+          flex-direction: column;
+          top: 50px;
+          left: 45px;
+          > span {
+            margin-bottom: 10px;
+            color: #fff;
+            &:last-of-type {
+              display: inline-block;
+              max-width: 400px;
+              font-size: 28px;
+              line-height: 35px;
+            }
+          }
+        }
+      }
     }
   }
 }
+
+

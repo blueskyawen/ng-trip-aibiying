@@ -7,7 +7,7 @@ import { PlusPageService } from './plus-page.service';
   styleUrls: ['./plus-dest-group.component.less']
 })
 export class PlusDestGroupComponent implements OnInit {
-  @Input() destList: any[] = [];
+  destList: any[] = [];
   showLoading: boolean = false;
   constructor(private plusPageService: PlusPageService) { }
 

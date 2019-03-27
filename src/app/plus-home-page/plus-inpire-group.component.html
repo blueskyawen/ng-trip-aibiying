@@ -1,14 +1,13 @@
-<div class="plus-special-house-group" *ngIf="!showLoading">
+<div class="plus-inpire-group" *ngIf="!showLoading">
   <div class="plus-item-head">
-    <span>爱彼迎Plus特色房源</span>
-    <span>因设计体贴周到而获得高评分的房源</span>
+    <span>和爱彼迎Plus一起收获灵感</span>
   </div>
   <div class="plus-item-content">
     <nc-list-group-horizontal [stepWidth]="240" [hideOper]="true">
       <ul class="nc-list-group nc-flex list-group-horizontal">
-        <li *ngFor="let house of houseList" (click)="goSpecialHouse(house)"
+        <li *ngFor="let inpire of inpireList" (click)="goInpire(inpire)"
             class="nc-list-group-item nc-align-item-center">
-          <app-plus-special-house-card [house]="house"></app-plus-special-house-card>
+          <app-plus-inpire-card [inpireHouse]="inpire"></app-plus-inpire-card>
         </li>
       </ul>
     </nc-list-group-horizontal>

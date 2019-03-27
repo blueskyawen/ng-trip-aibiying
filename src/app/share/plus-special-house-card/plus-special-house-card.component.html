@@ -1,0 +1,25 @@
+<div class="plus-special-house-card">
+  <div class="plus-spec-house-img">
+    <img [src]="house.image" />
+  </div>
+  <div class="plus-spec-house-foot">
+    <div class="plus-icon">
+      <span>
+        <nc-label [backColor]="'#993333'">
+          <span style="font-size: 12px;">PLUS</span>
+        </nc-label>
+      </span>
+      <span>已验证 · {{house.city}}</span>
+    </div>
+    <div class="plus-description">{{house.text}}</div>
+    <div class="plus-price">
+      ￥{{house.price}} 每晚
+    </div>
+    <div class="plus-star">
+      <span><nc-rate [size]="'12px'" [color]="'#993333'" [totalRate]="5"
+                     [(curRate)]="house.star" [showTitle]="false"></nc-rate></span>
+      <span>{{house.comment}}</span>
+    </div>
+  </div>
+</div>
+

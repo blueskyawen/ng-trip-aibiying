@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ExhibitPageService } from '../exhibit-page.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class HouseListPageComponent implements OnInit {
   cityHouselist1: any[] = [];
   cityHouselist2: any[] = [];
   curPageIndex: number = 1;
-  constructor(private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute,private router: Router,
               private exhibitPageService: ExhibitPageService) { }
 
   ngOnInit() {
@@ -51,7 +51,7 @@ export class HouseListPageComponent implements OnInit {
         house.imgOption.push({
           url: image,
           disable: false,
-          callback: () => {}
+          callback: () => {this.router.navigate(['/house', house.id]); }
         });
       });
     });
