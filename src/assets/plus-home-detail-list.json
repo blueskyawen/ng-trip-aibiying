@@ -1,0 +1,585 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "site": {
+        "name": "成都市",
+        "city_zh": "四川省",
+        "city_en": "Si Chuan",
+        "country_zh": "中国",
+        "country_en": "China"
+      },
+      "tyep": "整套房子",
+      "title": "在成都市青羊区附近的普通民宅闲逛市井成都",
+      "text": "俯瞰老成都街区,落地窗视角,港式现代品质装潢",
+      "price": 235,
+      "good_press": 5,
+      "comment": 38,
+      "fality": {
+        "room": 1,
+        "toliet": 1,
+        "bed": 1,
+        "maxguest":2
+      },
+      "photos": [
+        {
+          "name": "客厅",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/07b4d4e6-ee1b-4137-977b-c861090021fe.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "客厅",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/754862d0-9957-4d06-886d-0b5d7483bb84.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "客厅",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/c5db1b7c-d6b5-445a-b84a-d4ab61e2f7bd.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "设施齐全的厨房",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/e276a9d2-3013-4340-9afe-0f711952612d.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "设施齐全的厨房",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/a4825591-178a-4480-aed8-584f9ca3d829.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "设施齐全的厨房",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/e0ff89a1-51d7-43a1-af81-9aeab45bdf8f.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "卧室,4张特大号床",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/10cd3b5d-d57e-4782-8e06-aa411b3b8fce.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "卧室,4张特大号床",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/9212a6c7-04a5-4199-9375-85b615fb9754.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90&"
+        },
+        {
+          "name": "卧室,4张特大号床",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/de8e13f9-cd7d-4ccc-80e5-2609bfcd7f21.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "全功能卫生间",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/640321b1-c918-4571-b8f4-dd5ab2481661.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "全功能卫生间",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/45fa6012-f9bf-465d-a72f-5d7220ed4ae6.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "全功能卫生间",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/e53ede9b-796c-4730-89ce-bba52e4f233f.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "餐厅",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/98259273-a78c-4675-956c-7066bae5ad15.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "洗衣间",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/ad5fe33b-6dde-4146-a305-741699856fa8.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "门厅",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/d1cd0dca-84fc-4ad7-814a-a13d811ba501.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        },
+        {
+          "name": "房源外观",
+          "src": "https://z1.muscache.cn/4ea/air/v2/pictures/a16f4089-f125-4f27-9237-87701940c3b8.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+        }
+      ],
+      "owner":{
+        "userId":"11111",
+        "name":"Wendy",
+        "avatar":"https://z1.muscache.cn/im/pictures/83be2616-d027-474a-8c36-f51265ba7928.jpg?aki_policy=profile_x_medium",
+        "description": "和心爱的人一起，泡上一杯清茶，在家里享受落地窗带来的通透风景。",
+        "registerTime": "4/18/2017, 3:10:54 PM",
+        "text": "去过了很多地方,看过了很多风景,也住过了很多民宿,凭着对生活的热爱和高品质环境的执着,终于利用自己的兴趣爱好和对装修的喜爱,做了自己的民宿 Wendy'S apartment,希望你能在成都有一个短暂停留居住的家,我所定义的家,不是房子而是爱的总和,对于提升生活幸福感的东西我都会很在意,成都的火锅火辣辣,而坐在我家的落地窗边吹着高处的凉风,开瓶红酒聊聊心事,我想这就是十分惬意的事情了吧｡"
+      },
+      "featImages": [
+        {
+          "label": "客厅",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/07b4d4e6-ee1b-4137-977b-c861090021fe.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/754862d0-9957-4d06-886d-0b5d7483bb84.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/1d04d4bf-4029-4a00-8a30-2b53a78be530.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/e72b9972-c51c-4dae-94cf-1750cb95f90b.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/c5db1b7c-d6b5-445a-b84a-d4ab61e2f7bd.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        },
+        {
+          "label": "设施齐全的厨房",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/e276a9d2-3013-4340-9afe-0f711952612d.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/a4825591-178a-4480-aed8-584f9ca3d829.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/651e452e-b19b-4159-86f1-b59053d591d9.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/285d4ec9-d93e-4f76-bd0b-25af65ba406d.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/e0ff89a1-51d7-43a1-af81-9aeab45bdf8f.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        },
+        {
+          "label": "卧室",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/10cd3b5d-d57e-4782-8e06-aa411b3b8fce.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/5c137ae7-a4a5-4dea-b0d9-588e546c102b.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/1753d351-7286-46a1-899d-bda9e06b9e69.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/9212a6c7-04a5-4199-9375-85b615fb9754.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/de8e13f9-cd7d-4ccc-80e5-2609bfcd7f21.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        },
+        {
+          "label": "全功能卫生间",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/28dabeae-5bed-46b5-9e16-1abba629683b.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/640321b1-c918-4571-b8f4-dd5ab2481661.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/45fa6012-f9bf-465d-a72f-5d7220ed4ae6.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/161408aa-0770-4ae6-9a61-f7ca8a7a30a7.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/10dc158a-4d3b-4d7b-9743-46cb7d2866a2.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/e53ede9b-796c-4730-89ce-bba52e4f233f.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        },
+        {
+          "label": "餐厅",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/98259273-a78c-4675-956c-7066bae5ad15.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/b4fdb8a7-ff85-4609-bfef-91677a2358bd.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
+            "https://z1.muscache.cn/4ea/air/v2/pictures/e4aac7cb-0473-4c28-b463-52677ce692e7.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        },
+        {
+          "label": "洗衣间",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/ad5fe33b-6dde-4146-a305-741699856fa8.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        },
+        {
+          "label": "门厅",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/d1cd0dca-84fc-4ad7-814a-a13d811ba501.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        },
+        {
+          "label": "房源外观",
+          "images": [
+            "https://z1.muscache.cn/4ea/air/v2/pictures/a16f4089-f125-4f27-9237-87701940c3b8.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
+          ]
+        }
+      ],
+      "falityImgs": [
+        {
+          "name": "整间厨房",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/kitchen.png"
+        },
+        {
+          "name": "洗衣机",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/washer.png"
+        },
+        {
+          "name": "无线网络",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/wireless-internet.png"
+        },
+        {
+          "name": "电视",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/tv.png"
+        },
+        {
+          "name": "洗浴用品",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/essentials.png"
+        },
+        {
+          "name": "卧室舒适用品",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/extra-pillows-blankets.png"
+        },
+        {
+          "name": "吹风机",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/hair-dryer.png"
+        },
+        {
+          "name": "熨斗",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/iron.png"
+        },
+        {
+          "name": "电梯",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/elevator.png"
+        },
+        {
+          "name": "空调",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/air-conditioning.png"
+        },
+        {
+          "name": "一氧化碳报警器",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/co2-detector.png"
+        },
+        {
+          "name": "烟雾报警器",
+          "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/tile-view-2x/smoke-detector.png"
+        }
+      ],
+      "falityFeat": {
+        "basic": [
+          {
+            "name": "整间厨房",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/kitchen.png"
+          },
+          {
+            "name": "洗衣机",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/washer.png"
+          },
+          {
+            "name": "电梯",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/elevator.png"
+          },
+          {
+            "name": "空调",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/air-conditioning.png"
+          }
+        ],
+        "other": [
+          {
+            "name": "无线网络",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/wireless-internet.png"
+          },
+          {
+            "name": "电视",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/tv.png"
+          },
+          {
+            "name": "洗浴用品",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/essentials.png"
+          },
+          {
+            "name": "卧室舒适用品",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/extra-pillows-blankets.png"
+          },
+          {
+            "name": "吹风机",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/hair-dryer.png"
+          },
+          {
+            "name": "熨斗",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/iron.png"
+          },
+          {
+            "name": "一氧化碳报警器",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/co2-detector.png"
+          },
+          {
+            "name": "烟雾报警器",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/smoke-detector.png"
+          }
+        ],
+        "noHave": [
+          {
+            "name": "免费停车位",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/parking.png"
+          },
+          {
+            "name": "暖气",
+            "img": "https://z1.muscache.cn/airbnb/static/select/pdp/amenities/list-view-2x/heating.png"
+          }
+        ]
+      },
+      "comments": [
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/434bec6c-63e6-4dd0-b2ef-7c6767cad81e.jpg?aki_policy=profile_x_medium",
+            "name":["彦祖"]
+          },
+          "press":2,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"卫生方面需要改进,自带杯子吧,位置挺好｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/f98ebf9c-679d-45a9-9d41-46dcb6cd8641.jpg?aki_policy=profile_x_medium",
+            "name":["宁"]
+          },
+          "press":2,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"很不错!很温馨~"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/69add9b6-f4b9-499b-b972-df92287f8c2a.jpg?aki_policy=profile_x_medium",
+            "name":["冯"]
+          },
+          "press":2,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"我们晚上7点才到酒店第二天早上7点又出发去西岭雪山,不然真心想在酒店里呆久一点,完美体验,房东很热情绝对五星好评,去宽窄巷子坐出租车8块还没跳表,走路就20多分钟"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/89d964f4-ffab-4881-91c8-4bbf1717b1c6.jpg?aki_policy=profile_x_medium",
+            "name":["周"]
+          },
+          "press":2,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"房主姐姐人真的很好 有什么问题都给你安排的妥妥贴贴 房间很干净 也非常安全 不刷卡是不能坐电梯的 公寓位置也是在市中心 出门也很方便 (不要犹豫就是住 下次来成都 还会过来住的)"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/89d964f4-ffab-4881-91c8-4bbf1717b1c6.jpg?aki_policy=profile_x_medium",
+            "name":["晓雯"]
+          },
+          "press":2,
+          "time":"2/12/2019, 3:10:54 PM",
+          "text":"非常好啦"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/fc372031-cf45-481e-be61-b697992578ac.jpg?aki_policy=profile_x_medium",
+            "name":["布"]
+          },
+          "press":2,
+          "time":"2/12/2019, 3:10:54 PM",
+          "text":"很好下次也要来哈哈哈"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/1635f8d8-6483-42c4-a23d-356c54e266f5.jpg?aki_policy=profile_x_medium",
+            "name":["一丰"]
+          },
+          "press":2,
+          "time":"2/12/2019, 3:10:54 PM",
+          "text":"比预想中的好 很舒适 非常满意的一次入住体验"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/8ec5a8a3-f549-4ca8-bdec-f39995190c4f.jpg?aki_policy=profile_x_medium",
+            "name":["二狗"]
+          },
+          "press":2,
+          "time":"1/12/2019, 3:10:54 PM",
+          "text":"可以说比图片中还要好,进去之后很香很干净,装修的又精致,各种设施也齐全,周边就有好多有名的小吃,房主姐姐超级超级温柔,下次来成都一定还住这里"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/601e7631-7537-4aaf-a67e-ce88031b541b.jpg?aki_policy=profile_x_medium",
+            "name":["海龙"]
+          },
+          "press":2,
+          "time":"1/12/2019, 3:10:54 PM",
+          "text":"非常好的体验"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/706142a9-44be-4e7d-8787-d241e053031b.jpg?aki_policy=profile_x_medium",
+            "name":["雨田"]
+          },
+          "press":2,
+          "time":"1/6/2019, 3:10:54 PM",
+          "text":"推荐"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/36d023ed-b4c5-4044-946d-17a06f42db85.jpg?aki_policy=profile_x_medium",
+            "name":["Rane"]
+          },
+          "press":2,
+          "time":"1/6/2019, 3:10:54 PM",
+          "text":"开心的旅行"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/3a686aa9-3c92-4d27-935e-ea23ec84ef12.jpg?aki_policy=profile_x_medium",
+            "name":["美芳"]
+          },
+          "press":2,
+          "time":"1/6/2019, 3:10:54 PM",
+          "text":"小姐姐很热情很有耐心"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/71590bac-d8dd-4986-ae44-678e45c08835.jpg?aki_policy=profile_x_medium",
+            "name":["泽庆"]
+          },
+          "press":2,
+          "time":"1/6/2019, 3:10:54 PM",
+          "text":"很好,订吧"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/edf05f5d-6a77-4d8c-810e-518b0bafef18.jpg?aki_policy=profile_x_medium",
+            "name":["Robert"]
+          },
+          "press":2,
+          "time":"1/3/2019, 3:10:54 PM",
+          "text":"房子很不错,装修很现代化并且空间很大,不过里面有炉灶却没有微波炉,房东小姐姐回应很快很迅速｡位置很市中心就是距离地铁站有点远,距离宽窄巷子也有些距离要走｡总体很不错,不过成都的这个居民楼反对里面的房间做民宿用,然后入住和退房拎着行李要避开正门确实还是有些不方便｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/4b8d1ee8-97f4-4821-a6e4-1daf1252bdec.jpg?aki_policy=profile_x_medium",
+            "name":["钟"]
+          },
+          "press":2,
+          "time":"1/3/2019, 3:10:54 PM",
+          "text":"非常好的住宿环境,舒适,,交通便利,去哪都方便!价格贼划算"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/aca41b23-f1d4-419f-90f1-16407e221e89.jpg?aki_policy=profile_x_medium",
+            "name":["Tina"]
+          },
+          "press":2,
+          "time":"1/3/2019, 3:10:54 PM",
+          "text":"房东很热情,给了周围的攻略,住宿感觉也不错,\n"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/099b478d-5ad1-4453-98f9-621e082f9b92.jpg?aki_policy=profile_x_medium",
+            "name":["MaDDox"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"小姐姐的房子位置很便利,位于成都中心地段,距离宽窄巷子步行十几分钟左右,打车去各个热门地点都不远,附近各种美食应有尽有｡房子的装修是现在年轻人都很喜欢的北欧风格,楼层很高,拉开窗帘能把成都夜景尽收眼底｡公寓很高端,有24小时前台,电梯刷卡进入很安全｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/9ded7111-e703-43bc-aca5-75afbecba430.jpg?aki_policy=profile_x_medium",
+            "name":["廉"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"小区安全性很强,前台有人值班,上楼需要刷卡,房东小姐姐很热情,回复很及时,问的问题也都耐心回复~啊,对了,房间就是充电的地方有点少,机智的我找到了拖线板✌️总的来说住宿体验不错"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/7fd2c11e-c149-40f7-b428-471b6812736d.jpg?aki_policy=profile_x_medium",
+            "name":["彬"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"位置很好,房子装修很棒,房东准备的东西也很好,下次还会考虑住"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/fe8b0a4e-7a9f-4f77-91ce-fdffd35224f0.jpg?aki_policy=profile_x_medium",
+            "name":["可滢"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"和照片显示的一摸一样 床很舒服 楼下就有小吃广场 走二十分钟就能到宽窄巷子很方便"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/0b680597-7896-46ba-a9ce-3151498bcd9f.jpg?aki_policy=profile_x_medium",
+            "name":["Aimee"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"距离宽窄巷子一公里,附近有好几家吃的很好吃小谭豆花房主推荐,红墙记忆也很OK,最主要房子很好还可以投屏看电视,反正房子超级超级好,洗漱用品都是进口,房主有矿｡可以眺望成都了｡去那个周边景点都是三五公里滴滴十一二快"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/659a480a-24bc-41bd-b97f-3885d76f344f.jpg?aki_policy=profile_x_medium",
+            "name":["丹丹"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"离宽窄巷子也不是特别近,走路也要十几二十分钟吧,附近有新城市广场,那里有夜市,吃小吃很方便,小区设施很全,附近还有大型超市｡落地窗很棒,厕所也挺干净的,家里还有小冰箱,洗衣液,洗衣机,很喜欢｡能备一瓶洗洁精就更好了｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/c9e5b57a-dad0-4a07-bc45-433a1fe80915.jpg?aki_policy=profile_x_medium",
+            "name":["嫣"]
+          },
+          "press":2,
+          "time":"12/18/2019, 3:10:54 PM",
+          "text":"超级棒的房东小姐姐 房间布局也超级好 很高级 住的超级开心啦 楼下有家冰粉超级好吃"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/33faf183-999f-4aba-84ce-abd912fa17ef.jpg?aki_policy=profile_x_medium",
+            "name":["Junzhi"]
+          },
+          "press":2,
+          "time":"12/18/2019, 3:10:54 PM",
+          "text":"非常棒的房子 非常干净 整洁 装修人性化 简单 位置也不错 楼下有家冰粉非常好吃!!!!一万分推荐!"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/659a480a-24bc-41bd-b97f-3885d76f344f.jpg?aki_policy=profile_x_medium",
+            "name":["丹丹"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"离宽窄巷子也不是特别近,走路也要十几二十分钟吧,附近有新城市广场,那里有夜市,吃小吃很方便,小区设施很全,附近还有大型超市｡落地窗很棒,厕所也挺干净的,家里还有小冰箱,洗衣液,洗衣机,很喜欢｡能备一瓶洗洁精就更好了｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/c9e5b57a-dad0-4a07-bc45-433a1fe80915.jpg?aki_policy=profile_x_medium",
+            "name":["嫣"]
+          },
+          "press":2,
+          "time":"12/18/2019, 3:10:54 PM",
+          "text":"超级棒的房东小姐姐 房间布局也超级好 很高级 住的超级开心啦 楼下有家冰粉超级好吃"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/33faf183-999f-4aba-84ce-abd912fa17ef.jpg?aki_policy=profile_x_medium",
+            "name":["Junzhi"]
+          },
+          "press":2,
+          "time":"12/18/2019, 3:10:54 PM",
+          "text":"非常棒的房子 非常干净 整洁 装修人性化 简单 位置也不错 楼下有家冰粉非常好吃!!!!一万分推荐!"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/659a480a-24bc-41bd-b97f-3885d76f344f.jpg?aki_policy=profile_x_medium",
+            "name":["丹丹"]
+          },
+          "press":2,
+          "time":"12/24/2018, 3:10:54 PM",
+          "text":"离宽窄巷子也不是特别近,走路也要十几二十分钟吧,附近有新城市广场,那里有夜市,吃小吃很方便,小区设施很全,附近还有大型超市｡落地窗很棒,厕所也挺干净的,家里还有小冰箱,洗衣液,洗衣机,很喜欢｡能备一瓶洗洁精就更好了｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/c9e5b57a-dad0-4a07-bc45-433a1fe80915.jpg?aki_policy=profile_x_medium",
+            "name":["嫣"]
+          },
+          "press":2,
+          "time":"12/18/2019, 3:10:54 PM",
+          "text":"超级棒的房东小姐姐 房间布局也超级好 很高级 住的超级开心啦 楼下有家冰粉超级好吃"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/33faf183-999f-4aba-84ce-abd912fa17ef.jpg?aki_policy=profile_x_medium",
+            "name":["Junzhi"]
+          },
+          "press":2,
+          "time":"12/18/2019, 3:10:54 PM",
+          "text":"非常棒的房子 非常干净 整洁 装修人性化 简单 位置也不错 楼下有家冰粉非常好吃!!!!一万分推荐!"
+        }
+      ]
+    }
+  ]
+}
