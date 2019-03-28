@@ -43,6 +43,14 @@ export class PlusPageService {
       );
   }
 
+    geInpireById(id: string) {
+        return this.http.get('assets/plus-inspire-list.json').pipe(
+            map(res => {
+                return res['list'].find(item => {return item.id == id;}) || {};
+            })
+        );
+    }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);
@@ -53,4 +61,8 @@ export class PlusPageService {
     }
     return of([]);
   }
+
+    goPlusMore() {
+        window.open('https://www.airbnb.cn/plus','_blank');
+    }
 }

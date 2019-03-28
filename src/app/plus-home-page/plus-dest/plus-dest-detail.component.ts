@@ -15,7 +15,7 @@ export class PlusDestDetailComponent implements OnInit {
   curIndex: number = 0;
   showLoading: boolean = false;
   constructor(private route: ActivatedRoute,
-              private plusPageService: PlusPageService) { }
+              public plusPageService: PlusPageService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
