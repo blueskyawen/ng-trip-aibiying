@@ -1,0 +1,26 @@
+<div class="plus-dest-list-container">
+  <div class="plus-dest-body nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+    <div class="plus-dest-head">
+      <span>世界各地的爱彼迎Plus房源</span>
+      <span>探索世界各地的更多房源，所有房源均保证品质和舒适度</span>
+    </div>
+    <div class="plus-dest-list">
+      <div class="plus-dest-item" *ngFor="let dest of destList">
+        <div class="dest-item-head">{{dest.continent_zh}}</div>
+        <div class="dest-city-list">
+          <div *ngFor="let city of dest.cityList"
+               class="dest-city-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+            <div class="dest-city" [routerLink]="['/plus/destination',city.id]">
+              <img [src]="city.photo[0]" />
+              <span>{{city.city_zh}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-loading" *ngIf="showLoading">
+    <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
+  </div>
+</div>
+

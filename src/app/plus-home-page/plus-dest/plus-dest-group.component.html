@@ -14,7 +14,8 @@
     </nc-list-group-horizontal>
   </div>
   <div class="plus-item-foot">
-    <span>显示更多有爱彼迎Plus房源的地区<span class="fa fa-angle-right"></span></span>
+    <span [routerLink]="['/plus/destination']">
+      显示更多有爱彼迎Plus房源的地区<span class="fa fa-angle-right"></span></span>
   </div>
 </div>
 <div class="list-loading" *ngIf="showLoading">

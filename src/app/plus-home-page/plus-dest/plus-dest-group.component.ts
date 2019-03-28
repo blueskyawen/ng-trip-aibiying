@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PlusPageService } from './plus-page.service';
+import { PlusPageService } from '../plus-page.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plus-dest-group',
@@ -9,7 +10,8 @@ import { PlusPageService } from './plus-page.service';
 export class PlusDestGroupComponent implements OnInit {
   destList: any[] = [];
   showLoading: boolean = false;
-  constructor(private plusPageService: PlusPageService) { }
+  constructor(private plusPageService: PlusPageService,
+              private router: Router) { }
 
   ngOnInit() {
     this.showLoading = true;
@@ -20,7 +22,7 @@ export class PlusDestGroupComponent implements OnInit {
   }
 
   goPlusDest(dest: any) {
-    console.log(dest.city_zh);
+    this.router.navigate(['/plus/destination', dest.id]);
   }
 
 }

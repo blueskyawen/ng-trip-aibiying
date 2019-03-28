@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlusHomeComponent } from './plus-home.component';
 import { PlusHomeDetailComponent } from './plus-home-detail.component';
 import { PlusHomeMainComponent } from './plus-home-main.component';
+import { PlusDestListComponent } from './plus-dest/plus-dest-list.component';
+import { PlusDestDetailComponent } from './plus-dest/plus-dest-detail.component';
+import { PlusInpireDetailComponent } from './plus-inpire/plus-inpire-detail.component';
 
 const routes: Routes = [
     {
@@ -18,11 +21,15 @@ const routes: Routes = [
             },
             {
                 path: 'destination',
-                component: PlusHomeMainComponent
+                component: PlusDestListComponent
             },
             {
-                path: 'inspire',
-                component: PlusHomeMainComponent
+                path: 'destination/:id',
+                component: PlusDestDetailComponent
+            },
+            {
+                path: 'inspire/:id',
+                component: PlusInpireDetailComponent
             }
         ]
     },

@@ -5,7 +5,7 @@
   <div class="plus-item-content">
     <nc-list-group-horizontal [stepWidth]="240" [hideOper]="true">
       <ul class="nc-list-group nc-flex list-group-horizontal">
-        <li *ngFor="let inpire of inpireList" (click)="goInpire(inpire)"
+        <li *ngFor="let inpire of inpireList" [routerLink]="['/plus/inspire',inpire.id]"
             class="nc-list-group-item nc-align-item-center">
           <app-plus-inpire-card [inpireHouse]="inpire"></app-plus-inpire-card>
         </li>

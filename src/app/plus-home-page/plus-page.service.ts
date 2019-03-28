@@ -35,6 +35,14 @@ export class PlusPageService {
     );
   }
 
+  getDestById(id: string) {
+      return this.http.get('assets/plus-destination-list.json').pipe(
+          map(res => {
+              return res['destList'].find(item => {return item.id == id;}) || {};
+          })
+      );
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlusPageService } from './plus-page.service';
+import { PlusPageService } from '../plus-page.service';
 
 @Component({
   selector: 'app-plus-inpire-group',
@@ -17,10 +17,6 @@ export class PlusInpireGroupComponent implements OnInit {
       this.inpireList = res;
       this.showLoading = false;
     });
-  }
-
-  goInpire(item: any) {
-
   }
 
 }
