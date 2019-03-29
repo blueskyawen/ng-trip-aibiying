@@ -9,124 +9,15 @@
     .home-photo-container {
       width: 95%;
       margin: 10px auto;
-      height: 520px;
       &:after {
         content:"";
         clear: both;
       }
-      > div {
-        height: inherit;
-        display: inline-block;
-        float: left;
-        position: relative;
-        box-sizing: border-box;
-        &.home-photo-text {
-          background: #ebebe0;
-          padding: 30px;
-          display: flex;
-          flex-direction: column;
-          > span {
-            margin-bottom: 10px;
-            font-size: 12px;
-            &:nth-of-type(2) {
-              color: #666;
-            }
-            &:last-of-type {
-              margin-top: 50px;
-              font-size: 35px;
-              font-weight: 600;
-            }
-          }
-        }
-        &.home-photo-view {
-          padding-left: 15px;
-          img {
-            width: 100%;
-            height: inherit;
-          }
-          .home-button {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            .fa {
-              color: #3399ff;
-              margin-right: 5px;
-            }
-          }
-          .home-share {
-            display: inline-flex;
-            align-items: center;
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            > span {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              height: 40px;
-              width: 40px;
-              border: solid 1px #b3b3b3;
-              background: #fff;
-              border-radius: 5px;
-              cursor: pointer;
-              &:first-child {
-                margin-right: 10px;
-              }
-            }
-          }
-        }
-      }
     }
-    .home-detai-container {
+    .home-detai-item {
       width: 80%;
-      margin: 20px auto;
-      .home-overview {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 0 40px;
-        border-bottom: solid 1px #e6e6e6;
-        > .overview-fatify {
-          display: inline-flex;
-          flex-direction: column;
-          span {
-            margin-bottom: 15px;
-            &:first-child {
-              font-size: 14px;
-              font-weight: 800;
-              color: #333;
-            }
-            &:last-child {
-              font-size: 16px;
-              font-weight: 400;
-              color: #666;
-            }
-          }
-        }
-        > .overview-owner {
-          display: inline-flex;
-          > span {
-            margin-left: 10px;
-            &:last-child {
-              display: inline-flex;
-              flex-direction: column;
-              span {
-                &:first-child {
-                  width: 200px;
-                  color: #666;
-                  line-height: 24px;
-                  margin-bottom: 10px;
-                }
-                &:last-child {
-                  font-size: 14px;
-                  color: #333;
-                  font-weight:600;
-                }
-              }
-            }
-          }
-        }
-      }
+      margin: 30px auto;
+      border-bottom: solid 1px #e6e6e6;
     }
   }
 }

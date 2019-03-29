@@ -11,10 +11,7 @@ export class PlusHomeDetailComponent implements OnInit {
   homeId: string;
   showLoading: boolean = false;
   homeData: any;
-  isShowPhotoView: boolean = false;
-  curImgIndex: number = 0;
-  isShowLogin: boolean = false;
-  isShowRegister: boolean = false;
+
   constructor(private plusPageService: PlusPageService,
               private route: ActivatedRoute) { }
 
@@ -41,18 +38,6 @@ export class PlusHomeDetailComponent implements OnInit {
         alt: photo.name
       });
     });
-  }
-
-  openPhotoView() {
-    this.isShowPhotoView = true;
-  }
-
-  handleToLoginEvnent() {
-    this.isShowLogin = true;
-  }
-
-  handleToRegisterEvnent() {
-    this.isShowRegister = true;
   }
 
 }

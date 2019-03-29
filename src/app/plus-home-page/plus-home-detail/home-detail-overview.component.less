@@ -1,0 +1,46 @@
+.home-detail-overview {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 0;
+  > .overview-fatify {
+    display: inline-flex;
+    flex-direction: column;
+    span {
+      margin-bottom: 15px;
+      &:first-child {
+        font-size: 14px;
+        font-weight: 800;
+        color: #333;
+      }
+      &:last-child {
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+      }
+    }
+  }
+  > .overview-owner {
+    display: inline-flex;
+    > span {
+      margin-left: 10px;
+      &:last-child {
+        display: inline-flex;
+        flex-direction: column;
+        span {
+          &:first-child {
+            width: 200px;
+            color: #666;
+            line-height: 24px;
+            margin-bottom: 10px;
+          }
+          &:last-child {
+            font-size: 14px;
+            color: #333;
+            font-weight:600;
+          }
+        }
+      }
+    }
+  }
+}

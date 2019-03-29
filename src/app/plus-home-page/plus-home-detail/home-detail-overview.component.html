@@ -1,3 +1,15 @@
-<p>
-  home-detail-overview works!
-</p>
+<div class="home-detail-overview">
+  <span class="overview-fatify">
+    <span>{{homeData.fality.maxguest}}位房客  {{homeData.fality.room}}间卧室  {{homeData.fality.bed}}张床  {{homeData.fality.toliet}}间卫生间</span>
+    <span>{{homeData.text}}</span>
+  </span>
+  <span class="overview-owner">
+    <span>
+      <nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="homeData.owner.avatar"></nc-avater>
+    </span>
+    <span>
+      <span>“{{homeData.owner.description}}”</span>
+      <span>房东：{{homeData.owner.name}}</span>
+    </span>
+  </span>
+</div>

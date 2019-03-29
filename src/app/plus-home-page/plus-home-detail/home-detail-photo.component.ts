@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home-detail-photo',
@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-detail-photo.component.less']
 })
 export class HomeDetailPhotoComponent implements OnInit {
-
+  @Input() homeData: any = {};
+  isShowPhotoView: boolean = false;
+  isShowLogin: boolean = false;
+  isShowRegister: boolean = false;
+  curImgIndex: number = 0;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openPhotoView() {
+    this.isShowPhotoView = true;
+  }
+
+  handleToLoginEvnent() {
+    this.isShowLogin = true;
+  }
+
+  handleToRegisterEvnent() {
+    this.isShowRegister = true;
   }
 
 }
