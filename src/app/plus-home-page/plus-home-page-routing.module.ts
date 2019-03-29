@@ -4,7 +4,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PlusHomeComponent } from './plus-home.component';
-import { PlusHomeDetailComponent } from './plus-home-detail.component';
 import { PlusHomeMainComponent } from './plus-home-main.component';
 import { PlusDestListComponent } from './plus-dest/plus-dest-list.component';
 import { PlusDestDetailComponent } from './plus-dest/plus-dest-detail.component';
@@ -32,11 +31,7 @@ const routes: Routes = [
                 component: PlusInpireDetailComponent
             }
         ]
-    },
-    {
-        path: 'plus/home/:id',
-        component: PlusHomeDetailComponent
-    },
+    }
 ];
 
 @NgModule({

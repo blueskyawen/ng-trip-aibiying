@@ -15,7 +15,8 @@ export class PlusDestDetailComponent implements OnInit {
   curIndex: number = 0;
   showLoading: boolean = false;
   constructor(private route: ActivatedRoute,
-              public plusPageService: PlusPageService) { }
+              public plusPageService: PlusPageService,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -32,7 +33,7 @@ export class PlusDestDetailComponent implements OnInit {
             house.imgOption.push({
               url: image,
               disable: false,
-              callback: () => {}
+              callback: () => {this.router.navigate(['/plus/home', house.id]);}
             });
           });
         });

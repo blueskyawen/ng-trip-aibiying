@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlusPageService } from './plus-page.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plus-home-list',
@@ -11,7 +12,8 @@ export class PlusHomeListComponent implements OnInit {
   showLoading: boolean = false;
   allHomeList: any[] = [];
   curIndex: number = 0;
-  constructor(private plusPageService: PlusPageService) { }
+  constructor(private plusPageService: PlusPageService,
+              private router: Router) { }
 
   ngOnInit() {
     this.plusPageService.getPlusHouseList().subscribe(res => {
@@ -22,7 +24,7 @@ export class PlusHomeListComponent implements OnInit {
           house.imgOption.push({
             url: image,
             disable: false,
-            callback: () => {}
+            callback: () => {this.router.navigate(['/plus/home', house.id]);}
           });
         });
       });

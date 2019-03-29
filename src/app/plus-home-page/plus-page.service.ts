@@ -51,6 +51,14 @@ export class PlusPageService {
         );
     }
 
+    getPlusHomeInfo(id: string) {
+        return this.http.get('assets/plus-home-detail-list.json').pipe(
+            map(res => {
+                return res['list'][0] || {};
+            })
+        );
+    }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

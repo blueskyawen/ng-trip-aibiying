@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlusPageService } from './plus-page.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-plus-special-house-group',
@@ -9,7 +10,8 @@ import { PlusPageService } from './plus-page.service';
 export class PlusSpecialHouseGroupComponent implements OnInit {
   houseList: any[] = [];
   showLoading: boolean = false;
-  constructor(private plusPageService: PlusPageService) { }
+  constructor(private plusPageService: PlusPageService,
+              private router: Router) { }
 
   ngOnInit() {
     this.showLoading = true;
@@ -20,7 +22,7 @@ export class PlusSpecialHouseGroupComponent implements OnInit {
   }
 
   goSpecialHouse(house: any) {
-
+    this.router.navigate(['/plus/home', house.id]);
   }
 
 }
