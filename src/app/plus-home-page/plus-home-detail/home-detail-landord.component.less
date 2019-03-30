@@ -10,5 +10,70 @@
   .home-landord-body {
     width: inherit;
     margin: 0 0 20px;
+    display: flex;
+    > .landord-item {
+      display: inline-block;
+      padding-right: 50px;
+      box-sizing: border-box;
+      .landord-img {
+        width: 100%;
+        border: solid 1px #e6e6e6;
+        border-radius: 4px;
+        box-shadow: 2px 2px 2px 1px #f2f2f2,-2px -2px 2px 1px #f2f2f2;
+        img {
+          width: 100%;
+          height: 260px;
+          border-radius: 4px 4px 0 0;
+        }
+        div {
+          padding: 20px 0;
+          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-size: 30px;
+          line-height: 1.3em;
+          text-overflow: ellipsis;
+          max-height: 78px;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-align: center;
+        }
+      }
+      &:nth-of-type(2) {
+        div {
+          color: #666;
+          &:first-child {
+            font-weight: 500;
+            margin-bottom: 20px;
+          }
+          &:nth-child(2) {
+            line-height: 28px;
+            margin-bottom: 30px;
+          }
+          &:nth-child(3) {
+            font-weight: 500;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      &:last-of-type {
+        padding-right: 0;
+        div {
+          color: #666666;
+          line-height: 30px;
+          &.landord-button {
+            margin-top: 30px;
+            color: #ac3939;
+            border: solid 2px #ac3939;
+            border-radius: 4px;
+            padding: 5px 0;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &:after {
+      clear: both;
+    }
   }
 }
