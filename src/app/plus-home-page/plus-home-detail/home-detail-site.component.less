@@ -1,0 +1,46 @@
+.home-detail-site {
+  width: 100%;
+  .home-site-head {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    div {
+      &:first-child {
+        font-size: 35px;
+        font-weight: 800;
+        margin: 10px 0 20px;
+        color: #404040;
+      }
+      &:last-child {
+        font-size: 14px;
+        font-weight: normal;
+        margin:0 0 30px;
+        color: #999;
+      }
+    }
+  }
+  .home-site-content {
+    width: inherit;
+    position: relative;
+    img {
+      width: inherit;
+      height: 500px;
+    }
+    .home-site {
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      background: #993366;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 220px;
+      left: 520px;
+      .fa {
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home-detail-landord',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-detail-landord.component.less']
 })
 export class HomeDetailLandordComponent implements OnInit {
-
+  @Input() homeData: any = {};
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+class ViewImage {
+  label: string;
+  image: string;
+  constructor(label: string, image: string) {
+    this.label = label;
+    this.image = image;
+  }
+}
+
 @Component({
   selector: 'app-home-detail-content',
   templateUrl: './home-detail-content.component.html',
@@ -7,9 +16,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeDetailContentComponent implements OnInit {
   @Input() homeData: any = {};
+  featPhotoNum: number = 0;
+  homeViewImages: ViewImage[] = [];
   constructor() { }
 
   ngOnInit() {
+    this.homeData.featImages.forEach(item => {
+      this.featPhotoNum += item.images.length;
+      this.homeViewImages.push(new ViewImage(item.label, item.images[0]));
+    });
   }
 
   goMore() {

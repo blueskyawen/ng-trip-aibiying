@@ -1,6 +1,16 @@
 <div class="home-detail-content">
   <div class="home-content-item">
     <div class="content-item-head">参观这套房源</div>
+    <div class="content-item-body">
+      <div class="list-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-6 nc-xs-col-6"
+           *ngFor="let viewImg of homeViewImages">
+        <div class="home-img-item">
+          <img [src]="viewImg.image" />
+          <div>{{viewImg.label}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-item-foot">浏览所有照片，共{{featPhotoNum}}张</div>
   </div>
   <div class="home-content-item">
     <div class="home-divider">
@@ -17,5 +27,15 @@
   </div>
   <div class="home-content-item">
     <div class="content-item-head">便利设施</div>
+    <div class="content-item-body">
+      <div class="list-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-4 nc-xs-col-6"
+           *ngFor="let fatyImg of homeData.falityImgs">
+        <div class="fality-img-item">
+          <div><img [src]="fatyImg.img" /></div>
+          <div>{{fatyImg.name}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-item-foot">显示所有{{homeData.falityImgs.length}}项便利设施</div>
   </div>
 </div>
