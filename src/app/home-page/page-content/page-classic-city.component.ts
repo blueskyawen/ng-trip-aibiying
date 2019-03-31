@@ -16,8 +16,4 @@ export class PageClassicCityComponent implements OnInit {
     });
   }
 
-  goCity(item: any) {
-   window.open(item.href, '_blank');
-  }
-
 }

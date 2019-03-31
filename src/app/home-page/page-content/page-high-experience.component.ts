@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageContentService } from './page-content.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-high-experience',
@@ -8,7 +9,7 @@ import { PageContentService } from './page-content.service';
 })
 export class PageHighExperienceComponent implements OnInit {
   experList: any[] = [];
-  constructor(private pageContentService: PageContentService) { }
+  constructor(private pageContentService: PageContentService, private router: Router) { }
 
   ngOnInit() {
     this.pageContentService.getTripExperList().subscribe(res => {
@@ -17,10 +18,10 @@ export class PageHighExperienceComponent implements OnInit {
   }
 
   goExperStory(item: any) {
-    window.open('https://www.airbnb.cn/experiences/411310', '_blank');
+    this.router.navigate(['/experience', item.id]);
   }
 
   goMoreExper() {
-    window.open('https://www.airbnb.cn/s/experiences', '_blank');
+    this.router.navigate(['/experience/home']);
   }
 }

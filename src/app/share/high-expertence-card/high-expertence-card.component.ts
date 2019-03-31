@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HighExpertenceCardComponent implements OnInit {
   @Input() exper: any = {};
+  @Input() showLove: boolean = false;
+  @Input() showSite: boolean = true;
   curStar: number = 5;
   constructor() { }
 
