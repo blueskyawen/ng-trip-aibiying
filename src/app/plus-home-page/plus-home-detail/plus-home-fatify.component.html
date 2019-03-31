@@ -1,0 +1,14 @@
+<nc-dialog [header]="'便利设施'" [style]="'normal'" [(isShow)]="isDisplay">
+  <div class="content fatify-content">
+    <div class="fatify-items" *ngFor="let fatify of fatifyList">
+      <div class="items-head">{{fatify.name}}</div>
+      <div class="items-label">{{fatify.label}}</div>
+      <div class="items-list">
+        <div class="item-fatify" *ngFor="let item of fatify.list">
+          <span [ngClass]="{'noAllow': fatify.key == 'noHave'}">{{item.name}}</span>
+          <img [src]="item.img" />
+        </div>
+      </div>
+    </div>
+  </div>
+</nc-dialog>

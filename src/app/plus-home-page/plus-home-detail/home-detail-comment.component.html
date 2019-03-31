@@ -1,5 +1,31 @@
 <div class="home-detail-comment">
   <div class="home-comment-head">评价</div>
-  <div class="home-comment-body">评价</div>
-  <div class="home-comment-foot">阅读全部{{homeData.comment}}条评价</div>
+  <div class="home-comment-body">
+    <div *ngFor="let viewComment of viewComments" class="comment-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="comment-head">
+        <span><nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="viewComment.user.avatar"></nc-avater></span>
+        <span>
+          <span>{{viewComment.nameText}}</span>
+          <span>{{viewComment.timeText}}</span>
+        </span>
+      </div>
+      <div class="comment-content">{{viewComment.text}}</div>
+    </div>
+  </div>
+  <div class="home-comment-foot" (click)="isShowComments = true">阅读全部{{homeData.comment}}条评价</div>
 </div>
+
+<nc-dialog [header]="commentHead" [style]="'normal'" [(isShow)]="isShowComments">
+  <div class="content comment-list">
+    <div class="comment-item" *ngFor="let comment of homeData.comments">
+      <div class="comment-head">
+        <span><nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="comment.user.avatar"></nc-avater></span>
+        <span>
+          <span>{{comment.nameText}}</span>
+          <span>{{comment.timeText}}</span>
+        </span>
+      </div>
+      <div class="comment-content">{{comment.text}}</div>
+    </div>
+  </div>
+</nc-dialog>

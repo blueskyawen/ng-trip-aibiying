@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="content-item-foot">浏览所有照片，共{{featPhotoNum}}张</div>
+    <div class="content-item-foot" (click)="isShowPhotos = true">浏览所有照片，共{{featPhotoNum}}张</div>
   </div>
   <div class="home-content-item">
     <div class="home-divider">
@@ -36,6 +36,9 @@
         </div>
       </div>
     </div>
-    <div class="content-item-foot">显示所有{{homeData.falityImgs.length}}项便利设施</div>
+    <div class="content-item-foot" (click)="isShowFatify = true">显示所有{{homeData.falityImgs.length}}项便利设施</div>
   </div>
 </div>
+
+<app-plus-home-photo [photos]="homeData.featImages" [(isDisplay)]="isShowPhotos"></app-plus-home-photo>
+<app-plus-home-fatify [fatify]="homeData.falityFeat" [(isDisplay)]="isShowFatify"></app-plus-home-fatify>

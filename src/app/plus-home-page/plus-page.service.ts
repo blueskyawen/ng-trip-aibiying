@@ -59,7 +59,7 @@ export class PlusPageService {
         );
     }
 
-  private handleError(error: HttpErrorResponse) {
+    private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);
     } else {
@@ -68,9 +68,15 @@ export class PlusPageService {
           `body was: ${error.error}`);
     }
     return of([]);
-  }
+    }
+
+    getSiteTime(time: string) {
+        let tmpDate = new Date(time);
+        return tmpDate.getFullYear() + '年' + tmpDate.getMonth() + '月' + tmpDate.getDay() + '日';
+    }
 
     goPlusMore() {
         window.open('https://www.airbnb.cn/plus','_blank');
     }
+
 }

@@ -10,5 +10,38 @@
   .home-rule-body {
     width: inherit;
     margin: 0 0 20px;
+    .home-rule {
+      width: inherit;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      > div {
+        display: inline-block;
+        &:first-child {
+          font-size: 28px;
+          font-weight: 600;
+          color: #666;
+        }
+        &:last-child {
+          div {
+            margin-bottom: 20px;
+            color: #666;
+            &:first-child {
+              font-weight: 400;
+            }
+            &:nth-child(2) {
+              line-height: 24px;
+            }
+            &:nth-child(3) {
+              color: #ac3939;
+              &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

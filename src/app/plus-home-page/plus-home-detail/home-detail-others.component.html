@@ -1,4 +1,12 @@
 <div class="home-detail-others">
   <div class="home-others-head">其他高分房源</div>
-  <div class="home-others-body">取消政策及房屋守则</div>
+  <div class="home-others-body">
+    <div *ngFor="let home of otherHomes"
+         class="plus-home-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+      <app-plus-house-card [plusHouse]="home"></app-plus-house-card>
+    </div>
+  </div>
+  <div class="list-loading" *ngIf="showLoading">
+    <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
+  </div>
 </div>

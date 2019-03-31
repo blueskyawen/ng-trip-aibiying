@@ -1,0 +1,13 @@
+<nc-dialog [header]="'参观该房源'" [style]="'normal'" [size]="'big'" [(isShow)]="isDisplay" (isShowChange)="showChange()">
+    <div class="content photo-content">
+        <div *ngFor="let photoItem of photos" class="photo-items"
+             [ngClass]="{'photo-items2': photoItem.id === '4'}" >
+            <div class="photo-item-head">{{photoItem.label}}</div>
+            <div class="photo-item-body">
+                <div class="photo-item" *ngFor="let image of photoItem.images">
+                    <img [src]="image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</nc-dialog>

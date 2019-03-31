@@ -18,6 +18,8 @@ export class HomeDetailContentComponent implements OnInit {
   @Input() homeData: any = {};
   featPhotoNum: number = 0;
   homeViewImages: ViewImage[] = [];
+  isShowPhotos: boolean = false;
+  isShowFatify: boolean = false;
   constructor() { }
 
   ngOnInit() {

@@ -12,4 +12,7 @@ export class HomeDetailRuleComponent implements OnInit {
   ngOnInit() {
   }
 
+  goRuleDetail() {
+    window.open('https://www.airbnb.cn/home/cancellation_policies?guest_fee_policy=grace_period_48_hours#moderate', '_blank');
+  }
 }
