@@ -97,6 +97,7 @@
       },
       "featImages": [
         {
+          "id": "1",
           "label": "客厅",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/07b4d4e6-ee1b-4137-977b-c861090021fe.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
@@ -107,6 +108,7 @@
           ]
         },
         {
+          "id": "2",
           "label": "设施齐全的厨房",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/e276a9d2-3013-4340-9afe-0f711952612d.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
@@ -117,6 +119,7 @@
           ]
         },
         {
+          "id": "3",
           "label": "卧室",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/10cd3b5d-d57e-4782-8e06-aa411b3b8fce.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
@@ -127,6 +130,7 @@
           ]
         },
         {
+          "id": "4",
           "label": "全功能卫生间",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/28dabeae-5bed-46b5-9e16-1abba629683b.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
@@ -138,6 +142,7 @@
           ]
         },
         {
+          "id": "5",
           "label": "餐厅",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/98259273-a78c-4675-956c-7066bae5ad15.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90",
@@ -146,18 +151,21 @@
           ]
         },
         {
+          "id": "6",
           "label": "洗衣间",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/ad5fe33b-6dde-4146-a305-741699856fa8.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
           ]
         },
         {
+          "id": "7",
           "label": "门厅",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/d1cd0dca-84fc-4ad7-814a-a13d811ba501.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
           ]
         },
         {
+          "id": "8",
           "label": "房源外观",
           "images": [
             "https://z1.muscache.cn/4ea/air/v2/pictures/a16f4089-f125-4f27-9237-87701940c3b8.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90"
