@@ -14,6 +14,5 @@
     </nc-list-group-horizontal>
   </div>
 </div>
-<div class="list-loading" *ngIf="showLoading">
-  <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
-</div>
+
+<app-page-waiting *ngIf="showLoading"></app-page-waiting>

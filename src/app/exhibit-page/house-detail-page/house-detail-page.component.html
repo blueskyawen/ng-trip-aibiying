@@ -128,9 +128,8 @@
     </div>
   </div>
 </div>
-<div class="list-loading" *ngIf="showLoading">
-  <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
-</div>
+
+<app-page-waiting *ngIf="showLoading"></app-page-waiting>
 
 <app-page-login [(isDisplay)]="isShowLogin" (toRegisterEvent)="handleToRegisterEvnent()"></app-page-login>
 <app-page-register [(isDisplay)]="isShowRegister" (toLoginEvent)="handleToLoginEvnent()"></app-page-register>

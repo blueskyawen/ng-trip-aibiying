@@ -14,17 +14,18 @@ import { PlusDestCardComponent } from './plus-dest-card/plus-dest-card.component
 import { PlusSpecialHouseCardComponent } from './plus-special-house-card/plus-special-house-card.component';
 import { PlusInpireCardComponent } from './plus-inpire-card/plus-inpire-card.component';
 import { PlusHouseCardComponent } from './plus-house-card/plus-house-card.component';
+import { PageWaitingComponent } from './page-waiting/page-waiting.component';
 
 @NgModule({
   declarations: [TripStoryCardComponent, HotCityHouseCardComponent, HighExpertenceCardComponent,
     PlayCardComponent, FalityIconComponent, RoomerSetCardComponent, PlusDestCardComponent,
-    PlusSpecialHouseCardComponent, PlusInpireCardComponent, PlusHouseCardComponent],
+    PlusSpecialHouseCardComponent, PlusInpireCardComponent, PlusHouseCardComponent, PageWaitingComponent],
   imports: [
     CommonModule, LibModule, RouterModule
   ],
   exports: [LibModule, CommonModule, HttpClientModule, RouterModule, FormsModule,
     TripStoryCardComponent, HotCityHouseCardComponent, HighExpertenceCardComponent, PlayCardComponent,
     FalityIconComponent, RoomerSetCardComponent, PlusDestCardComponent, PlusSpecialHouseCardComponent,
-    PlusInpireCardComponent, PlusHouseCardComponent]
+    PlusInpireCardComponent, PlusHouseCardComponent, PageWaitingComponent]
 })
 export class ShareModule { }

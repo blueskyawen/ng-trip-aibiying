@@ -18,7 +18,5 @@
       <app-plus-house-card [plusHouse]="home"></app-plus-house-card>
     </div>
   </div>
-  <div class="list-loading" *ngIf="showLoading">
-    <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
-  </div>
+  <app-page-waiting *ngIf="showLoading"></app-page-waiting>
 </div>

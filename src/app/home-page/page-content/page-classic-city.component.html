@@ -3,7 +3,7 @@
     <span>经典旅行城市</span>
   </div>
   <div class="trip-block-img-list trip-classic-city-list">
-    <div *ngFor="let city of cityList" [routerLink]="['/city',city.id]"
+    <div *ngFor="let city of cityList" [routerLink]="['/city',city.id,{name: city.city}]"
          class="trip-block-img-body nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-6 nc-xs-col-6">
       <div class="trip-block-img city-img">
         <img [src]="city.imgUrl" [alt]="city.city" />

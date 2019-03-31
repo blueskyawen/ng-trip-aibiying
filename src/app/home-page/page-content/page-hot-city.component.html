@@ -20,6 +20,5 @@
     <span (click)="goMoreHouses()">查看更多{{selectedCity?.title}}房源<span class="fa fa-angle-right"></span></span>
   </div>
 </div>
-<div class="list-loading" *ngIf="showLoading">
-  <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
-</div>
+
+<app-page-waiting *ngIf="showLoading"></app-page-waiting>

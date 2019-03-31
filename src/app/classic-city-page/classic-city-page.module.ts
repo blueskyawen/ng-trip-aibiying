@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ShareModule } from '../share/share.module';
+import { HomePageModule } from '../home-page/home-page.module';
+import { ExhibitPageModule } from '../exhibit-page/exhibit-page.module';
 
 import { ClassicCityPageRoutingModule } from './classic-city-page-routing.module';
 import { CityHousesComponent } from './city-houses.component';
@@ -9,7 +11,7 @@ import { CityHomeComponent } from './city-home.component';
 @NgModule({
   declarations: [CityHousesComponent, CityExperiencesComponent, CityHomeComponent],
   imports: [
-    CommonModule,
+    ShareModule, HomePageModule, ExhibitPageModule,
     ClassicCityPageRoutingModule
   ]
 })

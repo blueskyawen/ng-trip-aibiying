@@ -110,9 +110,7 @@
       </div>
     </div>
   </div>
-  <div class="list-loading">
-    <nc-loading *ngIf="showLoading" [type]="'horizontal'" [loadSize]="'medium'"></nc-loading>
-  </div>
+  <app-page-waiting *ngIf="showLoading"></app-page-waiting>
 </div>
 
 

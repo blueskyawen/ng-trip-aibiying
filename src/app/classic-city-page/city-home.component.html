@@ -1,3 +1,27 @@
-<p>
-  city-home works!
-</p>
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <div class="exhibit-head">
+      <app-page-head [scene]="'city'" [showSearch]="true" [searchText]="cityName"></app-page-head>
+    </div>
+    <div class="exhibit-head">
+      <app-exhibit-select></app-exhibit-select>
+    </div>
+  </div>
+  <div class="nc-content">
+    <div class="city-head city-content-item nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <div>探索{{cityName}}</div>
+      <div>
+        <div>
+          <img src="https://z1.muscache.cn/4ea/air/v2/pictures/8b7519ec-2c82-4c09-8233-fd4d2715bbf9.jpg?t=r:w375-h250-sfit,e:fjpg-c80" />
+          <span>房源</span>
+        </div>
+        <div>
+          <img src="https://z1.muscache.cn/4ea/air/v2/pictures/cb8b3101-d419-4c17-8e2f-4989b39b98c3.jpg?t=r:w375-h250-sfit,e:fjpg-c80" />
+          <span>体验</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-page-waiting *ngIf="showLoading"></app-page-waiting>
