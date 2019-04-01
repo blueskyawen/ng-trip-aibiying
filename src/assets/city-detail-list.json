@@ -448,43 +448,6 @@
       ],
       "experiences": [
         {
-          "categroy": "music",
-          "name": "音乐会",
-          "text": "Discover live music in unique spaces"
-        },
-        {
-          "categroy": "walk",
-          "name": "城市漫步",
-          "text": "本土专家带你逛特色街区和冷门景点"
-        },
-        {
-          "categroy": "cate",
-          "name": "美食之旅体验",
-          "text": "探寻坊间食肆，品尝特色菜式"
-        },
-        {
-          "categroy": "shopping",
-          "name": "购物体验",
-          "text": "和当地时尚达人去独家购物宝地逛街"
-        },
-        {
-          "categroy": "photo",
-          "name": "摄影体验",
-          "text": "向当地摄影师学习拍摄技巧"
-        },
-        {
-          "categroy": "fashion",
-          "name": "",
-          "text": ""
-        },
-        {
-          "categroy": "art",
-          "name": "艺术课",
-          "text": "由当地艺术家组织的工作坊和课程"
-        }
-      ],
-      "experienceList": [
-        {
           "id": 1,
           "type": "骑车游览",
           "site": "伦敦",
