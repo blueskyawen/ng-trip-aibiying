@@ -8,7 +8,8 @@
     <div>¥{{house.price}}每晚.免费取消预订</div>
     <div>
       <span><nc-rate [size]="'12px'" [color]="'#3399ff'" [totalRate]="5" [(curRate)]="house.star"></nc-rate></span>
-      <span title="{{house.comment}}条评价">{{house.comment}}.超赞房东</span>
+      <span title="{{house.comment}}条评价" *ngIf="excelLandord">{{house.comment}}.超赞房东</span>
+      <span title="{{house.comment}}条评价" *ngIf="!excelLandord">{{house.comment}}</span>
     </div>
   </div>
 </div>

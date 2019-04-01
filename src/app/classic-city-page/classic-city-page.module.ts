@@ -7,9 +7,11 @@ import { ClassicCityPageRoutingModule } from './classic-city-page-routing.module
 import { CityHousesComponent } from './city-houses.component';
 import { CityExperiencesComponent } from './city-experiences.component';
 import { CityHomeComponent } from './city-home.component';
+import { CityHeadComponent } from './city-head.component';
 
 @NgModule({
-  declarations: [CityHousesComponent, CityExperiencesComponent, CityHomeComponent],
+  declarations: [CityHousesComponent, CityExperiencesComponent, CityHomeComponent,
+    CityHeadComponent],
   imports: [
     ShareModule, HomePageModule, ExhibitPageModule,
     ClassicCityPageRoutingModule
