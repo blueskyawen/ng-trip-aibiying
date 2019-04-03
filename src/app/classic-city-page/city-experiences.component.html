@@ -1,3 +1,16 @@
-<p>
-  city-experiences works!
-</p>
+<div class="city-experience-container">
+  <div class="city-experience-head">
+    <div class="head-name">{{experience.name}}</div>
+    <div class="head-title">{{experience.title}}</div>
+  </div>
+  <div class="city-experience-list" *ngIf="experience.type === 'highPress'">
+    <div *ngFor="let exper of experience.list" [routerLink]="['/experience',exper.id]"
+         class="city-experience nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+      <app-high-expertence-card [exper]="exper" [showLove]="true" [showSite]="false"></app-high-expertence-card>
+    </div>
+  </div>
+  <div class="city-experience-foot">
+    <span (click)="goMoreExpers()">显示全部（2000+）<span class="fa fa-angle-right"></span></span>
+  </div>
+</div>
+

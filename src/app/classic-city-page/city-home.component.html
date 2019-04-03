@@ -7,9 +7,17 @@
       <app-exhibit-select></app-exhibit-select>
     </div>
   </div>
-  <div class="nc-content">
-    <div class="city-content-item nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      <app-city-head [cityName]="cityName" [cityId]="cityId"></app-city-head>
+  <div class="nc-content" *ngIf="!showLoading">
+    <div class="city-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <div class="city-content-item">
+        <app-city-head [cityName]="cityName" [cityId]="cityId"></app-city-head>
+      </div>
+      <div class="city-content-item">
+        <app-city-experiences [experience]="experList[0]"></app-city-experiences>
+      </div>
+      <div class="city-content-item">
+        <app-city-houses [houses]="cityData.houses"></app-city-houses>
+      </div>
     </div>
   </div>
 </div>

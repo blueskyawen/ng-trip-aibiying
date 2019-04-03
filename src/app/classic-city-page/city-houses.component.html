@@ -1,3 +1,13 @@
-<p>
-  city-houses works!
-</p>
+<div class="city-house-container">
+  <div class="city-house-head">住宿</div>
+  <div class="city-house-list">
+    <div *ngFor="let house of showHouses" [routerLink]="['/house',house.id]"
+         class="city-house nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+      <app-hot-city-house-card [house]="house"></app-hot-city-house-card>
+    </div>
+  </div>
+  <div class="city-house-foot">
+    <span (click)="goMoreHouses()">显示全部（2000+）<span class="fa fa-angle-right"></span></span>
+  </div>
+</div>
+

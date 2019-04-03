@@ -12,6 +12,15 @@ export class CityHomeComponent implements OnInit {
   cityId: string = '';
   cityData: any = {};
   showLoading: boolean;
+  experList: any = [
+    {
+      type: 'highPress',
+      name: '高分体验',
+      title: '在下趟旅程中，不妨预订由本地达人组织的体验活动',
+      list: []
+    }
+  ];
+  highPressExper: any = {};
   constructor(private route: ActivatedRoute,
               private cityPageService: ClassicCityPageService) { }
 
@@ -29,7 +38,18 @@ export class CityHomeComponent implements OnInit {
   }
 
   initCityData() {
-
+    this.cityData.experiences.forEach(exper => {
+      if(exper.highPress) {
+        this.experList[0].list.push(exper);
+      }
+    });
+    this.experList.forEach(item => {
+      if(item.type === 'highPress') {
+        item.list = item.list.slice(0, 5);
+      } else {
+        item.list = item.list.slice(0, 8);
+      }
+    });
   }
 
 }

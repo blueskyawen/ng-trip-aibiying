@@ -22,15 +22,21 @@ export class HouseListPageComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.cityName = params.get('city');
       this.showLoading = true;
-      this.exhibitPageService.getPlatList().subscribe(res => {
-        let tempCitys = [];
-        res.forEach(item => {
-          tempCitys = tempCitys.concat(item.list);
-        });
-        const inhibitCity = tempCitys.find(city => {
-          return city.city_en === this.cityName;
-        });
-        this.cityHouselist = inhibitCity.houses;
+      this.exhibitPageService.getPlatList(this.cityName).subscribe(res => {
+        console.log(res);
+        if(this.cityName !== 'London') {
+          let tempCitys = [];
+          res.forEach(item => {
+            tempCitys = tempCitys.concat(item.list);
+          });
+          const inhibitCity = tempCitys.find(city => {
+            return city.city_en === this.cityName;
+          });
+          this.cityHouselist = inhibitCity.houses;
+        } else {
+          this.cityHouselist = res;
+        }
+
         this.InitPlayData();
         this.showLoading = false;
       });
@@ -38,10 +44,9 @@ export class HouseListPageComponent implements OnInit {
   }
 
   private InitPlayData() {
+    this.setCityHouseList(this.cityHouselist);
     this.cityHouselist1 = this.cityHouselist.slice(0, 12);
     this.cityHouselist2 = this.cityHouselist.slice(12, 16);
-    this.setCityHouseList(this.cityHouselist1);
-    this.setCityHouseList(this.cityHouselist2);
   }
 
   setCityHouseList(houses: any[]) {

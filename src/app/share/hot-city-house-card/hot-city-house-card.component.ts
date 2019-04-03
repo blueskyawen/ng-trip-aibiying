@@ -7,10 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HotCityHouseCardComponent implements OnInit {
   @Input() house: any = {};
-  @Input() excelLandord: boolean = true;
+  roomDeescript: string = '';
   constructor() { }
 
   ngOnInit() {
+    this.roomDeescript = this.house.room ? `${this.house.room}室${this.house.bedNum}床${this.house.toliet}卫` :
+        `${this.house.bedNum}张床`;
   }
-
 }
