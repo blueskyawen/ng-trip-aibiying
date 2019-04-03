@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ShareModule } from '../share/share.module';
+import { HomePageModule } from '../home-page/home-page.module';
+import { ExhibitPageModule } from '../exhibit-page/exhibit-page.module';
 
 import { ExperiencePageRoutingModule } from './experience-page-routing.module';
 import { ExperienceHomeComponent } from './experience-home.component';
@@ -12,7 +14,7 @@ import { ExperienceThemeComponent } from './experience-theme.component';
   declarations: [ExperienceHomeComponent, ExperienceListComponent, ExperienceDetailComponent,
     ExperienceCategoryComponent, ExperienceThemeComponent],
   imports: [
-    CommonModule,
+    ShareModule, HomePageModule, ExhibitPageModule,
     ExperiencePageRoutingModule
   ]
 })

@@ -1,11 +1,17 @@
 <div class="city-experience-container">
   <div class="city-experience-head">
     <div class="head-name">{{experience.name}}</div>
-    <div class="head-title">{{experience.title}}</div>
+    <div class="head-title">{{experience.text}}</div>
   </div>
-  <div class="city-experience-list" *ngIf="experience.type === 'highPress'">
+  <div class="city-experience-list" *ngIf="experience.categroy === 'highPress'">
     <div *ngFor="let exper of experience.list" [routerLink]="['/experience',exper.id]"
-         class="city-experience nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+         class="city-experience nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12" style="width: 20% !important;">
+      <app-high-expertence-card [exper]="exper" [showLove]="true" [showSite]="false"></app-high-expertence-card>
+    </div>
+  </div>
+  <div class="city-experience-list" *ngIf="experience.categroy !== 'highPress'">
+    <div *ngFor="let exper of experience.list" [routerLink]="['/experience',exper.id]"
+         class="city-experience nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
       <app-high-expertence-card [exper]="exper" [showLove]="true" [showSite]="false"></app-high-expertence-card>
     </div>
   </div>

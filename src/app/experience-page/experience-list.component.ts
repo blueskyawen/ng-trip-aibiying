@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience-list.component.less']
 })
 export class ExperienceListComponent implements OnInit {
-
+  showLoading: boolean = true;
   constructor() { }
 
   ngOnInit() {
+    this.showLoading = false;
   }
 
 }

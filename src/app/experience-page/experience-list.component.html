@@ -1,3 +1,18 @@
-<p>
-  experience-list works!
-</p>
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <div class="exhibit-head">
+      <app-page-head [scene]="'city'" [showSearch]="true"></app-page-head>
+    </div>
+    <div class="exhibit-head">
+      <app-exhibit-select></app-exhibit-select>
+    </div>
+  </div>
+  <div class="nc-content" *ngIf="!showLoading">
+    <div class="city-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <div class="city-content-item">
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-page-waiting *ngIf="showLoading"></app-page-waiting>

@@ -13,10 +13,13 @@
         <app-city-head [cityName]="cityName" [cityId]="cityId"></app-city-head>
       </div>
       <div class="city-content-item">
-        <app-city-experiences [experience]="experList[0]"></app-city-experiences>
+        <app-city-experiences [experience]="highPressExper"></app-city-experiences>
       </div>
       <div class="city-content-item">
         <app-city-houses [houses]="cityData.houses"></app-city-houses>
+      </div>
+      <div class="city-content-item" *ngFor="let experItem of experList">
+        <app-city-experiences [experience]="experItem"></app-city-experiences>
       </div>
     </div>
   </div>

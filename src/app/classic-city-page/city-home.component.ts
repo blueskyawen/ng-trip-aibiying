@@ -12,15 +12,13 @@ export class CityHomeComponent implements OnInit {
   cityId: string = '';
   cityData: any = {};
   showLoading: boolean;
-  experList: any = [
-    {
-      type: 'highPress',
-      name: '高分体验',
-      title: '在下趟旅程中，不妨预订由本地达人组织的体验活动',
-      list: []
-    }
-  ];
-  highPressExper: any = {};
+  experList: any[] = [];
+  highPressExper: any = {
+    categroy: 'highPress',
+    name: '高分体验',
+    text: '在下趟旅程中，不妨预订由本地达人组织的体验活动',
+    list: []
+  };
   constructor(private route: ActivatedRoute,
               private cityPageService: ClassicCityPageService) { }
 
@@ -29,26 +27,37 @@ export class CityHomeComponent implements OnInit {
       this.cityId = params.get('id');
       this.cityName = params.get('name');
       this.showLoading = true;
-      this.cityPageService.getCityById(this.cityId).subscribe(res => {
-        this.cityData = res;
-        this.initCityData();
-        this.showLoading = false;
+      this.cityPageService.getExperType(this.cityName).subscribe(res => {
+        this.experList = res.types;
+        this.setExperList();
+        this.cityPageService.getCityById(this.cityId).subscribe(res2 => {
+          this.cityData = res2;
+          this.initCityData();
+          this.showLoading = false;
+        });
       });
+    });
+  }
+
+  setExperList() {
+    this.experList.forEach(item => {
+      item['list'] = [];
     });
   }
 
   initCityData() {
     this.cityData.experiences.forEach(exper => {
-      if(exper.highPress) {
-        this.experList[0].list.push(exper);
+      if (exper.highPress) {
+        this.highPressExper.list.push(exper);
+      }
+      let tmpExper = this.experList.find(item => {return item.categroy === exper.categroy; });
+      if(tmpExper) {
+        tmpExper.list.push(exper);
       }
     });
-    this.experList.forEach(item => {
-      if(item.type === 'highPress') {
-        item.list = item.list.slice(0, 5);
-      } else {
-        item.list = item.list.slice(0, 8);
-      }
+    this.highPressExper.list = this.highPressExper.list.slice(0, 5);
+    this.experList.forEach(item2 => {
+      item2.list = item2.list.slice(0, 8);
     });
   }
 
