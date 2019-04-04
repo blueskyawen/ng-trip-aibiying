@@ -1,3 +1,20 @@
-<p>
-  experience-theme works!
-</p>
+<div class="experience-theme">
+  <div class="experience-theme-head">聚光灯下的体验活动</div>
+  <div class="experience-theme-list">
+    <nc-list-group-horizontal [stepWidth]="220" [hideOper]="true">
+      <ul class="nc-list-group list-group-horizontal">
+        <li *ngFor="let theme of experThemes" (click)="goThemeView(theme)"
+            class="nc-list-group-item">
+          <div class="exper-item-img">
+            <img [src]="theme.imgSrc" />
+          </div>
+          <div class="exper-item-text">
+            <div>超过 {{theme.experNum}} 个体验</div>
+            <div>{{theme.title}}</div>
+            <div>{{theme.text}}</div>
+          </div>
+        </li>
+      </ul>
+    </nc-list-group-horizontal>
+  </div>
+</div>

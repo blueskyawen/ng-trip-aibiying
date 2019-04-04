@@ -1,3 +1,19 @@
-<p>
-  experience-category works!
-</p>
+<div class="experience-category">
+  <div class="experience-category-head">探索体验</div>
+  <div class="experience-category-list" *ngIf="!showLoading">
+    <nc-list-group-horizontal [stepWidth]="220" [hideOper]="true">
+      <ul class="nc-list-group list-group-horizontal">
+        <li *ngFor="let category of categorys" (click)="goExperCategoryView(category)"
+            class="nc-list-group-item nc-inline-flex nc-align-item-center">
+          <div class="exper-item-img">
+            <img [src]="category.imgSrc" />
+          </div>
+          <div class="exper-item-text">
+            {{category.name}}
+          </div>
+        </li>
+      </ul>
+    </nc-list-group-horizontal>
+  </div>
+  <app-page-waiting *ngIf="showLoading"></app-page-waiting>
+</div>

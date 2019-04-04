@@ -1,18 +1,71 @@
 <div class="nc-layout">
   <div class="nc-header lay-header">
-    <div class="exhibit-head">
+    <div class="experience-head">
       <app-page-head [scene]="'city'" [showSearch]="true"></app-page-head>
     </div>
-    <div class="exhibit-head">
+    <div class="experience-head">
       <app-exhibit-select></app-exhibit-select>
     </div>
   </div>
   <div class="nc-content" *ngIf="!showLoading">
-    <div class="city-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      <div class="city-content-item">
+    <div class="exper-content-item-list nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <div class="exper-content-item">
+        <app-experience-category [cityName]="'all'"></app-experience-category>
+      </div>
+
+      <div class="exper-content-item">
+        <div class="exper-content-item-head">
+          <div class="item-head">高分体验</div>
+          <div class="item-head-title">当地人和全球旅行者赞不绝口的体验</div>
+        </div>
+        <div class="exper-content-item-list">
+          <div *ngFor="let highExper of experData.highPress" [routerLink]="['/experience',highExper.id]"
+               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+            <app-high-expertence-card [exper]="highExper" [showLove]="true"></app-high-expertence-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="exper-content-item">
+        <app-experience-theme [experThemes]="experData.theme"></app-experience-theme>
+      </div>
+
+      <div class="exper-content-item">
+        <div class="exper-content-item-head">
+          <div class="item-head">上海</div>
+        </div>
+        <div class="exper-content-item-list">
+          <div *ngFor="let shExper of experData.shanghai" [routerLink]="['/experience',shExper.id]"
+               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+            <app-high-expertence-card [exper]="shExper" [showLove]="true"></app-high-expertence-card>
+          </div>
+        </div>
+        <div class="exper-content-item-foot">
+          <span (click)="goMoreExpers('Shanghai')">显示全部（200+）<span class="fa fa-angle-right"></span></span>
+        </div>
+      </div>
+
+      <div class="exper-content-item">
+        <div class="exper-content-item-head">
+          <div class="item-head">杭州</div>
+        </div>
+        <div class="exper-content-item-list">
+          <div *ngFor="let hzExper of experData.hangzhou" [routerLink]="['/experience',hzExper.id]"
+               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+            <app-high-expertence-card [exper]="hzExper" [showLove]="true"></app-high-expertence-card>
+          </div>
+        </div>
+        <div class="exper-content-item-foot">
+          <span (click)="goMoreExpers('Hangzhou')">显示全部（200+）<span class="fa fa-angle-right"></span></span>
+        </div>
       </div>
     </div>
   </div>
+  <div class="nc-content" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
+  </div>
 </div>
 
-<app-page-waiting *ngIf="showLoading"></app-page-waiting>
+
+
+

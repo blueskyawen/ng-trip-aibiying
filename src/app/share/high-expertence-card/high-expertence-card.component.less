@@ -5,11 +5,19 @@
     margin-bottom: 5px;
     position: relative;
     background-color: #d6e0f5;
+    overflow: hidden;
     img {
       width: inherit;
-      height: 200px;
+      height: 240px;
       border-radius: 4px;
       display: inherit;
+      transform: scale(1);
+      transition: all 2s;
+      &:hover {
+        -webkit-filter: brightness(115%);
+        filter: brightness(115%);
+        transform: scale(1.2);
+      }
     }
     .exper-love {
       position: absolute;

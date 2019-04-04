@@ -93,7 +93,7 @@ export class StoryRecommendDetailComponent implements OnInit, AfterViewInit {
   backToStoryView() {
     this.isShowAlbumList = false;
     this.showLoading = true;
-    setTimeout(() => {this.showLoading = false;},200);
+    setTimeout(() => {this.showLoading = false;},300);
   }
 
   goAlbumView(item: any) {
@@ -105,7 +105,7 @@ export class StoryRecommendDetailComponent implements OnInit, AfterViewInit {
     this.isShowAlbumList = true;
     setTimeout(() => {
       this.showLoading = false;
-    },200);
+    },300);
   }
 
   goAlbumView2(name: string, type: string) {
@@ -117,6 +117,6 @@ export class StoryRecommendDetailComponent implements OnInit, AfterViewInit {
     this.isShowAlbumList = true;
     setTimeout(() => {
       this.showLoading = false;
-    },200);
+    },300);
   }
 }

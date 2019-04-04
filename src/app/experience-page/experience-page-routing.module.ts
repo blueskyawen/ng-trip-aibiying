@@ -13,7 +13,7 @@ const routes: Routes = [
         component: ExperienceHomeComponent
       },
       {
-        path: 'list/:city/:type',
+        path: 'list/:type',
         component: ExperienceListComponent
       },
       {

@@ -55,7 +55,7 @@ export class CityHomeComponent implements OnInit {
         tmpExper.list.push(exper);
       }
     });
-    this.highPressExper.list = this.highPressExper.list.slice(0, 5);
+    this.highPressExper.list = this.highPressExper.list.slice(0, 6);
     this.experList.forEach(item2 => {
       item2.list = item2.list.slice(0, 8);
     });

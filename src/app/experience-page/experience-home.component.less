@@ -3,7 +3,7 @@
     position: fixed;
     background: #fff;
     z-index: 5;
-    .exhibit-head {
+    .experience-head {
       width: inherit;
       border-bottom: solid 1px #e6e6e6;
     }
@@ -12,13 +12,55 @@
     position: relative;
     width: 100%;
     padding-top: 150px;
-    .city-content-item-list {
-      margin: 10px auto 10px;
-      .city-content-item {
+    .exper-content-item-list {
+      margin: 10px auto;
+      .exper-content-item {
         width: 100%;
-        margin: 50px 0;
+        padding: 42px 0;
+        .exper-content-item-head {
+          width: inherit;
+          margin-bottom: 20px;
+          div {
+            width: inherit;
+            &.item-head {
+              font-size: 28px;
+              font-weight: 800;
+              color:#595959;
+            }
+            &.item-head-title {
+              margin-bottom: 10px;
+              color:#999;
+            }
+          }
+        }
+        .exper-content-item-list {
+          width: inherit;
+          display: flex;
+          flex-wrap: wrap;
+          .experience-item {
+            padding: 6px;
+            display: inline-block;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin-bottom: 2px;
+          }
+        }
+        .exper-content-item-foot {
+          width: inherit;
+          span {
+            font-size: 16px;
+            font-weight: 800;
+            color: #3399ff;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+            .fa {
+              margin-left: 5px;
+            }
+          }
+        }
       }
     }
   }
 }
-
