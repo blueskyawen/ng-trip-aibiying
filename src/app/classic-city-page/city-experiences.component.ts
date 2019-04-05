@@ -15,7 +15,7 @@ export class CityExperiencesComponent implements OnInit {
 
   goMoreExpers() {
     if(this.experience.categroy === 'highPress') {
-      this.router.navigate(['/experience/list', 'all', {city: 'London', showCategory: true}]);
+      this.router.navigate(['/experience/list', 'all', {city: 'London'}]);
     } else {
       this.router.navigate(['/experience/list', this.experience.categroy, {city: 'London'}]);
     }

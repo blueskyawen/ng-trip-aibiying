@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-experience-theme',
@@ -7,12 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ExperienceThemeComponent implements OnInit {
   @Input() experThemes: any[] = [];
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   goThemeView(theme: any) {
-
+    this.router.navigate(['/experience/list', theme.categroy, {city: 'all', theme: 'true'}]);
   }
 }

@@ -8,11 +8,40 @@
     </div>
   </div>
   <div class="nc-content" *ngIf="!showLoading">
-    <div class="exper-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      <div class="exper-content-item">
-      </div>
+    <div class="exper-content-theme" *ngIf="themeInfo">
+      <img [src]="themeInfo.photo" />
+      <span class="exper-theme-text">
+        <span>{{themeInfo.name}}</span>
+        <span>{{themeInfo.text}}</span>
+      </span>
     </div>
+
+    <div class="exper-content-item-list nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <div class="exper-content-item" *ngIf="isShowCategory">
+        <app-experience-category [cityName]="city"></app-experience-category>
+      </div>
+
+      <div class="exper-content-item">
+        <div class="exper-content-item-head">
+          所有体验
+        </div>
+        <div *ngIf="showExperList.length !== 0" class="exper-content-item-list">
+          <div *ngFor="let showExper of showExperList" [routerLink]="['/experience',showExper.id]"
+               class="experience-item nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+            <app-high-expertence-card [exper]="showExper" [showLove]="true"></app-high-expertence-card>
+          </div>
+        </div>
+        <div *ngIf="showExperList.length === 0" class="exper-content-item-list exper-nodata">
+          <span class="fa fa-skyatlas fa-3x"></span>
+          <span>无记录</span>
+        </div>
+      </div>
+
+      <app-page-waiting *ngIf="showExpersLoading"></app-page-waiting>
+    </div>
+  </div>
+  <div class="nc-content" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
   </div>
 </div>
 
-<app-page-waiting *ngIf="showLoading"></app-page-waiting>

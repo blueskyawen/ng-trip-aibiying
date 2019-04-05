@@ -9,19 +9,18 @@ import { Router } from '@angular/router';
 })
 export class ExperienceCategoryComponent implements OnInit {
   @Input() cityName: string = '';
-  showLoading: boolean = false;
   categorys: any[] = [];
+  showCate: boolean = false;
   constructor(private cityPageService: ClassicCityPageService, private router: Router) { }
 
   ngOnInit() {
-    this.showLoading = true;
     this.cityPageService.getExperType(this.cityName).subscribe(res => {
       this.categorys = res.types;
-      setTimeout(() => {this.showLoading = false;}, 500);
+      this.showCate = true;
     });
   }
 
   goExperCategoryView(item: any) {
-    this.router.navigate(['/experience/list',item.categroy,{city: this.cityName}]);
+    this.router.navigate(['/experience/list', item.categroy, {city: this.cityName}]);
   }
 }

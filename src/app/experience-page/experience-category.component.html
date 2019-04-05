@@ -1,6 +1,6 @@
 <div class="experience-category">
   <div class="experience-category-head">探索体验</div>
-  <div class="experience-category-list" *ngIf="!showLoading">
+  <div class="experience-category-list" *ngIf="showCate">
     <nc-list-group-horizontal [stepWidth]="220" [hideOper]="true">
       <ul class="nc-list-group list-group-horizontal">
         <li *ngFor="let category of categorys" (click)="goExperCategoryView(category)"
@@ -15,5 +15,4 @@
       </ul>
     </nc-list-group-horizontal>
   </div>
-  <app-page-waiting *ngIf="showLoading"></app-page-waiting>
 </div>

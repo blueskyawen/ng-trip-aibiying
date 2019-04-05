@@ -26,7 +26,7 @@ export class ClassicCityPageService {
 
   getExperType(city: string) {
     return this.http.get('assets/experience-type-list.json').pipe(
-        map(res => {return res['list'].find(item => {return item.city === city; }) || {}; })
+        map(res => {return res['list'].find(item => {return item.name === city; }) || {}; })
     );
   }
 }

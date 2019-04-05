@@ -21,6 +21,6 @@ export class ExperienceHomeComponent implements OnInit {
   }
 
   goMoreExpers(name: string) {
-    this.router.navigate(['/experience/list','all', {city: name, showCategory: true}]);
+    this.router.navigate(['/experience/list', 'all', {city: name}]);
   }
 }

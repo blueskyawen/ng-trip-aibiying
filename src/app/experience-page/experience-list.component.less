@@ -12,11 +12,68 @@
     position: relative;
     width: 100%;
     padding-top: 150px;
+    .exper-content-theme {
+      width: inherit;
+      position: relative;
+      img {
+        width: inherit;
+        height: 450px;
+        background: #f2f2f2 linear-gradient(45deg,#b3d9ff,#fff,#b3d9ff);
+      }
+      .exper-theme-text {
+        display: inline-flex;
+        max-width: 300px;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        left: 60px;
+        span {
+          margin-bottom: 15px;
+          color: #fff;
+          &:first-child {
+            font-size: 28px;
+            font-weight: 600;
+          }
+          &:last-child {
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+
+      }
+    }
     .exper-content-item-list {
       margin: 10px auto 10px;
       .exper-content-item {
         width: 100%;
         margin: 40px 0;
+        .exper-content-item-head {
+          width: inherit;
+          margin-bottom: 20px;
+          font-size: 28px;
+          font-weight: 800;
+          color:#595959;
+        }
+        .exper-content-item-list {
+          width: inherit;
+          display: flex;
+          flex-wrap: wrap;
+          .experience-item {
+            padding: 6px;
+            display: inline-block;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin-bottom: 2px;
+          }
+        }
+      }
+      &.exper-nodata {
+        font-size: 16px;
+        color: #666;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }

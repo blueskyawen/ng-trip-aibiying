@@ -27,7 +27,7 @@ export class CityHomeComponent implements OnInit {
       this.cityId = params.get('id');
       this.cityName = params.get('name');
       this.showLoading = true;
-      this.cityPageService.getExperType(this.cityName).subscribe(res => {
+      this.cityPageService.getExperType('London').subscribe(res => {
         this.experList = res.types;
         this.setExperList();
         this.cityPageService.getCityById(this.cityId).subscribe(res2 => {

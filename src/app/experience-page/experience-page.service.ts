@@ -18,7 +18,15 @@ export class ExperiencePageService {
 
   getCityExperList() {
     return this.http.get('assets/city-detail-list.json').pipe(
-        map(res => res['cityList'][0]['experiences'] || [])
+        map(res => {
+            let tempList = res['cityList'][0]['experiences'] || [];
+            if(tempList.length !== 0) {
+                tempList.forEach(tempItem => {
+                    tempItem.city = 'London';
+                });
+            }
+            return tempList;
+        })
     );
   }
 
