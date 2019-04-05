@@ -16,12 +16,14 @@ import { HomeDetailLandordComponent } from './home-detail-landord.component';
 import { HomeDetailOthersComponent } from './home-detail-others.component';
 import { PlusHomePhotoComponent } from './plus-home-photo.component';
 import { PlusHomeFatifyComponent } from './plus-home-fatify.component';
+import { HomeDetailFootComponent } from './home-detail-foot.component';
+import { HomeOrderComponent } from './home-order.component';
 
 @NgModule({
   declarations: [PlusHomeDetailComponent, HomeDetailPhotoComponent, HomeDetailOverviewComponent,
     HomeDetailContentComponent, HomeDetailSiteComponent, HomeDetailCommentComponent, HomeDetailOrderComponent,
     HomeDetailRuleComponent, HomeDetailLandordComponent, HomeDetailOthersComponent, PlusHomePhotoComponent,
-    PlusHomeFatifyComponent],
+    PlusHomeFatifyComponent, HomeDetailFootComponent, HomeOrderComponent],
   imports: [
     ShareModule, HomePageModule,
     PlusHomeDetailRoutingModule

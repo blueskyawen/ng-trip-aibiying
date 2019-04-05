@@ -33,6 +33,10 @@
             <app-home-detail-others></app-home-detail-others>
         </div>
     </div>
+
+    <div class="plus-home-detail-foot">
+        <app-home-detail-foot [homeData]="homeData"></app-home-detail-foot>
+    </div>
 </div>
 
 <app-page-waiting *ngIf="showLoading"></app-page-waiting>
