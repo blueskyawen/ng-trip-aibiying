@@ -61,4 +61,12 @@ export class ExperiencePageService {
         })
     );
   }
+
+    getExperienceById(id: string) {
+        return this.http.get('assets/experience-detail-list.json').pipe(
+            map(res => {
+                return res['list'].find(item => item.id === '1') || {};
+            })
+        );
+    }
 }

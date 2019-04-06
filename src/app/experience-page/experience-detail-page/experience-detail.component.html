@@ -1,0 +1,22 @@
+<div class="nc-layout">
+    <div class="nc-header lay-header">
+    <div class="experience-head">
+      <app-page-head [scene]="'city'" [showSearch]="true"></app-page-head>
+    </div>
+    </div>
+    <div class="nc-content" *ngIf="!showLoading">
+        <div class="exper-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+            <div class="exper-content-item">
+              <app-experience-overview [experData]="experData"></app-experience-overview>
+            </div>
+
+            <div class="exper-content-item">
+                <app-experience-photos [experData]="experData"></app-experience-photos>
+            </div>
+        </div>
+    </div>
+    <div class="nc-content" *ngIf="showLoading">
+        <app-page-waiting></app-page-waiting>
+    </div>
+</div>
+

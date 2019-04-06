@@ -1,0 +1,15 @@
+<div class="exper-detail-photos">
+  <div class="photo-text nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+    参加者相片
+  </div>
+  <div class="photo-list nc-xl-col-8 nc-lg-col-8 nc-md-col-8 nc-sm-col-12 nc-xs-col-12">
+    <div>
+      <div *ngFor="let photo of viewPhotos" class="photo-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-10">
+        <img [src]="photo" />
+      </div>
+    </div>
+    <div>
+      <span>显示所有参与者拍摄的照片</span>
+    </div>
+  </div>
+</div>

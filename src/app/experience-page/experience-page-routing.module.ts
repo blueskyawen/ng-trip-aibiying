@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ExperienceHomeComponent} from './experience-home.component';
 import {ExperienceListComponent} from './experience-list.component';
-import {ExperienceDetailComponent} from './experience-detail.component';
 
 const routes: Routes = [
   {
@@ -15,10 +14,6 @@ const routes: Routes = [
       {
         path: 'list/:type',
         component: ExperienceListComponent
-      },
-      {
-        path: ':id',
-        component: ExperienceDetailComponent
       }
     ]
   },

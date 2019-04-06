@@ -1,0 +1,67 @@
+<div class="exper-detail-overview">
+  <div class="exper-images nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <nc-carousel [captions]="experData.imgOption" [height]="'560px'" [effect]="'fade'" [timerlen]="4000" [isPause]="true"></nc-carousel>
+  </div>
+  <div class="exper-view-content nc-xl-col-8 nc-lg-col-8 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <div class="exper-view-content-item">
+      <div>
+        <span>{{experData.type}}</span>
+        <span class="share-icon">
+          <span>
+            <span>
+              <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 15px; width: 15px; display: block; fill: rgb(72, 72, 72);"><path d="m22.19 8.5h-3.14a.81.81 0 0 0 -.81.8c0 .44.36.8.81.8h2.33v12.31h-18.76v-12.31h3.11c.45 0 .81-.36.81-.8a.81.81 0 0 0 -.81-.8h-3.92a.81.81 0 0 0 -.81.8v13.91c0 .44.36.8.81.8h20.38c.45 0 .81-.36.81-.8v-13.91a.81.81 0 0 0 -.81-.8zm-14.11-3.82c.19 0 .36-.06.51-.18l2.01-1.58.6-.47v13.79c0 .44.36.8.81.8s.81-.36.81-.8v-13.79l.59.47 2.01 1.58a.8.8 0 0 0 .5.18.81.81 0 0 0 .63-.3.79.79 0 0 0 -.13-1.12l-3.92-3.09a.42.42 0 0 0 -.07-.04l-.07-.03-.01-.01-.05-.03a.76.76 0 0 0 -.3-.06.81.81 0 0 0 -.3.06l-.01.01-.06.04-.07.03a.42.42 0 0 0 -.07.04l-3.92 3.09a.79.79 0 0 0 -.13 1.12c.16.19.39.3.63.3z" fill-rule="evenodd"></path></svg>
+            </span>分享
+          </span>
+          <span>
+            <span>
+              <svg viewBox="0 0 32 32" fill="#484848" fill-opacity="0" stroke="#484848" stroke-width="1.5" focusable="false" aria-hidden="true" role="presentation" stroke-linecap="round" stroke-linejoin="round" style="height: 15px; width: 15px; display: block; overflow: visible;"><path d="m23.99 2.75c-.3 0-.6.02-.9.05-1.14.13-2.29.51-3.41 1.14-1.23.68-2.41 1.62-3.69 2.94-1.28-1.32-2.46-2.25-3.69-2.94-1.12-.62-2.27-1-3.41-1.14a7.96 7.96 0 0 0 -.9-.05c-1.88 0-7.26 1.54-7.26 8.38 0 7.86 12.24 16.33 14.69 17.95a1 1 0 0 0 1.11 0c2.45-1.62 14.69-10.09 14.69-17.95 0-6.84-5.37-8.38-7.26-8.38"></path></svg>
+            </span>保存
+          </span>
+        </span>
+      </div>
+      <div>{{experData.title}}</div>
+      <div><span class="fa fa-map-marker"></span>{{experData.site}}</div>
+      <div><span class="fa fa-clock-o"></span>{{experData.featrues[0]}}</div>
+      <div><span class="fa fa-file-text-o"></span>{{experData.featrues[1]}}</div>
+      <div><span class="fa fa-wechat"></span>{{experData.featrues[2]}}</div>
+    </div>
+
+    <div class="exper-view-content-item">
+      <img class="_13gjrqj" src="https://a0.muscache.com/airbnb/static/1ffc04073f913b26ccdb520ba212c25d.gif" width="40" height="40" alt="">
+      <span>刚刚获得预订！ 赶快去抢个名额吧。</span>
+    </div>
+
+    <div class="exper-view-content-item">
+      <div>
+        <div>关于您的体验达人</div>
+        <div *ngFor="let titleitem of experData.triper.titles">{{titleitem}}</div>
+      </div>
+      <div>
+        <span>
+          <nc-avater [type]="'circle'" [size]="'large'" [imgSrc]="experData.triper.avatar"></nc-avater>
+        </span>
+        <span>{{experData.triper.name}}</span>
+        <span>联系体验达人</span>
+      </div>
+    </div>
+
+    <div class="exper-view-content-item">
+      <div>体验内容</div>
+      <div *ngFor="let cont of experData.tripContent">{{cont}}</div>
+    </div>
+
+    <div class="exper-view-content-item">
+      <div>其他应注意的事项</div>
+      <div *ngFor="let attent of experData.attention">{{attent}}</div>
+    </div>
+
+    <div class="exper-view-content-item">
+      <div>体验所含内容</div>
+      <div *ngFor="let otherattent of experData.otherContent;let i=index">
+        {{otherattent}}
+        <span class="fa fa-glass" *ngIf="i === 0"></span>
+        <span class="fa fa-cutlery" *ngIf="i === 1"></span>
+      </div>
+    </div>
+  </div>
+</div>
