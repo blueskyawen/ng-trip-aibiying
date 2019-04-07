@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-experience-overview',
@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ExperienceOverviewComponent implements OnInit {
   @Input() experData: any = {};
+  @Output() contactChange = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
@@ -22,6 +23,10 @@ export class ExperienceOverviewComponent implements OnInit {
         callback: () => {}
       });
     });
+  }
+
+  contactOwner() {
+    this.contactChange.emit();
   }
 
 }

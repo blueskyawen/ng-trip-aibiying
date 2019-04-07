@@ -7,16 +7,44 @@
     <div class="nc-content" *ngIf="!showLoading">
         <div class="exper-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
             <div class="exper-content-item">
-              <app-experience-overview [experData]="experData"></app-experience-overview>
+              <app-experience-overview [experData]="experData" (contactChange)="contactChange()"></app-experience-overview>
             </div>
 
             <div class="exper-content-item">
                 <app-experience-photos [experData]="experData"></app-experience-photos>
+            </div>
+
+            <div class="exper-content-item">
+                <app-experience-comments [experData]="experData"></app-experience-comments>
+            </div>
+
+            <div class="exper-content-item">
+                <app-experience-location></app-experience-location>
+            </div>
+
+            <div class="exper-content-item">
+                <app-experience-order [experData]="experData" (orderChange)="contactChange()"></app-experience-order>
+            </div>
+
+            <div class="exper-content-item">
+                <app-experience-attention></app-experience-attention>
+            </div>
+
+            <div class="exper-content-item">
+                <app-experience-others [experData]="experData"></app-experience-others>
             </div>
         </div>
     </div>
     <div class="nc-content" *ngIf="showLoading">
         <app-page-waiting></app-page-waiting>
     </div>
+
+    <div class="nc-footer nc-flex nc-content-center">
+        <div class="lay-foot nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+            <app-page-foot></app-page-foot>
+        </div>
+    </div>
 </div>
 
+<app-page-login [(isDisplay)]="isShowLogin" (toRegisterEvent)="handleToRegisterEvnent()"></app-page-login>
+<app-page-register [(isDisplay)]="isShowRegister" (toLoginEvent)="handleToLoginEvnent()"></app-page-register>

@@ -12,10 +12,12 @@ import { ExperienceLocationComponent } from './experience-location.component';
 import { ExperienceOrderComponent } from './experience-order.component';
 import { ExperienceAttentionComponent } from './experience-attention.component';
 import { ExperienceOthersComponent } from './experience-others.component';
+import { ExperPhotoDrawerComponent } from './exper-photo-drawer.component';
 
 @NgModule({
   declarations: [ExperienceDetailComponent, ExperienceOverviewComponent, ExperiencePhotosComponent, ExperienceCommentsComponent,
-    ExperienceLocationComponent, ExperienceOrderComponent, ExperienceAttentionComponent, ExperienceOthersComponent],
+    ExperienceLocationComponent, ExperienceOrderComponent, ExperienceAttentionComponent, ExperienceOthersComponent,
+    ExperPhotoDrawerComponent],
   imports: [
     ShareModule, HomePageModule, ExhibitPageModule, ExperienceDetailPageRoutingModule
   ]

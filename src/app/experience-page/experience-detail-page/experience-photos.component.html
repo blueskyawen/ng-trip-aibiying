@@ -9,7 +9,9 @@
       </div>
     </div>
     <div>
-      <span>显示所有参与者拍摄的照片</span>
+      <span (click)="isShowAllPhotos = true">显示所有参与者拍摄的照片</span>
     </div>
   </div>
 </div>
+
+<app-exper-photo-drawer [(isDisplay)]="isShowAllPhotos" [photos]="experData.photos"></app-exper-photo-drawer>

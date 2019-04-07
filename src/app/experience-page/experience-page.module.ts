@@ -14,8 +14,8 @@ import { ExperienceThemeComponent } from './experience-theme.component';
   declarations: [ExperienceHomeComponent, ExperienceListComponent,
     ExperienceCategoryComponent, ExperienceThemeComponent],
   imports: [
-    ShareModule, HomePageModule, ExhibitPageModule, ExperienceDetailPageModule,
-    ExperiencePageRoutingModule
+    ShareModule, HomePageModule, ExhibitPageModule,
+    ExperiencePageRoutingModule, ExperienceDetailPageModule
   ]
 })
 export class ExperiencePageModule { }

@@ -1,0 +1,22 @@
+<nc-drawer [(isShow)]="isDisplay" (isShowChange)="showChange()">
+  <div nc-drawer-content class="photo-container">
+    <div class="photo-head">全部照片</div>
+    <div class="photo-content">
+      <div class="photo-content-item" *ngFor="let photoItem of showPhotos">
+        <div class="photo-item-head">
+          <span>
+            <nc-avater [type]="'circle'" [size]="'middle'" [imgSrc]="photoItem.sharer.avatar"></nc-avater>
+          </span>
+          <span>{{photoItem.sharer.name}}</span>
+        </div>
+        <div class="photo-item-list">
+          <img *ngFor="let  photo of photoItem.list" [src]="photo" />
+        </div>
+      </div>
+      <div class="photo-foot">
+        <app-page-waiting *ngIf="showLoading" [size]="'small'"></app-page-waiting>
+        <span *ngIf="showButton" (click)="showAllPhotos()">显示更多的照片</span>
+      </div>
+    </div>
+  </div>
+</nc-drawer>

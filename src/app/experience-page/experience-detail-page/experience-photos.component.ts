@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ExperiencePhotosComponent implements OnInit {
   @Input() experData: any = {};
   viewPhotos: string[] = [];
+  isShowAllPhotos: boolean = false;
   constructor() { }
 
   ngOnInit() {

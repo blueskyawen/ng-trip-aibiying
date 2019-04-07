@@ -11,6 +11,8 @@ export class ExperienceDetailComponent implements OnInit {
   showLoading: boolean = true;
   experId: string = '';
   experData: any = {};
+  isShowLogin: boolean = false;
+  isShowRegister: boolean = false;
   constructor(private route: ActivatedRoute,
               private experPageService: ExperiencePageService) { }
 
@@ -25,6 +27,18 @@ export class ExperienceDetailComponent implements OnInit {
         setTimeout(() => {this.showLoading = false; }, 2000);
       });
     });
+  }
+
+  handleToLoginEvnent() {
+    this.isShowLogin = true;
+  }
+
+  handleToRegisterEvnent() {
+    this.isShowRegister = true;
+  }
+
+  contactChange() {
+    this.isShowLogin = true;
   }
 
 }

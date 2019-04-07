@@ -1,3 +1,23 @@
-<p>
-  experience-order works!
-</p>
+<div class="exper-detail-order">
+  <div class="order-text nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+    未来数日的可订情况
+  </div>
+  <div class="order-list nc-xl-col-8 nc-lg-col-8 nc-md-col-8 nc-sm-col-12 nc-xs-col-12">
+    <div>
+      <span class="text-left">
+        <span>{{time.month}}月{{time.day}}日  {{time.week}}  |  09:00到17:00。09:00 – 17:00</span>
+        <span>每人￥{{experData.price}}</span>
+        <span>4个名额中还剩2个</span>
+      </span>
+      <span class="text-right">
+        <nc-button [type]="'cancel'" (click)="contactIt()">选择</nc-button>
+      </span>
+    </div>
+    <div>
+      <img class="_13gjrqj" src="https://z1.muscache.cn/airbnb/static/1ffc04073f913b26ccdb520ba212c25d.gif" width="40" height="40" alt="">
+      <span>刚刚获得预订！ 赶快去抢个名额吧。</span>
+    </div>
+  </div>
+</div>
+
+
