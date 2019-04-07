@@ -10,7 +10,7 @@ export class PageLoginComponent implements OnInit {
   @Input() isDisplay: boolean = false;
   @Output() isDisplayChange = new EventEmitter<boolean>();
   @Output() toRegisterEvent = new EventEmitter<boolean>();
-  loginData: any = {phone: '', password: '', checkFlag: 1};
+  loginData: any = {name: '', password: '', checkFlag: 1};
   isLoading: boolean = false;
   showMsg: boolean = false;
   constructor(private pageRegisterLoginService: PageRegisterLoginService) { }
@@ -38,7 +38,7 @@ export class PageLoginComponent implements OnInit {
   }
 
   isDisableLogin() {
-    return !this.loginData.phone || !this.loginData.password;
+    return !this.loginData.name || !this.loginData.password;
   }
 
   login() {

@@ -12,7 +12,7 @@ export class PageRegisterComponent implements OnInit {
   @Output() toLoginEvent = new EventEmitter<boolean>();
   isShowOthers: boolean = false;
   isShowPhoneReg: boolean = false;
-  registerData: any = {phone: '', password: '', checkFlag: 1};
+  registerData: any = {name: '', password: '', checkFlag: 1};
   isLoading: boolean = false;
   showMsg: boolean = false;
   constructor(private pageRegisterLoginService: PageRegisterLoginService) { }
@@ -32,7 +32,7 @@ export class PageRegisterComponent implements OnInit {
 
   register() {
     this.isLoading = true;
-    this.pageRegisterLoginService.registerUser('/api/user/register', this.registerData).subscribe(res => {
+    this.pageRegisterLoginService.registerUserByDB('/api/user/register', this.registerData).subscribe(res => {
       setTimeout(() => {
         this.isLoading = false;
         this.showMsg = true;
@@ -43,7 +43,7 @@ export class PageRegisterComponent implements OnInit {
   }
 
   isDisableRegister() {
-    return !this.registerData.phone || !this.registerData.password;
+    return !this.registerData.name || !this.registerData.password;
   }
 
   checkFlag(flag: number) {

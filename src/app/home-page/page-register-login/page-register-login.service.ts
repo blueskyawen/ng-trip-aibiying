@@ -2,13 +2,26 @@ import { Injectable } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
 import { StorageService } from '../../core/storage.service';
 import { CoreService } from '../../core/core.service';
+import { DbStorageService } from '../../core/db-storage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PageRegisterLoginService {
 
-  constructor(private storageService: StorageService, public coreService: CoreService) { }
+  constructor(private storageService: StorageService,
+              public coreService: CoreService,
+              public dbStorageService: DbStorageService) { }
+
+  registerUserByDB(url, data): Observable<any> {
+    this.dbStorageService.add('users',data);
+    setTimeout(() => {this.getUser(data.name)},5000);
+    return of({});
+  }
+
+  getUser(name: string) {
+    this.dbStorageService.read('users', name);
+  }
 
   registerUser(url, data): Observable<any> {
     let tmpUsers = [];
@@ -24,7 +37,7 @@ export class PageRegisterLoginService {
     if(this.storageService.get('users')) {
       let users = JSON.parse(this.storageService.get('users'));
       let loginUser = users.find((item : any) => {
-        return item.phone === user.phone && item.password === user.password;
+        return item.name === user.name && item.password === user.password;
       });
       if(loginUser) {
         loginUser.logined = true;
@@ -43,7 +56,7 @@ export class PageRegisterLoginService {
     if(this.storageService.get('users')) {
       let users = JSON.parse(this.storageService.get('users'));
       let loginUser = users.find((item : any) => {
-        return item.phone === name && item.logined;
+        return item.name === name && item.logined;
       });
       if(loginUser) {
         loginUser.isLogined = false;
