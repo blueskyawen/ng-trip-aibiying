@@ -1,0 +1,337 @@
+{
+  "list": [
+    {
+      "id": "1",
+      "type": "摄影艺术 ",
+      "site": "杭州",
+      "city": "Hangzhou",
+      "categroy": "photo",
+      "imgUrl": "https://z1.muscache.cn/im/pictures/00ec576f-d25a-4752-9ca6-ede2bd01287b.jpg?aki_policy=x_large",
+      "title": "摄影师带你游杭州，用镜头记录你的一天",
+      "price": 360,
+      "star": 5,
+      "comment": 18,
+      "highPress": false,
+      "featrues": [
+        "8小时",
+        "零食和饮品",
+        "使用简体中文开展体验"
+      ],
+      "triper": {
+        "name": "Kelly",
+        "avatar": "https://z1.muscache.cn/im/pictures/user/90a0b8e5-2122-42ba-a4f0-8d018c95068b.jpg?aki_policy=profile_x_medium",
+        "titles": [
+          "大家好， 我是Kelly，",
+          "2010年接触摄影，2012年开始玩单反，已有8年业余摄影经验，擅长风光和人像拍摄。周末及节假日喜欢拍杭州美景，或去周边小镇旅行、摄影、发呆。\n兴趣爱好较多，业余时间还特喜欢组织和策划体验活动，如国学类的琴、棋、书、画、诗、酒、茶，读书会，时尚派对、及各类好玩有有意思的手工制作、私人定制和旅游外拍等",
+          "目前还是Toastmasters International 第85大区Z4小区杭州西城双语演讲俱乐部的教育副主席(西城TMC VPE)，每周四晚上定期组织演讲会议，来宾总人数累计超过500人。",
+          "2018年我想突破一下自己，认识新的朋友，同时用业余爱好做一些自己喜欢的事，总之一句话，和我一起出去玩你一定不会无聊。"
+        ]
+      },
+      "tripContent": [
+        "周末带你游杭州，全程提供旅途摄影，捕捉你们的精彩瞬间，同时可做导游向你们讲解杭州当地文化和历史典故。对于喜欢摄影的朋友我还可以边玩边教授摄影。",
+        "最后行程结束后当晚，我会提供给客人所有的拍摄照片原片（大于100张/人，微信、邮箱或百度云盘），保证你会爱上这段不一样的旅程，爱上大美杭州"
+      ],
+      "attention": [
+        "有条件请自带相机、零食、个人用品等，有条件请自带手机或单反相机，零食，日常防晒霜、晴雨伞等个人用品。",
+        "鉴于行程较长，最好请穿平底鞋或自备一双休闲运动鞋。"
+      ],
+      "otherContent": [
+        "550ml农夫山泉饮用天然水 1瓶/人(可以留备注：常温或冰镇)",
+        "时令水果一份"
+      ],
+      "images": [
+        "https://z1.muscache.cn/im/pictures/da3b94e1-4559-4704-89ab-90e21982bb5a.jpg?aki_policy=poster",
+        "https://z1.muscache.cn/im/pictures/e8a1de42-0d0f-4fe2-8728-9cc45824b093.jpg?aki_policy=poster",
+        "https://z1.muscache.cn/im/pictures/967f1822-f767-42c9-b06a-1177c284cf56.jpg?aki_policy=poster",
+        "https://z1.muscache.cn/im/pictures/fc659276-ab8b-4a6f-9e70-7b32ce26e038.jpg?aki_policy=poster",
+        "https://z1.muscache.cn/im/pictures/86d0770d-64aa-47a1-8a90-8352acd2666b.jpg?aki_policy=poster",
+        "https://z1.muscache.cn/im/pictures/4733a087-d28c-410a-a861-6a68a0c90423.jpg?aki_policy=poster",
+        "https://z1.muscache.cn/im/pictures/62622132-c136-4658-9f1a-3b99e03dd30d.jpg?aki_policy=poster",
+        "https://z1.muscache.cn/im/pictures/6b036b37-8251-491e-87e6-b49b567af009.jpg?aki_policy=poster"
+      ],
+      "photos": [
+        {
+          "sharer": {
+            "name": "倩倩",
+            "avatar": "https://z1.muscache.cn/im/pictures/user/218957de-daea-4ace-93b3-3d899a96d82f.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/38e8662d-9a0d-43b9-95be-56654cb8a79c.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/2a444bbb-c038-4edf-a76f-4446f401c2fa.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "雯",
+            "avatar": "https://z1.muscache.cn/im/pictures/user/03a5151d-17cb-4e8a-8bdf-a323ceb86322.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/00ec576f-d25a-4752-9ca6-ede2bd01287b.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/4b470600-99fb-4bb9-b08b-625a7cfd368f.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "芳",
+            "avatar": "https://z1.muscache.cn/im/pictures/user/6004c993-bd34-4e12-9db0-1a09a417c532.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/dd526c14-2fbb-43dc-81f9-e3dfca9fd645.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "炎",
+            "avatar": "https://z1.muscache.cn/im/pictures/user/fc6f5a9b-df45-4d7d-a6e5-9b5332118778.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/c44695b1-885a-49c5-ace4-4591390771f6.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/d2d0c015-2f71-4536-94db-3052711c871d.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/17027d6f-3ce0-4416-a455-9c5ba4002d1b.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "Ellen",
+            "avatar": "https://z1.muscache.cn/im/pictures/user/ecca4e89-3eb9-422d-a43e-4485cc47434d.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/1212b058-f24a-4f79-a746-9b46c0de687b.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "Shelly",
+            "avatar": "https://z1.muscache.cn/im/pictures/398c7199-3b09-4740-92a9-d4494d062c68.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/909b7992-f1bc-4c9f-abc5-d39bb55870c8.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/5f89511c-9804-44ac-ad9f-2a5c30b1aa21.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/d94df5eb-a693-4796-a125-288e353586a0.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "杰骏",
+            "avatar": "https://z1.muscache.cn/im/pictures/942d2018-5dbf-4d37-a251-7040bc30426b.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/a9fa2fcf-63fc-47f1-9c81-afa4f9f0d6ad.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "思文",
+            "avatar": "https://z1.muscache.cn/im/pictures/user/a23bf201-da7f-4c2c-a3be-e83477c83acf.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/c2ca78d2-9d1d-486f-b6bd-a57691de813b.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "Juan",
+            "avatar": "https://z1.muscache.cn/im/pictures/3faf9951-c4a0-4863-a003-234efa241ee2.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/19b30d7c-c446-4d40-a788-b89718aa12b5.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/f361ae0a-7db4-4adf-b746-07d4184028a5.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/a32d5932-099c-4789-9c59-f14e3b09dbe9.jpg?aki_policy=x_large"
+          ]
+        },
+        {
+          "sharer": {
+            "name": "瑶瑶",
+            "avatar": "https://z1.muscache.cn/im/pictures/user/20ad8b64-8d91-434c-857d-f03aa6c5751b.jpg?aki_policy=profile_x_medium"
+          },
+          "list": [
+            "https://z1.muscache.cn/im/pictures/dd216a34-e6c9-4483-a676-93cc0945ed78.jpg?aki_policy=x_large",
+            "https://z1.muscache.cn/im/pictures/ecc75843-6a89-4822-9bde-998664d62d68.jpg?aki_policy=x_large"
+          ]
+        }
+      ],
+      "comments": [
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/218957de-daea-4ace-93b3-3d899a96d82f.jpg?aki_policy=profile_x_medium",
+            "name":["倩倩"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"非常棒的小姐姐,拍照也很棒,谢谢"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/03a5151d-17cb-4e8a-8bdf-a323ceb86322.jpg?aki_policy=profile_x_medium",
+            "name":["雯"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"非常有责任心,也为对方考虑,照片非常好看,非常专业,而且有一双善于发现美的眼睛,时常会讲地理人文,听的也是津津有味,可惜遇到了大雨天,不然应该会是更愉快的旅行｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/e7926d6c-8747-4079-aa1c-3df9ae31c750.jpg?aki_policy=profile_x_medium",
+            "name":["九"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"小姐姐很热情,拍照技术很好.一天的体验非常好."
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/052f6be3-4856-4a47-b492-c1783bd03e32.jpg?aki_policy=profile_x_medium",
+            "name":["泰铭"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"今天的体验非常满意,期待下次再会哟｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/f9890f06-10aa-4b57-a22c-85ec0a16433a.jpg?aki_policy=profile_x_medium",
+            "name":["Shirley"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"因为个人原因导致时间推迟,缩短了体验时间,但Kelly依然很热情且下雨天陪到了很晚才结束!很认真的帮讲解所到之处景点,给人感觉很温暖舒服!下次杭州游还要邀请她一起!开心!!"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/ab76f56b-9684-44cd-9ac0-cb494274a613.jpg?aki_policy=profile_x_medium",
+            "name":["芳"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"温柔耐心的陪伴 海量跟拍的服务 超值"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/6899409b-12e5-4d07-beec-964a48f135e2.jpg?aki_policy=profile_x_medium",
+            "name":["浩安"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"Kelly在旅途上一路悉心讲解 拍照的时候也会帮我设计表情和动作 绝对物有所值"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/8c9c2e39-d47f-487d-85d6-d174802283db.jpg?aki_policy=profile_x_medium",
+            "name":["Ming-Ching"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"Kelly 是一位非常體貼的達人,下著雨卻一直在幫我找適合我拍照的地點,一路上也會解說景點讓我更認識杭州;品嚐齋飯的經驗很棒!在山裡聽著雨聲吃飯是很棒的體驗,沿著法淨寺到法喜寺,感覺身心靈都得到了釋放,在法喜寺敲鐘也是很棒的體驗!"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/658453c1-f6e3-40cd-82af-e6304f1f0afa.jpg?aki_policy=profile_x_medium",
+            "name":["Wilson"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"凯莉是一位非常温和友善的导游和摄影师｡我们与她相处非常舒服,所以拍家庭照时更容易｡我们非常喜欢她拍摄的照片,而且当天就立即收到照片｡ 我们强烈推荐凯莉的服务!如果有机会在另一个季节访问杭州,肯定会再次找她!"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/e2301d41-e7c4-4f93-a5f3-e394e4ce8bdd.jpg?aki_policy=profile_x_medium",
+            "name":["绿酱"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"一般般,讲解不算多,徒步项目……费用来说还是比较高的……"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/d181b827-add4-491a-9bef-59ab9b5dd6cd.jpg?aki_policy=profile_x_medium",
+            "name":["小胖"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"Kelly人超级nice,很好的照顾到了每个人,摄影技术也很棒,体验很超值,完美的良渚之行"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/f5ec136f-b64b-4d23-b6a9-7c6ce4708f96.jpg?aki_policy=profile_x_medium",
+            "name":["Chuanfei"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"貼心的Kelly 客製化路線的安排 人少時還能額外增加私房景點 太棒了"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/0ba8baf3-9918-494a-bdef-6a8232c6e388.jpg?aki_policy=profile_x_medium",
+            "name":["杰琳"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"姐姐人超好!我选择了西湖路线,行程安排轻松合理｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/743dabd0-484d-4143-8287-3befa2beda4e.jpg?aki_policy=profile_x_medium",
+            "name":["嘉彤"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"小姐姐特别好,怕我照片没拍满,一直在各种拍｡人超级nice 手机最后都没电了,感动 照相技术一级棒,完美"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/cabc81b5-4077-4f60-a692-29d4b4fdd6ff.jpg?aki_policy=profile_x_medium",
+            "name":["Keagan"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"去走走不是游客常去的礼佛景点,漫步在幽静的竹林小道,如何在游客繁多的西湖取景,夜间穿走在闹市里的小巷｡一路走来拍摄很多精美的照片,需要时间慢慢去消化筛选,深感模特明星拍专辑的不易,但到手的照片映入眼眸时,这都是值得的｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/f54b2576-25bb-4f0f-a1b3-3139a452281a.jpg?aki_policy=profile_x_medium",
+            "name":["Ss"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"非常nice的kelly,很细心的照顾到每个人,很好的一次体验｡"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/c26a404d-5b48-426c-aa0d-57dd2c645dc8.jpg?aki_policy=profile_x_medium",
+            "name":["Debbie"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"CP值爆表的超值之旅,完全值回票價,也讓人難忘! 在知性的解說與帶領下,文化民情與歷史遺跡碰撞出前所未有的火花｡過程中十分愉快,體驗了杭州風情,可以說是踏遍足跡,最後還能得到許多珍貴的照片回憶｡ 不論單人旅遊或是結伴同行,都十分推薦!"
+        },
+        {
+          "user":{
+            "id":"q222",
+            "avatar":"https://z1.muscache.cn/im/pictures/user/ffb0719c-5b09-467f-a3ce-f5962e9b26e2.jpg?aki_policy=profile_x_medium",
+            "name":["知言"]
+          },
+          "star":5,
+          "time":"3/12/2019, 3:10:54 PM",
+          "text":"让人愉快的kelly小姐姐,照片很赞!耐心满满~吃到了惊艳的小柿子,回来网上买了一箱哈哈哈,祝你一切顺利呀"
+        }
+      ]
+    }
+  ]
+}
