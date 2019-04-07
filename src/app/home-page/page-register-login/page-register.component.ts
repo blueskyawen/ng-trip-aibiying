@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PageRegisterLoginService } from './page-register-login.service';
 
 @Component({
   selector: 'app-page-register',
@@ -14,7 +15,7 @@ export class PageRegisterComponent implements OnInit {
   registerData: any = {phone: '', password: '', checkFlag: 1};
   isLoading: boolean = false;
   showMsg: boolean = false;
-  constructor() { }
+  constructor(private pageRegisterLoginService: PageRegisterLoginService) { }
 
   ngOnInit() {
   }
@@ -31,12 +32,14 @@ export class PageRegisterComponent implements OnInit {
 
   register() {
     this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-      this.showMsg = true;
-      this.isDisplay = false;
-      this.isDisplayChange.emit(this.isDisplay);
-    },2000);
+    this.pageRegisterLoginService.registerUser('/api/user/register', this.registerData).subscribe(res => {
+      setTimeout(() => {
+        this.isLoading = false;
+        this.showMsg = true;
+        this.isDisplay = false;
+        this.isDisplayChange.emit(this.isDisplay);
+      },2000);
+    });
   }
 
   isDisableRegister() {

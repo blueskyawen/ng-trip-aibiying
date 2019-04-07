@@ -72,6 +72,7 @@
 
 <app-page-help [(isDisplay)]="isShowHelp"></app-page-help>
 <app-page-register [(isDisplay)]="isShowRegister" (toLoginEvent)="handleToLoginEvnent()"></app-page-register>
-<app-page-login [(isDisplay)]="isShowLogin" (toRegisterEvent)="handleToRegisterEvnent()"></app-page-login>
+<app-page-login [(isDisplay)]="isShowLogin" (toRegisterEvent)="handleToRegisterEvnent()"
+                (isDisplayChange)="isDisplayChange()"></app-page-login>
 
 

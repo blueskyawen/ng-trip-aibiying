@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CoreService } from '../core/core.service';
 
 class CcyOption {
   label: string;
@@ -41,7 +42,7 @@ export class PageHeadComponent implements OnInit {
   isShowLogin: boolean = false;
   presentStyle : any = {};
   operStyle : any = {};
-  constructor() {
+  constructor(public coreService: CoreService) {
     this.selectedCCY = this.CCYOptions[0];
   }
 
@@ -62,5 +63,9 @@ export class PageHeadComponent implements OnInit {
   handleToRegisterEvnent() {
     console.log('handleToRegisterEvnent');
     this.isShowRegister = true;
+  }
+
+  isDisplayChange() {
+    this.type = this.coreService.isLogin ? 'loginIn' : 'loginOut';
   }
 }

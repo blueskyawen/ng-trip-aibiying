@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PageRegisterLoginService } from './page-register-login.service';
 
 @Component({
   selector: 'app-page-login',
@@ -12,7 +13,7 @@ export class PageLoginComponent implements OnInit {
   loginData: any = {phone: '', password: '', checkFlag: 1};
   isLoading: boolean = false;
   showMsg: boolean = false;
-  constructor() { }
+  constructor(private pageRegisterLoginService: PageRegisterLoginService) { }
 
   ngOnInit() {
   }
@@ -42,12 +43,14 @@ export class PageLoginComponent implements OnInit {
 
   login() {
     this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-      this.showMsg = true;
-      this.isDisplay = false;
-      this.isDisplayChange.emit(this.isDisplay);
-    },2000);
+    this.pageRegisterLoginService.loginOnUser('/api/user/login', this.loginData).subscribe(res => {
+      setTimeout(() => {
+        this.isLoading = false;
+        this.showMsg = true;
+        this.isDisplay = false;
+        this.isDisplayChange.emit(this.isDisplay);
+      },2000);
+    });
   }
 
   getPasswdBack() {
