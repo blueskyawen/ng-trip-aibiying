@@ -33,17 +33,29 @@ export class DbStorageService {
     };
   }
 
-  add(tableName: string, data: any) {
+  add(tableName: string, data: any, succFunc: Function, failFunc: Function) {
     var addItem = () => {
       var tableNames = [];
       tableNames.push(tableName);
       var request = this.db.transaction(tableNames, 'readwrite')
           .objectStore(tableName)
           .add(data);
+      succFunc();
+      request.onerror = (event) => {
+        console.log('add事务失败');
+        failFunc();
+      };
+      request.onsuccess = ( event) => {
+        if (request.result) {
+          console.log(request.result);
+        } else {
+          console.log('未获得数据记录');
+        }
+        succFunc();
+      };
     };
 
     this.getDbObject(tableName, addItem);
-
   }
 
   read(tableName: string, key: string) {

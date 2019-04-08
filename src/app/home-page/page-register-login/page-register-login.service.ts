@@ -13,9 +13,9 @@ export class PageRegisterLoginService {
               public coreService: CoreService,
               public dbStorageService: DbStorageService) { }
 
-  registerUserByDB(url, data): Observable<any> {
-    this.dbStorageService.add('users',data);
-    setTimeout(() => {this.getUser(data.name)},5000);
+  registerUserByIndexDB(url: string, data: any,
+                        succFunc: Function, failFunc: Function): Observable<any> {
+    this.dbStorageService.add('users', data, succFunc, failFunc);
     return of({});
   }
 

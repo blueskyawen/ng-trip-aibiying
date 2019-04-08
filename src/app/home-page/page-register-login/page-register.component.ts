@@ -15,6 +15,7 @@ export class PageRegisterComponent implements OnInit {
   registerData: any = {name: '', password: '', checkFlag: 1};
   isLoading: boolean = false;
   showMsg: boolean = false;
+  showFailMsg: boolean = false;
   constructor(private pageRegisterLoginService: PageRegisterLoginService) { }
 
   ngOnInit() {
@@ -32,14 +33,32 @@ export class PageRegisterComponent implements OnInit {
 
   register() {
     this.isLoading = true;
-    this.pageRegisterLoginService.registerUser('/api/user/register', this.registerData).subscribe(res => {
-      setTimeout(() => {
-        this.isLoading = false;
-        this.showMsg = true;
-        this.isDisplay = false;
-        this.isDisplayChange.emit(this.isDisplay);
-      },2000);
+    /*this.pageRegisterLoginService.registerUser('/api/user/register', this.registerData).subscribe(res => {
+      this.setRegisterSucess();
+    });*/
+    this.pageRegisterLoginService.registerUserByIndexDB('/api/user/register',
+        this.registerData, () => {this.setRegisterSucess();}, () => {this.setRegisterFail();})
+        .subscribe(res => {
+      //this.setRegisterSucess();
     });
+  }
+
+  setRegisterSucess() {
+    setTimeout(() => {
+      this.isLoading = false;
+      this.showMsg = true;
+      this.isDisplay = false;
+      this.isDisplayChange.emit(this.isDisplay);
+    },2000);
+  }
+
+  setRegisterFail() {
+    setTimeout(() => {
+      this.isLoading = false;
+      this.showFailMsg = true;
+      this.isDisplay = false;
+      this.isDisplayChange.emit(this.isDisplay);
+    },2000);
   }
 
   isDisableRegister() {
