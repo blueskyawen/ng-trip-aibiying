@@ -9,10 +9,11 @@ import { ExperienceHomeComponent } from './experience-home.component';
 import { ExperienceListComponent } from './experience-list.component';
 import { ExperienceCategoryComponent } from './experience-category.component';
 import { ExperienceThemeComponent } from './experience-theme.component';
+import { ExperienceCancelPolicyComponent } from './experience-cancel-policy.component';
 
 @NgModule({
   declarations: [ExperienceHomeComponent, ExperienceListComponent,
-    ExperienceCategoryComponent, ExperienceThemeComponent],
+    ExperienceCategoryComponent, ExperienceThemeComponent, ExperienceCancelPolicyComponent],
   imports: [
     ShareModule, HomePageModule, ExhibitPageModule,
     ExperiencePageRoutingModule, ExperienceDetailPageModule

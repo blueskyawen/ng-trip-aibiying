@@ -32,7 +32,7 @@ export class PageRegisterComponent implements OnInit {
 
   register() {
     this.isLoading = true;
-    this.pageRegisterLoginService.registerUserByDB('/api/user/register', this.registerData).subscribe(res => {
+    this.pageRegisterLoginService.registerUser('/api/user/register', this.registerData).subscribe(res => {
       setTimeout(() => {
         this.isLoading = false;
         this.showMsg = true;

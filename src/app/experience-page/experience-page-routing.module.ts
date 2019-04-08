@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ExperienceHomeComponent} from './experience-home.component';
 import {ExperienceListComponent} from './experience-list.component';
+import { ExperienceCancelPolicyComponent } from './experience-cancel-policy.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,10 @@ const routes: Routes = [
       {
         path: 'home',
         component: ExperienceHomeComponent
+      },
+      {
+        path: 'policy',
+        component: ExperienceCancelPolicyComponent
       },
       {
         path: 'list/:type',

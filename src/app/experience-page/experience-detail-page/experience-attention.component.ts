@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-experience-attention',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceAttentionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   goCancel() {
-    window.open('https://www.airbnb.cn/experiences/cancellation-policy', '_blank');
+    this.router.navigate(['/experience/policy']);
   }
 
   goMore() {
