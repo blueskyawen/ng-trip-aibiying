@@ -43,7 +43,8 @@ export class PageLoginComponent implements OnInit {
 
   login() {
     this.isLoading = true;
-    this.pageRegisterLoginService.loginOnUser('/api/user/login', this.loginData).subscribe(res => {
+    this.pageRegisterLoginService.loginUserUserByIndexDB('/api/user/login',
+        this.loginData, () => {}, () => {}).subscribe(res => {
       setTimeout(() => {
         this.isLoading = false;
         this.showMsg = true;

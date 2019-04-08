@@ -40,17 +40,12 @@ export class DbStorageService {
       var request = this.db.transaction(tableNames, 'readwrite')
           .objectStore(tableName)
           .add(data);
-      succFunc();
       request.onerror = (event) => {
         console.log('add事务失败');
         failFunc();
       };
       request.onsuccess = ( event) => {
-        if (request.result) {
-          console.log(request.result);
-        } else {
-          console.log('未获得数据记录');
-        }
+        console.log('add事务成功');
         succFunc();
       };
     };
@@ -58,19 +53,20 @@ export class DbStorageService {
     this.getDbObject(tableName, addItem);
   }
 
-  read(tableName: string, key: string) {
+  read(tableName: string, data: any, succFunc: Function, failFunc: Function) {
     var getItem = () => {
       var tableNames = [];
       tableNames.push(tableName);
       var transaction = this.db.transaction(tableNames);
       var objectStore = transaction.objectStore(tableName);
       var index = objectStore.index('name');
-      var request = index.get(key);
+      var request = index.get(data.name);
 
       request.onerror = (event) => {
-        console.log('事务失败');
+        console.log('read事务失败');
       };
       request.onsuccess = ( event) => {
+        console.log('read事务成功');
         if (request.result) {
           console.log(request.result);
         } else {
@@ -79,7 +75,6 @@ export class DbStorageService {
       };
     };
     this.getDbObject(tableName, getItem);
-    console.log('未获得数据记录333');
   }
 
   readAll(tableName: string, key: string) {

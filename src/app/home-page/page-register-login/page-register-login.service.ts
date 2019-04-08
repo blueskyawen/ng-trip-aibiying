@@ -8,6 +8,8 @@ import { DbStorageService } from '../../core/db-storage.service';
   providedIn: 'root'
 })
 export class PageRegisterLoginService {
+  regisgterSub$ = new Subject<string>();
+  loginSub$ = new Subject<string>();
 
   constructor(private storageService: StorageService,
               public coreService: CoreService,
@@ -19,8 +21,10 @@ export class PageRegisterLoginService {
     return of({});
   }
 
-  getUser(name: string) {
-    this.dbStorageService.read('users', name);
+  loginUserUserByIndexDB(url: string, data: any,
+                        succFunc: Function, failFunc: Function): Observable<any> {
+    this.dbStorageService.read('users', data, succFunc, failFunc);
+    return of({});
   }
 
   registerUser(url, data): Observable<any> {
