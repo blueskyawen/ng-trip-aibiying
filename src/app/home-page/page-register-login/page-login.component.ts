@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { PageRegisterLoginService } from './page-register-login.service';
+import { PageRegisterLoginService, AuthData } from './page-register-login.service';
 
 @Component({
   selector: 'app-page-login',
@@ -13,9 +13,17 @@ export class PageLoginComponent implements OnInit {
   loginData: any = {name: '', password: '', checkFlag: 1};
   isLoading: boolean = false;
   showMsg: boolean = false;
+  showErrorMsg: boolean = false;
   constructor(private pageRegisterLoginService: PageRegisterLoginService) { }
 
   ngOnInit() {
+    this.pageRegisterLoginService.loginSub$.subscribe(res => {
+      if(res === 'success') {
+        this.setLoginSucess();
+      } else {
+        this.setLoginFail();
+      }
+    });
   }
 
   showChange() {
@@ -42,16 +50,35 @@ export class PageLoginComponent implements OnInit {
   }
 
   login() {
+    let postLoginData = new AuthData(this.loginData.name, this.loginData.password);
     this.isLoading = true;
-    this.pageRegisterLoginService.loginUserUserByIndexDB('/api/user/login',
-        this.loginData, () => {}, () => {}).subscribe(res => {
-      setTimeout(() => {
-        this.isLoading = false;
-        this.showMsg = true;
-        this.isDisplay = false;
-        this.isDisplayChange.emit(this.isDisplay);
-      },2000);
+    this.pageRegisterLoginService.loginUser('/api/user/login', postLoginData).subscribe(res => {
+      if(res.status) {
+        if(res.status === 'success') {
+          this.setLoginSucess();
+        } else {
+          this.setLoginFail();
+        }
+      }
     });
+  }
+
+  setLoginSucess() {
+    setTimeout(() => {
+      this.isLoading = false;
+      this.showMsg = true;
+      this.isDisplay = false;
+      this.isDisplayChange.emit(this.isDisplay);
+    },1000);
+  }
+
+  setLoginFail() {
+    setTimeout(() => {
+      this.isLoading = false;
+      this.showErrorMsg = true;
+      this.isDisplay = false;
+      this.isDisplayChange.emit(this.isDisplay);
+    },1000);
   }
 
   getPasswdBack() {

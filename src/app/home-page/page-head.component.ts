@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CoreService } from '../core/core.service';
+import { PageRegisterLoginService } from './page-register-login/page-register-login.service';
 
 class CcyOption {
   label: string;
@@ -15,7 +15,7 @@ class CcyOption {
 @Component({
   selector: 'app-page-head',
   templateUrl: './page-head.component.html',
-  styleUrls: ['./home-page.less']
+  styleUrls: ['./home-page.less','./page-head.component.css']
 })
 export class PageHeadComponent implements OnInit {
   @Input() type: string = 'loginOut';
@@ -42,13 +42,16 @@ export class PageHeadComponent implements OnInit {
   isShowLogin: boolean = false;
   presentStyle : any = {};
   operStyle : any = {};
-  constructor(public coreService: CoreService) {
+  showLoginOffMsg: boolean = false;
+  constructor(public registerLoginService: PageRegisterLoginService) {
     this.selectedCCY = this.CCYOptions[0];
   }
 
   ngOnInit() {
     this.presentStyle = {'color': this.scene === 'home' ? '#fff' : '#ff4d4d'};
     this.operStyle = {'color': this.scene === 'home' ? '#fff' : '#666'};
+    this.registerLoginService.getLoginUserStorage();
+    this.checkLoginState();
   }
 
   selectCCY(option: CcyOption) {
@@ -66,6 +69,19 @@ export class PageHeadComponent implements OnInit {
   }
 
   isDisplayChange() {
-    this.type = this.coreService.isLogin ? 'loginIn' : 'loginOut';
+    this.checkLoginState();
+  }
+
+  checkLoginState() {
+    this.type = this.registerLoginService.isLogined ? 'loginIn' : 'loginOut';
+  }
+
+  loginOff() {
+    this.registerLoginService.loginOffUser('/api/user/loginOut').subscribe(res => {
+      setTimeout(() => {
+        this.checkLoginState();
+        this.showLoginOffMsg = true;
+      },500);
+    });
   }
 }

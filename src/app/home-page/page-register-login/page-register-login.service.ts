@@ -4,70 +4,211 @@ import { StorageService } from '../../core/storage.service';
 import { CoreService } from '../../core/core.service';
 import { DbStorageService } from '../../core/db-storage.service';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class PageRegisterLoginService {
-  regisgterSub$ = new Subject<string>();
-  loginSub$ = new Subject<string>();
-
-  constructor(private storageService: StorageService,
-              public coreService: CoreService,
-              public dbStorageService: DbStorageService) { }
-
-  registerUserByIndexDB(url: string, data: any,
-                        succFunc: Function, failFunc: Function): Observable<any> {
-    this.dbStorageService.add('users', data, succFunc, failFunc);
-    return of({});
+export class AuthData {
+  name: string;
+  password: string;
+  constructor(name: string,password: string) {
+    this.name = name;
+    this.password = password;
   }
+}
 
-  loginUserUserByIndexDB(url: string, data: any,
-                        succFunc: Function, failFunc: Function): Observable<any> {
-    this.dbStorageService.read('users', data, succFunc, failFunc);
-    return of({});
-  }
+export class LocalStorageAuth {
+  constructor(public storageService: StorageService) {}
 
-  registerUser(url, data): Observable<any> {
+  register(url: string, data: AuthData) {
     let tmpUsers = [];
     if (this.storageService.get('users')) {
       tmpUsers = JSON.parse(this.storageService.get('users'));
     }
     tmpUsers.push(data);
     this.storageService.set('users',JSON.stringify(tmpUsers));
+  }
+
+  loginOn(url: string, data : AuthData): boolean {
+    if(this.storageService.get('users')) {
+      let users = JSON.parse(this.storageService.get('users'));
+      let loginUser = users.find((item : any) => {
+        return item.name === data.name && item.password === data.password;
+      });
+      if(loginUser) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+
+  loginOff(name: string) : boolean {
+    if(this.storageService.get('users')) {
+      let users = JSON.parse(this.storageService.get('users'));
+      let loginUser = users.find((item : any) => {
+        return item.name === name;
+      });
+      if(loginUser) {
+        this.storageService.set('users',JSON.stringify(users));
+      }
+    }
+    return true;
+  }
+
+  getUser(name: string): any {
+    if(this.storageService.get('users')) {
+      let users = JSON.parse(this.storageService.get('users'));
+      let loginUser = users.find((item : any) => {
+        return item.name === name;
+      });
+      if(loginUser) {
+        return loginUser;
+      }
+    }
+    return null;
+  }
+}
+
+export class IndexDBAuth {
+  constructor(public dbStorageService: DbStorageService) {}
+
+  register(url: string, data: AuthData, succFunc: Function, failFunc: Function) {
+    this.dbStorageService.add('users', data, succFunc, failFunc);
+  }
+
+  loginOn(url: string, data : AuthData, succFunc: Function, failFunc: Function) {
+    this.dbStorageService.read('users', data.name, succFunc, failFunc);
+  }
+
+  loginOff(name: string): Observable<boolean> {
+    return of(true);
+  }
+
+  getUser(url: string, name: string, succFunc: Function, failFunc: Function) {
+    this.dbStorageService.read('users', name, succFunc, failFunc);
+  }
+}
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PageRegisterLoginService {
+  isLogined: boolean = false;
+  curloginedUser: AuthData = null;
+  regisgterSub$ = new Subject<string>();
+  loginSub$ = new Subject<string>();
+  getUserSub$ = new Subject<any>();
+
+  private localAuth: LocalStorageAuth;
+  private indexDbAuth: IndexDBAuth;
+
+  authType: string = 'indexDB';
+
+  constructor(private storageService: StorageService,
+              private dbStorageService: DbStorageService) {
+    this.localAuth = new LocalStorageAuth(this.storageService);
+    this.indexDbAuth = new IndexDBAuth(this.dbStorageService);
+  }
+
+  isLocalAuth() {
+    return this.authType === 'localStorage';
+  }
+
+  getCurLoginUser() {
+    return this.curloginedUser;
+  }
+
+  registerUser(url: string, data: any): Observable<any> {
+    if(this.authType === 'localStorage') {
+      this.localAuth.register(url, data);
+      return of({status: 'success'});
+    }
+
+    if(this.authType === 'indexDB') {
+      this.indexDbAuth.register(url, data,
+          () => {this.procRegisSuccess();}, () => {this.procRegisFail();});
+      return of({});
+    }
+  }
+
+  procRegisSuccess() {
+    this.regisgterSub$.next('success');
+  }
+
+  procRegisFail() {
+    this.regisgterSub$.next('fail');
+  }
+
+  loginUser(url: string, data: any): Observable<any> {
+    if(this.authType === 'localStorage') {
+      if(this.localAuth.loginOn(url, data)) {
+        this.isLogined = true;
+        return of({status: 'success'});
+      } else {
+        this.isLogined = false;
+        return of({status: 'fail'});
+      }
+    }
+
+    if(this.authType === 'indexDB') {
+      this.indexDbAuth.loginOn(url, data,
+          (user) => {this.procLoginSuccess(user);}, (user) => {this.procLoginFail(user);});
+      return of({});
+    }
+  }
+
+  procLoginSuccess(user: any) {
+    this.curloginedUser = user;
+    this.isLogined = true;
+    this.saveLoginUserStorage();
+    this.loginSub$.next('success');
+  }
+
+  procLoginFail(user) {
+    this.curloginedUser = user;
+    this.isLogined = false;
+    this.saveLoginUserStorage();
+    this.loginSub$.next('fail');
+  }
+
+  saveLoginUserStorage() {
+    this.storageService.set('curLoginUser',JSON.stringify(this.curloginedUser));
+  }
+
+  getLoginUserStorage() {
+    if(!this.curloginedUser) {
+      this.curloginedUser = JSON.parse(this.storageService.get('curLoginUser'));
+      this.isLogined = !!this.curloginedUser;
+    }
+    return {user: this.curloginedUser, isLogin: this.isLogined};
+  }
+
+  loginOffUser(url: string): Observable<any> {
+    this.isLogined = false;
+    this.curloginedUser = null;
+    this.saveLoginUserStorage();
     return of({});
   }
 
-  loginOnUser(url: string, user : any): Observable<boolean> {
-    if(this.storageService.get('users')) {
-      let users = JSON.parse(this.storageService.get('users'));
-      let loginUser = users.find((item : any) => {
-        return item.name === user.name && item.password === user.password;
-      });
-      if(loginUser) {
-        loginUser.logined = true;
-        this.coreService.isLogin = true;
-        this.storageService.set('users',JSON.stringify(users));
-        return of(true);
-      } else {
-        return of(false);
-      }
-    } else {
-      return of(false);
+  getUserInfo(url: string,name: string): Observable<any> {
+    if(this.authType === 'localStorage') {
+      let userData = this.localAuth.getUser(name);
+      return of({user: userData});
+    }
+
+    if(this.authType === 'indexDB') {
+      this.indexDbAuth.getUser(url, name,
+          (user) => {this.procGetUserSuccess(user);}, (user) => {this.procGetUserFail(user);});
+      return of({});
     }
   }
 
-  loginOffUser(name: string): Observable<boolean> {
-    if(this.storageService.get('users')) {
-      let users = JSON.parse(this.storageService.get('users'));
-      let loginUser = users.find((item : any) => {
-        return item.name === name && item.logined;
-      });
-      if(loginUser) {
-        loginUser.isLogined = false;
-        this.coreService.isLogin = false;
-        this.storageService.set('users',JSON.stringify(users));
-      }
-    }
-    return of(true);
+  procGetUserSuccess(user: any) {
+    this.getUserSub$.next({user: user});
   }
+
+  procGetUserFail(user: any) {
+    this.getUserSub$.next({user: user});
+  }
+
 }

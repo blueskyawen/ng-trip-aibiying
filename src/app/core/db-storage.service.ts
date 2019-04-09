@@ -53,24 +53,27 @@ export class DbStorageService {
     this.getDbObject(tableName, addItem);
   }
 
-  read(tableName: string, data: any, succFunc: Function, failFunc: Function) {
+  read(tableName: string, name: string, succFunc: Function, failFunc: Function) {
     var getItem = () => {
       var tableNames = [];
       tableNames.push(tableName);
       var transaction = this.db.transaction(tableNames);
       var objectStore = transaction.objectStore(tableName);
       var index = objectStore.index('name');
-      var request = index.get(data.name);
+      var request = index.get(name);
 
       request.onerror = (event) => {
         console.log('read事务失败');
+        failFunc(null);
       };
       request.onsuccess = ( event) => {
         console.log('read事务成功');
         if (request.result) {
           console.log(request.result);
+          succFunc(request.result);
         } else {
           console.log('未获得数据记录');
+          failFunc(null);
         }
       };
     };

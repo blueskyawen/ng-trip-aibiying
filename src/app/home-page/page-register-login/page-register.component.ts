@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { PageRegisterLoginService } from './page-register-login.service';
+import { PageRegisterLoginService, AuthData } from './page-register-login.service';
 
 @Component({
   selector: 'app-page-register',
@@ -16,9 +16,17 @@ export class PageRegisterComponent implements OnInit {
   isLoading: boolean = false;
   showMsg: boolean = false;
   showFailMsg: boolean = false;
-  constructor(private pageRegisterLoginService: PageRegisterLoginService) { }
+
+  constructor(public pageRegisterLoginService: PageRegisterLoginService) { }
 
   ngOnInit() {
+    this.pageRegisterLoginService.regisgterSub$.subscribe(res => {
+      if(res === 'success') {
+        this.setRegisterSucess();
+      } else {
+        this.setRegisterFail();
+      }
+    });
   }
 
   showChange() {
@@ -32,14 +40,16 @@ export class PageRegisterComponent implements OnInit {
   }
 
   register() {
+    let postRegisterData = new AuthData(this.registerData.name, this.registerData.password);
     this.isLoading = true;
-    /*this.pageRegisterLoginService.registerUser('/api/user/register', this.registerData).subscribe(res => {
-      this.setRegisterSucess();
-    });*/
-    this.pageRegisterLoginService.registerUserByIndexDB('/api/user/register',
-        this.registerData, () => {this.setRegisterSucess();}, () => {this.setRegisterFail();})
-        .subscribe(res => {
-      //this.setRegisterSucess();
+    this.pageRegisterLoginService.registerUser('/api/user/register', postRegisterData).subscribe(res => {
+      if(res.status) {
+        if(res.status === 'success') {
+          this.setRegisterSucess();
+        } else {
+          this.setRegisterFail();
+        }
+      }
     });
   }
 
@@ -49,7 +59,7 @@ export class PageRegisterComponent implements OnInit {
       this.showMsg = true;
       this.isDisplay = false;
       this.isDisplayChange.emit(this.isDisplay);
-    },2000);
+    },1000);
   }
 
   setRegisterFail() {
@@ -58,7 +68,7 @@ export class PageRegisterComponent implements OnInit {
       this.showFailMsg = true;
       this.isDisplay = false;
       this.isDisplayChange.emit(this.isDisplay);
-    },2000);
+    },1000);
   }
 
   isDisableRegister() {

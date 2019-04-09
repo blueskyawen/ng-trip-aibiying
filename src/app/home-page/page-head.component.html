@@ -64,9 +64,20 @@
     <div class="oper-item" [ngStyle]="operStyle" (click)="isShowHelp = true">帮助</div>
     <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
     <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowLogin = true">登录 </div>
-    <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginIn'">
-      <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
-    </div>
+    <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info">
+      <div nc-dropdown-btn class="oper-item" [ngStyle]="operStyle">
+        <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
+      </div>
+      <div nc-dropdown-menu class="user-Info-list">
+        <div class="user-data-item">个人资料</div>
+        <div class="user-data-item">账号</div>
+        <div class="user-data-item">礼券中心</div>
+        <div class="user-data-item">邀请好友</div>
+        <div class="user-data-item">我的旅行指南</div>
+        <div class="user-data-item">商务爱彼迎</div>
+        <div class="user-data-item" (click)="loginOff()">退出</div>
+      </div>
+    </nc-dropdown>
   </div>
 </div>
 
@@ -76,3 +87,4 @@
                 (isDisplayChange)="isDisplayChange()"></app-page-login>
 
 
+<nc-message [type]="'success'" [(show)]="showLoginOffMsg">退出成功</nc-message>
