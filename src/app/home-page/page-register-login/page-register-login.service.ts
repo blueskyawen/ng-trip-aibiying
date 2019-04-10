@@ -66,6 +66,45 @@ export class LocalStorageAuth {
     }
     return null;
   }
+
+  getUserList(): any[] {
+    if(this.storageService.get('users')) {
+      return JSON.parse(this.storageService.get('users'));
+    }
+    return [];
+  }
+
+  modUser(name: string, data: any) : boolean {
+    if(this.storageService.get('users')) {
+      let users = JSON.parse(this.storageService.get('users'));
+      let loginUser = users.find((item : any) => {
+        return item.name === name;
+      });
+      if(loginUser) {
+        loginUser.name = data.name;
+        loginUser.password = data.password;
+      }
+    }
+    return true;
+  }
+
+  deleteUser(name: string) : boolean {
+    if(this.storageService.get('users')) {
+      let users = JSON.parse(this.storageService.get('users'));
+      users = users.filter((item : any) => {
+        return item.name !== name;
+      });
+      this.storageService.set('users',JSON.stringify(users));
+    }
+    return true;
+  }
+
+  clear() : boolean {
+    if(this.storageService.get('users')) {
+      this.storageService.set('users',JSON.stringify([]));
+    }
+    return true;
+  }
 }
 
 export class IndexDBAuth {
@@ -86,6 +125,22 @@ export class IndexDBAuth {
   getUser(url: string, name: string, succFunc: Function, failFunc: Function) {
     this.dbStorageService.read('users', name, succFunc, failFunc);
   }
+
+  getAllUser(url: string, succFunc: Function, failFunc: Function) {
+    this.dbStorageService.readAll('users', succFunc, failFunc);
+  }
+
+  modUser(url: string, name: string, data: any, succFunc: Function, failFunc: Function) {
+    this.dbStorageService.update('users', name, data, succFunc, failFunc);
+  }
+
+  deleteUser(url: string, name: string, succFunc: Function, failFunc: Function) {
+    this.dbStorageService.remove('users', name, succFunc, failFunc);
+  }
+
+  clear(url: string, succFunc: Function, failFunc: Function) {
+    this.dbStorageService.clear('users', succFunc, failFunc);
+  }
 }
 
 
@@ -98,6 +153,8 @@ export class PageRegisterLoginService {
   regisgterSub$ = new Subject<string>();
   loginSub$ = new Subject<string>();
   getUserSub$ = new Subject<any>();
+  getUserListSub$ = new Subject<any>();
+  deleteSub$ = new Subject<string>();
 
   private localAuth: LocalStorageAuth;
   private indexDbAuth: IndexDBAuth;
@@ -209,6 +266,64 @@ export class PageRegisterLoginService {
 
   procGetUserFail(user: any) {
     this.getUserSub$.next({user: user});
+  }
+
+  getUserList(url: string): Observable<any> {
+    if(this.authType === 'localStorage') {
+      let userData = this.localAuth.getUserList();
+      return of({users: userData});
+    }
+
+    if(this.authType === 'indexDB') {
+      this.indexDbAuth.getAllUser(url,
+          (user) => {this.procGetUserListSuccess(user);}, () => {this.procGetUserListFail();});
+      return of({});
+    }
+  }
+
+  procGetUserListSuccess(users: any[]) {
+    let tempUsers = users ? users : [];
+    this.getUserListSub$.next({users: tempUsers});
+  }
+
+  procGetUserListFail() {
+    this.getUserListSub$.next({users: []});
+  }
+
+  modifyItem(url: string,name: string, data: any): Observable<any> {
+    if(this.authType === 'localStorage') {
+       this.localAuth.modUser(name, data);
+      return of({});
+    }
+
+    if(this.authType === 'indexDB') {
+      this.indexDbAuth.modUser(url, name, data, () => {}, () => {});
+      return of({});
+    }
+  }
+
+  deleteItem(url: string,name: string): Observable<any> {
+    if(this.authType === 'localStorage') {
+      this.localAuth.deleteUser(name);
+      return of({});
+    }
+
+    if(this.authType === 'indexDB') {
+      this.indexDbAuth.deleteUser(url, name, () => {}, () => {});
+      return of({});
+    }
+  }
+
+  clearItems(url: string): Observable<any> {
+    if(this.authType === 'localStorage') {
+      this.localAuth.clear();
+      return of({});
+    }
+
+    if(this.authType === 'indexDB') {
+      this.indexDbAuth.clear(url, () => {}, () => {});
+      return of({});
+    }
   }
 
 }

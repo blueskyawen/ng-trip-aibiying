@@ -44,7 +44,7 @@ export class DbStorageService {
         console.log('add事务失败');
         failFunc();
       };
-      request.onsuccess = ( event) => {
+      request.onsuccess = (event) => {
         console.log('add事务成功');
         succFunc();
       };
@@ -66,7 +66,7 @@ export class DbStorageService {
         console.log('read事务失败');
         failFunc(null);
       };
-      request.onsuccess = ( event) => {
+      request.onsuccess = (event) => {
         console.log('read事务成功');
         if (request.result) {
           console.log(request.result);
@@ -80,50 +80,93 @@ export class DbStorageService {
     this.getDbObject(tableName, getItem);
   }
 
-  readAll(tableName: string, key: string) {
-   // this.getDbObject(tableName);
-    var objectStore = this.db.transaction(tableName).objectStore(tableName);
+  readAll(tableName: string, succFunc: Function, failFunc: Function) {
+    var getItemList = () => {
+      var tableNames = [];
+      tableNames.push(tableName);
+      var transaction = this.db.transaction(tableNames);
+      var objectStore = transaction.objectStore(tableName);
+      var request = objectStore.getAll();
 
-    objectStore.openCursor().onsuccess = function (event) {
-      var cursor = event.target.result;
-
-      if (cursor) {
-        console.log(cursor);
-        cursor.continue();
-      } else {
-        console.log('没有更多数据了！');
-      }
+      request.onerror = (event) => {
+        console.log('readAll事务失败');
+        failFunc();
+      };
+      request.onsuccess = (event) => {
+        console.log('readAll事务成功');
+        if (request.result) {
+          succFunc(request.result);
+        } else {
+          console.log('未获得数据记录');
+          succFunc(null);
+        }
+      };
     };
+
+    this.getDbObject(tableName, getItemList);
   }
 
-  update(tableName: string, key: string, data: any) {
-    let tableNames = [];
-    tableNames.push(tableName);
-   // this.getDbObject(tableName);
-    var request = this.db.transaction(tableNames, 'readwrite')
-        .objectStore(tableName)
-        .put(data);
+  update(tableName: string, name: string, data: any, succFunc: Function, failFunc: Function) {
+    var putItem = () => {
+      var tableNames = [];
+      tableNames.push(tableName);
+      var transaction = this.db.transaction(tableNames);
+      var objectStore = transaction.objectStore(tableName);
+      var request = objectStore.put(data, name);
 
-    request.onsuccess = function (event) {
-      console.log('数据更新成功');
+      request.onerror = (event) => {
+        console.log('update事务失败');
+        failFunc(null);
+      };
+      request.onsuccess = (event) => {
+        console.log('update事务成功');
+        succFunc(data);
+      };
     };
 
-    request.onerror = function (event) {
-      console.log('数据更新失败');
-    };
+    this.getDbObject(tableName, putItem);
   }
 
-  remove(tableName: string, key: string) {
-    let tableNames = [];
-    tableNames.push(tableName);
-    //this.getDbObject(tableName);
-    var request = this.db.transaction(tableNames, 'readwrite')
-        .objectStore(tableName)
-        .delete(key);
+  remove(tableName: string, name: string, succFunc: Function, failFunc: Function) {
+    var deleteItem = () => {
+      var tableNames = [];
+      tableNames.push(tableName);
+      var transaction = this.db.transaction(tableNames);
+      var objectStore = transaction.objectStore(tableName);
+      var request = objectStore.delete(name);
 
-    request.onsuccess = function (event) {
-      console.log('数据删除成功');
+      request.onerror = (event) => {
+        console.log('remove事务失败');
+        failFunc();
+      };
+      request.onsuccess = (event) => {
+        console.log('remove事务成功');
+        succFunc();
+      };
     };
+
+    this.getDbObject(tableName, deleteItem);
+  }
+
+  clear(tableName: string,succFunc: Function, failFunc: Function) {
+    var clearItems = () => {
+      var tableNames = [];
+      tableNames.push(tableName);
+      var transaction = this.db.transaction(tableNames);
+      var objectStore = transaction.objectStore(tableName);
+      var request = objectStore.clear();
+
+      request.onerror = (event) => {
+        console.log('clear事务失败');
+        failFunc();
+      };
+      request.onsuccess = (event) => {
+        console.log('clear事务成功');
+        succFunc();
+      };
+    };
+
+    this.getDbObject(tableName, clearItems);
   }
 }
 

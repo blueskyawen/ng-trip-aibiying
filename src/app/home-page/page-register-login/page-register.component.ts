@@ -16,16 +16,25 @@ export class PageRegisterComponent implements OnInit {
   isLoading: boolean = false;
   showMsg: boolean = false;
   showFailMsg: boolean = false;
+  allUserList: AuthData[] = [];
 
   constructor(public pageRegisterLoginService: PageRegisterLoginService) { }
 
   ngOnInit() {
+    this.pageRegisterLoginService.getUserList('/api/user/all').subscribe(res => {
+      if(res.users) {
+        this.allUserList = res.users;
+      }
+    });
     this.pageRegisterLoginService.regisgterSub$.subscribe(res => {
       if(res === 'success') {
         this.setRegisterSucess();
       } else {
         this.setRegisterFail();
       }
+    });
+    this.pageRegisterLoginService.getUserListSub$.subscribe(res => {
+      this.allUserList = res.users;
     });
   }
 
