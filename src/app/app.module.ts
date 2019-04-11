@@ -10,6 +10,7 @@ import { ExhibitPageModule } from './exhibit-page/exhibit-page.module';
 import { PlusHomePageModule } from './plus-home-page/plus-home-page.module';
 import { ClassicCityPageModule } from './classic-city-page/classic-city-page.module';
 import { ExperiencePageModule } from './experience-page/experience-page.module';
+import { PersonalCenterModule } from './personal-center/personal-center.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found.component';
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './not-found.component';
   ],
   imports: [
     BrowserModule, CoreModule, ShareModule, HomePageModule, StoryPageModule,
-    ExhibitPageModule, PlusHomePageModule, ClassicCityPageModule, ExperiencePageModule, AppRoutingModule
+    ExhibitPageModule, PlusHomePageModule, ClassicCityPageModule, ExperiencePageModule,
+    PersonalCenterModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

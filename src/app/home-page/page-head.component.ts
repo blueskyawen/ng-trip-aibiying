@@ -43,6 +43,10 @@ export class PageHeadComponent implements OnInit {
   presentStyle : any = {};
   operStyle : any = {};
   showLoginOffMsg: boolean = false;
+  userInfo: any = {info: 0, notify: 0};
+  wishList: any[] = [
+    {id: '1', name: '厦门鼓浪屿', person: 1, project: 1}
+  ];
   constructor(public registerLoginService: PageRegisterLoginService) {
     this.selectedCCY = this.CCYOptions[0];
   }
