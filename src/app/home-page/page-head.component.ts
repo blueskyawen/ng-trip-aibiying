@@ -15,7 +15,7 @@ class CcyOption {
 @Component({
   selector: 'app-page-head',
   templateUrl: './page-head.component.html',
-  styleUrls: ['./home-page.less','./page-head.component.css']
+  styleUrls: ['./home-page.less']
 })
 export class PageHeadComponent implements OnInit {
   @Input() type: string = 'loginOut';

@@ -87,7 +87,7 @@
     <div class="oper-item" [ngStyle]="operStyle" (click)="isShowHelp = true">帮助</div>
     <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
     <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowLogin = true">登录 </div>
-    <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info">
+    <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info" [subPlace]="'right'">
       <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>消息</div>
       <div nc-dropdown-menu class="user-notifys">
         <div class="user-notify-item" [routerLink]="['/selfCenter/infoBox']">
@@ -104,7 +104,7 @@
         </div>
       </div>
     </nc-dropdown>
-    <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info">
+    <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info" [subPlace]="'right'">
       <div nc-dropdown-btn class="oper-item" [ngStyle]="operStyle">
         <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
       </div>
