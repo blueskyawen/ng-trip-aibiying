@@ -17,6 +17,8 @@ export class PageRegisterComponent implements OnInit {
   showMsg: boolean = false;
   showFailMsg: boolean = false;
   allUserList: AuthData[] = [];
+  nameErrMsg: string = '用户名已经被注册！';
+  isNameConflict: boolean = false;
 
   constructor(public pageRegisterLoginService: PageRegisterLoginService) { }
 
@@ -49,6 +51,9 @@ export class PageRegisterComponent implements OnInit {
   }
 
   register() {
+    if(this.isDisableRegister()) {
+      return;
+    }
     let postRegisterData = new AuthData(this.registerData.name, this.registerData.password);
     this.isLoading = true;
     this.pageRegisterLoginService.registerUser('/api/user/register', postRegisterData).subscribe(res => {
@@ -81,7 +86,7 @@ export class PageRegisterComponent implements OnInit {
   }
 
   isDisableRegister() {
-    return !this.registerData.name || !this.registerData.password;
+    return !this.registerData.name || !this.registerData.password || this.isNameConflict;
   }
 
   checkFlag(flag: number) {
@@ -91,5 +96,14 @@ export class PageRegisterComponent implements OnInit {
     if(flag === 0) {
       return flag = 1;
     }
+  }
+
+  nameInputChange() {
+    for(let user of this.allUserList) {
+      if(this.registerData.name === user.name) {
+        return this.isNameConflict = true;
+      }
+    }
+    this.isNameConflict = false;
   }
 }

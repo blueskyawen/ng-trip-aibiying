@@ -1,3 +1,37 @@
-<p>
-  user-work-manage works!
-</p>
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <div class="layout-head">
+      <app-page-head [scene]="'home'" [showSearch]="true"></app-page-head>
+    </div>
+    <div class="layout-video">
+      <video #experVideo autoplay poster="https://a0.muscache.com/pictures/Work/HeroVideo/original/68f5f594-985e-48dc-8c82-ec1e090c6b3a.jpg">
+        <source src="https://a0.muscache.com/v/20/0d/200d992d-d159-4971-ae76-d324028cae42/6fe357d4e08e5401a90ab38a6e71ab27_1500k_2.mp4" type="video/mp4">
+        您的浏览器不支持 video 标签。
+      </video>
+      <span class="video-button" #videoOper>
+        {{buttonTitle}}
+        <span *ngIf="!isPaused" class="fa fa-pause"></span>
+        <span *ngIf="isPaused" class="fa fa-play"></span>
+      </span>
+      <span class="video-text">
+        <span>在差旅途中享受家的温馨</span>
+        <span>您是管理公司差旅的负责人吗？</span>
+        <span (click)="getMore()">了解更多</span>
+      </span>
+    </div>
+  </div>
+  <div class="nc-content" *ngIf="!showLoading">
+    <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      商务爱彼迎
+    </div>
+  </div>
+  <div class="nc-content" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
+  </div>
+
+  <div class="nc-footer nc-flex nc-content-center">
+    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <app-page-foot></app-page-foot>
+    </div>
+  </div>
+</div>

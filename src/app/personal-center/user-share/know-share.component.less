@@ -1,0 +1,51 @@
+.nc-layout {
+  .lay-header {
+    position: fixed;
+    background: #fff;
+    z-index: 5;
+    .layout-head {
+      width: inherit;
+      box-sizing: border-box;
+      border-bottom: solid 1px #e6e6e6;
+      background-color: #f2f2f2;
+      padding: 25px 100px;
+      display: flex;
+      justify-content: space-between;
+      .head-title {
+        display: inline-flex;
+        align-items: center;
+        > span {
+          font-size: 14px;
+          color: #666666;
+          &:first-child {
+            margin-right: 10px;
+          }
+          &:nth-child(2) {
+            font-size: 28px;
+            font-weight: 600;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .nc-content {
+    position: relative;
+    width: 100%;
+    padding-top: 120px;
+    min-height: 360px;
+    .content-container {
+      margin: 5px auto;
+    }
+  }
+  .nc-footer {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-top:solid 1px #e6e6e6;
+    .lay-foot {
+      padding: 10px;
+    }
+  }
+}
+

@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-publish.component.less']
 })
 export class HomePublishComponent implements OnInit {
-
+  showLoading: boolean = false;
   constructor() { }
 
   ngOnInit() {
+    this.showLoading = true;
+    setTimeout(() => {this.showLoading = false;}, 2000);
   }
 
 }

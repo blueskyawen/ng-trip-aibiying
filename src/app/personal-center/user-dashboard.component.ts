@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-dashboard.component.less']
 })
 export class UserDashboardComponent implements OnInit {
-
+  showLoading: boolean = false;
   constructor() { }
 
   ngOnInit() {
+    this.showLoading = true;
+    setTimeout(() => {this.showLoading = false;}, 2000);
   }
 
 }

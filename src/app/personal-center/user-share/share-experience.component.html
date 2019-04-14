@@ -1,3 +1,37 @@
-<p>
-  share-experience works!
-</p>
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <div class="layout-head">
+      <app-page-head [scene]="'home'" [showSearch]="true"></app-page-head>
+    </div>
+    <div class="layout-video">
+      <video #experVideo autoplay poster="https://z1.muscache.cn/pictures/30b38333-cf1d-4483-817a-8910c9c663d6.jpg">
+        <source src="https://a0.muscache.com/v/76/07/76078ccb-c33d-4d25-aa9e-4fc4c7886633/bdcbe89cac105172b0faee8a2a064c76_8000k_1.mp4" type="video/mp4">
+        您的浏览器不支持 video 标签。
+      </video>
+      <span class="video-button" #videoOper>
+        {{buttonTitle}}
+        <span *ngIf="!isPaused" class="fa fa-pause"></span>
+        <span *ngIf="isPaused" class="fa fa-play"></span>
+      </span>
+      <span class="video-text">
+        <span>在爱彼迎开展体验</span>
+        <span>带领别人做自己热爱的事，顺便赚取收入</span>
+        <span>了解更多</span>
+      </span>
+    </div>
+  </div>
+  <div class="nc-content" *ngIf="!showLoading">
+    <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      发布房源
+    </div>
+  </div>
+  <div class="nc-content" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
+  </div>
+
+  <div class="nc-footer nc-flex nc-content-center">
+    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <app-page-foot></app-page-foot>
+    </div>
+  </div>
+</div>
