@@ -3,7 +3,8 @@ import { ShareModule } from '../share/share.module';
 import { ExhibitPageModule } from '../exhibit-page/exhibit-page.module';
 import { HomePageModule } from '../home-page/home-page.module';
 import { PlusHomeDetailModule } from './plus-home-detail/plus-home-detail.module';
-import { PlusHomePageRoutingModule } from './plus-home-page-routing.module'
+import { PlusHomeViewModule } from './plus-home-view/plus-home-view.module';
+import { PlusHomePageRoutingModule } from './plus-home-page-routing.module';
 
 import { PlusHomeComponent } from './plus-home.component';
 import { PlusHomeListComponent } from './plus-home-list.component';
@@ -20,7 +21,7 @@ import { PlusInpireDetailComponent } from './plus-inpire/plus-inpire-detail.comp
     PlusSpecialHouseGroupComponent, PlusInpireGroupComponent, PlusDestListComponent, PlusDestDetailComponent,
     PlusInpireDetailComponent],
   imports: [
-    ShareModule, ExhibitPageModule, HomePageModule, PlusHomePageRoutingModule, PlusHomeDetailModule
+    ShareModule, ExhibitPageModule, HomePageModule, PlusHomePageRoutingModule, PlusHomeDetailModule, PlusHomeViewModule
   ]
 })
 export class PlusHomePageModule { }

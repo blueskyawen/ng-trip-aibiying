@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, EMPTY } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlusPageService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   getPlusDestList() {
     return this.http.get('assets/plus-destination-list.json').pipe(
@@ -76,7 +77,7 @@ export class PlusPageService {
     }
 
     goPlusMore() {
-        window.open('https://www.airbnb.cn/plus','_blank');
+        this.router.navigate(['/plus/view']);
     }
 
 }

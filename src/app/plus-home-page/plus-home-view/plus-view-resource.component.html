@@ -1,0 +1,16 @@
+<div class="plus-view-resource">
+  <div class="resource-head">
+    <div>精致房源</div>
+    <div>无论您是入住独立房间还是独享整个房源，每个爱彼迎Plus房源都独具特色，经过精心设计，并配备一整套标准的便利设施。</div>
+  </div>
+  <div class="resource-content">
+    <nc-list-group-horizontal [stepWidth]="360" [hideOper]="true">
+      <ul class="nc-list-group nc-flex list-group-horizontal">
+        <li *ngFor="let resouce of resoucelist"
+            class="nc-list-group-item nc-align-item-center">
+          <img [src]="resouce" />
+        </li>
+      </ul>
+    </nc-list-group-horizontal>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="plus-view-owner">
+  <div class="resource-head">
+    <div>出色房东</div>
+    <div>爱彼迎Plus房东为您提供超赞房东级别的周到服务。 他们拥有高评分（4.8分以上），值得信赖（没有取消过预订），致力于为房客打造完美的住宿体验。</div>
+    <div>了解最优秀的房东如何热情接待每一位房客：</div>
+  </div>
+  <div class="resource-content">
+    <div class="owner-item nc-xl-col-4 nc-lg-col-14 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="item-video">
+        <video #onwnerVideo1 controls [poster]="ownerList[0].image">
+          <source [src]="ownerList[0].src">
+          您的浏览器不支持 video 标签。
+        </video>
+        <span class="video-oper" [class.itemPlay]="!ownerList[0].isPaused" (click)="playOrPauseItem(ownerList[0])">
+          <span *ngIf="!ownerList[0].isPaused" class="fa fa-pause"></span>
+          <span *ngIf="ownerList[0].isPaused" class="fa fa-play"></span>
+        </span>
+      </div>
+      <div class="owner-name">{{ownerList[0].name}}</div>
+      <div class="owner-title">{{ownerList[0].title}}</div>
+    </div>
+    <div class="owner-item nc-xl-col-4 nc-lg-col-14 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="item-video">
+        <video #onwnerVideo2 controls [poster]="ownerList[1].image">
+          <source [src]="ownerList[1].src">
+          您的浏览器不支持 video 标签。
+        </video>
+        <span class="video-oper" [class.itemPlay]="!ownerList[1].isPaused" (click)="playOrPauseItem(ownerList[1])">
+          <span *ngIf="!ownerList[1].isPaused" class="fa fa-pause"></span>
+          <span *ngIf="ownerList[1].isPaused" class="fa fa-play"></span>
+        </span>
+      </div>
+      <div class="owner-name">{{ownerList[1].name}}</div>
+      <div class="owner-title">{{ownerList[1].title}}</div>
+    </div>
+    <div class="owner-item nc-xl-col-4 nc-lg-col-14 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="item-video">
+        <video #onwnerVideo3 controls [poster]="ownerList[2].image">
+          <source [src]="ownerList[2].src">
+          您的浏览器不支持 video 标签。
+        </video>
+        <span class="video-oper" [class.itemPlay]="!ownerList[2].isPaused" (click)="playOrPauseItem(ownerList[2])">
+          <span *ngIf="!ownerList[2].isPaused" class="fa fa-pause"></span>
+          <span *ngIf="ownerList[2].isPaused" class="fa fa-play"></span>
+        </span>
+      </div>
+      <div class="owner-name">{{ownerList[2].name}}</div>
+      <div class="owner-title">{{ownerList[2].title}}</div>
+    </div>
+  </div>
+</div>

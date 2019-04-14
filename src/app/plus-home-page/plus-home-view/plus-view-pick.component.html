@@ -1,0 +1,22 @@
+<div class="plus-view-pick">
+  <div class="resource-head">
+    <div>若要为下一次旅程寻找最适合自己的爱彼迎Plus房源</div>
+    <div>
+      只需认准房源照片下方的
+      <span>
+        <nc-label [type]="'primary'" [backColor]="'rgb(153, 51, 51)'">
+          <span style="font-size: 14px;">PLUS</span>
+        </nc-label>
+        只需认准房源照片下方的PLUS徽章即可
+      </span>
+    </div>
+  </div>
+  <div class="resource-content">
+    <div class="view-exper-list">
+      <div *ngFor="let home of homeList"
+           class="view-exper nc-xl-col-2 nc-lg-col-2 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
+        <app-plus-house-card [plusHouse]="home"></app-plus-house-card>
+      </div>
+    </div>
+  </div>
+</div>
