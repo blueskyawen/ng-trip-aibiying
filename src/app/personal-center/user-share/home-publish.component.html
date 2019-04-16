@@ -6,7 +6,24 @@
   </div>
   <div class="nc-content" *ngIf="!showLoading">
     <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      发布房源
+      <div class="reglogin-contianer nc-xl-col-6 nc-lg-col-6 nc-md-col-10 nc-sm-col-10 nc-xs-col-10">
+        <div class="reglogin-head">创建账号以开始使用</div>
+        <div class="body-item">
+          <div class="item-button">
+            <nc-button [type]="'major'" [style]="'custom'"  (click)="isShowRegister = true"
+                       [width]="'100%'" [height]="'50px'">创建账号</nc-button>
+          </div>
+          <div class="item-text">
+            点击“注册”或“继续”即表示我同意爱彼迎的服务条款、支付服务条款、隐私政策和非歧视政策。 如果我是中国居民，我将与爱
+            彼迎中国签约，而且我的信息会根据中国的法律被储存和处理，这些法律包括隐私和信息披露方面的法律。
+            <span (click)="toMore()">了解更多</span>
+          </div>
+        </div>
+        <div class="body-item">
+          <span>已有账号，请直接登录。 </span>
+          <span><nc-button (click)="isShowLogin = true">登录</nc-button></span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">
@@ -19,3 +36,7 @@
     </div>
   </div>
 </div>
+
+<app-page-register [(isDisplay)]="isShowRegister" (toLoginEvent)="handleToLoginEvnent()"></app-page-register>
+<app-page-login [(isDisplay)]="isShowLogin" (toRegisterEvent)="handleToRegisterEvnent()"
+                (isDisplayChange)="isDisplayChange()"></app-page-login>
