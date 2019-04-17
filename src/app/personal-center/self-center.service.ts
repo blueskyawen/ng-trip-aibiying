@@ -21,6 +21,27 @@ export class SelfCenterService {
             houseType: 'Apartment',
             rentalType: 'Entire house',
             isShare: 1
+        },
+        room: {
+            personNum: 2,
+            num: 1,
+            bedrooms: [
+                {
+                    beds: [
+                        {
+                            type: 'Double bed',
+                            num: 1
+                        }
+                    ]
+                }
+            ]
+        },
+        toilet: 1,
+        facility: [],
+        site: {
+            country:'',
+            city: '',
+            adress: ''
         }
     };
     constructor(private http: HttpClient) {}

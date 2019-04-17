@@ -1,0 +1,56 @@
+<div class="nc-layout">
+  <div class="nc-header lay-header">
+    <div class="layout-head">
+      <app-page-head [scene]="'selfcenter'" [showSearch]="true"></app-page-head>
+    </div>
+  </div>
+  <div class="nc-content" *ngIf="!showLoading">
+    <div class="content-container nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+      <nc-step [type]="'underline'" [(stepIndex)]="curStepIndex" [stepItems]="stepItems" [id]="'step01'">
+        <div class="content">
+          <div *ngIf="curStepIndex === 0">
+            <app-publish-basic></app-publish-basic>
+          </div>
+          <div *ngIf="curStepIndex === 1">
+            <app-publish-room></app-publish-room>
+          </div>
+          <div *ngIf="curStepIndex === 2">
+            <div class="publish-content">
+              <div class="step-head">有几个卫生间？</div>
+              <div class="step-body">
+                <div class="step-body-item">
+                  <div class="body-item-head">卫生间</div>
+                  <div class="body-item-content">
+                    <span class="num-item">
+                      <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
+                                     [(value)]="selfCenterService.houseData.toilet"></nc-number-put>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="curStepIndex === 3">步骤4</div>
+          <div *ngIf="curStepIndex === 4">步骤5</div>
+        </div>
+        <div class="footer">
+          <span class="form-btn-group">
+            <nc-button *ngIf="curStepIndex !== 0" [type]="'cancel'" (click)="preStep()">上一步</nc-button>
+          </span>
+          <span class="form-btn-group">
+            <nc-button *ngIf="curStepIndex < 4" (click)="nextStep()">下一步</nc-button>
+          </span>
+          <span class="form-btn-group">
+            <nc-button *ngIf="curStepIndex === 4" (click)="confirm()">完成</nc-button>
+          </span>
+        </div>
+      </nc-step>
+    </div>
+    <span class="back-btn">
+      <nc-button [type]="'cancel'" [routerLink]="['/selfCenter/share/beHoster']">返回</nc-button>
+    </span>
+  </div>
+  <div class="nc-content" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
+  </div>
+</div>

@@ -1,21 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { SelfCenterService } from '../self-center.service';
+import { SelfCenterService } from '../../self-center.service';
 
 @Component({
-  selector: 'app-publish-house',
-  templateUrl: './publish-house.component.html',
+  selector: 'app-publish-basic',
+  templateUrl: './publish-basic.component.html',
   styleUrls: ['./publish-house.component.less']
 })
-export class PublishHouseComponent implements OnInit {
-  showLoading: boolean = false;
-  stepItems : any[] = [
-    {label: '基本信息'},
-    {label: '卧室信息'},
-    {label: '卫生间配置'},
-    {label: '配套设施'},
-    {label: '地址'}
-  ];
-  curStepIndex : number = 0;
+export class PublishBasicComponent implements OnInit {
   houseTypes: any[] = [];
   rentalTypes : any[] = [
     {label: '整个房源',value: 'Entire house',
@@ -26,6 +17,7 @@ export class PublishHouseComponent implements OnInit {
     {label: '合住房间',value: 'Shared room',
       title: '房客住在与他人合用的卧室或公共区域'}
   ];
+  showLoading: boolean = false;
   constructor(public selfCenterService: SelfCenterService) { }
 
   ngOnInit() {
@@ -36,9 +28,8 @@ export class PublishHouseComponent implements OnInit {
         typeItem.defaultColor = '#e6e6e6';
       });
       this.houseTypes[0].defaultColor = '#80d5ff';
-      setTimeout(() => {this.showLoading = false;}, 1000);
+      setTimeout(() => {this.showLoading = false;}, 500);
     });
-
   }
 
   selectHouseType(typeItem: any) {
@@ -51,14 +42,6 @@ export class PublishHouseComponent implements OnInit {
 
   selectRentalType(rentalType: any) {
     this.selfCenterService.houseData.basic.rentalType = rentalType.value;
-  }
-
-  preStep() {
-    this.curStepIndex--;
-  }
-
-  nextStep() {
-    this.curStepIndex++;
   }
 
 }

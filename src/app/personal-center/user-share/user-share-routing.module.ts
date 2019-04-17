@@ -7,7 +7,6 @@ import { HomePublishComponent } from './home-publish.component';
 import { ShareExperienceComponent } from './share-experience.component';
 import { KnowShareComponent } from './know-share.component';
 import { BecomeHosterComponent } from './become-hoster.component';
-import { PublishHouseComponent } from './publish-house.component';
 import { AuthGuard } from '../../core/auth.guard';
 
 const routes: Routes = [
@@ -27,10 +26,6 @@ const routes: Routes = [
         path: 'selfCenter/share/beHoster',
         component: BecomeHosterComponent,
         canActivate: [AuthGuard]
-    },
-    {
-        path: 'selfCenter/share/publishHouse',
-        component: PublishHouseComponent
     }
 ];
 

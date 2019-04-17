@@ -1,0 +1,44 @@
+{
+  "types": [
+    {
+      "name": "双人床",
+      "value": "Double bed"
+    },
+    {
+      "name": "单人床",
+      "value": "Single bed"
+    },
+    {
+      "name": "沙发床",
+      "value": "Sofa bed"
+    },
+    {
+      "name": "沙发",
+      "value": "Sofa"
+    },
+    {
+      "name": "双层床",
+      "value": "Bunk bed"
+    },
+    {
+      "name": "地板床垫",
+      "value": "Floor mattress"
+    },
+    {
+      "name": "充气床垫",
+      "value": "Air mattress"
+    },
+    {
+      "name": "婴儿床",
+      "value": "Baby cot"
+    },
+    {
+      "name": "儿童床",
+      "value": "Children bed"
+    },
+    {
+      "name": "吊床",
+      "value": "Hammock"
+    }
+  ]
+}

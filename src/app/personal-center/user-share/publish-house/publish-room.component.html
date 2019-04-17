@@ -1,0 +1,29 @@
+<div class="publish-content">
+  <div class="step-head">您的房源可以住几位房客？</div>
+  <div class="step-body">
+    <div class="step-body-item">
+      <div class="body-item-head">最多容纳房客人数</div>
+      <div class="body-item-content">
+        <span class="num-item">
+          <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
+                         [(value)]="selfCenterService.houseData.room.personNum"></nc-number-put>
+        </span>
+      </div>
+    </div>
+    <div class="step-body-item">
+      <div class="body-item-head">房间数量</div>
+      <div class="body-item-content">
+        <span class="num-item">
+          <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
+                         [(value)]="selfCenterService.houseData.room.num"></nc-number-put>
+        </span>
+      </div>
+    </div>
+    <div class="step-body-item">
+      <div class="body-item-head">床型信息</div>
+      <div class="body-item-content">
+        告知房客每个房间的床铺类型，有助于他们了解床型信息
+      </div>
+    </div>
+  </div>
+</div>
