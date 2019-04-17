@@ -7,12 +7,46 @@
 
   <div class="nc-content">
     <div class="content-container nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      创建账号以开始使用
+      <div class="content-item nc-xl-col-6 nc-lg-col-6 nc-md-col-8 nc-sm-col-12 nc-xs-col-12">
+        <div class="content-select">
+          <div class="select-head">{{pageRegisterLoginService.curloginedUser?.name}}，您好，开启您的出租之旅吧</div>
+          <div class="select-title">您打算发布什么样的房源？</div>
+          <div class="select-pick">
+            <span class="select-option">
+              <nc-select [options]="options1" [(value)]="hostData.type" [width]="'100%'"></nc-select></span>
+            <span class="select-option">
+              <nc-select [options]="options2" [(value)]="hostData.person" [width]="'100%'"></nc-select></span>
+          </div>
+          <div class="select-pick-2">
+            <nc-input [type]="'text'" [(modelValue)]="hostData.city" [required]="true"
+                      [showHint]="false" [placeHolder]="'所在城市'">
+            </nc-input>
+          </div>
+          <div class="select-pick">
+            <nc-button (click)="goToPublish()">继续</nc-button>
+          </div>
+          <div class="select-icon">
+            <div>
+              <span class="fa fa-lightbulb-o"></span>
+            </div>
+            <div>在此地出租一个月预计可以挣</div>
+            <div>￥{{480*hostData.person}}
+              <span>
+                <nc-help [style]="'default'"
+                         [title]="'该收益预估假定每个月能预订15晚，价格为预期的每日价格。预期的每日价格基于类似房源（考虑位置、房源类型和客户接待能力）的平均价格。您实际能获得多少收益可能会因您的房源价格、类型和位置、实际入住率、季节、需求、当地法律和其他因素而有所不同。'"></nc-help>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-item nc-xl-col-6 nc-lg-col-6 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+        <img src="https://z1.muscache.cn/airbnb/static/b12a70f632d3d127a38a67afde7cc8ec.png" />
+      </div>
     </div>
   </div>
 
   <div class="nc-footer nc-flex nc-content-center">
-    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+    <div class="lay-foot nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
       <app-page-foot></app-page-foot>
     </div>
   </div>

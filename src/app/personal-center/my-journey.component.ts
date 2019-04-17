@@ -11,7 +11,7 @@ export class MyJourneyComponent implements OnInit {
 
   ngOnInit() {
     this.showLoading = true;
-    setTimeout(() => {this.showLoading = false;}, 2000);
+    setTimeout(() => {this.showLoading = false;}, 1000);
   }
 
 }

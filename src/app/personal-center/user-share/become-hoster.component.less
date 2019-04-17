@@ -14,6 +14,66 @@
     min-height: 360px;
     .content-container {
       margin: 10px auto;
+      .content-item {
+        padding: 10px 50px;
+        box-sizing: border-box;
+        float:left;
+        img {
+          height: 100%;
+          width: 100%;
+          margin: 0 auto;
+          background-color: #f2f2f2;
+        }
+        .content-select {
+          height: 100%;
+          width: 100%;
+          div {
+            width: inherit;
+            margin-bottom: 20px;
+            &.select-head {
+              font-size: 38px;
+              color: #666;
+              font-weight: 500;
+            }
+            &.select-title {
+              font-size: 30px;
+              color: #666;
+              font-weight: 400;
+            }
+            &.select-pick {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              .select-option {
+                width: 45%;
+              }
+            }
+            &.select-icon {
+              width: 50%;
+              padding: 15px;
+              background-color: #d6f5f5;
+              div {
+                width: 100%;
+                padding: 5px 0;
+                margin: 5px 0;
+                .fa {
+                  font-size: 45px;
+                  color:#33cccc;
+                }
+                &:nth-child(2) {
+                  font-size: 16px;
+                  color:#666;
+                }
+                &:last-child {
+                  font-size: 20px;
+                  color:#666;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   .nc-footer {
