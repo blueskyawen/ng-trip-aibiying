@@ -27,19 +27,15 @@ export class SelfCenterService {
             num: 1,
             bedrooms: [
                 {
-                    beds: [
-                        {
-                            type: 'Double bed',
-                            num: 1
-                        }
-                    ]
+                    id: 1,
+                    beds: []
                 }
             ]
         },
         toilet: 1,
         facility: [],
         site: {
-            country:'',
+            country: '',
             city: '',
             adress: ''
         }
@@ -48,7 +44,13 @@ export class SelfCenterService {
 
     getHouseTypes() {
         return this.http.get('assets/house-type-list.json').pipe(
-            map(res => res['houseTypes'] || {})
+            map(res => res['houseTypes'] || [])
+        );
+    }
+
+    getBedTypes() {
+        return this.http.get('assets/house-bed-types.json').pipe(
+            map(res => res['types'] || [])
         );
     }
 }

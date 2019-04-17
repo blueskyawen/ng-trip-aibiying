@@ -2,27 +2,51 @@
   <div class="step-head">您的房源可以住几位房客？</div>
   <div class="step-body">
     <div class="step-body-item">
-      <div class="body-item-head">最多容纳房客人数</div>
-      <div class="body-item-content">
-        <span class="num-item">
-          <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
-                         [(value)]="selfCenterService.houseData.room.personNum"></nc-number-put>
-        </span>
-      </div>
+      <span class="body-item-num">最多容纳房客人数</span>
+      <span class="body-item-num">
+        <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
+                       [(value)]="selfCenterService.houseData.room.personNum"></nc-number-put>
+      </span>
     </div>
     <div class="step-body-item">
-      <div class="body-item-head">房间数量</div>
-      <div class="body-item-content">
-        <span class="num-item">
-          <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
-                         [(value)]="selfCenterService.houseData.room.num"></nc-number-put>
-        </span>
-      </div>
+      <span class="body-item-num">卧室数量</span>
+      <span class="body-item-num">
+        <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
+                       [(value)]="selfCenterService.houseData.room.num" (valueChange)="roomNumChange()"></nc-number-put>
+      </span>
     </div>
     <div class="step-body-item">
       <div class="body-item-head">床型信息</div>
+      <div class="body-item-title">告知房客每个房间的床铺类型，有助于他们了解床型信息。</div>
       <div class="body-item-content">
-        告知房客每个房间的床铺类型，有助于他们了解床型信息
+        <div class="room-bed-item nc-xl-col-6 nc-lg-col-6 nc-md-col-8 nc-sm-col-12 nc-xs-col-12"
+             *ngFor="let bedRoom of selfCenterService.houseData.room.bedrooms">
+          <div class="bed-review">
+            <span class="bed-name">
+              <span>卧室{{bedRoom.id}}</span>
+              <span *ngIf="!bedRoom.beds || bedRoom.beds.length === 0">0张床</span>
+              <span class="bed-list" *ngIf="!bedRoom.editState && bedRoom.beds.length !== 0">
+                <span *ngFor="let bedItem of bedRoom.beds">{{bedItem.num}}张{{bedItem.name}}</span>
+              </span>
+            </span>
+            <span class="bed-oper">
+              <nc-button [type]="'cancel'" (click)="operBedRoom(bedRoom)">{{bedRoom.operTitle}}</nc-button>
+            </span>
+          </div>
+          <div class="bed-select" *ngIf="bedRoom.editState">
+            <div class="bed-selected-item" *ngFor="let selectedBed of bedRoom.beds">
+              <span class="bed-name">{{selectedBed.name}}</span>
+              <span class="bed-input">
+                <nc-number-put [mode]="'horizontal'" [max]="10" [min]="0" [(value)]="selectedBed.num"></nc-number-put>
+                <span class="fa fa-minus-circle" (click)="delBed(selectedBed,bedRoom)"></span>
+              </span>
+            </div>
+            <div class="bed-selection">
+              <nc-mutil-select [options]="bedRoom.bedOptions" [(selections)]="bedRoom.selecteBedOptions"
+                               (selectionsChange)="bedOptionChange(bedRoom)"></nc-mutil-select>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

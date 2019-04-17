@@ -36,7 +36,7 @@ export class PublishBasicComponent implements OnInit {
     this.houseTypes.forEach(item => {
       item.defaultColor = '#e6e6e6';
     });
-    typeItem.selectColor = '#80d5ff';
+    typeItem.defaultColor = '#80d5ff';
     this.selfCenterService.houseData.basic.houseType = typeItem.value;
   }
 
