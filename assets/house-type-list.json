@@ -1,0 +1,68 @@
+{
+  "houseTypes": [
+    {
+      "name": "公寓",
+      "value": "Apartment"
+    },
+    {
+      "name": "普通民宅",
+      "value": "Ordinary house"
+    },
+    {
+      "name": "别墅",
+      "value": "Villa"
+    },
+    {
+      "name": "酒店",
+      "value": "Hotel"
+    },
+    {
+      "name": "酒店式公寓",
+      "value": "Serviced apartment"
+    },
+    {
+      "name": "精品酒店",
+      "value": "Boutique hotel"
+    },
+    {
+      "name": "青年旅舍",
+      "value": "Youth hostel"
+    },
+    {
+      "name": "农家乐",
+      "value": "Farmhouse"
+    },
+    {
+      "name": "度假村",
+      "value": "Resort"
+    },
+    {
+      "name": "乡村小屋",
+      "value": "Country cottage"
+    },
+    {
+      "name": "蒙古包",
+      "value": "Yurt"
+    },
+    {
+      "name": "木屋",
+      "value": "Chalet"
+    },
+    {
+      "name": "船屋",
+      "value": "Houseboat"
+    },
+    {
+      "name": "帐篷",
+      "value": "Tent"
+    },
+    {
+      "name": "树屋",
+      "value": "Tree house"
+    },
+    {
+      "name": "城堡",
+      "value": "Castle"
+    }
+  ]
+}
