@@ -8,24 +8,25 @@ import { SelfCenterService } from '../../self-center.service';
 })
 export class PublishRoomComponent implements OnInit {
   bedTypes: any[] = [];
+  bedOptions: any[] = [];
   constructor(public selfCenterService: SelfCenterService) { }
 
   ngOnInit() {
     this.selfCenterService.getBedTypes().subscribe(res => {
       this.bedTypes = res;
+      this.bedTypes.forEach(bed => {
+        this.bedOptions.push({label: bed.name, value: bed.value, disable: false});
+      });
       this.setRoomBedInfo();
     });
   }
 
   setRoomBedInfo() {
     this.selfCenterService.houseData.room.bedrooms.forEach(room => {
-      room.bedOptions = [];
+      room.bedOptions = this.bedOptions;
       room.selecteBedOptions = [];
       room.operTitle = '编辑';
       room.editState = false;
-      this.bedTypes.forEach(bed => {
-        room.bedOptions.push({label: bed.name, value: bed.value, disable: false});
-      });
     });
   }
 
@@ -83,7 +84,14 @@ export class PublishRoomComponent implements OnInit {
   }
 
   roomNumChange() {
-
+    this.selfCenterService.houseData.room.bedrooms.push({
+      id: this.selfCenterService.houseData.room.bedrooms.length + 1,
+      beds: [],
+      bedOptions: JSON.parse(JSON.stringify(this.bedOptions)),
+      selecteBedOptions: [],
+      operTitle: '编辑',
+      editState: false,
+    });
   }
 
 }

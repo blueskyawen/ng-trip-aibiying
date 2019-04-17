@@ -1,3 +1,31 @@
 <div class="publish-content">
-  地址
+  <div class="step-head">您的房源位于什么地方？</div>
+  <div class="step-body">
+    <form novalidate class="nc-xl-col-6 nc-lg-col-6 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
+      <nc-form-group class="nc-form-item nc-xl-col-3 nc-lg-col-3 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-4 nc-xs-col-4">
+          国家/地区</nc-form-label>
+        <nc-form-control class="nc-xl-col-8 nc-lg-col-8 nc-md-col-8 nc-sm-col-8 nc-xs-col-8">
+          <nc-input [type]="'text'" [(modelValue)]="selfCenterService.houseData.site.country" [required]="true">
+          </nc-input>
+        </nc-form-control>
+      </nc-form-group>
+      <nc-form-group class="nc-form-item nc-xl-col-3 nc-lg-col-3 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-4 nc-xs-col-4">
+          省/市(区)</nc-form-label>
+        <nc-form-control class="nc-xl-col-8 nc-lg-col-8 nc-md-col-8 nc-sm-col-8 nc-xs-col-8">
+          <nc-input [type]="'text'" [(modelValue)]="selfCenterService.houseData.site.city" [required]="true">
+          </nc-input>
+        </nc-form-control>
+      </nc-form-group>
+      <nc-form-group class="nc-form-item nc-xl-col-3 nc-lg-col-3 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-4 nc-xs-col-4">
+          地址</nc-form-label>
+        <nc-form-control class="nc-xl-col-8 nc-lg-col-8 nc-md-col-8 nc-sm-col-8 nc-xs-col-8">
+          <nc-input [type]="'text'" [(modelValue)]="selfCenterService.houseData.site.adress" [required]="true">
+          </nc-input>
+        </nc-form-control>
+      </nc-form-group>
+    </form>
+  </div>
 </div>

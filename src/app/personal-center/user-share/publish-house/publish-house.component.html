@@ -19,19 +19,21 @@
               <div class="step-head">有几个卫生间？</div>
               <div class="step-body">
                 <div class="step-body-item">
-                  <div class="body-item-head">卫生间</div>
-                  <div class="body-item-content">
-                    <span class="num-item">
+                  <span class="body-item-num">卫生间</span>
+                  <span class="body-item-num">
                       <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
                                      [(value)]="selfCenterService.houseData.toilet"></nc-number-put>
-                    </span>
-                  </div>
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-          <div *ngIf="curStepIndex === 3">步骤4</div>
-          <div *ngIf="curStepIndex === 4">步骤5</div>
+          <div *ngIf="curStepIndex === 3">
+            <app-publish-facility></app-publish-facility>
+          </div>
+          <div *ngIf="curStepIndex === 4">
+            <app-publish-site></app-publish-site>
+          </div>
         </div>
         <div class="footer">
           <span class="form-btn-group">
