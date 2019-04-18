@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SelfCenterService } from '../../self-center.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { SelfCenterService } from '../../self-center.service';
   styleUrls: ['./publish-house.component.less']
 })
 export class PublishBasicComponent implements OnInit {
+  @Output() basicChange = new EventEmitter<string>();
   houseTypes: any[] = [];
   rentalTypes : any[] = [
     {label: '整个房源',value: 'Entire house',
@@ -42,6 +43,10 @@ export class PublishBasicComponent implements OnInit {
 
   selectRentalType(rentalType: any) {
     this.selfCenterService.houseData.basic.rentalType = rentalType.value;
+  }
+
+  nextStep() {
+    this.basicChange.emit('next');
   }
 
 }

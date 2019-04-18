@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SelfCenterService } from '../../self-center.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-publish-site',
@@ -7,10 +8,51 @@ import { SelfCenterService } from '../../self-center.service';
   styleUrls: ['./publish-house.component.less']
 })
 export class PublishSiteComponent implements OnInit {
-
-  constructor(public selfCenterService: SelfCenterService) { }
+  @Output() siteChange = new EventEmitter<string>();
+  showMsg: boolean = false;
+  isValid: boolean = false;
+  constructor(public selfCenterService: SelfCenterService,
+              private router: Router) { }
 
   ngOnInit() {
+    this.selfCenterService.publishSub$.subscribe(res => {
+      if(res === 'success') {
+        this.setSucess();
+      } else {
+        this.setFail();
+      }
+    });
+  }
+
+  preStep() {
+    this.siteChange.emit('prev');
+  }
+
+  confirm() {
+    this.showMsg = true;
+    this.isValid = true;
+    this.selfCenterService.publishHouse('api/publish/house',this.selfCenterService.houseData)
+        .subscribe(res => {
+          if(res.status) {
+            if(res.status === 'success') {
+              this.setSucess();
+            } else {
+              this.setFail();
+            }
+          }
+        });
+  }
+
+  setSucess() {
+    setTimeout(() => {
+      this.showMsg = false;
+      this.router.navigate(['/home']);
+    },1000);
+  }
+
+  setFail() {
+    this.showMsg = false;
+    this.isValid = false;
   }
 
 }

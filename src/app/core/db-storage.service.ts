@@ -7,6 +7,7 @@ export class DbStorageService {
   dbName: string = 'db_aibiying';
   dbObject: any;
   db: any;
+
   constructor() { }
 
   getDbObject(name: string, func: Function) {
@@ -19,7 +20,7 @@ export class DbStorageService {
       console.log('数据库打开成功');
       if (!this.db.objectStoreNames.contains(name)) {
         this.dbObject = this.db.createObjectStore(name, { autoIncrement: true });
-        this.dbObject.createIndex('name', 'name', { unique: false });
+        this.dbObject .createIndex('name', 'name', { unique: false });
       }
       func();
     };
@@ -27,8 +28,8 @@ export class DbStorageService {
       this.db = request.result;
       console.log('onupgradeneeded');
       if (!this.db.objectStoreNames.contains(name)) {
-        this.dbObject = this.db.createObjectStore(name, { autoIncrement: true });
-        this.dbObject.createIndex('name', 'name', { unique: false });
+        this.dbObject  = this.db.createObjectStore(name, { autoIncrement: true });
+        this.dbObject .createIndex('name', 'name', { unique: false });
       }
     };
   }

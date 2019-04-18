@@ -2,147 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
 import { StorageService } from '../../core/storage.service';
 import { CoreService } from '../../core/core.service';
-import { DbStorageService } from '../../core/db-storage.service';
-
-export class AuthData {
-  name: string;
-  password: string;
-  constructor(name: string,password: string) {
-    this.name = name;
-    this.password = password;
-  }
-}
-
-export class LocalStorageAuth {
-  constructor(public storageService: StorageService) {}
-
-  register(url: string, data: AuthData) {
-    let tmpUsers = [];
-    if (this.storageService.get('users')) {
-      tmpUsers = JSON.parse(this.storageService.get('users'));
-    }
-    tmpUsers.push(data);
-    this.storageService.set('users',JSON.stringify(tmpUsers));
-  }
-
-  loginOn(url: string, data : AuthData): boolean {
-    if(this.storageService.get('users')) {
-      let users = JSON.parse(this.storageService.get('users'));
-      let loginUser = users.find((item : any) => {
-        return item.name === data.name && item.password === data.password;
-      });
-      if(loginUser) {
-        return true;
-      } else {
-        return false;
-      }
-    } else {
-      return false;
-    }
-  }
-
-  loginOff(name: string) : boolean {
-    if(this.storageService.get('users')) {
-      let users = JSON.parse(this.storageService.get('users'));
-      let loginUser = users.find((item : any) => {
-        return item.name === name;
-      });
-      if(loginUser) {
-        this.storageService.set('users',JSON.stringify(users));
-      }
-    }
-    return true;
-  }
-
-  getUser(name: string): any {
-    if(this.storageService.get('users')) {
-      let users = JSON.parse(this.storageService.get('users'));
-      let loginUser = users.find((item : any) => {
-        return item.name === name;
-      });
-      if(loginUser) {
-        return loginUser;
-      }
-    }
-    return null;
-  }
-
-  getUserList(): any[] {
-    if(this.storageService.get('users')) {
-      return JSON.parse(this.storageService.get('users'));
-    }
-    return [];
-  }
-
-  modUser(name: string, data: any) : boolean {
-    if(this.storageService.get('users')) {
-      let users = JSON.parse(this.storageService.get('users'));
-      let loginUser = users.find((item : any) => {
-        return item.name === name;
-      });
-      if(loginUser) {
-        loginUser.name = data.name;
-        loginUser.password = data.password;
-      }
-    }
-    return true;
-  }
-
-  deleteUser(name: string) : boolean {
-    if(this.storageService.get('users')) {
-      let users = JSON.parse(this.storageService.get('users'));
-      users = users.filter((item : any) => {
-        return item.name !== name;
-      });
-      this.storageService.set('users',JSON.stringify(users));
-    }
-    return true;
-  }
-
-  clear() : boolean {
-    if(this.storageService.get('users')) {
-      this.storageService.set('users',JSON.stringify([]));
-    }
-    return true;
-  }
-}
-
-export class IndexDBAuth {
-  constructor(public dbStorageService: DbStorageService) {}
-
-  register(url: string, data: AuthData, succFunc: Function, failFunc: Function) {
-    this.dbStorageService.add('users', data, succFunc, failFunc);
-  }
-
-  loginOn(url: string, data : AuthData, succFunc: Function, failFunc: Function) {
-    this.dbStorageService.read('users', data.name, succFunc, failFunc);
-  }
-
-  loginOff(name: string): Observable<boolean> {
-    return of(true);
-  }
-
-  getUser(url: string, name: string, succFunc: Function, failFunc: Function) {
-    this.dbStorageService.read('users', name, succFunc, failFunc);
-  }
-
-  getAllUser(url: string, succFunc: Function, failFunc: Function) {
-    this.dbStorageService.readAll('users', succFunc, failFunc);
-  }
-
-  modUser(url: string, name: string, data: any, succFunc: Function, failFunc: Function) {
-    this.dbStorageService.update('users', name, data, succFunc, failFunc);
-  }
-
-  deleteUser(url: string, name: string, succFunc: Function, failFunc: Function) {
-    this.dbStorageService.remove('users', name, succFunc, failFunc);
-  }
-
-  clear(url: string, succFunc: Function, failFunc: Function) {
-    this.dbStorageService.clear('users', succFunc, failFunc);
-  }
-}
-
+import { DbStorageService} from '../../core/db-storage.service';
+import { LocalStorageAuth, IndexDBAuth, AuthData} from '../../core/storage-auth';
 
 @Injectable({
   providedIn: 'root'
@@ -160,6 +21,7 @@ export class PageRegisterLoginService {
   private indexDbAuth: IndexDBAuth;
 
   authType: string = 'indexDB';
+  tableName: string = 'users';
 
   constructor(private storageService: StorageService,
               private dbStorageService: DbStorageService) {
@@ -177,12 +39,12 @@ export class PageRegisterLoginService {
 
   registerUser(url: string, data: any): Observable<any> {
     if(this.authType === 'localStorage') {
-      this.localAuth.register(url, data);
+      this.localAuth.register(this.tableName, url, data);
       return of({status: 'success'});
     }
 
     if(this.authType === 'indexDB') {
-      this.indexDbAuth.register(url, data,
+      this.indexDbAuth.register(this.tableName, url, data,
           () => {this.procRegisSuccess();}, () => {this.procRegisFail();});
       return of({});
     }
@@ -198,7 +60,7 @@ export class PageRegisterLoginService {
 
   loginUser(url: string, data: any): Observable<any> {
     if(this.authType === 'localStorage') {
-      if(this.localAuth.loginOn(url, data)) {
+      if(this.localAuth.loginOn(this.tableName, url, data)) {
         this.isLogined = true;
         return of({status: 'success'});
       } else {
@@ -208,7 +70,7 @@ export class PageRegisterLoginService {
     }
 
     if(this.authType === 'indexDB') {
-      this.indexDbAuth.loginOn(url, data,
+      this.indexDbAuth.loginOn(this.tableName, url, data,
           (user) => {this.procLoginSuccess(user);}, (user) => {this.procLoginFail(user);});
       return of({});
     }
@@ -249,12 +111,12 @@ export class PageRegisterLoginService {
 
   getUserInfo(url: string,name: string): Observable<any> {
     if(this.authType === 'localStorage') {
-      let userData = this.localAuth.getUser(name);
+      let userData = this.localAuth.getUser(this.tableName, name);
       return of({user: userData});
     }
 
     if(this.authType === 'indexDB') {
-      this.indexDbAuth.getUser(url, name,
+      this.indexDbAuth.getUser(this.tableName, url, name,
           (user) => {this.procGetUserSuccess(user);}, (user) => {this.procGetUserFail(user);});
       return of({});
     }
@@ -270,12 +132,12 @@ export class PageRegisterLoginService {
 
   getUserList(url: string): Observable<any> {
     if(this.authType === 'localStorage') {
-      let userData = this.localAuth.getUserList();
+      let userData = this.localAuth.getUserList(this.tableName);
       return of({users: userData});
     }
 
     if(this.authType === 'indexDB') {
-      this.indexDbAuth.getAllUser(url,
+      this.indexDbAuth.getAllUser(this.tableName, url,
           (user) => {this.procGetUserListSuccess(user);}, () => {this.procGetUserListFail();});
       return of({});
     }
@@ -292,36 +154,36 @@ export class PageRegisterLoginService {
 
   modifyItem(url: string,name: string, data: any): Observable<any> {
     if(this.authType === 'localStorage') {
-       this.localAuth.modUser(name, data);
+       this.localAuth.modUser(this.tableName, name, data);
       return of({});
     }
 
     if(this.authType === 'indexDB') {
-      this.indexDbAuth.modUser(url, name, data, () => {}, () => {});
+      this.indexDbAuth.modUser(this.tableName, url, name, data, () => {}, () => {});
       return of({});
     }
   }
 
   deleteItem(url: string,name: string): Observable<any> {
     if(this.authType === 'localStorage') {
-      this.localAuth.deleteUser(name);
+      this.localAuth.deleteUser(this.tableName, name);
       return of({});
     }
 
     if(this.authType === 'indexDB') {
-      this.indexDbAuth.deleteUser(url, name, () => {}, () => {});
+      this.indexDbAuth.deleteUser(this.tableName, url, name, () => {}, () => {});
       return of({});
     }
   }
 
   clearItems(url: string): Observable<any> {
     if(this.authType === 'localStorage') {
-      this.localAuth.clear();
+      this.localAuth.clear(this.tableName);
       return of({});
     }
 
     if(this.authType === 'indexDB') {
-      this.indexDbAuth.clear(url, () => {}, () => {});
+      this.indexDbAuth.clear(this.tableName, url, () => {}, () => {});
       return of({});
     }
   }

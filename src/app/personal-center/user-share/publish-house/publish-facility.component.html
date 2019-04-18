@@ -4,22 +4,61 @@
     <div class="step-body-item">
       <div class="body-item-head">基本设施</div>
       <div class="body-item-content">
-        基本设施
+        <div class="facity-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-6 nc-xs-col-10"
+             *ngFor="let basicItem of facility.basic">
+          <span>
+            <nc-checkbox [(checked)]="basicItem.checked"></nc-checkbox>
+          </span>
+          <span>{{basicItem.label}}</span>
+        </div>
       </div>
     </div>
 
     <div class="step-body-item">
       <div class="body-item-head">配套设施</div>
       <div class="body-item-content">
-        配套设施
+        <div class="facity-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-6 nc-xs-col-10"
+             *ngFor="let advanItem of facility.advance">
+          <span>
+            <nc-checkbox [(checked)]="advanItem.checked"></nc-checkbox>
+          </span>
+          <span>{{advanItem.label}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-body-item">
+      <div class="body-item-head">儿童设施</div>
+      <div class="body-item-content">
+        <div class="facity-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-6 nc-xs-col-10"
+             *ngFor="let kidItem of facility.kid">
+          <span>
+            <nc-checkbox [(checked)]="kidItem.checked"></nc-checkbox>
+          </span>
+          <span>{{kidItem.label}}</span>
+        </div>
       </div>
     </div>
 
     <div class="step-body-item">
       <div class="body-item-head">安全设施</div>
       <div class="body-item-content">
-        安全设施
+        <div class="facity-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-6 nc-xs-col-10"
+             *ngFor="let safeItem of facility.safe">
+          <span>
+            <nc-checkbox [(checked)]="safeItem.checked"></nc-checkbox>
+          </span>
+          <span>{{safeItem.label}}</span>
+        </div>
       </div>
     </div>
   </div>
+</div>
+<div class="publish-footer">
+  <span class="form-btn-group">
+    <nc-button [type]="'cancel'" (click)="preStep()">上一步</nc-button>
+  </span>
+  <span class="form-btn-group">
+    <nc-button (click)="nextStep()">下一步</nc-button>
+  </span>
 </div>

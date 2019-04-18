@@ -1,0 +1,20 @@
+<div class="publish-content">
+  <div class="step-head">有几个卫生间？</div>
+  <div class="step-body">
+    <div class="step-body-item">
+      <span class="body-item-num">卫生间</span>
+        <span class="body-item-num">
+            <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
+                           [(value)]="selfCenterService.houseData.toilet"></nc-number-put>
+        </span>
+    </div>
+  </div>
+</div>
+<div class="publish-footer">
+  <span class="form-btn-group">
+    <nc-button [type]="'cancel'" (click)="preStep()">上一步</nc-button>
+  </span>
+  <span class="form-btn-group">
+    <nc-button (click)="nextStep()">下一步</nc-button>
+  </span>
+</div>

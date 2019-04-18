@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SelfCenterService } from '../../self-center.service';
 
 @Component({
@@ -7,35 +7,45 @@ import { SelfCenterService } from '../../self-center.service';
   styleUrls: ['./publish-house.component.less']
 })
 export class PublishRoomComponent implements OnInit {
-  bedTypes: any[] = [];
+  @Output() roomChange = new EventEmitter<string>();
   bedOptions: any[] = [];
+  roomData: any = {
+    personNum: 2,
+    num: 1,
+    bedrooms: []
+  };
   constructor(public selfCenterService: SelfCenterService) { }
 
   ngOnInit() {
-    this.selfCenterService.getBedTypes().subscribe(res => {
-      this.bedTypes = res;
-      this.bedTypes.forEach(bed => {
-        this.bedOptions.push({label: bed.name, value: bed.value, disable: false});
-      });
+    this.initRoomInfo();
+    if(this.selfCenterService.bedOptions.length !== 0) {
+      this.bedOptions = this.selfCenterService.bedOptions;
       this.setRoomBedInfo();
-    });
+    } else {
+      this.selfCenterService.getBedTypes().subscribe(res => {
+        res.forEach(bed => {
+          this.selfCenterService.bedOptions.push({label: bed.name,
+            value: bed.value, disable: false});
+        });
+        this.bedOptions = this.selfCenterService.bedOptions;
+        this.setRoomBedInfo();
+      });
+    }
+  }
+
+  initRoomInfo() {
+    this.roomData.personNum = this.selfCenterService.houseData.room.personNum;
+    this.roomData.num = this.selfCenterService.houseData.room.num;
+    this.roomData.bedrooms = JSON.parse(JSON.stringify(this.selfCenterService.houseData.room.bedrooms));
   }
 
   setRoomBedInfo() {
-    this.selfCenterService.houseData.room.bedrooms.forEach(room => {
+    this.roomData.bedrooms.forEach(room => {
       room.bedOptions = this.bedOptions;
       room.selecteBedOptions = [];
       room.operTitle = '编辑';
       room.editState = false;
     });
-  }
-
-  getBedNumPerRoom(room: any) {
-    let bedNum = 0;
-    room.beds.forEach(bed => {
-      bedNum += bed.num;
-    });
-    return bedNum;
   }
 
   operBedRoom(room: any) {
@@ -84,14 +94,45 @@ export class PublishRoomComponent implements OnInit {
   }
 
   roomNumChange() {
-    this.selfCenterService.houseData.room.bedrooms.push({
-      id: this.selfCenterService.houseData.room.bedrooms.length + 1,
-      beds: [],
-      bedOptions: JSON.parse(JSON.stringify(this.bedOptions)),
-      selecteBedOptions: [],
-      operTitle: '编辑',
-      editState: false,
+    let changeNum = 0;
+    if(this.roomData.num > this.roomData.bedrooms.length) {
+      changeNum = this.roomData.num - this.roomData.bedrooms.length;
+      for(let i = 0;i < changeNum;i++) {
+        this.roomData.bedrooms.push({
+          id: this.roomData.bedrooms.length + 1,
+          beds: [],
+          bedOptions: JSON.parse(JSON.stringify(this.bedOptions)),
+          selecteBedOptions: [],
+          operTitle: '编辑',
+          editState: false,
+        });
+      }
+    } else {
+      changeNum = this.roomData.bedrooms.length - this.roomData.num;
+      for(let i = 0;i < changeNum;i++) {
+        this.roomData.bedrooms.pop();
+      }
+    }
+  }
+
+  preStep() {
+    this.roomChange.emit('prev');
+  }
+
+  nextStep() {
+    this.saveRoomData();
+    this.roomChange.emit('next');
+  }
+
+  saveRoomData() {
+    this.selfCenterService.houseData.room.personNum = this.roomData.personNum;
+    this.selfCenterService.houseData.room.bedrooms = [];
+    this.roomData.bedrooms.forEach(roomItem => {
+      this.selfCenterService.houseData.room.bedrooms.push({
+        id: roomItem.id, beds: roomItem.beds
+      });
     });
+    this.selfCenterService.houseData.room.num = this.selfCenterService.houseData.room.bedrooms.length;
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { PageRegisterLoginService, AuthData } from './page-register-login.service';
+import { PageRegisterLoginService } from './page-register-login.service';
+import { AuthData} from '../../core/storage-auth';
 
 @Component({
   selector: 'app-page-register',

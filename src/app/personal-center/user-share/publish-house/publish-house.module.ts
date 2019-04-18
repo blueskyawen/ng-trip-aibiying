@@ -10,10 +10,11 @@ import { PublishBasicComponent } from './publish-basic.component';
 import { PublishRoomComponent } from './publish-room.component';
 import { PublishFacilityComponent } from './publish-facility.component';
 import { PublishSiteComponent } from './publish-site.component';
+import { PublishRestRoomComponent } from './publish-rest-room.component';
 
 @NgModule({
   declarations: [PublishHouseComponent, PublishBasicComponent, PublishRoomComponent,
-    PublishFacilityComponent, PublishSiteComponent],
+    PublishFacilityComponent, PublishSiteComponent, PublishRestRoomComponent],
   imports: [
     ShareModule, ExhibitPageModule, HomePageModule,
     PublishHouseRoutingModule

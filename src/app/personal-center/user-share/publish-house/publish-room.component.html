@@ -5,14 +5,14 @@
       <span class="body-item-num">最多容纳房客人数</span>
       <span class="body-item-num">
         <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
-                       [(value)]="selfCenterService.houseData.room.personNum"></nc-number-put>
+                       [(value)]="roomData.personNum"></nc-number-put>
       </span>
     </div>
     <div class="step-body-item">
       <span class="body-item-num">卧室数量</span>
       <span class="body-item-num">
         <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
-                       [(value)]="selfCenterService.houseData.room.num" (valueChange)="roomNumChange()"></nc-number-put>
+                       [(value)]="roomData.num" (valueChange)="roomNumChange()"></nc-number-put>
       </span>
     </div>
     <div class="step-body-item">
@@ -20,10 +20,10 @@
       <div class="body-item-title">告知房客每个房间的床铺类型，有助于他们了解床型信息。</div>
       <div class="body-item-content nc-row-column">
         <div class="room-bed-item nc-xl-col-6 nc-lg-col-6 nc-md-col-8 nc-sm-col-12 nc-xs-col-12"
-             *ngFor="let bedRoom of selfCenterService.houseData.room.bedrooms">
+             *ngFor="let bedRoom of roomData.bedrooms;let i = index;">
           <div class="bed-review">
             <span class="bed-name">
-              <span>卧室{{bedRoom.id}}</span>
+              <span>卧室{{i + 1}}</span>
               <span *ngIf="!bedRoom.beds || bedRoom.beds.length === 0">0张床</span>
               <span class="bed-list" *ngIf="!bedRoom.editState && bedRoom.beds.length !== 0">
                 <span *ngFor="let bedItem of bedRoom.beds">{{bedItem.num}}张{{bedItem.name}}</span>
@@ -50,4 +50,12 @@
       </div>
     </div>
   </div>
+</div>
+<div class="publish-footer">
+  <span class="form-btn-group">
+    <nc-button [type]="'cancel'" (click)="preStep()">上一步</nc-button>
+  </span>
+  <span class="form-btn-group">
+    <nc-button (click)="nextStep()">下一步</nc-button>
+  </span>
 </div>

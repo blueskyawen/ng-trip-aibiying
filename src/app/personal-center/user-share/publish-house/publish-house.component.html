@@ -9,42 +9,20 @@
       <nc-step [type]="'underline'" [(stepIndex)]="curStepIndex" [stepItems]="stepItems" [id]="'step01'">
         <div class="content">
           <div *ngIf="curStepIndex === 0">
-            <app-publish-basic></app-publish-basic>
+            <app-publish-basic (basicChange)="stepProcChange($event)"></app-publish-basic>
           </div>
           <div *ngIf="curStepIndex === 1">
-            <app-publish-room></app-publish-room>
+            <app-publish-room (roomChange)="stepProcChange($event)"></app-publish-room>
           </div>
           <div *ngIf="curStepIndex === 2">
-            <div class="publish-content">
-              <div class="step-head">有几个卫生间？</div>
-              <div class="step-body">
-                <div class="step-body-item">
-                  <span class="body-item-num">卫生间</span>
-                  <span class="body-item-num">
-                      <nc-number-put [mode]="'horizontal'" [max]="12" [min]="1"
-                                     [(value)]="selfCenterService.houseData.toilet"></nc-number-put>
-                  </span>
-                </div>
-              </div>
-            </div>
+            <app-publish-rest-room (restChange)="stepProcChange($event)"></app-publish-rest-room>
           </div>
           <div *ngIf="curStepIndex === 3">
-            <app-publish-facility></app-publish-facility>
+            <app-publish-facility (facityChange)="stepProcChange($event)"></app-publish-facility>
           </div>
           <div *ngIf="curStepIndex === 4">
-            <app-publish-site></app-publish-site>
+            <app-publish-site (siteChange)="stepProcChange($event)"></app-publish-site>
           </div>
-        </div>
-        <div class="footer">
-          <span class="form-btn-group">
-            <nc-button *ngIf="curStepIndex !== 0" [type]="'cancel'" (click)="preStep()">上一步</nc-button>
-          </span>
-          <span class="form-btn-group">
-            <nc-button *ngIf="curStepIndex < 4" (click)="nextStep()">下一步</nc-button>
-          </span>
-          <span class="form-btn-group">
-            <nc-button *ngIf="curStepIndex === 4" (click)="confirm()">完成</nc-button>
-          </span>
         </div>
       </nc-step>
     </div>

@@ -21,12 +21,12 @@ export class PublishHouseComponent implements OnInit {
   ngOnInit() {
   }
 
-  preStep() {
-    this.curStepIndex--;
-  }
-
-  nextStep() {
-    this.curStepIndex++;
+  stepProcChange(type: string) {
+    if(type === 'next') {
+      this.curStepIndex++;
+    } else {
+      this.curStepIndex--;
+    }
   }
 
 }

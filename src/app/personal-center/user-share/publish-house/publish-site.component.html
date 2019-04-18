@@ -29,3 +29,13 @@
     </form>
   </div>
 </div>
+<div class="publish-footer">
+  <span class="form-btn-group">
+    <nc-button [type]="'cancel'" (click)="preStep()" [disabled]="isValid">上一步</nc-button>
+  </span>
+  <span class="form-btn-group">
+    <nc-button (click)="confirm()" [disabled]="isValid">完成</nc-button>
+  </span>
+</div>
+<nc-message [type]="'success'" [(show)]="showMsg">发布成功</nc-message>
+
