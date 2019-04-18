@@ -1,0 +1,40 @@
+{
+  "facilty": {
+    "basic":[
+      {"name":"wifi","label":"无线网络"},
+      {"name":"kitchen","label":"厨房"},
+      {"name":"shampoo","label":"洗发水"},
+      {"name":"blower","label":"吹风机"},
+      {"name":"necessity","label":"生活必需品"},
+      {"name":"airconditioner","label":"空调"},
+      {"name":"heating","label":"暖气"},
+      {"name":"tv","label":"电视"},
+      {"name":"dryer","label":"烘干机"},
+      {"name":"desk","label":"书桌/工作区域"},
+      {"name":"hanger","label":"衣架"},
+      {"name":"iron","label":"熨斗"},
+      {"name":"breakfast","label":"早餐"},
+      {"name":"coffee","label":"咖啡"},
+      {"name":"Tea","label":"茶叶"},
+      {"name":"iron","label":"熨斗"},
+      {"name":"washing machine","label":"洗衣机"}
+    ],
+    "advance":[
+      {"name":"bathtub","label":"浴缸"},
+      {"name":"car park","label":"停车场"},
+      {"name":"swimming pool","label":"游泳池"},
+      {"name":"elevator","label":"电梯"},
+      {"name":"gym","label":"健身房"}
+    ],
+    "kid":[
+      {"name":"childbathtub","label":"儿童浴缸"},
+      {"name":"curtain","label":"遮光窗帘"}
+    ],
+    "safe":[
+      {"name":"smoke-alarm","label":"烟雾报警器"},
+      {"name":"carbon-monoxibe-alarm","label":"一氧化碳报警器"},
+      {"name":"First aid kit","label":"急救包"},
+      {"name":"Fire extinguisher","label":"灭火器"}
+    ]
+  }
+}
