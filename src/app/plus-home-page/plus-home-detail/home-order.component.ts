@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-home-order',
   templateUrl: './home-order.component.html',
-  styleUrls: ['./home-order.component.less']
+  styleUrls: ['./home-order.component.less', '../../exhibit-page/house-detail-page/house-detail-page.css']
 })
 export class HomeOrderComponent implements OnInit {
   @Input() isShowOrder: boolean = false;
