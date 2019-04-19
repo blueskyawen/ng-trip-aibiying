@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SelfCenterService } from '../../self-center.service';
+import { DialogService } from '../../../core/dialog';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-publish-house',
@@ -16,9 +18,14 @@ export class PublishHouseComponent implements OnInit {
   ];
   curStepIndex : number = 0;
 
-  constructor(public selfCenterService: SelfCenterService) { }
+  constructor(public selfCenterService: SelfCenterService,
+              private dialogService : DialogService) { }
 
   ngOnInit() {
+  }
+
+  canDeactivate(): Observable<boolean> | boolean {
+    return this.dialogService.confirm('已有修改未保存，确定离开吗?');
   }
 
   stepProcChange(type: string) {

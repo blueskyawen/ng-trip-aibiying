@@ -22,7 +22,18 @@
   </div>
   <div class="nc-content" *ngIf="!showLoading">
     <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      发布房源
+      <div class="content-item">
+        <app-exper-overview></app-exper-overview>
+      </div>
+      <div class="content-item">
+        <app-exper-community></app-exper-community>
+      </div>
+      <div class="content-item">
+        <app-exper-guide></app-exper-guide>
+      </div>
+      <div class="content-item">
+        <app-exper-others></app-exper-others>
+      </div>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">

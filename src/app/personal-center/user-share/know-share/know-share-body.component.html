@@ -1,0 +1,108 @@
+<div class="know-share-body">
+  <div class="content-item">
+    <div class="content-item-body">
+      <div class="share-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="item-head">为什么选择在爱彼迎出租房源？</div>
+        <div class="item-text">不论您出租的是哪种类型的房屋或房间，爱彼迎都可以让您轻松、安全地接待旅行者。 可订日期、价格、房屋守则、与房客的互动方式等，完全由您掌控。</div>
+      </div>
+      <div class="share-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="item-head">爱彼迎保护房东的利益</div>
+        <div class="item-text">为了保护您、您的房源和物品的安全，我们为每笔预订均提供价值100万美元的财产损坏保障，以及价值100万美元的意外事件保障险。</div>
+        <div class="item-foot" (click)="goSafety()">了解爱彼迎如何保护房东</div>
+      </div>
+      <div class="share-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="item-head">房客已验证</div>
+        <div class="item-text">爱彼迎始终要求房客在提供某些信息后才可预订，如已验证的手机号和邮箱地址。 如果您想更安心，还可以要求房客提供其他房东的推荐语和已验证身份。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-item">
+    <div class="content-item-head">出租三步走</div>
+    <div class="content-item-body">
+      <div class="share-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="item-icon">
+          <nc-badge [type]="'success'" [count]="1"></nc-badge>
+        </div>
+        <div class="item-head">免费发布房源</div>
+        <div class="item-text">无需注册费用即可分享任意空间，从合用客厅到度假住宅不一而足。</div>
+      </div>
+      <div class="share-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="item-icon">
+          <nc-badge [type]="'success'" [count]="2"></nc-badge>
+        </div>
+        <div class="item-head">自主决定出租方式</div>
+        <div class="item-text">您可自主选择时间安排、价格和房客要求。我们将全程协助。</div>
+      </div>
+      <div class="share-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="item-icon">
+          <nc-badge [type]="'success'" [count]="3"></nc-badge>
+        </div>
+        <div class="item-head">欢迎您的首批房客</div>
+        <div class="item-text">您的房源上线后，符合条件的房客会与您联系。如果您有任何问题，在房客入住前就可以给他们发消息。</div>
+        <div class="item-foot" (click)="goHowShare()">了解如何开始出租</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-item">
+    <div class="content-item-body">
+      <div class="share-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+        <img src="https://z1.muscache.cn/pictures/2b6774ff-f366-4c1a-b941-198b92e87ffd.jpg" />
+      </div>
+      <div class="share-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+        <div class="share-question">
+          <div>“出租房源帮助我支付了新厨房和其他装修项目的费用。」</div>
+          <div>Tessa在伦敦出租房屋赚取额外收入</div>
+          <div>
+            <span (click)="goHowShare2()">了解他们的出租方式</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-item">
+    <div class="content-item-head">为您答疑</div>
+    <div class="content-item-body">
+      <div *ngFor="let questionItem of questions" (click)="viewQuestin(questionItem)"
+              class="share-item share-question-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="question-item">{{questionItem.title}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-item">
+    <div class="content-item-head">关于出租的更多信息</div>
+    <div class="content-item-body">
+      <div *ngFor="let moreItem of moreQuestions" (click)="moreItem.callBack()"
+              class="share-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-10 nc-xs-col-12">
+        <div class="item-icon">
+          <img [src]="moreItem.src" />
+        </div>
+        <div class="item-more-head">{{moreItem.name}}</div>
+        <div class="item-more-title">{{moreItem.title}}</div>
+        <div class="item-more-oper">了解更多</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-item">
+    <div class="content-publish">
+      <span>
+        <span>准备好当房东赚钱了吗？</span>
+        <span>
+          <nc-button [type]="'cancel'" [style]="'max'"
+                     [routerLink]="['/selfCenter/share/beHoster']">开始吧</nc-button>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<nc-dialog [header]="''" [style]="'normal'" [(isShow)]="isViewQuestin">
+  <div class="content question-dialog">
+    <div class="question-head">{{curViewQuestion?.title}}</div>
+    <div class="question-body">{{curViewQuestion?.text}}</div>
+  </div>
+</nc-dialog>

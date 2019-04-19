@@ -1,0 +1,31 @@
+<div class="know-share-head">
+  <div class="share-start">
+    <div class="share-start-head">来爱彼迎当房东，轻松赚取收入</div>
+    <div class="share-start-title">看看您可以赚取多少收入</div>
+    <div class="share-start-form">
+      <div>
+        <nc-input [type]="'text'" [(modelValue)]="startShare.city" [required]="true"></nc-input>
+      </div>
+      <div>
+        <span class="select-option">
+          <nc-select [options]="rentalOptions" [(value)]="startShare.rental" [width]="'100%'"></nc-select>
+        </span>
+        <span class="select-option">
+          <nc-select [options]="options2" [(value)]="startShare.person" [width]="'100%'"></nc-select>
+        </span>
+      </div>
+    </div>
+    <div class="share-start-text">
+      <span>￥{{2113 * startShare.person}} </span>
+      <span>
+        每月
+        <nc-help [place]="'right'" [style]="'default'"
+                 [title]="'该收益预估假定每个月能预订15晚，价格为预期的每日价格。预期的每日价格基于类似房源（考虑位置、房源类型和客户接待能力）的平均价格。您实际能获得多少收益可能会因您的房源价格、类型和位置、实际入住率、季节、需求、当地法律和其他因素而有所不同。'"></nc-help>
+      </span>
+    </div>
+    <div class="share-start-foot">
+      <nc-button [type]="'major'" [style]="'custom'" [routerLink]="['/selfCenter/share/publish']"
+                 [width]="'100%'" [height]="'42px'">开始</nc-button>
+    </div>
+  </div>
+</div>

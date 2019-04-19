@@ -18,8 +18,11 @@
     </div>
   </div>
   <div class="nc-content" *ngIf="!showLoading">
+    <div class="head-container">
+      <app-know-share-head></app-know-share-head>
+    </div>
     <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      了解如何出租您的房源
+      <app-know-share-body></app-know-share-body>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">
