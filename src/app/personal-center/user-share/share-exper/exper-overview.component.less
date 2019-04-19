@@ -1,6 +1,114 @@
 .exper-overview {
   width: 100%;
-  > div {
-    width: 40%;
+  .overview-item {
+    width: inherit;
+    position: relative;
+    padding: 10px 0;
+    img {
+      height: 500px;
+      width: inherit;
+      background-color: #f2f2f2;
+    }
+    section {
+      width: 60%;
+      color: #666666;
+      position: absolute;
+      top:20%;
+      left:50%;
+      transform: translateX(-50%);
+      text-align: center;
+      .item-text-head {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+      .item-text-content {
+        font-size: 18px;
+        color: #484848;
+        font-weight: 400;
+        line-height: 1.444444em;
+        word-wrap: break-word;
+      }
+    }
+    &.photo-view {
+      width: inherit;
+      display: flex;
+      > div {
+        &:first-child {
+          margin-right: 20px;
+        }
+        &.photo-title-item  {
+          position: relative;
+          background-color: #d9d9d9;
+          box-sizing: border-box;
+          padding: 120px 80px 0;
+          .title-item-head {
+            font-size: 46px;
+            font-weight: 800;
+            margin-bottom: 20px;
+          }
+          .title-item-content {
+            font-size: 18px;
+            color: #484848;
+            font-weight: 400;
+            line-height: 1.444444em;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+    &.exper-view {
+      width: inherit;
+      height: 500px;
+      background: url(https://a0.muscache.com/airbnb/static/packages/11811fd0da72386eff4ac2804057ca3a.png) no-repeat #d9d9d9;
+      background-size: auto 80%;
+      background-position: 85% center;
+      margin: 10px 0 20px;
+      .exper-view-item {
+        position: absolute;
+        width: 35%;
+        top:120px;
+        left:150px;
+        .title-item-head {
+          font-size: 46px;
+          font-weight: 800;
+          margin-bottom: 20px;
+        }
+        .title-item-content {
+          font-size: 18px;
+          color: #484848;
+          font-weight: 400;
+          line-height: 1.444444em;
+          word-wrap: break-word;
+        }
+      }
+    }
+    &.exper-view-2 {
+      width: inherit;
+      height: 500px;
+      background: url(https://a0.muscache.com/airbnb/static/packages/cba581974e4fde306750b6e4993cc9bf.png) no-repeat #d9d9d9;
+      background-size: auto 80%;
+      background-position: 15% center;
+      margin: 10px 0 20px;
+      .exper-view-item {
+        position: absolute;
+        width: 35%;
+        top:120px;
+        right:150px;
+        .title-item-head {
+          font-size: 46px;
+          font-weight: 800;
+          margin-bottom: 20px;
+        }
+        .title-item-content {
+          font-size: 18px;
+          color: #484848;
+          font-weight: 400;
+          line-height: 1.444444em;
+          word-wrap: break-word;
+        }
+      }
+    }
   }
 }
+
