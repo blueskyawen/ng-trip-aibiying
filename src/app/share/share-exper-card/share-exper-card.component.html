@@ -1,0 +1,21 @@
+<div class="share-exper-card">
+  <div class="share-exper-photo">
+    <nc-carousel [captions]="imgOptions" [height]="'520px'" [effect]="'fade'"
+                 [(showIndex)]="curIndex"></nc-carousel>
+    <span class="exper-photo-title" *ngIf="showTitle">
+      <span class="photo-title-item" *ngFor="let titleItem of titleOptions;let i=index;">
+        <span class="photo-title" *ngIf="i === curIndex">
+          <span>
+            <nc-rate [size]="'12px'" [color]="'#fff'" [totalRate]="5"
+                     [(curRate)]="curStar" [showTitle]="false"></nc-rate>
+          </span>
+          <span>{{titleItem.text}}</span>
+          <span>{{titleItem.name}}</span>
+          <span>{{titleItem.title}}</span>
+        </span>
+      </span>
+    </span>
+  </div>
+
+  <div class="share-exper-foot" *ngIf="showFoot"></div>
+</div>
