@@ -1,3 +1,14 @@
-<p>
-  exper-others works!
-</p>
+<div class="exper-others">
+  <section>
+    <div class="item-text-head">浏览其他体验</div>
+  </section>
+  <div class="exper-others-head">
+    <app-experience-category [cityName]="'all'"></app-experience-category>
+  </div>
+  <div class="exper-item-list">
+    <div *ngFor="let exper of expers" [routerLink]="['/experience',exper.id]"
+         class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+      <app-high-expertence-card [exper]="exper" [showLove]="true"></app-high-expertence-card>
+    </div>
+  </div>
+</div>

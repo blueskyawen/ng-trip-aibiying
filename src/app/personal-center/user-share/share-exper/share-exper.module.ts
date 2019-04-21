@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { ShareModule } from '../../../share/share.module';
 import { ExhibitPageModule } from '../../../exhibit-page/exhibit-page.module';
 import { HomePageModule } from '../../../home-page/home-page.module';
+import { ExperiencePageModule } from '../../../experience-page/experience-page.module';
 
 import { ShareExperRoutingModule } from './share-exper-routing.module';
 
@@ -15,7 +16,7 @@ import { ExperOthersComponent } from './exper-others.component';
   declarations: [ShareExperienceComponent, ExperOverviewComponent, ExperCommunityComponent,
     ExperGuideComponent, ExperOthersComponent],
   imports: [
-    ShareModule, ExhibitPageModule, HomePageModule,
+    ShareModule, ExhibitPageModule, HomePageModule, ExperiencePageModule,
     ShareExperRoutingModule
   ]
 })

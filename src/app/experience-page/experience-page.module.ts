@@ -17,6 +17,7 @@ import { ExperienceCancelPolicyComponent } from './experience-cancel-policy.comp
   imports: [
     ShareModule, HomePageModule, ExhibitPageModule,
     ExperiencePageRoutingModule, ExperienceDetailPageModule
-  ]
+  ],
+  exports: [ExperienceCategoryComponent]
 })
 export class ExperiencePageModule { }

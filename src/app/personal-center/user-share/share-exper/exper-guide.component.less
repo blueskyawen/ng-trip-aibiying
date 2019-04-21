@@ -1,0 +1,109 @@
+.exper-guide {
+  width: 100%;
+  .exper-start-guide {
+    width: inherit;
+    padding: 36px 0;
+    border-bottom: solid 1px #e6e6e6;
+    section {
+      width: 60%;
+      color: #666;
+      margin: 5px auto 30px;
+      text-align: center;
+      .item-text-head {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 15px;
+      }
+    }
+    .guide-list {
+      width: inherit;
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      .guide-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        span {
+          color: #666;
+          &:first-child {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: solid 2px #666;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: 500;
+          }
+          &:nth-child(2) {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+          }
+          &:last-child {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+    .guide-foot {
+      width: inherit;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .exper-questions {
+    width: inherit;
+    padding: 40px 0;
+    .exper-question-head {
+      width: inherit;
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .exper-question-list {
+      margin: 10px 0;
+      width: inherit;
+      .exper-question {
+        width: inherit;
+        padding: 30px 0;
+        border-bottom: solid 1px #f2f2f2;
+        div {
+          color: #666666;
+          &:first-child {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+          &:last-child {
+            font-size: 14px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    .exper-question-foot {
+      display: flex;
+      align-items: center;
+      > span {
+        color: #1a75ff;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+}

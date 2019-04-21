@@ -1,3 +1,44 @@
-<p>
-  exper-guide works!
-</p>
+<div class="exper-guide">
+  <div class="exper-start-guide">
+    <section>
+      <div class="item-text-head">新手上路</div>
+    </section>
+    <div class="guide-list">
+      <div class="guide-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+        <span>1</span>
+        <span>了解我们对体验的要求</span>
+        <span>对照质量标准，看看你的体验是否符合爱彼迎的要求</span>
+      </div>
+      <div class="guide-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+        <span>2</span>
+        <span>创建体验页面</span>
+        <span>强调您的专业技能和特色活动，吸引参与者加入体验。</span>
+      </div>
+      <div class="guide-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+        <span>3</span>
+        <span>提交爱彼迎审核</span>
+        <span>符合我们的质量标准后，您就可以发布并开展体验</span>
+      </div>
+    </div>
+    <div class="guide-foot">
+      <nc-button (click)="goAddExper()">开始吧</nc-button>
+    </div>
+  </div>
+
+  <div class="exper-questions">
+    <div class="exper-question-head">常见问题</div>
+    <div class="exper-question-list">
+      <div class="exper-question" *ngFor="let questionItem of questionItems">
+        <div>{{questionItem.name}}</div>
+        <div>{{questionItem.text}}</div>
+      </div>
+    </div>
+    <div class="exper-question-foot">
+      <span (click)="viewMore()">
+        <span>{{operTitle}}</span>
+        <span *ngIf="!isExpend" class="fa fa-angle-down"></span>
+        <span *ngIf="isExpend" class="fa fa-angle-up"></span>
+      </span>
+    </div>
+  </div>
+</div>

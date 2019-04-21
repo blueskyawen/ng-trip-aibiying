@@ -1,3 +1,18 @@
-<p>
-  exper-community works!
-</p>
+<div class="exper-community">
+  <section>
+    <div class="item-text-head">加入体验达人社区</div>
+    <div class="item-text-content">
+      体验达人社区中有厨师、艺术家，也有像你一样的当地通。体验达人们会带参与者参加只有内行人才知道的活动，去参与者自己一般找不到的地方。达人们给每位参与者带来宾至如归的体验，并积极促进体验过程中参与者之间的沟通和交流。
+    </div>
+  </section>
+  <div class="community-list">
+    <div *ngFor="let community of communityList"
+         class="community-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <img [src]="community.src" />
+      <div class="item-text">
+        <div>{{community.name}}</div>
+        <div>{{community.title}}</div>
+      </div>
+    </div>
+  </div>
+</div>
