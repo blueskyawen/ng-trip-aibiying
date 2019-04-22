@@ -1,0 +1,85 @@
+.nc-layout {
+  .lay-header {
+    background: #fff;
+    z-index: 5;
+    .layout-head {
+      width: inherit;
+      border-bottom: solid 1px #e6e6e6;
+    }
+  }
+  .nc-content {
+    position: relative;
+    width: 100%;
+    padding-top:10px;
+    min-height: 360px;
+    .content-container {
+      position: relative;
+      margin: 0 auto;
+      .wish-content {
+        width: 100%;
+        margin: 20px 0 30px;
+        display: flex;
+        .wish-head {
+          width: inherit;
+          display: flex;
+          justify-content: space-between;
+          padding: 5px 0 20px;
+          span {
+            display: inline-block;
+            &:first-child {
+              font-size: 30px;
+              color:#666;
+              font-weight: 800;
+            }
+            &:last-child {
+              padding: 10px 20px;
+              border:solid 2px #1a75ff;
+              color: #1a75ff;
+              font-size: 20px;
+              font-weight: 600;
+              cursor: pointer;
+              border-radius: 5px;
+            }
+          }
+        }
+        .wish-add {
+          &:first-child {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 100px 60px 0;
+            > div {
+              color: #666;
+              margin-bottom: 20px;
+              &:first-child {
+                font-size: 36px;
+                font-weight: 800;
+              }
+              &:nth-child(2) {
+                font-size: 16px;
+                font-weight: normal;
+                margin-bottom: 50px;
+              }
+            }
+          }
+          &:last-child {
+            display: inline-block;
+            height: 500px;
+            background: #f2f2f2 url('https://z1.muscache.cn/airbnb/static/4b09cd0220f25301736d4f248d6c7cd1.svg') no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+  .nc-footer {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-top:solid 1px #e6e6e6;
+    .lay-foot {
+      padding: 10px;
+    }
+  }
+}
+

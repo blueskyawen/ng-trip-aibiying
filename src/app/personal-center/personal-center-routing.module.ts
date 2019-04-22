@@ -4,7 +4,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserInviteComponent } from './user-invite.component';
-import { UserWishsComponent } from './user-wishs.component';
 import { UserTripGuideComponent } from './user-trip-guide.component';
 import { UserWorkManageComponent } from './user-work-manage.component';
 import { MyJourneyComponent } from './my-journey.component';
@@ -16,10 +15,6 @@ const routes: Routes = [
     {
         path: 'selfCenter',
         children: [
-            {
-                path: 'wishs',
-                component: UserWishsComponent
-            },
             {
                 path: 'invite',
                 component: UserInviteComponent

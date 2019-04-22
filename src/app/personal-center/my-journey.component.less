@@ -1,6 +1,5 @@
 .nc-layout {
   .lay-header {
-    position: fixed;
     background: #fff;
     z-index: 5;
     .layout-head {
@@ -11,10 +10,35 @@
   .nc-content {
     position: relative;
     width: 100%;
-    padding-top: 120px;
+    padding: 10px 0;
     min-height: 360px;
     .content-container {
-      margin: 5px auto;
+      position: relative;
+      margin: 0 auto;
+      .journey-head {
+        width: 100%;
+        margin: 10px 0;
+        div {
+          margin-bottom: 20px;
+          color:#666;
+          &:first-child {
+            font-size: 36px;
+            font-weight: 800;
+          }
+          &:last-child {
+            font-size: 16px;
+          }
+        }
+      }
+      .journey-body {
+        width: 100%;
+        margin-bottom: 20px;
+        img {
+          width: inherit;
+          height: 500px;
+          background: #f2f2f2;
+        }
+      }
     }
   }
   .nc-footer {

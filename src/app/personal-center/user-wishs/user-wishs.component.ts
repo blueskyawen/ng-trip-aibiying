@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserWishsComponent implements OnInit {
   showLoading: boolean = false;
+  isShowAdd: boolean = false;
   constructor() { }
 
   ngOnInit() {
     this.showLoading = true;
-    setTimeout(() => {this.showLoading = false;}, 2000);
+    setTimeout(() => {this.showLoading = false;}, 1000);
   }
 
+  addChange(type: string) {
+    console.log('addChange::== '+ type);
+  }
 }

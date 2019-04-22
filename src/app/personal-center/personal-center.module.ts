@@ -5,6 +5,7 @@ import { HomePageModule } from '../home-page/home-page.module';
 import { UserInfoModule } from './user-info/user-info.module';
 import { UserDataModule } from './user-data/user-data.module';
 import { UserShareModule } from './user-share/user-share.module';
+import { UserWishsModule } from './user-wishs/user-wishs.module';
 import { PersonalCenterRoutingModule } from './personal-center-routing.module';
 
 import { UserInviteComponent } from './user-invite.component';
@@ -13,14 +14,13 @@ import { UserWorkManageComponent } from './user-work-manage.component';
 import { MyJourneyComponent } from './my-journey.component';
 import { UserDashboardComponent } from './user-dashboard.component';
 import { UserInfoBoxComponent } from './user-info-box.component';
-import { UserWishsComponent } from './user-wishs.component';
 
 @NgModule({
   declarations: [UserInviteComponent, UserTripGuideComponent, UserWorkManageComponent,
-    MyJourneyComponent, UserDashboardComponent, UserInfoBoxComponent, UserWishsComponent],
+    MyJourneyComponent, UserDashboardComponent, UserInfoBoxComponent],
   imports: [
     ShareModule, ExhibitPageModule, HomePageModule, UserInfoModule, UserDataModule,
-    UserShareModule, PersonalCenterRoutingModule
+    UserShareModule, UserWishsModule, PersonalCenterRoutingModule
   ]
 })
 export class PersonalCenterModule { }

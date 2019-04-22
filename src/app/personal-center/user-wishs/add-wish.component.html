@@ -1,0 +1,11 @@
+<nc-dialog [header]="'创建心愿单'" [style]="'normal'" [(isShow)]="isDisplay" (isShowChange)="showChange()">
+  <div class="content">
+    创建心愿单
+  </div>
+  <div class="footer">
+    创建心愿单--foot
+  </div>
+</nc-dialog>
+
+<nc-message [type]="'success'" [(show)]="showMsg">登录成功</nc-message>
+<nc-message [type]="'error'" [(show)]="showErrorMsg">登录失败!</nc-message>
