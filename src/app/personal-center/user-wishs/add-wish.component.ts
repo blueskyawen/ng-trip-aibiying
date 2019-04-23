@@ -9,7 +9,12 @@ export class AddWishComponent implements OnInit {
   @Input() isDisplay: boolean = false;
   @Output() isDisplayChange = new EventEmitter<boolean>();
   @Output() addChange = new EventEmitter<string>();
-  wishData: any = {name: '', password: '', checkFlag: 1};
+  wishData: any = {
+    name: '',
+    private: false,
+    img: ''
+  };
+  wishImages: any[] = [];
 
   showMsg: boolean = false;
   showErrorMsg: boolean = false;

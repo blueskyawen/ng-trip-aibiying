@@ -1,0 +1,54 @@
+{
+  "list": [
+    {
+      "city": "成都",
+      "city_en": "Chengdu",
+      "image": "https://z1.muscache.cn/im/pictures/5dbe1410-30f2-4c31-b6e7-b0cad5295d47.jpg?aki_policy=x_large"
+    },
+    {
+      "city": "北京",
+      "city_en": "Beijing",
+      "image": "https://z1.muscache.cn/im/pictures/943666ab-1685-4682-844e-8aacf285ff31.jpg?aki_policy=x_large"
+    },
+    {
+      "city": "上海",
+      "city_en": "Shanghai",
+      "image": "https://z1.muscache.cn/im/pictures/c7ca932d-27a7-4564-ba47-48a7a16de94c.jpg?aki_policy=x_large"
+    },
+    {
+      "city": "香港",
+      "city_en": "Hong Kong",
+      "image": "https://z1.muscache.cn/im/pictures/36eaca56-fe75-43e8-b74d-73829adea0d0.jpg?aki_policy=x_large_portrait"
+    },
+    {
+      "city": "东京",
+      "city_en": "Tokyo",
+      "image": "https://z1.muscache.cn/im/pictures/ec506c57-9d9b-4a00-ade1-5beb080f5761.jpg?aki_policy=x_large"
+    },
+    {
+      "city": "京都",
+      "city_en": "Kyoto",
+      "image": "https://z1.muscache.cn/im/pictures/cbfb6da0-c148-4968-bc07-1d9284b42296.jpg?aki_policy=x_large_portrait"
+    },
+    {
+      "city": "杭州",
+      "city_en": "Hangzhou",
+      "image": "https://z1.muscache.cn/im/pictures/761dab4a-4795-43f8-8256-88314143e0f7.jpg?aki_policy=x_large"
+    },
+    {
+      "city": "厦门",
+      "city_en": "Xiamen",
+      "image": "https://z1.muscache.cn/im/pictures/4b7db5b6-5ed1-4505-a22c-4421dd25ba06.jpg?aki_policy=x_large"
+    },
+    {
+      "city": "西安",
+      "city_en": "Xian",
+      "image": "https://z1.muscache.cn/im/pictures/80bb6fdf-e81f-438d-a655-f152a3c5af5d.jpg?aki_policy=x_large_portrait"
+    },
+    {
+      "city": "武汉",
+      "city_en": "Wuhan",
+      "image": "https://z1.muscache.cn/im/pictures/cb4c863d-3fe7-431a-a274-fcde17f6c772.jpg?aki_policy=x_large"
+    }
+  ]
+}
