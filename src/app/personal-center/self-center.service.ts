@@ -76,6 +76,18 @@ export class SelfCenterService {
         );
     }
 
+    getHotWishById(id: any) {
+        return this.http.get('assets/hot-wishs.json').pipe(
+            map(res => {
+                let tmpWish = res['wishs'].find(item => {return item.id == id;});
+                if(tmpWish) {
+                    tmpWish.projects = res['wishs'][0].projects;
+                }
+                return tmpWish || {id: id, name: '', photo: '' , projects: []};
+            })
+        );
+    }
+
     publishHouse(url: string, data: any): Observable<any> {
         let publishHouse: any;
         let curHoster = this.pageRegisterLoginService.curloginedUser;

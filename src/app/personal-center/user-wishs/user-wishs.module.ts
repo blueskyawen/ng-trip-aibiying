@@ -8,9 +8,10 @@ import { UserWishsComponent } from './user-wishs.component';
 import { AddWishComponent } from './add-wish.component';
 import { HotWishListComponent } from './hot-wish-list.component';
 import { WishListComponent } from './wish-list.component';
+import { WishDetailComponent } from './wish-detail.component';
 
 @NgModule({
-  declarations: [UserWishsComponent, AddWishComponent, HotWishListComponent, WishListComponent],
+  declarations: [UserWishsComponent, AddWishComponent, HotWishListComponent, WishListComponent, WishDetailComponent],
   imports: [
     ShareModule, ExhibitPageModule, HomePageModule,
     UserWishsRoutingModule

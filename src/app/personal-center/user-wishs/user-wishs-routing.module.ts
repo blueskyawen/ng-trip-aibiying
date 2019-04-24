@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserWishsComponent } from './user-wishs.component';
 import { HotWishListComponent } from './hot-wish-list.component';
+import { WishDetailComponent } from './wish-detail.component';
 
 const routes: Routes = [
     {
@@ -14,7 +15,11 @@ const routes: Routes = [
     {
         path: 'selfCenter/hot-wishs',
         component: HotWishListComponent
-    }
+    },
+    {
+        path: 'selfCenter/wishs/:id',
+        component: WishDetailComponent
+    },
 ];
 
 @NgModule({

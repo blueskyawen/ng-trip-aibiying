@@ -1,5 +1,5 @@
 <div class="wish-list">
-  <div *ngFor="let wishItem of wishs"
+  <div *ngFor="let wishItem of wishs" [routerLink]="['/selfCenter/wishs', wishItem.id, {type: type}]" 
        class="wish-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
     <div class="wish-img">
       <img *ngIf="wishItem.photo" [src]="wishItem.photo" />

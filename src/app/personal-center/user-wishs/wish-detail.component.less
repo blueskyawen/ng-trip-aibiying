@@ -1,0 +1,93 @@
+.nc-layout {
+  .lay-header {
+    background: #fff;
+    z-index: 5;
+    .layout-head {
+      width: inherit;
+      border-bottom: solid 1px #e6e6e6;
+    }
+  }
+  .nc-content {
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    min-height: 360px;
+    .content-container {
+      margin: 5px auto;
+      .wish-detail-container {
+        width: 100%;
+        .wish-detail-head {
+          padding: 10px 0 30px;
+          display: flex;
+          justify-content: space-between;
+          color: #999999;
+          font-size: 18px;
+          font-weight: 500;
+          .all-wishs {
+            .fa {
+              margin-right: 10px;
+            }
+          }
+          .my-wishs {
+            .fa {
+              margin-left: 10px;
+            }
+          }
+        }
+        .wish-detail-content {
+          width: inherit;
+          box-sizing: border-box;
+          padding: 10px 20px 30px;
+          div {
+            margin-bottom: 20px;
+            color:#666;
+            &:first-child {
+              font-size: 28px;
+              font-weight: 600;
+            }
+            &:last-child {
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+        }
+        .wish-detail-projects {
+          width: inherit;
+          box-sizing: border-box;
+          .no-project {
+            padding: 10px 0;
+            > div {
+              margin-bottom: 15px;
+              &.no-project-head {
+                font-weight: bold;
+                font-size: 22px;
+                color: #666666;
+              }
+              &.no-project-text {
+                font-size: 16px;
+                color: #999;
+                line-height: 24px;
+              }
+              .no-project-oper {
+                display: flex;
+                justify-content: flex-start;
+                padding-left: 20px;
+                box-sizing: border-box;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .nc-footer {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-top:solid 1px #e6e6e6;
+    .lay-foot {
+      padding: 10px;
+    }
+  }
+}
+
