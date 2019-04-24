@@ -1,0 +1,37 @@
+<div class="nc-layout">
+    <div class="nc-header lay-header">
+        <div class="layout-head">
+            <app-page-head [scene]="'selfcenter'" [showSearch]="true"></app-page-head>
+        </div>
+    </div>
+    <div class="nc-content" *ngIf="!showLoading">
+        <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+            <div class="wish-list-head">
+                <span>热门心愿单</span>
+                <span class="wish-oper">
+                    <nc-button [type]="'cancel'" [routerLink]="['/selfCenter/wishs']">
+                        我的心愿单</nc-button>
+                </span>
+            </div>
+            <div class="wish-list-body">
+                <div *ngFor="let wishItem of hotWishs"
+                     class="wish-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+                    <div class="wish-img">
+                        <img *ngIf="wishItem.photo" [src]="wishItem.photo" />
+                    </div>
+                    <div class="wish-title title-hot">
+                        <div>{{wishItem.name}}</div>
+                        <div>{{wishItem.projects.length}}个房源</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wish-list-foot">
+                <span class="wish-list-oper" *ngIf="showMore" (click)="getMoreHotWishs()">加载更多</span>
+                <app-page-waiting *ngIf="showLoading2"></app-page-waiting>
+            </div>
+        </div>
+    </div>
+    <div class="nc-content" *ngIf="showLoading">
+        <app-page-waiting></app-page-waiting>
+    </div>
+</div>

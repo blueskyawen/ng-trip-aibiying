@@ -22,10 +22,15 @@ export class PublishHouseComponent implements OnInit {
               private dialogService : DialogService) { }
 
   ngOnInit() {
+    this.selfCenterService.publishSuccess = false;
   }
 
   canDeactivate(): Observable<boolean> | boolean {
-    return this.dialogService.confirm('已有修改未保存，确定离开吗?');
+    if(this.selfCenterService.publishSuccess) {
+      return true;
+    } else {
+      return this.dialogService.confirm('已有修改未保存，确定离开吗?');
+    }
   }
 
   stepProcChange(type: string) {

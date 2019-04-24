@@ -15,13 +15,6 @@ export class PublishSiteComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    this.selfCenterService.publishSub$.subscribe(res => {
-      if(res === 'success') {
-        this.setSucess();
-      } else {
-        this.setFail();
-      }
-    });
   }
 
   preStep() {
@@ -44,6 +37,7 @@ export class PublishSiteComponent implements OnInit {
   }
 
   setSucess() {
+    this.selfCenterService.publishSuccess = true;
     setTimeout(() => {
       this.showMsg = false;
       this.router.navigate(['/home']);

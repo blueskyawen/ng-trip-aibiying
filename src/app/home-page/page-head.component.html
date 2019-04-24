@@ -68,11 +68,20 @@
             <span>查看心愿单</span>
           </div>
           <div class="notify-item-list">
-            <div class="notify-item" *ngFor="let wish of wishList" [routerLink]="['/selfCenter/wishs',wish.id]">
+            <div class="notify-item" *ngIf="homePageService.wishList.length == 0" [routerLink]="['/selfCenter/wishs']">
               <span class="wish-content">
-                <span>{{wish.name}}</span>
-                <span>{{wish.person}}人</span>
-                <span>{{wish.project}}个项目</span>
+                <span>尚未创建心愿单</span>
+                <span>创建心愿单</span>
+              </span>
+              <span class="wish-image">
+                <span class="fa fa-heart-o"></span>
+              </span>
+            </div>
+            <div class="notify-item" *ngFor="let wish of homePageService.wishList" [routerLink]="['/selfCenter/wishs',wish.id]">
+              <span class="wish-content">
+                <span>{{wish.data.name}}</span>
+                <span>{{wish.data.person.adult + wish.data.person.child + wish.data.person.baby}}人</span>
+                <span>{{wish.data.projects.length}}个项目</span>
               </span>
               <span class="wish-image">
                 <span class="fa fa-heart-o"></span>

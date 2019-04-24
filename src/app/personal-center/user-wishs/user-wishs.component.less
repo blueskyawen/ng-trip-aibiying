@@ -17,7 +17,7 @@
       margin: 0 auto;
       .wish-content {
         width: 100%;
-        margin: 20px 0 30px;
+        margin: 20px 0 50px;
         display: flex;
         .wish-head {
           width: inherit;
@@ -67,6 +67,36 @@
             height: 500px;
             background: #f2f2f2 url('https://z1.muscache.cn/airbnb/static/4b09cd0220f25301736d4f248d6c7cd1.svg') no-repeat;
             background-size: cover;
+          }
+        }
+        .wishs-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .wishs-head {
+            width: inherit;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 15px;
+            .wish-oper {
+              color: #999;
+              font-size: 14px;
+              padding: 5px;
+              border: solid 1px #e6e6e6;
+              border-radius: 5px;
+              cursor: pointer;
+              &:hover {
+                color:#4da6ff;
+                border-color: #4da6ff;
+              }
+            }
+          }
+          .wishs-container {
+            width: inherit;
+            padding: 10px 0;
           }
         }
       }

@@ -1,0 +1,12 @@
+<div class="wish-list">
+  <div *ngFor="let wishItem of wishs"
+       class="wish-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <div class="wish-img">
+      <img *ngIf="wishItem.photo" [src]="wishItem.photo" />
+    </div>
+    <div class="wish-title" [class.title-hot]="showProject">
+      <div>{{wishItem.name}}</div>
+      <div *ngIf="showProject">{{wishItem.projects.length}}个房源</div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PageRegisterLoginService } from './page-register-login/page-register-login.service';
+import { HomePageService } from './home-page.service';
 
 class CcyOption {
   label: string;
@@ -44,10 +45,8 @@ export class PageHeadComponent implements OnInit {
   operStyle : any = {};
   showLoginOffMsg: boolean = false;
   userInfo: any = {info: 0, notify: 0};
-  wishList: any[] = [
-    {id: '1', name: '厦门鼓浪屿', person: 1, project: 1}
-  ];
-  constructor(public registerLoginService: PageRegisterLoginService) {
+  constructor(public registerLoginService: PageRegisterLoginService,
+              public homePageService: HomePageService) {
     this.selectedCCY = this.CCYOptions[0];
   }
 
@@ -56,6 +55,9 @@ export class PageHeadComponent implements OnInit {
     this.operStyle = {'color': this.scene === 'home' ? '#fff' : '#666'};
     this.registerLoginService.getLoginUserStorage();
     this.checkLoginState();
+    this.homePageService.getWishList().subscribe(res => {
+      this.homePageService.wishList = res.wishList.slice(0, 3);
+    });
   }
 
   selectCCY(option: CcyOption) {

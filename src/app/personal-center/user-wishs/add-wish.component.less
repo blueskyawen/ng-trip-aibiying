@@ -1,0 +1,21 @@
+.content {
+  form {
+    width: 100%;
+    > .nc-form-item {
+      position: relative;
+      .trip-person-set {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        z-index: 2;
+        & /deep/ .roomer-set-item {
+          width: 500px;
+        }
+      }
+      .privatcy-oo /deep/ .dropdown-content {
+        max-height: 120px;
+        height:auto !important;
+      }
+    }
+  }
+}

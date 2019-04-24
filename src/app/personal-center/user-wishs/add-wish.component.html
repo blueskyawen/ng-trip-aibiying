@@ -1,11 +1,42 @@
 <nc-dialog [header]="'创建心愿单'" [style]="'normal'" [(isShow)]="isDisplay" (isShowChange)="showChange()">
   <div class="content">
-    创建心愿单
+    <form novalidate>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start">名称</nc-form-label>
+        <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+          <nc-input [type]="'text'" [(modelValue)]="wishData.name" [required]="true"
+                    [showHint]="false" [placeHolder]="'为心愿单命名'">
+          </nc-input>
+        </nc-form-control>
+      </nc-form-group>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start">人数</nc-form-label>
+        <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12" (click)="openPersonSet()">
+          <nc-input [type]="'text'" [(modelValue)]="personData" [required]="true" [iconffix]="'pre'" [showHint]="false">
+            <nc-input-icon class="nc-input-icon-preffix"><span class="fa fa fa-user-plus"></span></nc-input-icon>
+          </nc-input>
+        </nc-form-control>
+        <app-roomer-set-card *ngIf="isShowPersonSet" class="trip-person-set" [(person)]="wishData.person"
+                             (personChange)="personChange($event)">
+        </app-roomer-set-card>
+      </nc-form-group>
+      <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+        <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start">隐私设置</nc-form-label>
+        <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
+          <nc-select class="privatcy-oo" [options]="privaOption" [(value)]="wishData.privacy" [width]="'100%'"></nc-select>
+        </nc-form-control>
+      </nc-form-group>
+    </form>
   </div>
   <div class="footer">
-    创建心愿单--foot
+    <span class="form-btn-group">
+      <nc-button [disabled]="disableAdd()" (click)="addWish()">确定</nc-button>
+    </span>
+    <span class="form-btn-group">
+      <nc-button [type]="'cancel'" (click)="cancel()">取消</nc-button>
+    </span>
   </div>
 </nc-dialog>
 
-<nc-message [type]="'success'" [(show)]="showMsg">登录成功</nc-message>
-<nc-message [type]="'error'" [(show)]="showErrorMsg">登录失败!</nc-message>
+<nc-message [type]="'success'" [(show)]="showMsg">创建成功</nc-message>
+<nc-message [type]="'error'" [(show)]="showErrorMsg">创建失败!</nc-message>

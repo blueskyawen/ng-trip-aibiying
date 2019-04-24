@@ -26,17 +26,17 @@
         <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start">日期</nc-form-label>
         <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12" (click)="openDateSelector()">
           <nc-input [type]="'text'" [(modelValue)]="tripDateRange" [required]="true" [iconffix]="'pre'" [showHint]="false">
-            <nc-input-icon><span class="fa fa-calendar"></span></nc-input-icon>
+            <nc-input-icon class="nc-input-icon-preffix"><span class="fa fa-calendar"></span></nc-input-icon>
           </nc-input>
         </nc-form-control>
         <nc-range-date-selector *ngIf="isShowDateRange" class="date-selector" [(dateRange)]="orderData.dateRange"
                                 (dateRangeChange)="dateRangeChange()"></nc-range-date-selector>
       </nc-form-group>
       <nc-form-group class="nc-form-item nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12">
-        <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start nc-content-start">房客</nc-form-label>
+        <nc-form-label class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12 nc-content-start">房客</nc-form-label>
         <nc-form-control class="nc-xl-col-12 nc-lg-col-12 nc-md-col-12 nc-sm-col-12 nc-xs-col-12" (click)="openPersonSet()">
           <nc-input [type]="'text'" [(modelValue)]="personData" [required]="true" [iconffix]="'pre'" [showHint]="false">
-            <nc-input-icon><span class="fa fa-lock"></span></nc-input-icon>
+            <nc-input-icon class="nc-input-icon-preffix"><span class="fa fa-user-plus"></span></nc-input-icon>
           </nc-input>
         </nc-form-control>
         <app-roomer-set-card *ngIf="isShowPersonSet" class="trip-person-set" [(person)]="orderData.person"

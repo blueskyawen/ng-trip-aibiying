@@ -6,8 +6,6 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, EMPTY, Subject } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { StorageService } from '../core/storage.service';
-import { DbStorageService} from '../core/db-storage.service';
-import { LocalStorageAuth, IndexDBAuth, AuthData} from '../core/storage-auth';
 import { PageRegisterLoginService } from '../home-page/page-register-login/page-register-login.service';
 
 @Injectable({
@@ -44,19 +42,14 @@ export class SelfCenterService {
         }
     };
     bedOptions: any[] = [];
+    publishSuccess: boolean = false;
 
-    private localAuth: LocalStorageAuth;
-    private indexDbAuth: IndexDBAuth;
-    authType: string = 'localStorage';
     tableName: string = 'published-houses';
     publishSub$ = new Subject<string>();
 
     constructor(private http: HttpClient,
                 private storageService: StorageService,
-                private dbStorageService: DbStorageService,
                 public pageRegisterLoginService: PageRegisterLoginService) {
-        this.localAuth = new LocalStorageAuth(this.storageService);
-        this.indexDbAuth = new IndexDBAuth(this.dbStorageService);
     }
 
     getHouseTypes() {
@@ -77,30 +70,73 @@ export class SelfCenterService {
         );
     }
 
+    getHotWishs() {
+        return this.http.get('assets/hot-wishs.json').pipe(
+            map(res => res['wishs'] || [])
+        );
+    }
+
     publishHouse(url: string, data: any): Observable<any> {
+        let publishHouse: any;
         let curHoster = this.pageRegisterLoginService.curloginedUser;
-        let publishData: any = {
-          owner: curHoster.name,
-          name: `${curHoster.name}_house_${Math.ceil(Math.random() * 1000)}`,
-          house: data
-        };
-        if(this.authType === 'localStorage') {
-            this.localAuth.register(this.tableName, url, publishData);
-            return of({status: 'success'});
+        let tmpPublishHouse = this.storageService.get(this.tableName);
+        if(tmpPublishHouse) {
+            publishHouse = JSON.parse(tmpPublishHouse);
+            let userHouse = publishHouse.list.find(house => {return house.owner === curHoster.name;});
+            if(userHouse) {
+                let id = userHouse.houses[userHouse.houses.length - 1].id;
+                userHouse.houses.push({
+                    id: id + 1,
+                    name: `house_0${id + 1}`,
+                    data: data
+                });
+            } else {
+                publishHouse.list.push({
+                    owner: curHoster.name,
+                    houses: [
+                        {
+                            id: 1,
+                            name: 'house_01',
+                            data: data
+                        }
+                    ]
+                });
+            }
+        } else {
+            publishHouse = {
+              list: [
+                  {
+                      owner: curHoster.name,
+                      houses: [
+                          {
+                              id: 1,
+                              name: 'house_01',
+                              data: data
+                          }
+                      ]
+                  }
+              ]
+            };
         }
 
-        if(this.authType === 'indexDB') {
-            this.indexDbAuth.register(this.tableName, url, publishData,
-                () => {this.procPublishSuccess();}, () => {this.procPublishFail();});
-            return of({});
+        this.storageService.set(this.tableName,JSON.stringify(publishHouse));
+        return of({status: 'success'});
+    }
+
+    getHouse(url: string, id: string): Observable<any> {
+        let curHoster = this.pageRegisterLoginService.curloginedUser;
+        let publishHouse = JSON.parse(this.storageService.get(this.tableName));
+        if(publishHouse) {
+            let userHouse = publishHouse.list.find(house => {return house.owner === curHoster.name;});
+            if(userHouse) {
+                let house = userHouse.houses.find(item => {return item.id === Number(id);});
+                return of({owner: curHoster.name, house: house});
+            } else {
+                return of({owner: curHoster.name, house: null});
+            }
+        } else {
+            return of({owner: curHoster.name, house: null});
         }
     }
 
-    procPublishSuccess() {
-        this.publishSub$.next('success');
-    }
-
-    procPublishFail() {
-        this.publishSub$.next('fail');
-    }
 }

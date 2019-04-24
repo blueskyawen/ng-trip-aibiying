@@ -1,0 +1,91 @@
+.nc-layout {
+  .lay-header {
+    background: #fff;
+    z-index: 5;
+    .layout-head {
+      width: inherit;
+      border-bottom: solid 1px #e6e6e6;
+    }
+  }
+  .nc-content {
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    min-height: 360px;
+    .content-container {
+      margin: 10px auto;
+      .wish-list-head {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .wish-list-body {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        .wish-item {
+          padding: 6px;
+          display: inline-block;
+          box-sizing: border-box;
+          cursor: pointer;
+          margin-bottom: 3px;
+          position: relative;
+          .wish-img {
+            width: 100%;
+            height: 240px;
+            border-radius: 2px;
+            background: #ccc;
+            img {
+              width: inherit;
+              height: inherit;
+              border-radius: 2px;
+            }
+          }
+          .wish-title {
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            padding: 0 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: 600;
+            &.title-hot {
+              color: #fff;
+            }
+            div {
+              width: inherit;
+              padding: 0 15px;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+      .wish-list-foot {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .wish-list-oper {
+          font-size: 16px;
+          padding: 10px;
+          border: solid 1px #4da6ff;
+          border-radius: 5px;
+          color:#4da6ff;
+          cursor: pointer;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .nc-footer {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-top:solid 1px #e6e6e6;
+    .lay-foot {
+      padding: 10px;
+    }
+  }
+}
+

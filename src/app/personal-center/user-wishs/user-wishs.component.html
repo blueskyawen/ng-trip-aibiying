@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <div class="wish-content">
+      <div class="wish-content" *ngIf="myWishs.length === 0">
         <div class="wish-add nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
           <div>在爱彼迎上保存和分享你的旅程</div>
           <div>心愿单可以让您轻松回顾自己心仪之地，并和他人一起完成行程规划。</div>
@@ -23,6 +23,31 @@
           </div>
         </div>
         <div class="wish-add nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+        </div>
+      </div>
+
+      <div class="wish-content" *ngIf="myWishs.length !== 0">
+        <div class="wishs-container">
+          <div class="wishs-head">
+            <span>您的心愿单</span>
+            <span>{{myWishs.length}}个心愿单</span>
+          </div>
+          <div class="wish-container">
+            <app-wish-list *ngIf="!showMyload" [type]="'my'" [wishList]="myWishs"></app-wish-list>
+            <app-page-waiting *ngIf="showMyload"></app-page-waiting>
+          </div>
+        </div>
+      </div>
+
+      <div class="wish-content">
+        <div class="wishs-container">
+          <div class="wishs-head">
+            <span>热门心愿单</span>
+            <span class="wish-oper" [routerLink]="['/selfCenter/hot-wishs']">查看所有</span>
+          </div>
+          <div class="wish-container">
+            <app-wish-list [type]="'hot'" [wishList]="hotWishs" [showProject]="true"></app-wish-list>
+          </div>
         </div>
       </div>
     </div>

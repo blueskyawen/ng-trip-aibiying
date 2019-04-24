@@ -6,9 +6,11 @@ import { UserWishsRoutingModule } from './user-wishs-routing.module';
 
 import { UserWishsComponent } from './user-wishs.component';
 import { AddWishComponent } from './add-wish.component';
+import { HotWishListComponent } from './hot-wish-list.component';
+import { WishListComponent } from './wish-list.component';
 
 @NgModule({
-  declarations: [UserWishsComponent, AddWishComponent],
+  declarations: [UserWishsComponent, AddWishComponent, HotWishListComponent, WishListComponent],
   imports: [
     ShareModule, ExhibitPageModule, HomePageModule,
     UserWishsRoutingModule
