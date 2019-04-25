@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ExhibitPageService } from '../exhibit-page.service';
 import { PageRegisterLoginService } from '../../home-page/page-register-login/page-register-login.service';
+import { HomePageService } from '../../home-page/home-page.service';
 
 @Component({
   selector: 'app-house-list-page',
@@ -19,10 +20,12 @@ export class HouseListPageComponent implements OnInit {
   isShowLogin: boolean = false;
   isShowRegister: boolean = false;
   isShowRelateWish: boolean = false;
-  pickHouse: any;
+  pickHouse: any = {imgs:[]};
+  myWishs: any[] = [];
   constructor(private route: ActivatedRoute,private router: Router,
               private exhibitPageService: ExhibitPageService,
-              public pageRegisterLoginService: PageRegisterLoginService) { }
+              public pageRegisterLoginService: PageRegisterLoginService,
+              private homePageService: HomePageService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -33,6 +36,14 @@ export class HouseListPageComponent implements OnInit {
       } else {
         this.getCityHouses();
       }
+    });
+    this.getMyWishs();
+  }
+
+  getMyWishs() {
+    this.homePageService.getWishList().subscribe(res => {
+      this.myWishs = res.wishList;
+      this.myWishs.forEach(item => {item.selected = false;});
     });
   }
 

@@ -11,6 +11,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 export class HomePageService {
   tableName: string = 'wish-list';
   wishList: any[] = [];
+  myWishList: any[] = [];
   constructor(private http: HttpClient,
               private storageService: StorageService,
               public pageRegisterLoginService: PageRegisterLoginService) { }
