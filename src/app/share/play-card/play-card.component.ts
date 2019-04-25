@@ -12,9 +12,14 @@ export class PlayCardComponent implements OnInit {
   @Input() showFality: boolean = false;
   @Input() showUser: boolean = false;
   @Output() loveHouseChange = new EventEmitter();
+  @Input() height: string = '200px';
+  imgStyles : any = {'height': '200px'};
   constructor() { }
 
   ngOnInit() {
+    if(this.height) {
+      this.imgStyles = {'height': this.height};
+    }
   }
 
   loveTheHouse() {

@@ -35,6 +35,7 @@ export class WishDetailComponent implements OnInit {
       if(this.type === 'hot') {
         this.selfCenterService.getHotWishById(this.wishId).subscribe(res => {
           this.wish = res;
+          this.procProjectList();
           setTimeout(() => {this.showLoading = false;}, 1000);
         });
       } else {
@@ -46,9 +47,23 @@ export class WishDetailComponent implements OnInit {
             this.wish.person = res.wish.data.person;
             this.wish.projects = res.wish.data.projects;
           }
+          this.procProjectList();
           setTimeout(() => {this.showLoading = false;}, 1000);
         });
       }
+    });
+  }
+
+  procProjectList() {
+    this.wish.projects.forEach(project => {
+      project.imgOption = [];
+      project.imgs.forEach(image => {
+        project.imgOption.push({
+          url: image,
+          disable: false,
+          callback: () => {this.router.navigate(['/house', project.id]); }
+        });
+      });
     });
   }
 

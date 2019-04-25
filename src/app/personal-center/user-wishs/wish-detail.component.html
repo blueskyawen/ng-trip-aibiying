@@ -38,7 +38,9 @@
         <div class="wish-project" *ngIf="wish.projects.length !== 0">
           <div class="project-head">{{wish.projects.length}}个房源</div>
           <div class="project-list">
-            房源列表
+            <div class="project-item" *ngFor="let project of wish.projects">
+              <app-play-card [playHouse]="project" [height]="'300px'" [showUser]="true"></app-play-card>
+            </div>
           </div>
         </div>
       </div>
