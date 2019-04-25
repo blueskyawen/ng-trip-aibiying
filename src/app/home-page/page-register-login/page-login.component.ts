@@ -11,6 +11,7 @@ export class PageLoginComponent implements OnInit {
   @Input() isDisplay: boolean = false;
   @Output() isDisplayChange = new EventEmitter<boolean>();
   @Output() toRegisterEvent = new EventEmitter<boolean>();
+  @Output() loginSuccessEvent = new EventEmitter();
   loginData: any = {name: '', password: '', checkFlag: 1};
   isLoading: boolean = false;
   showMsg: boolean = false;
@@ -70,6 +71,7 @@ export class PageLoginComponent implements OnInit {
       this.showMsg = true;
       this.isDisplay = false;
       this.isDisplayChange.emit(this.isDisplay);
+      this.loginSuccessEvent.emit();
     },1000);
   }
 

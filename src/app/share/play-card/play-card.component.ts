@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-play-card',
@@ -11,9 +11,14 @@ export class PlayCardComponent implements OnInit {
   @Input() showLove: boolean = false;
   @Input() showFality: boolean = false;
   @Input() showUser: boolean = false;
+  @Output() loveHouseChange = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  loveTheHouse() {
+    this.loveHouseChange.emit();
   }
 
 }

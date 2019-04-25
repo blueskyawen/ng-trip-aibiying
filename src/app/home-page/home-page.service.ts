@@ -86,6 +86,30 @@ export class HomePageService {
     }
   }
 
+  delOneWish(id: string): Observable<any> {
+    let curHoster = this.getCurUser();
+    let tmpWish = JSON.parse(this.storageService.get(this.tableName));
+    if(tmpWish) {
+      let userWish = tmpWish.list.find(item => {return item.owner === curHoster.name;});
+      if(userWish) {
+        let wish = userWish.wishList.find(wish => {return wish.id == id;});
+        if(wish) {
+          userWish.wishList = userWish.wishList.filter(item => {
+            return item.id.toString() !== id.toString();
+          });
+          this.storageService.set(this.tableName,JSON.stringify(tmpWish));
+          return of(true);
+        } else {
+          return of(true);
+        }
+      } else {
+        return of(true);
+      }
+    } else {
+      return of(true);
+    }
+  }
+
   getCurUser() {
     if(this.pageRegisterLoginService.curloginedUser) {
       return this.pageRegisterLoginService.curloginedUser;

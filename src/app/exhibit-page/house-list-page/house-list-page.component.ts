@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ExhibitPageService } from '../exhibit-page.service';
+import { PageRegisterLoginService } from '../../home-page/page-register-login/page-register-login.service';
 
 @Component({
   selector: 'app-house-list-page',
@@ -15,31 +16,52 @@ export class HouseListPageComponent implements OnInit {
   cityHouselist1: any[] = [];
   cityHouselist2: any[] = [];
   curPageIndex: number = 1;
+  isShowLogin: boolean = false;
+  isShowRegister: boolean = false;
+  isShowRelateWish: boolean = false;
+  pickHouse: any;
   constructor(private route: ActivatedRoute,private router: Router,
-              private exhibitPageService: ExhibitPageService) { }
+              private exhibitPageService: ExhibitPageService,
+              public pageRegisterLoginService: PageRegisterLoginService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.cityName = params.get('city');
       this.showLoading = true;
-      this.exhibitPageService.getPlatList(this.cityName).subscribe(res => {
-        console.log(res);
-        if(this.cityName !== 'London') {
-          let tempCitys = [];
-          res.forEach(item => {
-            tempCitys = tempCitys.concat(item.list);
-          });
-          const inhibitCity = tempCitys.find(city => {
-            return city.city_en === this.cityName;
-          });
-          this.cityHouselist = inhibitCity.houses;
-        } else {
-          this.cityHouselist = res;
-        }
+      if(this.cityName === 'all') {
+        this.getAllHouses();
+      } else {
+        this.getCityHouses();
+      }
+    });
+  }
 
-        this.InitPlayData();
-        this.showLoading = false;
-      });
+  getCityHouses() {
+    this.exhibitPageService.getPlatList(this.cityName).subscribe(res => {
+      console.log(res);
+      if(this.cityName !== 'London') {
+        let tempCitys = [];
+        res.forEach(item => {
+          tempCitys = tempCitys.concat(item.list);
+        });
+        const inhibitCity = tempCitys.find(city => {
+          return city.city_en === this.cityName;
+        });
+        this.cityHouselist = inhibitCity.houses;
+      } else {
+        this.cityHouselist = res;
+      }
+      this.InitPlayData();
+      this.showLoading = false;
+    });
+  }
+
+  getAllHouses() {
+    this.exhibitPageService.getAllHouseList().subscribe(res => {
+      console.log(res);
+      this.cityHouselist = res;
+      this.InitPlayData();
+      this.showLoading = false;
     });
   }
 
@@ -64,6 +86,29 @@ export class HouseListPageComponent implements OnInit {
 
   handleIndexChange() {
 
+  }
+
+  pickTheHouse(house: any) {
+    this.pickHouse = house;
+    if(this.pageRegisterLoginService.isLogined) {
+      this.isShowRelateWish = true;
+    } else {
+      this.isShowLogin = true;
+    }
+  }
+
+  handleToLoginEvnent() {
+    this.isShowLogin = true;
+  }
+
+  handleToRegisterEvnent() {
+    this.isShowRegister = true;
+  }
+
+  loginSuccess() {
+    setTimeout(() => {
+      this.pickTheHouse(this.pickHouse);
+    },500);
   }
 
 }

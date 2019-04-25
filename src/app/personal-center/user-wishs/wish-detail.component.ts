@@ -20,9 +20,12 @@ export class WishDetailComponent implements OnInit {
   };
   wishId: number;
   type: string;
+  isShowDel: boolean = false;
+  showMsg: boolean = false;
   constructor(private selfCenterService: SelfCenterService,
               private homePageService: HomePageService,
-              private route: ActivatedRoute,) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -49,4 +52,22 @@ export class WishDetailComponent implements OnInit {
     });
   }
 
+  deleteWish() {
+    this.isShowDel = true;
+  }
+
+  deleteConfirm() {
+    this.homePageService.delOneWish(this.wishId.toString()).subscribe(res => {
+      this.showMsg = true;
+      setTimeout(() => {
+        this.showMsg = false;
+        this.isShowDel = false;
+        this.router.navigate(['/selfCenter/wishs']);
+      }, 2000);
+    });
+  }
+
+  cancel() {
+    this.isShowDel = false;
+  }
 }

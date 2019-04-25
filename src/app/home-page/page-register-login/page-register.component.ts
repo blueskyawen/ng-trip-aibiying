@@ -11,6 +11,7 @@ export class PageRegisterComponent implements OnInit {
   @Input() isDisplay: boolean = false;
   @Output() isDisplayChange = new EventEmitter<boolean>();
   @Output() toLoginEvent = new EventEmitter<boolean>();
+  @Output() regisSuccessEvent = new EventEmitter();
   isShowOthers: boolean = false;
   isShowPhoneReg: boolean = false;
   registerData: any = {name: '', password: '', checkFlag: 1};
@@ -74,6 +75,7 @@ export class PageRegisterComponent implements OnInit {
       this.showMsg = true;
       this.isDisplay = false;
       this.isDisplayChange.emit(this.isDisplay);
+      this.regisSuccessEvent.emit();
     },1000);
   }
 

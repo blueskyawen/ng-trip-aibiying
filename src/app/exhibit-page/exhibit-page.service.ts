@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, of, EMPTY } from 'rxjs';
+import { Observable, of, EMPTY, forkJoin } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -33,4 +33,18 @@ export class ExhibitPageService {
     );
   }
 
+  getAllHouseList() {
+    return forkJoin(this.getPlatList('London'), this.getPlatList('all')).pipe(
+        map((data: any) => {
+          let houseList = [];
+          houseList = houseList.concat(data[0]);
+          data[1].forEach(item => {
+            item.list.forEach(cityItem => {
+              houseList = houseList.concat(cityItem.houses);
+            });
+          });
+          return houseList;
+        })
+    );
+  }
 }

@@ -4,10 +4,9 @@
       <app-page-head [scene]="'selfcenter'" [showSearch]="true"></app-page-head>
     </div>
   </div>
-  <div class="nc-content" *ngIf="!showLoading">
-    <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      <div class="wish-detail-container">
-        <div class="wish-detail-head">
+  <div class="nc-content nc-flex" *ngIf="!showLoading">
+    <div class="wish-detail-container nc-xl-col-5 nc-lg-col-5 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+      <div class="wish-detail-head">
           <span class="all-wishs" [routerLink]="['/selfCenter/hot-wishs']">
             <span class="fa fa-angle-left"></span>
             <span>所有心愿单</span>
@@ -16,31 +15,57 @@
             <span>我的心愿单</span>
             <span class="fa fa-angle-right"></span>
           </span>
-        </div>
-        <div class="wish-detail-content">
+      </div>
+      <div class="wish-detail-content">
+        <div class="wish-content-name">
           <div>{{wish.name}}</div>
           <div>{{wish.person.adult + wish.person.child + wish.person.baby}}位房客</div>
         </div>
-        <div class="wish-detail-projects">
-          <div class="no-project" *ngIf="wish.projects.length === 0">
-            <div class="no-project-head">尚未收藏任何内容</div>
-            <div class="no-project-text">
-              如果看到喜欢的房源，您可以点击心形图标将其保存。如果您计划和其他人一起出行，也可以邀请他们一起来看看，请他们也保存并选出各自喜爱的房源。</div>
-            <div class="no-project-oper">
-              <nc-button [style]="'custom'" [width]="'180px'" [height]="'36px'">开始浏览房源</nc-button>
-            </div>
+        <div class="wish-content-del" *ngIf="type === 'my'">
+          <span class="fa fa-trash-o" (click)="deleteWish()"></span>
+        </div>
+      </div>
+      <div class="wish-detail-projects">
+        <div class="no-project" *ngIf="wish.projects.length === 0">
+          <div class="no-project-head">尚未收藏任何内容</div>
+          <div class="no-project-text">
+            如果看到喜欢的房源，您可以点击心形图标将其保存。如果您计划和其他人一起出行，也可以邀请他们一起来看看，请他们也保存并选出各自喜爱的房源。</div>
+          <div class="no-project-oper">
+            <nc-button [style]="'custom'" [width]="'180px'" [height]="'36px'"
+                       [routerLink]="['/exhibit/houselist', 'all']">开始浏览房源</nc-button>
           </div>
-          <div class="wish-project" *ngIf="wish.projects.length !== 0">
-            <div class="project-head">{{wish.projects.length}}个房源</div>
-            <div class="project-list">
-              房源列表
-            </div>
+        </div>
+        <div class="wish-project" *ngIf="wish.projects.length !== 0">
+          <div class="project-head">{{wish.projects.length}}个房源</div>
+          <div class="project-list">
+            房源列表
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="wish-detail-map nc-xl-col-7 nc-lg-col-7 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">
     <app-page-waiting></app-page-waiting>
   </div>
 </div>
+
+<nc-message [type]="'success'" [(show)]="showMsg">删除成功</nc-message>
+<nc-dialog [header]="'删除心愿单'" [style]="'confirm'" [(isShow)]="isShowDel">
+  <div class="content">
+    <div class="delwish-head">
+      <span>!</span>
+      <span>你确认要删除该心愿单吗？</span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="form-btn-group">
+      <nc-button [type]="'major'" (click)="deleteConfirm()">删除</nc-button>
+    </span>
+    <span class="form-btn-group">
+      <nc-button [type]="'cancel'" (click)="cancel()">取消</nc-button>
+    </span>
+  </div>
+</nc-dialog>

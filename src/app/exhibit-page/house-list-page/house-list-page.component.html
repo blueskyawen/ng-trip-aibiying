@@ -3,7 +3,8 @@
     <div class="list-content">
       <div *ngFor="let house of cityHouselist1"
            class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [showUser]="true"></app-play-card>
+        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true"
+                       [showUser]="true" (loveHouseChange)="pickTheHouse(house)"></app-play-card>
       </div>
     </div>
     <div class="list-invite">
@@ -33,3 +34,21 @@
 </div>
 
 <app-page-waiting *ngIf="showLoading"></app-page-waiting>
+
+<app-page-login [(isDisplay)]="isShowLogin"
+                (toRegisterEvent)="handleToRegisterEvnent()" (loginSuccessEvent)="loginSuccess()"></app-page-login>
+<app-page-register [(isDisplay)]="isShowRegister" (toLoginEvent)="handleToLoginEvnent()"></app-page-register>
+
+<nc-dialog [header]="'保存到心愿单'" [style]="'normal'" [(isShow)]="isShowRelateWish">
+  <div class="content">
+    您的心愿单
+  </div>
+  <div class="footer">
+    <span class="form-btn-group">
+      <nc-button>确定</nc-button>
+    </span>
+    <span class="form-btn-group">
+      <nc-button [type]="'cancel'">取消</nc-button>
+    </span>
+  </div>
+</nc-dialog>
