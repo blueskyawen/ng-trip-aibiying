@@ -84,7 +84,8 @@
                 <span>{{wish.data.projects.length}}个项目</span>
               </span>
               <span class="wish-image">
-                <span class="fa fa-heart-o"></span>
+                <span *ngIf="wish.data.projects.length === 0" class="fa fa-heart-o"></span>
+                <img *ngIf="wish.data.projects.length !== 0" [src]="wish.data.projects[0].imgs[0]" />
               </span>
             </div>
           </div>

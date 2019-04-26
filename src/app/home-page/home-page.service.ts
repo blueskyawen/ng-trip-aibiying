@@ -60,6 +60,48 @@ export class HomePageService {
     return of({status: 'success'});
   }
 
+  addWishProject(wishs: any[],project: any): Observable<any> {
+    let curHoster = this.getCurUser();
+    let tmpWish = JSON.parse(this.storageService.get(this.tableName));
+    if(tmpWish) {
+      let userWish = tmpWish.list.find(item => {return item.owner === curHoster.name;});
+      if(userWish) {
+        userWish.wishList.forEach(item => {
+          if(wishs.find(item2 => {return item2.id == item.id;})) {
+            item.data.projects.push(project);
+          }
+        });
+        this.storageService.set(this.tableName,JSON.stringify(tmpWish));
+        return of(true);
+      } else {
+        return of(false);
+      }
+    } else {
+      return of(false);
+    }
+  }
+
+  removeWishProject(wishs: any[],project: any): Observable<any> {
+    let curHoster = this.getCurUser();
+    let tmpWish = JSON.parse(this.storageService.get(this.tableName));
+    if(tmpWish) {
+      let userWish = tmpWish.list.find(item => {return item.owner === curHoster.name;});
+      if(userWish) {
+        userWish.wishList.forEach(item => {
+          if(wishs.find(item2 => {return item2.id == item.id;})) {
+            item.data.projects = item.data.projects.filter(pro => {return pro.id != project.id;});
+          }
+        });
+        this.storageService.set(this.tableName,JSON.stringify(tmpWish));
+        return of(true);
+      } else {
+        return of(false);
+      }
+    } else {
+      return of(false);
+    }
+  }
+
   getWishList(): Observable<any> {
     let curHoster = this.getCurUser();
     let tmpWish = JSON.parse(this.storageService.get(this.tableName));

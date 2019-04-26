@@ -18,12 +18,15 @@ export class WishDetailComponent implements OnInit {
     'person': {'adult': 2, 'child': 0, 'baby': 0},
     'projects': []
   };
+  wishData: any = {};
   wishId: number;
   type: string;
   isShowDel: boolean = false;
   showMsg: boolean = false;
+  unpickHouse: any = {};
+  isShowUnpick: boolean = false;
   constructor(private selfCenterService: SelfCenterService,
-              private homePageService: HomePageService,
+              public homePageService: HomePageService,
               private route: ActivatedRoute,
               private router: Router) { }
 
@@ -41,6 +44,7 @@ export class WishDetailComponent implements OnInit {
       } else {
         this.homePageService.getOneWish(this.wishId.toString()).subscribe(res => {
           if(res.wish) {
+            this.wishData = res.wish;
             this.wish.id = res.wish.id;
             this.wish.name = res.wish.data.name;
             this.wish.privacy = res.wish.data.privacy;
@@ -84,5 +88,37 @@ export class WishDetailComponent implements OnInit {
 
   cancel() {
     this.isShowDel = false;
+  }
+
+  pickTheHouse(isPicked:boolean,house: any) {
+    if(isPicked) {
+      this.unpickHouse = house;
+      this.isShowUnpick = true;
+    }
+  }
+
+  unpickConfirm() {
+    this.homePageService.removeWishProject([this.wishData],this.unpickHouse).subscribe(res => {
+      if(res) {
+        this.wishData.data.projects = this.wishData.data.projects.filter(pro => {
+          return pro.id != this.unpickHouse.id;
+        });
+        this.wish.projects = this.wish.projects.filter(pro => {
+          return pro.id != this.unpickHouse.id;
+        });
+        this.undateLocalWishs();
+      }
+      this.isShowUnpick = false;
+    });
+  }
+
+  unpickCancel() {
+    this.isShowUnpick = false;
+  }
+
+  undateLocalWishs() {
+    this.homePageService.getWishList().subscribe(res => {
+      this.homePageService.wishList = res.wishList.slice(0, 3);
+    });
   }
 }

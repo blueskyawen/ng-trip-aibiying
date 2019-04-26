@@ -39,8 +39,13 @@
           <div class="project-head">{{wish.projects.length}}个房源</div>
           <div class="project-list">
             <div class="project-item" *ngFor="let project of wish.projects">
-              <app-play-card [playHouse]="project" [height]="'300px'" [showUser]="true"></app-play-card>
+              <app-play-card [playHouse]="project" [height]="'300px'" [pick]="project.picked"
+                             [showUser]="true" [showLove]="true" (loveHouseChange)="pickTheHouse($event,project)"></app-play-card>
             </div>
+          </div>
+          <div class="project-oper">
+            <nc-button [style]="'custom'" [width]="'180px'" [height]="'36px'"
+                       [routerLink]="['/exhibit/houselist', 'all']">浏览更多房源</nc-button>
           </div>
         </div>
       </div>
@@ -68,6 +73,23 @@
     </span>
     <span class="form-btn-group">
       <nc-button [type]="'cancel'" (click)="cancel()">取消</nc-button>
+    </span>
+  </div>
+</nc-dialog>
+
+<nc-dialog [header]="'删除房源'" [style]="'confirm'" [(isShow)]="isShowUnpick">
+  <div class="content">
+    <div class="delwish-head warn-head">
+      <span>!</span>
+      <span>你确认要移除该心愿单吗？</span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="form-btn-group">
+      <nc-button [type]="'major'" (click)="unpickConfirm()">移除</nc-button>
+    </span>
+    <span class="form-btn-group">
+      <nc-button [type]="'cancel'" (click)="unpickCancel()">取消</nc-button>
     </span>
   </div>
 </nc-dialog>

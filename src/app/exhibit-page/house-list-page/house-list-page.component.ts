@@ -20,30 +20,27 @@ export class HouseListPageComponent implements OnInit {
   isShowLogin: boolean = false;
   isShowRegister: boolean = false;
   isShowRelateWish: boolean = false;
-  pickHouse: any = {imgs:[]};
+  pickHouse: any = {imgs:[],good_press:5};
   myWishs: any[] = [];
   constructor(private route: ActivatedRoute,private router: Router,
               private exhibitPageService: ExhibitPageService,
               public pageRegisterLoginService: PageRegisterLoginService,
-              private homePageService: HomePageService) { }
+              public homePageService: HomePageService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.cityName = params.get('city');
       this.showLoading = true;
-      if(this.cityName === 'all') {
-        this.getAllHouses();
-      } else {
-        this.getCityHouses();
-      }
-    });
-    this.getMyWishs();
-  }
+      this.homePageService.getWishList().subscribe(res => {
+        this.myWishs = res.wishList;
+        this.myWishs.forEach(item => {item.selected = false;});
+        if(this.cityName === 'all') {
+          this.getAllHouses();
+        } else {
+          this.getCityHouses();
+        }
+      });
 
-  getMyWishs() {
-    this.homePageService.getWishList().subscribe(res => {
-      this.myWishs = res.wishList;
-      this.myWishs.forEach(item => {item.selected = false;});
     });
   }
 
@@ -83,7 +80,10 @@ export class HouseListPageComponent implements OnInit {
   }
 
   setCityHouseList(houses: any[]) {
+    let pickedHouses: any[] = [];
+    this.myWishs.forEach(item => {pickedHouses = pickedHouses.concat(item.data.projects);});
     houses.forEach(house => {
+      this.setHousePicked(house,pickedHouses);
       house.imgOption = [];
       house.imgs.forEach(image => {
         house.imgOption.push({
@@ -95,16 +95,26 @@ export class HouseListPageComponent implements OnInit {
     });
   }
 
+  setHousePicked(house: any,pickedHouses: any[]) {
+    if(pickedHouses.length === 0) {
+      house.picked = false;
+    } else {
+      house.picked = !!pickedHouses.find(item => {return item.id == house.id;});
+    }
+  }
+
   handleIndexChange() {
 
   }
 
-  pickTheHouse(house: any) {
-    this.pickHouse = house;
-    if(this.pageRegisterLoginService.isLogined) {
-      this.isShowRelateWish = true;
-    } else {
-      this.isShowLogin = true;
+  pickTheHouse(isPicked:boolean,house: any) {
+    if(!isPicked) {
+      this.pickHouse = house;
+      if(this.pageRegisterLoginService.isLogined) {
+        this.isShowRelateWish = true;
+      } else {
+        this.isShowLogin = true;
+      }
     }
   }
 
@@ -118,8 +128,30 @@ export class HouseListPageComponent implements OnInit {
 
   loginSuccess() {
     setTimeout(() => {
-      this.pickTheHouse(this.pickHouse);
+      this.pickTheHouse(false,this.pickHouse);
     },500);
   }
 
+  confirmAdd() {
+    let relativeWishs = this.myWishs.filter(wish => wish.selected);
+    if(relativeWishs.length === 0) {
+      return this.isShowRelateWish = false;
+    }
+    this.pickHouse.picked = true;
+    this.homePageService.addWishProject(relativeWishs,this.pickHouse).subscribe(res => {
+      if(res) {
+        this.myWishs.forEach(item => {item.selected = false;});
+        this.undateLocalWishs();
+      } else {
+        this.pickHouse.picked = false;
+      }
+      this.isShowRelateWish = false;
+    });
+  }
+
+  undateLocalWishs() {
+    this.homePageService.getWishList().subscribe(res => {
+      this.homePageService.wishList = res.wishList.slice(0, 3);
+    });
+  }
 }

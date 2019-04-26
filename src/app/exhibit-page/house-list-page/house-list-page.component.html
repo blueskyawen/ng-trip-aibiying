@@ -3,8 +3,8 @@
     <div class="list-content">
       <div *ngFor="let house of cityHouselist1"
            class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true"
-                       [showUser]="true" (loveHouseChange)="pickTheHouse(house)"></app-play-card>
+        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [pick]="house.picked"
+                       [showUser]="true" (loveHouseChange)="pickTheHouse($event,house)"></app-play-card>
       </div>
     </div>
     <div class="list-invite">
@@ -13,7 +13,8 @@
     <div class="list-content">
       <div *ngFor="let house of cityHouselist2"
            class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [showUser]="true"></app-play-card>
+        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [pick]="house.picked"
+                       [showUser]="true" (loveHouseChange)="pickTheHouse($event,house)"></app-play-card>
       </div>
     </div>
     <div class="list-foot">
@@ -24,7 +25,8 @@
     <div class="list-content">
       <div *ngFor="let house of cityHouselist"
            class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
-        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [showUser]="true"></app-play-card>
+        <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true"  [pick]="house.picked"
+                       [showUser]="true" (loveHouseChange)="pickTheHouse($event,house)"></app-play-card>
       </div>
     </div>
     <div class="list-foot">
@@ -51,8 +53,6 @@
         <span class="fa fa-heart" *ngIf="mywish.selected" (click)="mywish.selected = false"></span>
       </div>
     </div>
-  </div>
-  <div class="footer">
     <div class="pick-house">
       <div class="house-imge">
         <img [src]="pickHouse.imgs[0]" />
@@ -70,5 +70,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="footer">
+    <span (click)="confirmAdd()">确定</span>
   </div>
 </nc-dialog>

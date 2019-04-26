@@ -11,7 +11,8 @@ export class PlayCardComponent implements OnInit {
   @Input() showLove: boolean = false;
   @Input() showFality: boolean = false;
   @Input() showUser: boolean = false;
-  @Output() loveHouseChange = new EventEmitter();
+  @Input() pick: boolean = false;
+  @Output() loveHouseChange = new EventEmitter<boolean>();
   @Input() height: string = '200px';
   imgStyles : any = {'height': '200px'};
   constructor() { }
@@ -23,7 +24,7 @@ export class PlayCardComponent implements OnInit {
   }
 
   loveTheHouse() {
-    this.loveHouseChange.emit();
+    this.loveHouseChange.emit(this.pick);
   }
 
 }
