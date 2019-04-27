@@ -48,7 +48,7 @@
     </div>
     <div class="wish-list">
       <div class="wish-item" *ngFor="let mywish of myWishs">
-        <span>{{mywish.data.name}}</span>
+        <span>{{mywish.data?.name}}</span>
         <span class="fa fa-heart-o" *ngIf="!mywish.selected" (click)="mywish.selected = true"></span>
         <span class="fa fa-heart" *ngIf="mywish.selected" (click)="mywish.selected = false"></span>
       </div>
