@@ -55,9 +55,11 @@ export class PageHeadComponent implements OnInit {
     this.operStyle = {'color': this.scene === 'home' ? '#fff' : '#666'};
     this.registerLoginService.getLoginUserStorage();
     this.checkLoginState();
-    this.homePageService.getWishList().subscribe(res => {
-      this.homePageService.wishList = res.wishList.slice(0, 3);
-    });
+    if (this.registerLoginService.isLogined)  {
+      this.homePageService.getWishList().subscribe(res => {
+        this.homePageService.wishList = res.wishList.slice(0, 3);
+      });
+    }
   }
 
   selectCCY(option: CcyOption) {
