@@ -6,7 +6,27 @@
   </div>
   <div class="nc-content" *ngIf="!showLoading">
     <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      收件箱
+      <div class="info-box-head">
+        <nc-select [options]="infoOptions" [(value)]="selectedInfo" (valueChange)="labelChange()"></nc-select>
+      </div>
+      <div class="info-box-body">
+        <div class="info-list" *ngIf="showInfoList.length !== 0">
+          <div class="info-item" *ngFor="let showInfo of showInfoList">
+            showInfo
+          </div>
+        </div>
+        <div class="info-list no-infos" *ngIf="showInfoList.length === 0">
+          <div class="no-info-show">
+            <div class="no-info-show-head">没有消息｡</div>
+            <div class="no-info-show-title">
+              制定旅行计划过程中，请在这里阅读房东发来的消息。
+            </div>
+            <div class="no-info-show-oper">
+              <nc-button [type]="'major'" [routerLink]="['/exhibit/houselist', 'all']">浏览房源</nc-button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">

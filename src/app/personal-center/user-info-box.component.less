@@ -1,6 +1,5 @@
 .nc-layout {
   .lay-header {
-    position: fixed;
     background: #fff;
     z-index: 5;
     .layout-head {
@@ -11,10 +10,51 @@
   .nc-content {
     position: relative;
     width: 100%;
-    padding-top: 120px;
+    padding-top: 10px;
     min-height: 360px;
     .content-container {
-      margin: 5px auto;
+      margin: 30px auto;
+      .info-box-head {
+        margin-bottom: 10px;
+      }
+      .info-box-body {
+        padding: 30px 0;
+        border: solid 1px #e6e6e6;
+        border-radius: 2px;
+        .info-list {
+          width: 100%;
+          padding: 10px;
+          &.no-infos {
+            display: flex;
+            justify-content: center;
+          }
+          .info-item {
+            margin: 20px;
+            font-size: 16px;
+            color: #666;
+          }
+          .no-info-show {
+            width: 30%;
+            div {
+              margin-bottom: 20px;
+              display: flex;
+              justify-content: center;
+              color: #666;
+              &.no-info-show-head {
+                font-size: 24px;
+                font-weight: bold;
+              }
+              &.no-info-show-title {
+                font-size: 16px;
+                font-weight: normal;
+              }
+              &.no-info-show-oper {
+                padding: 10px 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
   .nc-footer {

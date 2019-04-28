@@ -1,6 +1,5 @@
 .nc-layout {
   .lay-header {
-    position: fixed;
     background: #fff;
     z-index: 5;
     .layout-head {
@@ -11,10 +10,177 @@
   .nc-content {
     position: relative;
     width: 100%;
-    padding-top: 120px;
     min-height: 360px;
     .content-container {
-      margin: 5px auto;
+      width: inherit;
+      margin: 10px auto;
+      .dashboard-head {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 25px;
+        position: relative;
+        background-color: #cceeff;
+        border-radius: 2px;
+        display: flex;
+        .head-icon {
+          display: inline-flex;
+          height: 54px;
+          width: 54px;
+          border: solid 5px #3399ff;
+          border-radius: 50%;
+          .fa {
+            font-size:35px;
+            color: #3399ff;
+            margin: auto;
+          }
+        }
+        .head-text {
+          display: inline-flex;
+          flex-direction: column;
+          margin-left: 20px;
+          > div {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            &:first-child {
+              font-weight: bold;
+            }
+            &:nth-child(2) {
+              font-weight: normal;
+            }
+            &:last-child {
+              span {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+        .head-delete {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          cursor: pointer;
+          font-size: 20px;
+          color: #3399ff;
+        }
+      }
+      .dashboard-body {
+        width: 100%;
+        padding: 20px 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+          box-sizing: border-box;
+          padding: 5px 8px;
+          &.dashboard-left {
+            > div {
+              width: 100%;
+              margin-bottom: 20px;
+              &.dashboard-user {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+                border: solid 1px #e6e6e6;
+                margin-bottom: 20px;
+                img {
+                  width: 240px;
+                  height: 240px;
+                  background-color: #cce5ff;
+                }
+                span {
+                  color: #666;
+                  &:first-of-type {
+                    font-size: 42px;
+                    margin-top: 20px;
+                  }
+                  &:nth-of-type(2) {
+                    font-size: 14px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                  }
+                  &:nth-of-type(3) {
+                    font-size: 14px;
+                    margin-top: 5px;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+          &.dashboard-content {
+            > div {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+          }
+          .dashboard-item {
+            border: solid 1px #e6e6e6;
+            margin-bottom: 20px;
+            .dashboard-item-head {
+              padding: 15px;
+              box-sizing: border-box;
+              font-size: 16px;
+              color: #333;
+              background-color: #f2f2f2;
+              border-bottom: solid 1px #e6e6e6;
+            }
+            .dashboard-item-content {
+              padding: 10px 20px;
+              box-sizing: border-box;
+              font-size: 14px;
+              color: #666;
+              line-height: 1.43em;
+              .content-item {
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                span {
+                  &.item-check {
+                    display: inline-flex;
+                    height: 24px;
+                    width: 24px;
+                    border: solid 1px #666;
+                    color: #666;
+                    border-radius: 50%;
+                    .fa {
+                      color: #666;
+                      margin: auto;
+                    }
+                  }
+                  &.item-title {
+                    cursor: pointer;
+                  }
+                }
+              }
+              &.dash-invite {
+                display: flex;
+                justify-content: space-between;
+                padding: 25px;
+                > span {
+                  &:first-child {
+                    span {
+                      color: #666;
+                      &:first-child {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                      }
+                      &:last-child {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+              }
+              &.dash-message {
+                padding: 25px;
+              }
+            }
+          }
+        }
+      }
     }
   }
   .nc-footer {

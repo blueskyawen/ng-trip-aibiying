@@ -6,7 +6,87 @@
   </div>
   <div class="nc-content" *ngIf="!showLoading">
     <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      控制面板
+      <div class="dashboard-head" *ngIf="showDbHead">
+        <div class="head-icon">
+          <span class="fa fa-cny"></span>
+        </div>
+        <div class="head-text">
+          <div>赚取￥75旅行基金</div>
+          <div>为好友的爱彼迎旅程送上最高￥550，你即可获得高达￥75的旅行基金。</div>
+          <div>
+            <span>
+              <nc-button [routerLink]="['/selfCenter/invite']">普通按钮</nc-button>
+            </span>
+            <span>
+              <nc-button [type]="'cancel'" (click)="showDbHead = false">以后再说</nc-button>
+            </span>
+          </div>
+        </div>
+        <span class="head-delete fa fa-close" (click)="showDbHead = false"></span>
+      </div>
+      <div class="dashboard-body">
+        <div class="dashboard-left nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+          <div class="dashboard-user">
+            <img [src]="userImg" />
+            <span>{{pRLoginService.curloginedUser.name}}</span>
+            <span [routerLink]="['/selfCenter/user/show']">查看个人资料</span>
+            <span [routerLink]="['/selfCenter/user/edit']">编辑个人资料</span>
+          </div>
+          <div class="dashboard-item">
+            <div class="dashboard-item-head">已验证的信息</div>
+            <div class="dashboard-item-content">
+              <div class="content-item">
+                <span>电子邮件地址</span>
+                <span class="item-check">
+                  <span class="fa fa-check"></span>
+                </span>
+              </div>
+              <div class="content-item">
+                <span>手机号</span>
+                <span class="item-check">
+                  <span class="fa fa-check"></span>
+                </span>
+              </div>
+              <div class="content-item">
+                <span class="item-title" [routerLink]="['/selfCenter/user/show']">验证更多信息</span>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-item">
+            <div class="dashboard-item-head">快速链接</div>
+            <div class="dashboard-item-content">
+              <div class="content-item">
+                <span class="item-title" [routerLink]="['/exhibit/myJourney']">查看/管理房源</span>
+              </div>
+              <div class="content-item">
+                <span class="item-title" [routerLink]="['/exhibit/houselist', 'all']">预订</span>
+              </div>
+              <div class="content-item">
+                <span class="item-title" [routerLink]="['/selfCenter/user/show']">评价与推荐语</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-content nc-xl-col-9 nc-lg-col-9 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+          <div class="dashboard-item">
+            <div class="dashboard-item-content dash-invite">
+              <span>
+                <span>邀请好友，赚取旅行基金！</span>
+                <span>每邀请一位好友，您可以获得高达￥75。</span>
+              </span>
+              <span>
+                <nc-button [type]="'major'" [routerLink]="['/selfCenter/invite']">邀请好友</nc-button>
+              </span>
+            </div>
+          </div>
+          <div class="dashboard-item">
+            <div class="dashboard-item-head">消息 ({{messages.length}}条新消息)</div>
+            <div class="dashboard-item-content dash-message" *ngIf="messages.length === 0">
+              如果您发消息给房东或发送预订申请，您将会在这里看到他们的回复。
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">
