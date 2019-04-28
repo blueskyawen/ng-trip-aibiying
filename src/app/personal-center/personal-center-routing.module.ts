@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserInviteComponent } from './user-invite.component';
 import { UserTripGuideComponent } from './user-trip-guide.component';
-import { UserWorkManageComponent } from './user-work-manage.component';
 import { MyJourneyComponent } from './my-journey.component';
 import { UserDashboardComponent } from './user-dashboard.component';
 import { UserInfoBoxComponent } from './user-info-box.component';
@@ -30,10 +29,6 @@ const routes: Routes = [
             {
                 path: 'infoBox',
                 component: UserInfoBoxComponent
-            },
-            {
-                path: 'workManage',
-                component: UserWorkManageComponent
             },
             {
                 path: 'trpGuide',
