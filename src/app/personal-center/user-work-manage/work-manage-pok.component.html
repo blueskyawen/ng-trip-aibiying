@@ -1,0 +1,10 @@
+<div class="work-manage-pok">
+  <div class="manage-pok-head">出色完成工作所需的一切</div>
+  <div class="manage-pok-list">
+    <div class="manage-pok nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12"
+         *ngFor="let workPok of workPoks">
+      <img [src]="workPok.img" />
+      <div class="pok-title">{{workPok.title}}</div>
+    </div>
+  </div>
+</div>

@@ -22,7 +22,25 @@
   </div>
   <div class="nc-content" *ngIf="!showLoading">
     <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      商务爱彼迎
+      <div class="work-manage-item">
+        <app-work-manage-pok></app-work-manage-pok>
+      </div>
+
+      <div class="work-manage-item">
+        <app-work-manage-activity></app-work-manage-activity>
+      </div>
+
+      <div class="work-manage-item">
+        <app-work-manage-text></app-work-manage-text>
+      </div>
+
+      <div class="work-manage-item">
+        <app-work-manage-mart></app-work-manage-mart>
+      </div>
+
+      <div class="work-manage-item">
+        <app-work-manage-contact></app-work-manage-contact>
+      </div>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">
@@ -30,7 +48,7 @@
   </div>
 
   <div class="nc-footer nc-flex nc-content-center">
-    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+    <div class="lay-foot nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
       <app-page-foot></app-page-foot>
     </div>
   </div>
