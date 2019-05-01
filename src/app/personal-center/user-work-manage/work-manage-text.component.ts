@@ -12,4 +12,7 @@ export class WorkManageTextComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToMore() {
+    window.open('https://www.airbnb.cn/companies', '_blank');
+  }
 }

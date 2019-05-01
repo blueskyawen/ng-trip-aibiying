@@ -1,0 +1,30 @@
+.work-manage-text {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
+  .manage-text {
+    width: inherit;
+    div {
+      margin-bottom: 15px;
+      text-align: center;
+      color: #666666;
+      &:first-child {
+        font-size: 42px;
+      }
+      &:nth-child(2) {
+        font-size: 18px;
+      }
+      &:last-child {
+        font-size: 18px;
+        color: #009499;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

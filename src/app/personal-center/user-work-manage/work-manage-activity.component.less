@@ -1,0 +1,102 @@
+.work-manage-activity {
+  width: 100%;
+  padding: 5px 0;
+  .work-activity-item {
+    width: inherit;
+    padding: 8px 0;
+    display: flex;
+    height: 540px;
+    .photo-item {
+      height: inherit;
+      img {
+        width: 100%;
+        height: inherit;
+        background-color: #f2f2f2;
+      }
+    }
+    .photo-title-item {
+      width: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .title-item {
+        div {
+          margin-bottom: 15px;
+          &.title-item-head {
+            font-size: 42px;
+          }
+          &.title-item-title {
+            font-size: 18px;
+            line-height: 24px;
+          }
+          &.title-item-text {
+            width: 100%;
+            > div {
+              width: inherit;
+              display: flex;
+              margin-bottom: 10px;
+              > span {
+                font-size: 16px;
+                &:first-child {
+                  display: inline-flex;
+                  height: 22px;
+                  width: 22px;
+                  border: solid 1px #009499;
+                  border-radius: 50%;
+                  color: #009499;
+                  justify-content: center;
+                  align-items: center;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+          &.title-item-foot {
+            width: 100%;
+            > span {
+              font-size: 16px;
+              color: #009499;
+              &.fa {
+                margin-left: 10px;
+              }
+            }
+            &:hover  {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    &:first-of-type {
+      .photo-item {
+        margin-right: 10px;
+      }
+      .photo-title-item {
+        background-color: #e6e6e6;
+        color: #666666;
+      }
+    }
+    &:nth-of-type(2) {
+      .photo-item {
+        margin-left: 10px;
+      }
+      .photo-title-item {
+        background-color: #009499;
+        color: #ffffff;
+        .title-item div.title-item-foot >  span {
+          color: #fff;
+        }
+      }
+    }
+    &:last-of-type {
+      .photo-item {
+        margin-right: 10px;
+      }
+      .photo-title-item {
+        background-color: #e6e6e6;
+        color: #666666;
+      }
+    }
+  }
+}

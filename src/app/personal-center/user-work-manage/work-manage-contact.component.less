@@ -1,0 +1,39 @@
+.work-manage-contact {
+  width: 100%;
+  height: 300px;
+  background-color: #009499;
+  display: flex;
+  .work-contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    .contact-item {
+      color: #ffffff;
+      > div {
+        width: 100%;
+        margin-bottom: 15px;
+        &.contact-head {
+          font-size: 32px;
+        }
+        &.contact-title {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        &.contact-foot {
+          > span {
+            font-size: 14px;
+            color: #fff;
+            &.fa {
+              margin-left: 10px;
+            }
+          }
+          &:hover  {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

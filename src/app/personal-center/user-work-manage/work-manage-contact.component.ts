@@ -12,4 +12,11 @@ export class WorkManageContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  goTrust() {
+    window.open('https://www.airbnb.cn/trust', '_blank');
+  }
+
+  goHelp() {
+    window.open('https://www.airbnb.cn/help', '_blank');
+  }
 }
