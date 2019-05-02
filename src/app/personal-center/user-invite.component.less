@@ -1,6 +1,5 @@
 .nc-layout {
   .lay-header {
-    position: fixed;
     background: #fff;
     z-index: 5;
     .layout-head {
@@ -11,10 +10,231 @@
   .nc-content {
     position: relative;
     width: 100%;
-    padding-top: 120px;
     min-height: 360px;
+    .head-container {
+      width: inherit;
+      background: #00a699 url("https://a0.muscache.com/airbnb/static/global_supply/mentor-hero@2x-73a33b56361b511c2096bdb65433a282.png") no-repeat;
+      background-size: cover;
+      .head-title {
+        padding: 42px 0;
+        margin: 0 auto;
+        > div {
+          width: 100%;
+          &.head-owner {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            img {
+              display: inline-block;
+              width: 100px;
+              height: 100px;
+              border: solid 2px #ffffff;
+              border-radius: 50%;
+              background-color: #f2f2f2;
+            }
+          }
+          &.head-owner-title {
+            color: #fff;
+            font-size: 40px;
+            margin-bottom: 15px;
+            text-align: center;
+          }
+          &.head-owner-text {
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            line-height: 26px;
+            margin-bottom: 150px;
+            span {
+              cursor: pointer;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
     .content-container {
-      margin: 5px auto;
+      margin: 0 auto 10px;
+      margin-top: -140px;
+      background-color: #fff;
+      .content-head {
+        box-sizing: border-box;
+        padding: 40px;
+        display: flex;
+        border: solid 1px #e6e6e6;
+        > div {
+          width: 50%;
+          box-sizing: border-box;
+          color: #666666;
+          &.head-left {
+            border-right: solid 1px #f2f2f2;
+            .head-h {
+              width: 100%;
+              margin-bottom: 20px;
+              font-size: 20px;
+            }
+            .head-t {
+              width: 100%;
+              font-size: 16px;
+              display: flex;
+              > div {
+                width: 50%;
+                &:first-of-type {
+                  .item-h {
+                    margin-bottom: 15px;
+                  }
+                  img {
+                    width: 200px;
+                    height: 200px;
+                    background-color: #f2f2f2;
+                  }
+                }
+                &:last-of-type {
+                  .item-h {
+                    margin-bottom: 15px;
+                  }
+                  img {
+                    width: 150px;
+                    height: 240px;
+                    background-color: #f2f2f2;
+                  }
+                }
+              }
+            }
+          }
+          &.head-right {
+            box-sizing: border-box;
+            padding-left: 50px;
+            .right-item {
+              margin-bottom: 40px;
+              color: #666666;
+              font-size: 16px;
+              .right-label {
+                margin-bottom: 10px;
+              }
+              .right-input {
+                padding: 5px 0;
+                .oper-button {
+                  display: inline-flex;
+                  align-items: center;
+                  background-color: #ff5050;
+                  color: #fff;
+                  font-size: 12px;
+                  padding: 6px 12px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  .fa {
+                    margin-right: 10px;
+                  }
+                  &.oper-button2 {
+                    background-color: #00a699;
+                    margin-right: 10px;
+                  }
+                }
+              }
+              .right-daoru {
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                color: #666666;
+                .daoru-label {
+                  font-size: 14px;
+                  &:after {
+                    content: ":";
+                  }
+                  margin-right: 10px;
+                }
+                .daoru-list {
+                  margin-right: 15px;
+                  .daoru-item {
+                    padding: 0 10px;
+                    &:not(:first-child) {
+                      border-left:solid 1px #f2f2f2;
+                    }
+                    &:first-child {
+                      &:before {
+                        display: inline-block;
+                        content: "";
+                        background: #1aa3ff url(https://a0.muscache.com/airbnb/static/referrals/contact_import/gmail-8ed24f7f449e52c3c2eb6832ffeadb1d.png) left center no-repeat;
+                        background-size: contain;
+                        height: 16px;
+                        width: 16px;
+                        margin-right: 10px;
+                      }
+                    }
+                    &:nth-child(2) {
+                      &:before {
+                        display: inline-block;
+                        content: "";
+                        background: #1aa3ff url(https://a0.muscache.com/airbnb/static/referrals/contact_import/yahoo-ed0a1a177f7e36eb0f8233bacf2af897.png) left center no-repeat;
+                        background-size: contain;
+                        height: 16px;
+                        width: 16px;
+                        margin-right: 10px;
+                      }
+                    }
+                    &:nth-child(3) {
+                      &:before {
+                        display: inline-block;
+                        content: "";
+                        background: #1aa3ff url(https://a0.muscache.com/airbnb/static/referrals/contact_import/windowslive-a989d1625fafb81204e8e48818c88659.png) left center no-repeat;
+                        background-size: contain;
+                        height: 16px;
+                        width: 16px;
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .content-introduce {
+        width: 100%;
+        padding: 40px 0;
+        .introduce-head {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+          font-size: 30px;
+        }
+        .introduce-body {
+          width: inherit;
+          padding: 5px 0;
+          display: flex;
+          flex-wrap: wrap;
+          .intriduce-item {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            .item-ah {
+              width: 70%;
+              color: #666666;
+              display: inline-flex;
+              span {
+                &:first-child {
+                  margin-right: 10px;
+                  font-size: 28px;
+                }
+                &:last-child {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .content-invite-more {
+
+      }
+      .content-foot {
+
+      }
     }
   }
   .nc-footer {

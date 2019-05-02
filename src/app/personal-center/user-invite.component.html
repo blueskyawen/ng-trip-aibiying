@@ -5,8 +5,103 @@
     </div>
   </div>
   <div class="nc-content" *ngIf="!showLoading">
+    <div class="head-container">
+      <div class="head-title nc-xl-col-7 nc-lg-col-7 nc-md-col-8 nc-sm-col-10 nc-xs-col-10">
+        <div class="head-owner">
+          <img [src]="userImg" />
+        </div>
+        <div class="head-owner-title">分享您对旅行的热爱</div>
+        <div class="head-owner-text">
+          当好友通过你分享的链接注册，将获得最高￥550的礼金券。他们使用礼金券并完成首次合资格行程后，你将获得￥75的旅行基金。
+          <span (click)="readMore()">阅读条款</span>
+        </div>
+      </div>
+    </div>
     <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
-      邀请好友
+      <div class="content-head">
+        <div class="head-left">
+          <div class="head-h">微信邀请</div>
+          <div class="head-t">
+            <div>
+              <div class="item-h">第1步 微信扫描二维码</div>
+              <div>
+                <img src="https://z1.muscache.cn/airbnb/static/wechat/service_account_qr_code_header_p1-3b21bb9e7d2f035e3a26a406ea9e598e.png" />
+              </div>
+            </div>
+            <div>
+              <div class="item-h">第2步 点击···分享页面</div>
+              <div>
+                <img src="https://z1.muscache.cn/airbnb/static/referrals/wechat_share/step-image-mdlg-e0b6adf12ec145d816690c06aa545774.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="head-right">
+          <div class="right-item">
+            <div class="right-label">社交网络邀请</div>
+            <div class="right-input">
+              <nc-input [type]="'text'" [(modelValue)]="link" [required]="true" [iconffix]="'sub'">
+                <nc-input-icon class="nc-input-icon-subffix">
+                  <span class="oper-button oper-button2">
+                    复制链接
+                  </span>
+                  <span class="oper-button">
+                    <span class="fa fa-weibo"></span>微博
+                  </span>
+                </nc-input-icon>
+              </nc-input>
+            </div>
+          </div>
+          <div class="right-item">
+            <div class="right-label">邮箱邀请</div>
+            <div class="right-input">
+              <nc-input [type]="'text'" [(modelValue)]="email" [required]="true" [iconffix]="'sub'">
+                <nc-input-icon class="nc-input-icon-subffix">
+                  <span class="oper-button">
+                    发送请求
+                  </span>
+                </nc-input-icon>
+              </nc-input>
+            </div>
+            <div class="right-daoru">
+              <span class="daoru-label">导入联系人</span>
+              <span class="daoru-list">
+                <span class="daoru-item">Gmail</span>
+                <span class="daoru-item">雅虎邮箱</span>
+                <span class="daoru-item">Outlook</span>
+                <span>
+                  <nc-help [style]="'default'" [title]="'爱彼迎储存了这些联系人，以便您能向好友发送邀请或其他消息。 如果您想删除联系人，请前往账号设置进行操作。'"></nc-help>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-introduce">
+        <div class="introduce-head">简单入门</div>
+        <div class="introduce-body">
+          <div class="intriduce-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+            <div class="item-ah">
+              <span class="fa fa-share-square-o"></span>
+              <span>分享您的链接或发送邮件给好友，告诉大家这个好消息吧。</span>
+            </div>
+          </div>
+          <div class="intriduce-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+            <div class="item-ah">
+              <span class="fa fa-siutcase"></span>
+              <span>当他们使用礼金券并成功预订后，你将获得￥75的旅行基金</span>
+            </div>
+          </div>
+          <div class="intriduce-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+            <div class="item-ah">
+              <span class="fa fa-handshake-o"></span>
+              <span>邀请好友即可获得高达￥33,675的奖励。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-invite-more"></div>
+      <div class="content-foot"></div>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">
