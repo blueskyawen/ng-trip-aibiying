@@ -20,4 +20,8 @@ export class UserInviteComponent implements OnInit {
   readMore() {
     window.open('https://www.airbnb.cn/help/article/2269', '_blank');
   }
+
+  goToyaoqing() {
+    window.open('https://www.airbnb.cn/help/article/84', '_blank');
+  }
 }

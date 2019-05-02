@@ -1,6 +1,5 @@
 .nc-layout {
   .lay-header {
-    position: fixed;
     background: #fff;
     z-index: 5;
     .layout-head {
@@ -11,10 +10,36 @@
   .nc-content {
     position: relative;
     width: 100%;
-    padding-top: 120px;
+    padding-top: 10px;
     min-height: 360px;
     .content-container {
-      margin: 5px auto;
+      margin: 10px auto;
+      display: flex;
+      .content-tabs {
+        padding: 0 20px;
+        box-sizing: border-box;
+        .tab-item {
+          width: 100%;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          color: #808080;
+          &:hover {
+            color: #bfbfbf;
+          }
+          &.active {
+            color: #333333
+          }
+        }
+        .tab-oper {
+          width: 100%;
+          padding: 15px 0;
+        }
+      }
+      .content-body {
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
     }
   }
   .nc-footer {

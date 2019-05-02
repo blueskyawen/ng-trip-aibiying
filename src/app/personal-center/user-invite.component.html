@@ -100,8 +100,22 @@
           </div>
         </div>
       </div>
-      <div class="content-invite-more"></div>
-      <div class="content-foot"></div>
+      <div class="content-invite-more">
+        <div class="invite-more-head">更多获得收入的方式</div>
+        <div class="invite-more-body">
+          <img src="https://z1.muscache.cn/airbnb/static/56b879348873eca5acff1fb8d5063e50.jpg" />
+          <div class="invite-text">
+            <div>邀请好友出租房源</div>
+            <div>马上邀请好友出租房源，他们完成首笔预订后，您可赚取￥0推荐奖励。</div>
+            <div>
+              <nc-button [routerLink]="['/home']">了解更多</nc-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-foot">
+        <span (click)="goToyaoqing()">了解如何通过邀请好友加入爱彼迎赚取旅行基金</span>
+      </div>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">
