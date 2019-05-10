@@ -4,7 +4,57 @@
       <div class="user-data-head">消息</div>
       <div class="user-data-body">
         <div class="data-body-title">接收预订请求等来自房东和房客的消息。</div>
-        <div class="data-body-content">BBB</div>
+        <div class="data-body-content">
+          <div class="data-message">
+            <div class="data-message-item" *ngFor="let msgItem of userInfoShow.message;let i=index">
+              <div class="item-head">
+                <nc-checkbox [(checked)]="msgItem.checked"></nc-checkbox>
+                <span>{{msgItem.label}}</span>
+              </div>
+              <div class="item-title" *ngIf="i === 1">发送至您的手机或平板设备</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notify-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <div class="user-data-container">
+      <div class="user-data-head">提醒</div>
+      <div class="user-data-body">
+        <div class="data-body-title">接收预订提醒、评论撰写提醒、价格提醒，以及与您使用爱彼迎有关的其他提醒消息。</div>
+        <div class="data-body-content">
+          <div class="data-message">
+            <div class="data-message-item" *ngFor="let msgItem of userInfoShow.remind;let i=index">
+              <div class="item-head">
+                <nc-checkbox [(checked)]="msgItem.checked"></nc-checkbox>
+                <span>{{msgItem.label}}</span>
+              </div>
+              <div class="item-title" *ngIf="i === 1">发送至您的手机或平板设备</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notify-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <div class="user-data-container">
+      <div class="user-data-head">提醒</div>
+      <div class="user-data-body">
+        <div class="data-body-title">接收预订提醒、评论撰写提醒、价格提醒，以及与您使用爱彼迎有关的其他提醒消息。</div>
+        <div class="data-body-content">
+          <div class="data-message">
+            <div class="data-message-item" *ngFor="let msgItem of userInfoShow.remind;let i=index">
+              <div class="item-head">
+                <nc-checkbox [(checked)]="msgItem.checked"></nc-checkbox>
+                <span>{{msgItem.label}}</span>
+              </div>
+              <div class="item-title" *ngIf="i === 1">发送至您的手机或平板设备</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

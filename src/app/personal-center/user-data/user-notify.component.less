@@ -4,7 +4,8 @@
   flex-wrap: wrap;
   .notify-item {
     box-sizing: border-box;
-    padding: 5px;
+    padding: 0 10px 10px;
+    margin-bottom: 10px;
   }
 }
 .user-data-container {
@@ -32,10 +33,30 @@
       border-bottom: solid 1px #e6e6e6;
     }
     .data-body-content {
+      width: 100%;
       padding: 12px 0;
       box-sizing: border-box;
       font-size: 14px;
       color: #666;
+      .data-message {
+        width: inherit;
+        .data-message-item {
+          width: inherit;
+          margin: 10px 0;
+          .item-head {
+            color: #333;
+            font-weight: 600;
+            span {
+              margin-left: 5px;
+            }
+          }
+          .item-title {
+            font-size: 12px;
+            padding-left: 36px;
+            color: #999;
+          }
+        }
+      }
     }
   }
 }
