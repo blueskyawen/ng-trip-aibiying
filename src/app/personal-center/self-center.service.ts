@@ -47,6 +47,32 @@ export class SelfCenterService {
     tableName: string = 'published-houses';
     publishSub$ = new Subject<string>();
 
+    tableName2: string = 'user-data';
+    defaultUserData = {
+        message: {
+            email: true, msgPush: false, phoneMsg: false
+        },
+        contact: {
+            email: '******@163.com ', phoneMsg: '+86 *** **** 0560'
+        },
+        remind: {
+            email: true, msgPush: true, phoneMsg: true
+        },
+        promote: {
+            email: true, msgPush: true, phoneMsg: true, phone: false
+        },
+        pocity: {
+            email: true, msgPush: false, phoneMsg: false, phone: false
+        },
+        support: {
+            email: false, msgPush: false, phoneMsg: false
+        },
+        phoneMsg: {
+            selectedPhone: '+86 *** **** 0560',
+            phones: ['+86 *** **** 0560']
+        }
+    };
+
     constructor(private http: HttpClient,
                 private storageService: StorageService,
                 public pageRegisterLoginService: PageRegisterLoginService) {
@@ -148,6 +174,40 @@ export class SelfCenterService {
             }
         } else {
             return of({owner: curHoster.name, house: null});
+        }
+    }
+
+    postUserData(url: string, data: any): Observable<any> {
+        let curHoster = this.pageRegisterLoginService.curloginedUser;
+        let tmpUserDatas = this.storageService.get(this.tableName2);
+        let tmpUsersss = [];
+        if(tmpUserDatas) {
+            tmpUsersss = JSON.parse(tmpUserDatas);
+            let tempIndex = tmpUsersss.findIndex(item => {return item.user === curHoster.name;});
+            if(tempIndex !== -1) {
+                tmpUsersss.splice(tempIndex,1,{user: curHoster.name, data: data});
+            } else {
+                tmpUsersss.push({user: curHoster.name, data: data});
+            }
+        } else {
+            tmpUsersss.push({user: curHoster.name, data: data});
+        }
+        this.storageService.set(this.tableName2,JSON.stringify(tmpUsersss));
+        return of({status: 'success'});
+    }
+
+    getUserData(url: string): Observable<any> {
+        let curHoster = this.pageRegisterLoginService.curloginedUser;
+        let tmpUserDatas = JSON.parse(this.storageService.get(this.tableName2));
+        if(tmpUserDatas) {
+            let tempUser = tmpUserDatas.find(item => {return item.item === curHoster.name;});
+            if(tempUser) {
+                return of(tempUser);
+            } else {
+                return of({user: curHoster.name, data: this.defaultUserData});
+            }
+        } else {
+            return of({user: curHoster.name, data: this.defaultUserData});
         }
     }
 

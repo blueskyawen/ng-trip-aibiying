@@ -31,6 +31,23 @@
       font-size: 14px;
       color: #666;
       border-bottom: solid 1px #e6e6e6;
+      .msg-phone {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-size: 14px;
+          color: #666;
+          display: inline-flex;
+          align-items: center;
+          &:first-child {
+            width: 30%;
+          }
+          &:last-child {
+            width: 50%;
+          }
+        }
+      }
     }
     .data-body-content {
       width: 100%;
@@ -55,8 +72,32 @@
             padding-left: 36px;
             color: #999;
           }
+          &.data-contact-item {
+            padding: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            span {
+              font-size: 14px;
+              color: #666;
+              display: inline-flex;
+              align-items: center;
+              &:first-child {
+                width: 30%;
+              }
+              &:last-child {
+                width: 50%;
+              }
+            }
+          }
         }
       }
     }
   }
+}
+
+.user-oper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }

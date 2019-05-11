@@ -26,26 +26,37 @@
         <div class="data-body-title">可在您的个人资料页面编辑此信息。编辑个人资料</div>
         <div class="data-body-content">
           <div class="data-message">
-            <div class="data-message-item">
-              <div class="item-head">
-                <span>电子邮件</span>
-                <span>{{userInfo.contact.email}}</span>
-              </div>
+            <div class="data-message-item data-contact-item">
+              <span>电子邮件</span>
+              <span>{{userInfo.contact.email}}</span>
             </div>
-            <div class="data-message-item">
-              手机号
+            <div class="data-message-item data-contact-item">
+              <span>账号提醒、验证信息及预订申请</span>
+              <span>{{userInfo.contact.phoneMsg}}</span>
             </div>
-            <div class="data-message-item">
-              <div class="item-head">
-                <span>账号提醒、验证信息及预订申请</span>
-                <span>{{userInfo.contact.phoneMsg}}</span>
-              </div>
+            <div class="data-message-item data-contact-item">
+              <span>来自房客/参与者的消息</span>
+              <span>{{userInfo.contact.phoneMsg}}</span>
             </div>
-            <div class="data-message-item">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notify-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <div class="user-data-container">
+      <div class="user-data-head">提醒</div>
+      <div class="user-data-body">
+        <div class="data-body-title">接收预订提醒、评论撰写提醒、价格提醒，以及与您使用爱彼迎有关的其他提醒消息。</div>
+        <div class="data-body-content">
+          <div class="data-message">
+            <div class="data-message-item" *ngFor="let msgItem of userInfoShow.remind;let i=index">
               <div class="item-head">
-                <span>来自房客/参与者的消息</span>
-                <span>{{userInfo.contact.phoneMsg}}</span>
+                <nc-checkbox [(checked)]="msgItem.checked"></nc-checkbox>
+                <span>{{msgItem.label}}</span>
               </div>
+              <div class="item-title" *ngIf="i === 1">发送至您的手机或平板设备</div>
             </div>
           </div>
         </div>
@@ -57,7 +68,16 @@
     <div class="user-data-container">
       <div class="user-data-head">短信</div>
       <div class="user-data-body">
-        <div class="data-body-title">选择短信消息方框后，即代表您同意爱彼迎及其合作伙伴向以下手机号发送自动推广短信。</div>
+        <div class="data-body-title">
+          <div>选择短信消息方框后，即代表您同意爱彼迎及其合作伙伴向以下手机号发送自动推广短信。</div>
+          <div class="msg-phone">
+            <span>短信通知请发送至</span>
+            <span>
+              <nc-select [options]="phoneOptions" [(value)]="userInfo.phoneMsg.selectedPhone"
+                         [width]="'100%'" [height]="'30px'"></nc-select>
+            </span>
+          </div>
+        </div>
         <div class="data-body-content">
           注：要了解更多信息，请发送“HELP”（帮助）至247262。要取消手机通知，请回复“STOP”（停止）至247262。可能会产生信息费和数据费。
         </div>
@@ -125,3 +145,9 @@
     </div>
   </div>
 </div>
+<div class="user-oper">
+  <nc-button [type]="'major'" (click)="confirmUserNotify()">保存</nc-button>
+</div>
+
+<nc-message [type]="'success'" [(show)]="showMsg">设置成功</nc-message>
+<nc-message [type]="'error'" [(show)]="showErrorMsg">设置失败!</nc-message>

@@ -1,3 +1,54 @@
-<p>
-  user-payment works!
-</p>
+<div class="user-payment">
+  <div class="payment-item">
+    <div class="user-data-container">
+      <div class="user-data-head">付款方式</div>
+      <div class="user-data-body">
+        <div class="data-body-content">
+          <div class="data-message">
+            请记住：爱彼迎绝不会要求您在站外汇钱。了解更多。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-item">
+    <div class="user-data-container">
+      <div class="user-data-head">您的礼金券</div>
+      <div class="user-data-body">
+        <div class="data-body-title">
+          <div class="pay-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+            <div class="item-head">添加礼金券</div>
+            <div class="item-title">
+              <span class="lijin-add">
+                <nc-input [type]="'text'" [(modelValue)]="lijinquan" [width]="'40%'"
+                          [required]="false" [showHint]="false"></nc-input>
+              </span>
+              <span class="lijin-add-button">
+                <nc-button [type]="'major'" (click)="addLijinquan()">添加礼金券</nc-button>
+              </span>
+            </div>
+          </div>
+          <div class="pay-item nc-xl-col-6 nc-lg-col-6 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+            <div class="item-head">显示</div>
+            <div class="item-title">
+              <span class="pay-select">
+                <nc-select [options]="payOptions" [(value)]="selectPay" [width]="'50%'"></nc-select>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="data-body-content">
+          <div class="data-message" *ngIf="selectPay === 'availables'">
+            您向账号添加的礼金券将在这里显示。
+          </div>
+          <div class="data-message" *ngIf="selectPay === 'unavailables'">
+            没有不可用的礼金券。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nc-message [type]="'success'" [(show)]="showMsg">设置成功</nc-message>
