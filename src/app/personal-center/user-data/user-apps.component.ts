@@ -12,4 +12,7 @@ export class UserAppsComponent implements OnInit {
   ngOnInit() {
   }
 
+  goAddZhanghao() {
+    window.open('https://www.airbnb.cn/host-assist', '_blank');
+  }
 }

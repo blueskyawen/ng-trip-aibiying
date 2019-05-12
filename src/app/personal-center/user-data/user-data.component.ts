@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-data',
@@ -34,11 +35,14 @@ export class UserDataComponent implements OnInit {
     }
   ];
   curTab: string = 'notify';
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.showLoading = true;
-    setTimeout(() => {this.showLoading = false;}, 1000);
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.curTab = params.get('tab');
+      setTimeout(() => {this.showLoading = false;}, 1000);
+    });
   }
 
   switchTab(item: any) {

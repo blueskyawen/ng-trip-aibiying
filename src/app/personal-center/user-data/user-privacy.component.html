@@ -1,3 +1,68 @@
-<p>
-  user-privacy works!
-</p>
+<div class="user-privacy">
+  <div class="privacy-item">
+    <div class="user-data-container">
+      <div class="user-data-head">社交联系人</div>
+      <div class="user-data-body">
+        <div class="data-body-title">
+          <div class="body-title">
+            社交联系人信息突出显示您的爱彼迎活动，包括向您使用爱彼迎的Facebook好友显示您的用户名、Facebook个人头像以及您最近到过的地方。
+          </div>
+          <div class="body-title">
+            关闭此功能后，您的账号仍然与Facebook关联，只是您的爱彼迎活动将不会在爱彼迎上与其他Facebook好友分享。您在本平台上的公开爱彼迎活动（如心愿单和公开评价等）仍会向其他爱彼迎用户显示。
+          </div>
+          <div class="body-title">
+            如果您想把您的Facebook帐户从爱彼迎取消关联，请前往信任和验证了解更多信息。
+          </div>
+          <div class="body-title">
+            <span>
+              <nc-checkbox [(checked)]="privacyData.contact" [isPartial]="false"></nc-checkbox>
+            </span>
+            <span>与使用爱彼迎的Facebook好友分享我的动态（推荐）</span>
+          </div>
+        </div>
+        <div class="data-body-content">
+          <div class="data-oper">
+            <nc-button [type]="'major'" (click)="showMsg = true">保存社交联系人</nc-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="privacy-item">
+    <div class="user-data-container">
+      <div class="user-data-head">在搜索引擎中显示房源和个人资料</div>
+      <div class="user-data-body">
+        <div class="data-body-title">
+          <div class="body-title">
+            搜索引擎能为您的房源吸引浏览量，让人们对您的房源产生兴趣并预订。
+          </div>
+          <div class="body-title">
+            也许您只希望您的房源和个人信息出现在爱彼迎的网站上，而不需要其他方面的宣传。您可以关闭搜索索引，以避免您的信息在搜索引擎（如谷歌和必应）的搜索结果中显示。
+          </div>
+          <div class="body-title">
+            请注意：此操作可能会减少您的预订，并需要几天时间才能生效。
+          </div>
+          <div class="body-title">
+            <span>
+              <nc-checkbox [(checked)]="privacyData.search" [isPartial]="false"></nc-checkbox>
+            </span>
+            <span>使我的个人资料及房源出现在搜索引擎，如谷歌和Bing的查询结果中（推荐）。</span>
+          </div>
+        </div>
+        <div class="data-body-content">
+          <div class="data-oper">
+            <nc-button [type]="'major'" (click)="showMsg = true">保存可被搜索的状态</nc-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nc-message [(show)]="showMsg" [style]="'right'" [headerTitle]="'保存成功'">
+  <div name="content">
+    <p>2s后自动消失</p>
+  </div>
+  <a class="manage" name="footer" herf="javascript:void(0);" (click)="showMsg = false">忽略</a>
+</nc-message>

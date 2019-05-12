@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-privacy.component.less']
 })
 export class UserPrivacyComponent implements OnInit {
-
+  privacyData: any = {
+    contact: 1, search: 1
+  };
+  showMsg: boolean = false;
   constructor() { }
 
   ngOnInit() {

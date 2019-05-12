@@ -1,0 +1,63 @@
+.user-apps {
+  width: 100%;
+  .app-item {
+    width: inherit;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+}
+
+.user-data-container {
+  display: block;
+  width: 100%;
+  border: solid 1px #dce0e0;
+  .user-data-head {
+    width: inherit;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    background-color: #edefed;
+    font-size: 16px;
+    color: #666;
+    border-bottom: solid 1px #ccc;
+  }
+  .user-data-body {
+    width: inherit;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    .data-body-title {
+      width: inherit;
+      padding: 12px 0;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: #666;
+      border-bottom: solid 1px #e6e6e6;
+      .body-title {
+        width: 100%;
+        font-size: 14px;
+        color: #808080;
+        line-height: 22px;
+        margin-bottom: 15px;
+      }
+    }
+    .data-body-content {
+      width: 100%;
+      padding: 12px 0;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: #666;
+      div {
+        margin-bottom: 10px;
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        &:last-child {
+          span {
+            color: #3399ff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
