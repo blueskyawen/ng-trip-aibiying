@@ -2,7 +2,7 @@
   <div class="trip-block-head trip-classic-city-head nc-flex nc-row-column">
     <span>经典旅行城市</span>
   </div>
-  <div class="trip-block-img-list trip-classic-city-list nc-md-display-none nc-lg-display-flex">
+  <div class="trip-block-img-list trip-classic-city-list nc-sm-display-none nc-md-display-none nc-lg-display-flex">
     <div *ngFor="let city of cityList;let i=index;" [routerLink]="['/city',city.id,{name: '伦敦'}]"
          class="trip-block-img-body nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-6 nc-xs-col-6">
       <div class="trip-block-img city-img">
@@ -18,7 +18,7 @@
     <nc-list-group-horizontal [stepWidth]="300" [hideOper]="true" [resetGroup]="showLoading">
       <ul class="nc-list-group list-group-horizontal trip-block-img-list trip-classic-city-list">
         <li *ngFor="let city of cityList;let i=index;" [routerLink]="['/city',city.id,{name: '伦敦'}]"
-             class="nc-list-group-item trip-block-img-body nc-xl-col-2 nc-lg-col-2 nc-md-col-2 nc-sm-col-6 nc-xs-col-6">
+             class="nc-list-group-item trip-block-img-body nc-xl-col-2 nc-lg-col-2 nc-md-col-2 nc-sm-col-2 nc-xs-col-2">
           <div class="trip-block-img city-img">
             <img [src]="city.imgUrl" [alt]="city.city" />
           </div>

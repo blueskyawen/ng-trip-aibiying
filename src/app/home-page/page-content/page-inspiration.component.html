@@ -5,7 +5,7 @@
   </div>
   <div class="trip-block-img-list trip-inspiration-list">
     <div *ngFor="let trip of tripList;let i=index;" (click)="goTripDetai(trip)"
-         class="trip-block-img-body nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+         class="trip-block-img-body nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-4 nc-xs-col-12">
       <div class="trip-block-img trip-item-img">
         <img [src]="trip.imgUrl" [alt]="trip.name">
       </div>
