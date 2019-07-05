@@ -17,6 +17,7 @@ export class PageTripStoryComponent implements OnInit {
     'activity': '活动',
     'shop': '店铺'
   };
+  mdHideIndexs : number[] = [4, 5, 6, 7];
   constructor(private pageContentService: PageContentService, private router: Router) { }
 
   ngOnInit() {

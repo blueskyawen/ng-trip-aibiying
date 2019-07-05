@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PageHighExperienceComponent implements OnInit {
   experList: any[] = [];
+  mdHideIndexs : number[] = [4, 5, 6, 7];
   constructor(private pageContentService: PageContentService, private router: Router) { }
 
   ngOnInit() {

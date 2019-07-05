@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PageInspirationComponent implements OnInit {
   tripList: any[] = [];
+  showLoading : boolean = false;
   constructor(private pageContentService: PageContentService, private router: Router) { }
 
   ngOnInit() {

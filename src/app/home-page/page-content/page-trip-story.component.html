@@ -3,8 +3,9 @@
     <span>精彩旅行故事</span>
   </div>
   <div class="trip-block-img-list trip-story-list">
-    <div *ngFor="let story of storyList" [routerLink]="['/story/detail',story.id]"
-         class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+    <div *ngFor="let story of storyList;let i=index;" [routerLink]="['/story/detail',story.id]"
+         class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-12 nc-xs-col-12"
+          [ngClass]="{'nc-md-display-none': mdHideIndexs.includes(i), 'nc-lg-display-inline-block': mdHideIndexs.includes(i)}">
       <app-trip-story-card [story]="story"></app-trip-story-card>
     </div>
   </div>

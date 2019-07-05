@@ -76,13 +76,16 @@
       display: flex;
       justify-content: space-between;
       img {
-        width: 430px;
+        width: 40%;
         height: inherit;
       }
       .divider-text {
         display: inline-flex;
         flex-direction: column;
         padding: 60px;
+        box-sizing: border-box;
+        width: 60%;
+        z-index: 1;
         > span {
           &:first-of-type {
             margin-bottom: 30px;

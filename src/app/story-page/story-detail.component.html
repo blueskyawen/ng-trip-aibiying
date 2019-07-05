@@ -1,6 +1,6 @@
 <div class="story-detail-container">
   <div *ngIf="!showLoading"
-       class="story-detail nc-xl-col-8 nc-lg-col-8 nc-md-col-10 nc-sm-col-12 nc-xs-col-12">
+       class="story-detail nc-xl-col-8 nc-lg-col-8 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
     <div class="story-detail-head">
       <span class="detail-head-user">
         <span>
@@ -104,7 +104,7 @@
       <div class="detail-others">相关故事</div>
       <div class="detail-others-content">
         <div *ngFor="let story of otherStorys"
-             class="other-story-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+             class="other-story-item nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
           <app-trip-story-card [story]="story"></app-trip-story-card>
         </div>
       </div>
