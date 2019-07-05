@@ -7,10 +7,10 @@
     <div class="house-photo-container">
       <div class="nc-container photos-container" *ngIf="!isShowPhotoView">
         <div class="nc-row nc-image-container photos-review">
-          <div class="nc-thumb-picture nc-col nc-xs-col-12 nc-sm-col-12 nc-md-col-6 nc-lg-col-6 nc-xl-col-6">
+          <div class="nc-thumb-picture nc-col nc-xs-col-12 nc-sm-col-6 nc-md-col-6 nc-lg-col-6 nc-xl-col-6">
             <img (click)="openPhotoView(0)" [src]="photoSrc.src" [alt]="photoSrc.alt" />
           </div>
-          <div class="nc-flex nc-flex-wrap nc-col nc-xs-col-12 nc-sm-col-12 nc-md-col-6 nc-lg-col-6 nc-xl-col-6">
+          <div class="nc-flex nc-flex-wrap nc-col nc-xs-col-12 nc-sm-col-6 nc-md-col-6 nc-lg-col-6 nc-xl-col-6">
             <div class="nc-thumb-picture nc-col nc-xs-col-6 nc-sm-col-6 nc-md-col-6 nc-lg-col-6 nc-xl-col-6"
                  *ngFor="let photo of photos;let i=index;">
               <img (click)="openPhotoView(photo.id)" [src]="photo.src" [alt]="photo.alt" />
@@ -27,7 +27,7 @@
     </div>
 
     <div class="house-detail-container"  #HouseContent>
-      <div class="house-detail-info nc-lg-col-10 nc-xl-col-10 nc-md-col-11 nc-xs-col-12 nc-sm-col-12">
+      <div class="house-detail-info nc-lg-col-10 nc-xl-col-10 nc-md-col-11 nc-xs-col-11 nc-sm-col-11">
         <div class="house-detail nc-lg-col-7 nc-xl-col-7 nc-md-col-12 nc-xs-col-12 nc-sm-col-12">
           <div class="house-detail-item" [class.detail-head-fixed]="isHeadFixed">
             <ul>
@@ -110,11 +110,11 @@
         </div>
       </div>
 
-      <div class="other-house-info nc-lg-col-10 nc-xl-col-10 nc-md-col-11 nc-xs-col-12 nc-sm-col-12">
+      <div class="other-house-info nc-lg-col-10 nc-xl-col-10 nc-md-col-11 nc-xs-col-12 nc-sm-col-11">
         <div #OtherHouse>类似房源</div>
         <div class="other-list">
           <div *ngFor="let cityHouse of cityOtherHouses" [routerLink]="['/house',cityHouse.id]"
-               class="hot-city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+               class="hot-city-house nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
             <app-hot-city-house-card [house]="cityHouse"></app-hot-city-house-card>
           </div>
         </div>

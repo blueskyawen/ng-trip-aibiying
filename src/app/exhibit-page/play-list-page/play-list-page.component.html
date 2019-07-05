@@ -2,7 +2,7 @@
   <div class="play-list-image">
     <img [src]="image[imgId]" alt="imag-top" />
   </div>
-  <div class="play-list-body nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+  <div class="play-list-body nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
     <div class="play-list-head">
       <div>{{imgHead[imgId].title}}</div>
       <div>{{imgHead[imgId].name}}</div>
@@ -28,7 +28,7 @@
         </div>
         <div class="play-items">
           <div *ngFor="let houseItem of playItem.housess"
-               class="play-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+               class="play-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
             <app-play-card [playHouse]="houseItem" [city]="playItem.city_zh"></app-play-card>
           </div>
         </div>

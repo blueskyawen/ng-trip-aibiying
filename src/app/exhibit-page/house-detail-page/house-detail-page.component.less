@@ -287,11 +287,26 @@
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
+  .nc-layout .nc-content .house-detail-container .house-detail-info .house-get .house-get-container.order-fixed {
+    right:30px;
+  }
+  .nc-layout .nc-content .house-photo-container .photos-container .photos-review .nc-thumb-picture {
+    height: 190px;
+  }
+  .nc-layout .nc-content .house-photo-container .photos-container .photos-review > .nc-thumb-picture {
+    height: 380px;
+  }
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
   .nc-layout .nc-content .house-detail-container .house-detail-info .house-get .house-get-container.order-fixed {
     right:60px;
+  }
+  .nc-layout .nc-content .house-photo-container .photos-container .photos-review .nc-thumb-picture {
+    height: 240px;
+  }
+  .nc-layout .nc-content .house-photo-container .photos-container .photos-review > .nc-thumb-picture {
+    height: 480px;
   }
 }
 /*大型桌面屏幕*/
