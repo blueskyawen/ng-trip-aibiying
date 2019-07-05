@@ -58,7 +58,8 @@
         </div>
       </div>
     </nc-dropdown>
-    <div class="oper-item" [ngStyle]="operStyle" [routerLink]="['/story/home']">故事</div>
+    <div class="oper-item nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle"
+         [routerLink]="['/story/home']">故事</div>
     <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info">
       <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>心愿单</div>
       <div nc-dropdown-menu class="user-notifys">
@@ -92,7 +93,7 @@
         </div>
       </div>
     </nc-dropdown>
-    <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginIn'"
+    <div class="oper-item nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle" *ngIf="type === 'loginIn'"
          [routerLink]="['/selfCenter/myJourney']">行程</div>
     <div class="oper-item" [ngStyle]="operStyle" (click)="isShowHelp = true">帮助</div>
     <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
