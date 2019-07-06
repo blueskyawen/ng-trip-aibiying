@@ -2,7 +2,7 @@
   <div class="house-list-overview" *ngIf="curPageIndex === 1">
     <div class="list-content">
       <div *ngFor="let house of cityHouselist1"
-           class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+           class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
         <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [pick]="house.picked"
                        [showUser]="true" (loveHouseChange)="pickTheHouse($event,house)"></app-play-card>
       </div>
@@ -12,7 +12,7 @@
     </div>
     <div class="list-content">
       <div *ngFor="let house of cityHouselist2"
-           class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+           class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
         <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true" [pick]="house.picked"
                        [showUser]="true" (loveHouseChange)="pickTheHouse($event,house)"></app-play-card>
       </div>
@@ -24,7 +24,7 @@
   <div class="house-list-overview" *ngIf="curPageIndex !== 1">
     <div class="list-content">
       <div *ngFor="let house of cityHouselist"
-           class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+           class="list-item nc-xl-col-3 nc-lg-col-4 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
         <app-play-card [playHouse]="house" [showLove]="true" [showFality]="true"  [pick]="house.picked"
                        [showUser]="true" (loveHouseChange)="pickTheHouse($event,house)"></app-play-card>
       </div>

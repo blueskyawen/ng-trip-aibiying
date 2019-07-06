@@ -46,7 +46,7 @@
       </div>
     </div>
   </span>
-  <span class="select-item" *ngIf="type === 'more'">
+  <span class="select-item nc-sm-display-none nc-md-display-inline-block" *ngIf="type === 'more'">
     <nc-button [type]="showButton.price.type" (click)="showButton.price.flag = !showButton.price.flag">
       {{showButton.price.text}}</nc-button>
     <div class="select-price nc-flex nc-row-column" *ngIf="showButton.price.flag">
@@ -63,7 +63,7 @@
       </div>
     </div>
   </span>
-  <span class="select-item" *ngIf="type === 'more'">
+  <span class="select-item nc-sm-display-none nc-md-display-inline-block" *ngIf="type === 'more'">
     <nc-button [type]="showButton.book.type" (click)="showButton.book.flag = !showButton.book.flag">
       {{showButton.book.text}}</nc-button>
     <div class="select-book nc-flex nc-row-column" *ngIf="showButton.book.flag">
@@ -82,7 +82,7 @@
       </div>
     </div>
   </span>
-  <span class="select-item" *ngIf="type === 'more'">
+  <span class="select-item nc-sm-display-none nc-md-display-inline-block" *ngIf="type === 'more'">
     <nc-button [type]="showButton.more.type" (click)="showButton.more.flag = !showButton.more.flag">
       {{showButton.more.text}}</nc-button>
     <div class="select-more nc-flex nc-row-column" *ngIf="showButton.more.flag">

@@ -16,7 +16,7 @@
       </span>
     </div>
 
-    <div class="exper-content-item-list nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+    <div class="exper-content-item-list nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
       <div class="exper-content-item" *ngIf="isShowCategory">
         <app-experience-category [cityName]="city"></app-experience-category>
       </div>
@@ -27,7 +27,7 @@
         </div>
         <div *ngIf="showExperList.length !== 0" class="exper-content-item-list">
           <div *ngFor="let showExper of showExperList" [routerLink]="['/experience',showExper.id]"
-               class="experience-item nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+               class="experience-item nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-4 nc-xs-col-12">
             <app-high-expertence-card [exper]="showExper" [showLove]="true"></app-high-expertence-card>
           </div>
         </div>

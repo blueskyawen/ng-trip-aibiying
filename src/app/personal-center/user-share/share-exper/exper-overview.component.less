@@ -119,20 +119,54 @@
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
-  //
+  .exper-overview .overview-item.exper-view {
+    height: 400px;
+  }
+  .exper-overview .overview-item.exper-view .exper-view-item {
+    top: 20px;
+    left: 20px;
+  }
+  .exper-overview .overview-item.exper-view-2 {
+    height: 400px;
+  }
+  .exper-overview .overview-item.exper-view-2 .exper-view-item {
+    top: 20px;
+    right: 20px;
+  }
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
+  .exper-overview .overview-item.exper-view {
+    height: 450px;
+  }
   .exper-overview .overview-item.exper-view .exper-view-item {
+    top:50px;
     left: 50px;
   }
+  .exper-overview .overview-item.exper-view-2 {
+    height: 450px;
+  }
   .exper-overview .overview-item.exper-view-2 .exper-view-item {
+    top:50px;
     right: 50px;
   }
 }
 /*大型桌面屏幕*/
 @media (min-width: @nc-screen-lg-min) {
-  //width: 100%;
+  .exper-overview .overview-item.exper-view {
+    height: 500px;
+  }
+  .exper-overview .overview-item.exper-view .exper-view-item {
+    top:100px;
+    left: 100px;
+  }
+  .exper-overview .overview-item.exper-view-2 {
+    height: 500px;
+  }
+  .exper-overview .overview-item.exper-view-2 .exper-view-item {
+    top:100px;
+    right: 100px;
+  }
 }
 /*超大型桌面屏幕*/
 @media (min-width: @nc-screen-xl-min) {

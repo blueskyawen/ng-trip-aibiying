@@ -7,7 +7,7 @@
   </div>
   <div class="exper-item-list">
     <div *ngFor="let exper of expers" [routerLink]="['/experience',exper.id]"
-         class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+         class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
       <app-high-expertence-card [exper]="exper" [showLove]="true"></app-high-expertence-card>
     </div>
   </div>

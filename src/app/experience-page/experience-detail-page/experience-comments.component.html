@@ -1,12 +1,12 @@
 <div class="exper-detail-comments">
-  <div class="comment-text nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+  <div class="comment-text nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-4 nc-xs-col-12">
     <span>参与者评价</span>
     <span>
       <nc-rate [size]="'16px'" [color]="'#33adff'" [totalRate]="5" [(curRate)]="experData.star" [showTitle]="false"></nc-rate>
       <span>{{experData.comments.length}}</span>
     </span>
   </div>
-  <div class="comment-list nc-xl-col-8 nc-lg-col-8 nc-md-col-8 nc-sm-col-12 nc-xs-col-12">
+  <div class="comment-list nc-xl-col-8 nc-lg-col-8 nc-md-col-8 nc-sm-col-8 nc-xs-col-12">
     <div class="comment-item" *ngFor="let commentItem of commentList">
       <span class="comment-user">
         <span class="comment-user-img">

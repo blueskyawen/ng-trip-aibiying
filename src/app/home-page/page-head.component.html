@@ -8,8 +8,32 @@
                 [isSearch]="true"></nc-input>
     </div>
   </div>
-  <div class="nc-xl-col-7 nc-lg-col-7 nc-md-col-7 nc-sm-col-6 nc-xs-col-12 header-oper-right">
-    <nc-dropdown class="nc-sm-display-none nc-lg-display-inline-block">
+  <div class="nc-xl-col-7 nc-lg-col-7 nc-md-col-7 nc-sm-col-6 nc-xs-col-12 header-oper-right nc-sm-display-inline-flex nc-md-display-none">
+    <div class="user-menu" *ngIf="type === 'loginIn'">
+      <nc-dropdown class="dropdown-user-Info" [subPlace]="'right'">
+        <div nc-dropdown-btn class="oper-item" [ngStyle]="operStyle">
+          <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
+        </div>
+        <div nc-dropdown-menu class="user-Info-list">
+          <div class="user-data-item" [routerLink]="['/selfCenter/user/show']">个人资料</div>
+          <div class="user-data-item" [routerLink]="['/selfCenter/infoBox']">消息({{userInfo.info}})</div>
+          <div class="user-data-item" [routerLink]="['/selfCenter/dashboard']">通知({{userInfo.notify}})</div>
+          <div class="user-data-item" [routerLink]="['/selfCenter/userData',{tab: 'notify'}]">账号</div>
+          <div class="user-data-item" [routerLink]="['/selfCenter/userData',{tab: 'payment'}]">礼券中心</div>
+          <div class="user-data-item" [routerLink]="['/selfCenter/invite']">邀请好友</div>
+          <div class="user-data-item" [routerLink]="['/selfCenter/trpGuide']">我的旅行指南</div>
+          <div class="user-data-item" [routerLink]="['/selfCenter/workManage']">商务爱彼迎</div>
+          <div class="user-data-item" (click)="isShowUserMenu = true">其他</div>
+          <div class="user-data-item" (click)="loginOff()">退出</div>
+        </div>
+      </nc-dropdown>
+    </div>
+    <div class="user-menu" *ngIf="type === 'loginOut'">
+      <span class="fa fa-user-circle-o" (click)="isShowUserMenu = true"></span>
+    </div>
+  </div>
+  <div class="nc-xl-col-7 nc-lg-col-7 nc-md-col-7 nc-sm-col-6 nc-xs-col-12 header-oper-right nc-sm-display-none nc-md-display-inline-flex">
+    <nc-dropdown class="nc-md-display-none nc-lg-display-inline-block">
       <span class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>{{selectedCCY.label}}</span>
       <ul nc-dropdown-menu class="dropdown-items">
         <li *ngFor="let CcyOption of CCYOptions" [class.selected]="selectedCCY.value === CcyOption.value" (click)="selectCCY(CcyOption)">
@@ -17,7 +41,7 @@
           <span><svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height: 16px; width: 16px; display: block;" class="__web-inspector-hide-shortcut__"><path d="m1.29 11.98c-.29-.3-.76-.31-1.06-.02s-.31.76-.02 1.06l6.75 7c .29.3.78.31 1.07.01l15.75-16c .29-.3.29-.77-.01-1.06s-.77-.29-1.06.01l-15.21 15.45z" fill-rule="evenodd"></path></svg></span></li>
       </ul>
     </nc-dropdown>
-    <nc-dropdown class="nc-sm-display-none nc-md-display-none nc-lg-display-inline-block">
+    <nc-dropdown class="nc-md-display-none nc-lg-display-inline-block">
       <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>手机端</div>
       <div nc-dropdown-menu class="dropdown-phone">
         <div class="app-image">
@@ -32,7 +56,7 @@
       </div>
     </nc-dropdown>
     <nc-dropdown>
-      <div class="oper-item nc-sm-display-none nc-md-display-inline-block" [ngStyle]="operStyle" nc-dropdown-btn>成为房东/体验达人</div>
+      <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>成为房东/体验达人</div>
       <div nc-dropdown-menu class="dropdown-fd">
         <div class="dropdown-fd-item">
           <div class="item-f-head">房源</div>
@@ -58,7 +82,7 @@
         </div>
       </div>
     </nc-dropdown>
-    <div class="oper-item nc-sm-display-none nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle"
+    <div class="oper-item nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle"
          [routerLink]="['/story/home']">故事</div>
     <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info">
       <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>心愿单</div>
@@ -93,12 +117,12 @@
         </div>
       </div>
     </nc-dropdown>
-    <div class="oper-item nc-sm-display-none nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle" *ngIf="type === 'loginIn'"
+    <div class="oper-item nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle" *ngIf="type === 'loginIn'"
          [routerLink]="['/selfCenter/myJourney']">行程</div>
-    <div class="oper-item nc-sm-display-none nc-md-display-inline-block" [ngStyle]="operStyle" (click)="isShowHelp = true">帮助</div>
-    <div class="oper-item nc-sm-display-none nc-md-display-inline-block" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
-    <div class="oper-item nc-sm-display-none nc-md-display-inline-block" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowLogin = true">登录 </div>
-    <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info nc-sm-display-none nc-md-display-inline-block" [subPlace]="'right'">
+    <div class="oper-item" [ngStyle]="operStyle" (click)="isShowHelp = true">帮助</div>
+    <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
+    <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowLogin = true">登录 </div>
+    <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info" [subPlace]="'right'">
       <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>消息</div>
       <div nc-dropdown-menu class="user-notifys">
         <div class="user-notify-item" [routerLink]="['/selfCenter/infoBox']">
@@ -136,6 +160,6 @@
 <app-page-register [(isDisplay)]="isShowRegister" (toLoginEvent)="handleToLoginEvnent()"></app-page-register>
 <app-page-login [(isDisplay)]="isShowLogin" (toRegisterEvent)="handleToRegisterEvnent()"
                 (isDisplayChange)="isDisplayChange()"></app-page-login>
-
+<app-user-menu [(isDisplay)]="isShowUserMenu" (selectMenuChange)="handleSelectMenuChange($event)"></app-user-menu>
 
 <nc-message [type]="'success'" [(show)]="showLoginOffMsg">退出成功</nc-message>

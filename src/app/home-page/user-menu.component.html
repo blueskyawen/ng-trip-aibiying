@@ -1,0 +1,16 @@
+<nc-drawer [(isShow)]="isDisplay" (isShowChange)="showChange()">
+  <div nc-drawer-content class="menu-container">
+    <div class="menu-head">
+      <span class="fa fa-user-o"></span>
+    </div>
+    <div class="menu-content">
+      <div class="menu-item" *ngIf="loginType === 'loginOut'" (click)="selectMenu('register')">注册</div>
+      <div class="menu-item" *ngIf="loginType === 'loginOut'" (click)="selectMenu('login')">登录</div>
+      <div class="menu-item" (click)="selectMenu('help')">帮助</div>
+      <div class="menu-item" *ngIf="loginType === 'loginIn'" [routerLink]="['/selfCenter/wishs']">心愿单</div>
+      <div class="menu-item" [routerLink]="['/selfCenter/share/beHoster']">发布房源</div>
+      <div class="menu-item" [routerLink]="['/selfCenter/share/know']">如何出租</div>
+      <div class="menu-item" [routerLink]="['/selfCenter/share/exper']">开展体验</div>
+    </div>
+  </div>
+</nc-drawer>

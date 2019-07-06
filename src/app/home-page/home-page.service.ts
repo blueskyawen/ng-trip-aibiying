@@ -105,11 +105,11 @@ export class HomePageService {
   getWishList(): Observable<any> {
     let curHoster = this.getCurUser();
     let tmpWish = JSON.parse(this.storageService.get(this.tableName));
-    if(tmpWish) {
+    if(tmpWish && curHoster) {
       let userWish = tmpWish.list.find(wish => {return wish.owner === curHoster.name;});
       return userWish ? of(userWish) : of({owner: curHoster.name, wishList: []});
     } else {
-      return of({owner: curHoster.name, wishList: []});
+      return of({owner: 'default', wishList: []});
     }
   }
 

@@ -12,13 +12,13 @@
       </span>
     </div>
   </div>
-  <div class="plus-dest-body nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+  <div class="plus-dest-body nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
     <div class="plus-dest-head">
       爱彼迎Plus已在{{destnation.city_zh}}推出
     </div>
     <div class="plus-dest-list">
       <div *ngFor="let home of homeList"
-           class="plus-home-item nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-12 nc-xs-col-12">
+           class="plus-home-item nc-xl-col-4 nc-lg-col-4 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
         <app-plus-house-card [plusHouse]="home"></app-plus-house-card>
       </div>
     </div>

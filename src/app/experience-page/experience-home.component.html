@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="nc-content" *ngIf="!showLoading">
-    <div class="exper-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+    <div class="exper-content-item-list nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
       <div class="exper-content-item">
         <app-experience-category [cityName]="'all'"></app-experience-category>
       </div>
@@ -20,7 +20,7 @@
         </div>
         <div class="exper-content-item-list">
           <div *ngFor="let highExper of experData.highPress" [routerLink]="['/experience',highExper.id]"
-               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-4 nc-xs-col-12">
             <app-high-expertence-card [exper]="highExper" [showLove]="true"></app-high-expertence-card>
           </div>
         </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="exper-content-item-list">
           <div *ngFor="let shExper of experData.shanghai" [routerLink]="['/experience',shExper.id]"
-               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-4 nc-xs-col-12">
             <app-high-expertence-card [exper]="shExper" [showLove]="true"></app-high-expertence-card>
           </div>
         </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="exper-content-item-list">
           <div *ngFor="let hzExper of experData.hangzhou" [routerLink]="['/experience',hzExper.id]"
-               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-12 nc-xs-col-12">
+               class="experience-item nc-xl-col-2 nc-lg-col-2 nc-md-col-3 nc-sm-col-4 nc-xs-col-12">
             <app-high-expertence-card [exper]="hzExper" [showLove]="true"></app-high-expertence-card>
           </div>
         </div>

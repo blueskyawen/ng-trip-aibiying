@@ -13,9 +13,10 @@ import { PageHeadComponent } from './page-head.component';
 import { PageCarouselComponent } from './page-carousel.component';
 import { PageFootComponent } from './page-foot.component';
 import { HomePageComponent } from './home-page.component';
+import { UserMenuComponent } from './user-menu.component';
 
 @NgModule({
-    declarations: [PageHeadComponent, PageCarouselComponent, PageFootComponent, HomePageComponent],
+    declarations: [PageHeadComponent, PageCarouselComponent, PageFootComponent, HomePageComponent, UserMenuComponent],
     imports: [
         ShareModule, HomePageRoutingModule, PageHelpModule, PageRegisterLoginModule, PageContentModule
     ],

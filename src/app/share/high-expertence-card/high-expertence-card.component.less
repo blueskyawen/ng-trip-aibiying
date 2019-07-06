@@ -1,3 +1,5 @@
+@import "../../app-common";
+
 .high-expertence-card {
   width: 100%;
   .high-expert-img {
@@ -61,5 +63,27 @@
   }
 }
 
-
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .high-expertence-card .high-expert-img img {
+    height: 200px;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+  .high-expertence-card .high-expert-img img {
+    height: 260px;
+  }
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+  //width: 100%;
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
+}
 

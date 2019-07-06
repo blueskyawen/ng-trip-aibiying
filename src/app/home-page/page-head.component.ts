@@ -41,6 +41,7 @@ export class PageHeadComponent implements OnInit {
   isShowHelp: boolean = false;
   isShowRegister: boolean = false;
   isShowLogin: boolean = false;
+  isShowUserMenu: boolean = false;
   presentStyle : any = {};
   operStyle : any = {};
   showLoginOffMsg: boolean = false;
@@ -74,6 +75,20 @@ export class PageHeadComponent implements OnInit {
   handleToRegisterEvnent() {
     console.log('handleToRegisterEvnent');
     this.isShowRegister = true;
+  }
+
+  handleSelectMenuChange(type : string) {
+    setTimeout(() => {
+      if(type === 'register') {
+        return this.isShowRegister = true;
+      }
+      if(type === 'login') {
+        return this.isShowLogin = true;
+      }
+      if(type === 'help') {
+        return this.isShowHelp = true;
+      }
+    }, 300);
   }
 
   isDisplayChange() {
