@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="nc-content" *ngIf="!showLoading">
-        <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-12 nc-xs-col-12">
+        <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
             <div class="wish-list-head">
                 <span>热门心愿单</span>
                 <span class="wish-oper">
@@ -15,7 +15,7 @@
             </div>
             <div class="wish-list-body">
                 <div *ngFor="let wishItem of hotWishs" [routerLink]="['/selfCenter/wishs', wishItem.id, {type: 'hot'}]"
-                     class="wish-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-12 nc-xs-col-12">
+                     class="wish-item nc-xl-col-4 nc-lg-col-4 nc-md-col-6 nc-sm-col-6 nc-xs-col-12">
                     <div class="wish-img">
                         <img *ngIf="wishItem.photo" [src]="wishItem.photo" />
                     </div>

@@ -182,6 +182,12 @@
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
+  .nc-layout .nc-content .wish-detail-map {
+    height: 550px;
+  }
+  .nc-layout .nc-content {
+    max-height: 550px;
+  }
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
@@ -194,7 +200,12 @@
 }
 /*大型桌面屏幕*/
 @media (min-width: @nc-screen-lg-min) {
-  //width: 100%;
+  .nc-layout .nc-content .wish-detail-map {
+    height: 750px;
+  }
+  .nc-layout .nc-content {
+    max-height: 750px;
+  }
 }
 /*超大型桌面屏幕*/
 @media (min-width: @nc-screen-xl-min) {
