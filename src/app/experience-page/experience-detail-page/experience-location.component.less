@@ -1,3 +1,5 @@
+@import "../../app-common";
+
 .exper-detail-location {
   width: 100%;
   padding: 15px 0;
@@ -18,4 +20,30 @@
     top: 150px;
     left: 330px;
   }
+}
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .exper-detail-location img {
+    height: 300px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .exper-detail-location img {
+    height: 500px;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+  .exper-detail-location img {
+    height: 600px;
+  }
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+
 }

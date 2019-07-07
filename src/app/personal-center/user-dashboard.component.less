@@ -1,3 +1,5 @@
+@import "../app-common";
+
 .nc-layout {
   .lay-header {
     background: #fff;
@@ -194,3 +196,38 @@
   }
 }
 
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
+    width: 150px;
+    height: 150px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
+    width: 220px;
+    height: 220px;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+  .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
+    width: 170px;
+    height: 170px;
+  }
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+  .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
+    width: 195px;
+    height: 195px;
+  }
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
+    width: 240px;
+    height: 240px;
+  }
+}

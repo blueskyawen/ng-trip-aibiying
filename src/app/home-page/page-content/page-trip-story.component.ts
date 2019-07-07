@@ -17,12 +17,12 @@ export class PageTripStoryComponent implements OnInit {
     'activity': '活动',
     'shop': '店铺'
   };
-  mdHideIndexs : number[] = [4, 5, 6, 7];
+  mdHideIndexs: number[] = [6, 7];
   constructor(private pageContentService: PageContentService, private router: Router) { }
 
   ngOnInit() {
     this.pageContentService.getTripStoryList().subscribe(res => {
-      this.storyList = res.slice(0,8);
+      this.storyList = res.slice(0,  8);
     });
   }
 

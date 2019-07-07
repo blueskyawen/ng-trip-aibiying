@@ -5,13 +5,13 @@
   </div>
   <div class="city-experience-list" *ngIf="experience.categroy === 'highPress'">
     <div *ngFor="let exper of experience.list" [routerLink]="['/experience',exper.id]"
-         class="city-experience nc-xl-col-2 nc-lg-col-2 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
+         class="city-experience nc-xl-col-2 nc-lg-col-2 nc-md-col-4 nc-sm-col-6 nc-xs-col-6">
       <app-high-expertence-card [exper]="exper" [showLove]="true" [showSite]="false"></app-high-expertence-card>
     </div>
   </div>
   <div class="city-experience-list" *ngIf="experience.categroy !== 'highPress'">
     <div *ngFor="let exper of experience.list" [routerLink]="['/experience',exper.id]"
-         class="city-experience nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
+         class="city-experience nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-6 nc-xs-col-6">
       <app-high-expertence-card [exper]="exper" [showLove]="true" [showSite]="false"></app-high-expertence-card>
     </div>
   </div>

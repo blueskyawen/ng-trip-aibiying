@@ -64,7 +64,12 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-
+  .nc-draderss /deep/ .drawer-container .drawer-content {
+    max-width: 85% !important;
+  }
+  .photo-container .photo-content .photo-content-item .photo-item-list img {
+    height: 260px;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {

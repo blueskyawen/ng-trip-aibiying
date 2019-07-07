@@ -1,3 +1,5 @@
+@import "../../app-common";
+
 .content {
   form {
     width: 100%;
@@ -7,7 +9,7 @@
         position: absolute;
         top: 100%;
         left: 0%;
-        z-index: 2;
+        z-index: 5;
         & /deep/ .roomer-set-item {
           width: 500px;
         }
@@ -18,4 +20,26 @@
       }
     }
   }
+}
+
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .content form > .nc-form-item .trip-person-set  & /deep/ .roomer-set-item {
+    width: 280px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
 }

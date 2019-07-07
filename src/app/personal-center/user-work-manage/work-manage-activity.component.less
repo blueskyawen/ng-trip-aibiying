@@ -21,6 +21,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow-y: auto;
       .title-item {
         div {
           margin-bottom: 15px;
@@ -105,7 +106,9 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-  //
+  .work-manage-activity .work-activity-item {
+    height: 320px;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {

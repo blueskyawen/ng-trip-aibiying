@@ -147,7 +147,22 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-
+  .exper-detail-overview .exper-images .exper-carousel /deep/ .carousel-fade {
+    height: 100% !important;
+  }
+  .exper-detail-overview .exper-images .exper-carousel /deep/ .carousel {
+    height: 100% !important;
+  }
+  .exper-detail-overview .exper-view-content .exper-view-content-item:nth-of-type(3) > div:last-child {
+    transform: translateX(0);
+    right: -10px;
+  }
+  .exper-detail-overview .exper-images {
+    height: 320px;
+  }
+  .exper-detail-overview .exper-view-content {
+    max-height: 300px;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {

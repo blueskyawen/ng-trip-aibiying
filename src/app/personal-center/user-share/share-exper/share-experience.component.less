@@ -43,8 +43,8 @@
       }
       .video-text {
         position: absolute;
-        left: 150px;
-        bottom: 150px;
+        left: 10%;
+        bottom: 20%;
         color: #fff;
         z-index: 2;
         display: inline-flex;
@@ -97,18 +97,32 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-  //
+  .nc-layout .lay-header .layout-video video {
+    height: 350px;
+  }
+  .nc-layout .lay-header .layout-video .video-text {
+    left: 20%;
+    bottom: 40%;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
   .nc-layout .lay-header .layout-video video {
     height: 450px;
   }
+  .nc-layout .lay-header .layout-video .video-text {
+    left: 10%;
+    bottom: 20%;
+  }
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
   .nc-layout .lay-header .layout-video video {
     height: 540px;
+  }
+  .nc-layout .lay-header .layout-video .video-text {
+    left: 20%;
+    bottom: 40%;
   }
 }
 /*大型桌面屏幕*/

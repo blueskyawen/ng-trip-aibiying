@@ -1,3 +1,5 @@
+@import "../../app-common";
+
 .plus-dest-card {
   width: 100%;
   .plus-dest-img {
@@ -46,4 +48,31 @@
       }
     }
   }
+}
+
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .plus-dest-card .plus-dest-img img {
+    height: 180px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .plus-dest-card .plus-dest-img img {
+    height: 200px;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+  .plus-dest-card .plus-dest-img img {
+    height: 240px;
+  }
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+  //width: 100%;
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
 }

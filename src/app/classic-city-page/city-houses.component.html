@@ -2,7 +2,7 @@
   <div class="city-house-head">住宿</div>
   <div class="city-house-list">
     <div *ngFor="let house of showHouses" [routerLink]="['/house',house.id]"
-         class="city-house nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-6 nc-xs-col-12">
+         class="city-house nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-6 nc-xs-col-6">
       <app-hot-city-house-card [house]="house"></app-hot-city-house-card>
     </div>
   </div>

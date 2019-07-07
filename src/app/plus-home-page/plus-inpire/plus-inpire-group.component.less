@@ -1,3 +1,5 @@
+@import "../../app-common";
+
 .plus-inpire-group {
   width: 100%;
   .plus-item-head {
@@ -30,3 +32,29 @@
   }
 }
 
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .plus-inpire-group .plus-item-content .nc-list-group .nc-list-group-item {
+    width: 270px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .plus-inpire-group .plus-item-content .nc-list-group .nc-list-group-item {
+    width: 300px;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+  .plus-inpire-group .plus-item-content .nc-list-group .nc-list-group-item {
+    width: 400px;
+  }
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+  //width: 100%;
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
+}

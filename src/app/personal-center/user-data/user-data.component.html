@@ -5,8 +5,8 @@
     </div>
   </div>
   <div class="nc-content" *ngIf="!showLoading">
-    <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
-      <div class="content-tabs nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-3 nc-xs-col-12">
+    <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-11">
+      <div class="content-tabs nc-xl-col-3 nc-lg-col-3 nc-md-col-3 nc-sm-col-3 nc-xs-col-4">
         <div class="tab-item" [class.active]="tabItem.name === curTab"
              *ngFor="let tabItem of tabItems" (click)="switchTab(tabItem)">
           {{tabItem.label}}
@@ -16,7 +16,7 @@
                      [height]="'36px'" [routerLink]="['/selfCenter/invite']">邀请好友</nc-button>
         </div>
       </div>
-      <div class="content-body nc-xl-col-9 nc-lg-col-9 nc-md-col-9 nc-sm-col-9 nc-xs-col-12">
+      <div class="content-body nc-xl-col-9 nc-lg-col-9 nc-md-col-9 nc-sm-col-9 nc-xs-col-8">
         <app-user-notify *ngIf="curTab === 'notify'"></app-user-notify>
 
         <app-user-payment *ngIf="curTab === 'payment'"></app-user-payment>
@@ -36,7 +36,7 @@
   </div>
 
   <div class="nc-footer nc-flex nc-content-center">
-    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
+    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-11">
       <app-page-foot></app-page-foot>
     </div>
   </div>

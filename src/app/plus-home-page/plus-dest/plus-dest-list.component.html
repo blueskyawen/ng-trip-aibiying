@@ -9,7 +9,7 @@
         <div class="dest-item-head">{{dest.continent_zh}}</div>
         <div class="dest-city-list">
           <div *ngFor="let city of dest.cityList"
-               class="dest-city-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-4 nc-xs-col-12">
+               class="dest-city-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-4 nc-xs-col-6">
             <div class="dest-city" [routerLink]="['/plus/destination',city.id]">
               <img [src]="city.photo[0]" />
               <span>{{city.city_zh}}</span>

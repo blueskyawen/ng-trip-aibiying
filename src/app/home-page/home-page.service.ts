@@ -24,7 +24,7 @@ export class HomePageService {
       wishs = JSON.parse(tmpWishs);
       let userWish = wishs.list.find(wish => {return wish.owner === curHoster.name;});
       if(userWish) {
-        let id = userWish.wishList[userWish.wishList.length - 1].id;
+        let id = userWish.wishList.length !== 0 ? userWish.wishList[userWish.wishList.length - 1].id : 0;
         userWish.wishList.push({
           id: id + 1,
           data: data

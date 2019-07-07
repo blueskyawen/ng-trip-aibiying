@@ -27,7 +27,7 @@
         border: solid 2px #fff;
         border-radius: 3px;
         right: 50px;
-        bottom: 50px;
+        bottom: 30px;
         font-size: 18px;
         cursor: pointer;
         opacity: 0;
@@ -43,8 +43,9 @@
       }
       .video-text {
         position: absolute;
-        left: 150px;
-        bottom: 150px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
         color: #fff;
         z-index: 2;
         display: inline-flex;
@@ -96,7 +97,9 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-  //
+  .nc-layout .lay-header .layout-video video {
+    height: 350px;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {

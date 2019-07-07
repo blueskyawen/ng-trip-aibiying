@@ -70,7 +70,15 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-
+  .home-detail-photos {
+    height: 320px;
+  }
+  .home-detail-photos > div.home-photo-text > span:last-of-type {
+    margin-top: 10px;
+  }
+  .home-detail-photos > div.home-photo-view {
+    padding-left: 0;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {

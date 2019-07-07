@@ -1,3 +1,5 @@
+@import "../../../app-common";
+
 .know-share-body {
   width: 100%;
   .content-item {
@@ -157,4 +159,34 @@
     color: #666;
     line-height: 28px;
   }
+}
+
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .know-share-body .content-item .content-item-body .share-item .item-icon img {
+    height: 100px;
+  }
+  .know-share-body .content-item .content-publish > span {
+    left: 50px;
+    top: 70px;
+  }
+  .know-share-body .content-item .content-publish > span span:first-child {
+    font-size: 36px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
 }

@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="nc-content" *ngIf="!showLoading">
-    <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
+    <div class="content-container nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-11">
       <div class="dashboard-head" *ngIf="showDbHead">
         <div class="head-icon">
           <span class="fa fa-cny"></span>
@@ -25,7 +25,7 @@
         <span class="head-delete fa fa-close" (click)="showDbHead = false"></span>
       </div>
       <div class="dashboard-body">
-        <div class="dashboard-left nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-6 nc-xs-col-12">
+        <div class="dashboard-left nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-6 nc-xs-col-6">
           <div class="dashboard-user">
             <img [src]="userImg" />
             <span>{{pRLoginService.curloginedUser.name}}</span>
@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div class="dashboard-content nc-xl-col-9 nc-lg-col-9 nc-md-col-6 nc-sm-col-6 nc-xs-col-12">
+        <div class="dashboard-content nc-xl-col-9 nc-lg-col-9 nc-md-col-8 nc-sm-col-6 nc-xs-col-6">
           <div class="dashboard-item">
             <div class="dashboard-item-content dash-invite">
               <span>
@@ -94,7 +94,7 @@
   </div>
 
   <div class="nc-footer nc-flex nc-content-center">
-    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-12">
+    <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-11">
       <app-page-foot></app-page-foot>
     </div>
   </div>

@@ -2,7 +2,7 @@
   <div class="trip-block-head picked-storys-head" *ngIf="!type">精选故事</div>
   <div *ngIf="storyList.length !== 0" class="trip-block-img-list story-list">
     <div  *ngFor="let story of storyList" [routerLink]="['/story/detail',story.id]"
-          class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-4 nc-xs-col-12">
+          class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-4 nc-xs-col-6">
       <app-trip-story-card [story]="story"></app-trip-story-card>
     </div>
   </div>
