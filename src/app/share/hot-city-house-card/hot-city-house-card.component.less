@@ -1,3 +1,5 @@
+@import "../../app-common";
+
 .hot-city-house-card {
   width: 100%;
   .hot-city-house-img {
@@ -39,4 +41,26 @@
   }
 }
 
-
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .hot-city-house-card .hot-city-house-img img {
+    height: 195px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .hot-city-house-card .hot-city-house-img img {
+    height: 220px;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+  //width: 100%;
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
+}

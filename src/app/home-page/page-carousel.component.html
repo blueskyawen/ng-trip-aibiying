@@ -5,7 +5,7 @@
   </div>
   <div class="header-carousel-title" (click)="goExhibition()">
     <h2>{{slideOptionTitle.head}}</h2>
-    <h2>{{slideOptionTitle.subHead}}</h2>
+    <h2 class="nc-xs-display-none nc-sm-display-block">{{slideOptionTitle.subHead}}</h2>
     <p>{{slideOptionTitle.description}}</p>
     <span *ngIf="curSlideIndex === 0"><nc-button [type]="'major'">立即领取</nc-button></span>
     <div class="carousel-title-process">

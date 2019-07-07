@@ -5,8 +5,8 @@
   </div>
   <div class="trip-block-img-list trip-high-exper-list">
     <div *ngFor="let exper of experList;let i=index;" (click)="goExperStory(exper)"
-         class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-6 nc-xs-col-12"
-         [ngClass]="{'nc-sm-display-none': mdHideIndexs.includes(i), 'nc-md-display-none': mdHideIndexs.includes(i), 'nc-lg-display-inline-block': mdHideIndexs.includes(i)}">
+         class="trip-block-img-body nc-xl-col-3 nc-lg-col-3 nc-md-col-6 nc-sm-col-6 nc-xs-col-6"
+         [ngClass]="{'nc-xs-display-none': mdHideIndexs.includes(i), 'nc-sm-display-none': mdHideIndexs.includes(i), 'nc-md-display-none': mdHideIndexs.includes(i), 'nc-lg-display-inline-block': mdHideIndexs.includes(i)}">
       <app-high-expertence-card [exper]="exper"></app-high-expertence-card>
     </div>
   </div>

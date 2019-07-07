@@ -376,7 +376,16 @@
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
   .page-carousel-container .header-carousel-title {
-    left:80px;
+    left:40px;
+  }
+  .page-carousel-container .page-carousel {
+    height: 340px;
+  }
+  .page-carousel-container .page-carousel .app-carouel /deep/ .carousel-fade {
+    height: 100% !important;
+  }
+  .page-carousel-container .header-carousel-title .carousel-title-process {
+    top: 40px;
   }
 }
 /*小型桌面,平板*/
@@ -390,6 +399,9 @@
   .page-carousel-container .page-carousel .app-carouel /deep/ .carousel-fade {
     height: 100% !important;
   }
+  .page-carousel-container .header-carousel-title .carousel-title-process {
+    top: 60px;
+  }
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
@@ -401,6 +413,9 @@
   }
   .page-carousel-container .page-carousel .app-carouel /deep/ .carousel-fade {
     height: 100% !important;
+  }
+  .page-carousel-container .header-carousel-title .carousel-title-process {
+    top: 70px;
   }
 }
 /*大型桌面屏幕*/
