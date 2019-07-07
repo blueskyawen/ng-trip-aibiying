@@ -1,3 +1,5 @@
+@import "../../app-common";
+
 .trip-hot-city {
   width: 100%;
   margin-top: 20px;
@@ -61,7 +63,6 @@
     span {
       font-size: 16px;
       font-weight: 800;
-      color: #737373;
       &:hover {
         cursor: pointer;
         text-decoration: underline;
@@ -73,3 +74,32 @@
   }
 }
 
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .trip-hot-city .hot-city-foot span.foot-operzz {
+    color: #1a75ff;
+    display: flex;
+    width: 100%;
+    border: solid 1px #1a75ff;
+    border-radius: 4px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .trip-hot-city .hot-city-foot span.foot-operzz {
+    color: #1a75ff;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+  //width: 100%;
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+}
