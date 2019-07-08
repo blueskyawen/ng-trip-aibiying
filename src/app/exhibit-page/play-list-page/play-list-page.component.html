@@ -40,5 +40,7 @@
     </div>
   </div>
 </div>
+<div class="play-list-contianer" *ngIf="showLoading">
+  <app-page-waiting></app-page-waiting>
+</div>
 
-<app-page-waiting *ngIf="showLoading"></app-page-waiting>

@@ -1,5 +1,5 @@
 <div class="exhibit-select">
-  <span class="select-item nc-xs-display-none nc-sm-display-none nc-md-display-block">
+  <span class="select-item nc-xs-display-none nc-sm-display-none nc-md-display-inline-block">
     <nc-button [type]="showButton.date.type" (click)="showButton.date.flag = !showButton.date.flag">
       {{showButton.date.text}}</nc-button>
     <nc-range-date-selector *ngIf="showButton.date.flag" class="date-selector" [(dateRange)]="selectData.dateRange"
