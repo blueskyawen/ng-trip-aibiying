@@ -121,6 +121,9 @@
       </div>
     </div>
   </div>
+  <div class="nc-content" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
+  </div>
 
   <div class="nc-footer nc-flex nc-content-center">
     <div class="lay-foot nc-xl-col-10 nc-lg-col-10 nc-md-col-11 nc-sm-col-11 nc-xs-col-11">
@@ -128,8 +131,6 @@
     </div>
   </div>
 </div>
-
-<app-page-waiting *ngIf="showLoading"></app-page-waiting>
 
 <app-page-login [(isDisplay)]="isShowLogin" (toRegisterEvent)="handleToRegisterEvnent()"></app-page-login>
 <app-page-register [(isDisplay)]="isShowRegister" (toLoginEvent)="handleToLoginEvnent()"></app-page-register>

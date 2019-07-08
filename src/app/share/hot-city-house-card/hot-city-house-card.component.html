@@ -4,7 +4,8 @@
   </div>
   <div class="hot-city-house-foot">
     <div>{{house.type}}.{{roomDeescript}}</div>
-    <div>{{house.text}}</div>
+    <div class="nc-xs-display-none nc-sm-display-block">{{house.text}}</div>
+    <div class="nc-xs-display-block nc-sm-display-none" [title]="house.text">{{house.text}}</div>
     <div>¥{{house.price}}每晚.免费取消预订</div>
     <div>
       <span><nc-rate [size]="'12px'" [color]="'#3399ff'" [totalRate]="5" [(curRate)]="house.star"></nc-rate></span>

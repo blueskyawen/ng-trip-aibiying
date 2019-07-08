@@ -27,6 +27,10 @@
       color: #404040;
     }
     div:nth-child(3) {
+      font-weight: 600;
+      color: #404040;
+    }
+    div:nth-child(4) {
       font-size: 13px;
       color:#666;
     }
@@ -44,17 +48,26 @@
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
   .hot-city-house-card .hot-city-house-img img {
-    height: 150px;
+    height: 130px;
+  }
+  .hot-city-house-card .hot-city-house-foot div:nth-child(3) {
+    max-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
   .hot-city-house-card .hot-city-house-img img {
-    height: 220px;
+    height: 190px;
   }
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
+  .hot-city-house-card .hot-city-house-img img {
+    height: 220px;
+  }
 }
 /*大型桌面屏幕*/
 @media (min-width: @nc-screen-lg-min) {

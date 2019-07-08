@@ -32,6 +32,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: space-between;
+      .f-text {
+        max-height: 50px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
     div:nth-child(3) {
       font-size: 13px;
@@ -49,13 +55,13 @@
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
   .play-card .play-item-img .play-carousel /deep/ .carousel {
-    height: 150px !important;
+    height: 130px !important;
   }
   .play-card .play-item-img .play-carousel /deep/ .carousel-fade {
-    height: 150px !important;
+    height: 130px !important;
   }
   .play-card .play-item-img {
-    height: 150px !important;
+    height: 130px !important;
   }
 }
 /*小型桌面,平板*/
