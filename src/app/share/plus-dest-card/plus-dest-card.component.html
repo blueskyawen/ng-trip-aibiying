@@ -10,7 +10,8 @@
   </div>
   <div class="plus-dest-foot">
     <div>{{destination.verify}}+个已验证房源</div>
-    <div>{{destination.text}}</div>
+    <div class="nc-xs-display-none nc-sm-display-block">{{destination.text}}</div>
+    <div class="nc-xs-display-block nc-sm-display-none" [title]="destination.text">{{destination.text}}</div>
   </div>
 </div>
 

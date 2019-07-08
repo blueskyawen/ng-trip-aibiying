@@ -33,12 +33,19 @@
       color: #404040;
       display: inline-flex;
       align-items: center;
+      width: 100%;
       > span {
         position: relative;
         > .plus-icon {
           position: absolute;
           bottom: 0;
           right: 0;
+        }
+        &.f-text {
+          max-height: 50px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
       }
     }
@@ -58,13 +65,13 @@
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
   .plus-house-card .plus-house-img {
-    height: 160px !important;
+    height: 140px !important;
   }
   .plus-house-card .plus-house-img .play-carousel /deep/ .carousel {
-    height: 160px !important;
+    height: 140px !important;
   }
   .plus-house-card .plus-house-img .play-carousel /deep/ .carousel-fade {
-    height: 160px !important;
+    height: 140px !important;
   }
 }
 /*小型桌面,平板*/

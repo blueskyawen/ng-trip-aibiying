@@ -52,7 +52,7 @@
             }
             &:last-child {
               span {
-                margin-right: 20px;
+                padding: 10px;
               }
             }
           }
@@ -198,9 +198,22 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
+  .nc-layout .nc-content .content-container .dashboard-head .head-icon {
+    height: 40px;
+    width: 40px;
+  }
+  .nc-layout .nc-content .content-container .dashboard-head .head-icon .fa {
+    font-size: 24px;
+  }
   .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
     width: 150px;
     height: 150px;
+  }
+  .nc-layout .nc-content .content-container .dashboard-body > div .dashboard-item .dashboard-item-content.dash-invite {
+    flex-direction: column;
+  }
+  .nc-layout .nc-content .content-container .dashboard-body > div .dashboard-item .dashboard-item-content.dash-invite > span:last-child {
+    margin-top: 10px;
   }
 }
 /*小型桌面,平板*/

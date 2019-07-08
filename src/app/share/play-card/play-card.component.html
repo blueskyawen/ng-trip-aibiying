@@ -12,7 +12,7 @@
     <div *ngIf="!showFality">{{playHouse.type}}.{{city}}</div>
     <div *ngIf="showFality">{{playHouse.type}}.{{playHouse?.fality?.room}}室{{playHouse?.fality?.toliet}}卫{{playHouse?.fality?.bed}}床</div>
     <div>
-      <span class="f-text nc-xs-display-none nc-sm-display-inline-block">{{playHouse.text}}</span>
+      <span class="nc-xs-display-none nc-sm-display-inline-block">{{playHouse.text}}</span>
       <span class="f-text nc-xs-display-inline-block nc-sm-display-none"
             [title]="playHouse.text">{{playHouse.text}}</span>
       <span [title]="playHouse.user.name" *ngIf="showUser">

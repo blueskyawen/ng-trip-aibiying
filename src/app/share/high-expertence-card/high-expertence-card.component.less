@@ -45,6 +45,14 @@
         font-weight: 800;
       }
       &:nth-child(3) {
+        font-size: 16px;
+        color: #333333;
+        font-weight: 800;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &:nth-child(4) {
         font-size: 13px;
         color: #666666;
       }
@@ -66,7 +74,7 @@
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
   .high-expertence-card .high-expert-img img {
-    height: 150px;
+    height: 135px;
   }
 }
 /*小型桌面,平板*/

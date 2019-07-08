@@ -14,7 +14,9 @@
       </span>
       <span>已验证 · {{plusHouse.city}}</span>
     </div>
-    <div>{{plusHouse.text}}
+    <div>
+      <span class="nc-xs-display-none nc-sm-display-inline-block">{{plusHouse.text}}</span>
+      <span class="f-text nc-xs-display-inline-block nc-sm-display-none" [title]="plusHouse.text">{{plusHouse.text}}</span>
       <span [title]="plusHouse.user.name">
         <nc-avater [type]="'circle'" [size]="'middle'" [imgSrc]="plusHouse.user.avatar"></nc-avater>
         <span class="plus-icon">
