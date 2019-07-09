@@ -2,7 +2,7 @@
   <div class="lay-body-item">
     <div class="story-head">故事</div>
   </div>
-  <div class="lay-body-item">
+  <div class="lay-body-item"  *ngIf="!showLoading">
     <nc-tab class="story-tab" [tabs]="storyTabs" [type]="'line'" [(selectTab)] = "curTab"
             (selectTabChange)="selectTabChange()" [id]="'tab-story'">
       <div class="story-tab-content" *ngIf="curTab === 'carefully chosen'">
@@ -20,5 +20,8 @@
         <app-story-list [type]="curTab"></app-story-list>
       </div>
     </nc-tab>
+  </div>
+  <div class="lay-body-item" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
   </div>
 </div>

@@ -24,7 +24,7 @@ export class ExperienceDetailComponent implements OnInit {
       this.experPageService.getExperienceById(this.experId).subscribe(res => {
         this.experData = res;
         console.log(this.experData);
-        setTimeout(() => {this.showLoading = false; }, 2000);
+        setTimeout(() => {this.showLoading = false; }, 1000);
       });
     });
   }

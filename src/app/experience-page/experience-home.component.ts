@@ -16,7 +16,7 @@ export class ExperienceHomeComponent implements OnInit {
     this.showLoading = true;
     this.experPageService.getExpersAndThemes().subscribe(res => {
       this.experData = res;
-      setTimeout(() => {this.showLoading = false;}, 2000);
+      setTimeout(() => {this.showLoading = false;}, 1000);
     });
   }
 

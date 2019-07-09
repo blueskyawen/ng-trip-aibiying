@@ -23,6 +23,8 @@
       </div>
     </div>
   </div>
+  <div class="nc-content" *ngIf="showLoading">
+    <app-page-waiting></app-page-waiting>
+  </div>
 </div>
 
-<app-page-waiting *ngIf="showLoading"></app-page-waiting>

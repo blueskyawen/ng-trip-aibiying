@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import set = Reflect.set;
 
 @Component({
   selector: 'app-story-home',
@@ -17,11 +18,16 @@ export class StoryHomeComponent implements OnInit {
   ];
   curTab: string = '';
   isShowOtherTab: boolean = false;
+  showLoading: boolean = false;
   constructor() {
     this.curTab = this.storyTabs[0].label;
   }
 
   ngOnInit() {
+    this.showLoading = true;
+    setTimeout(() => {
+      this.showLoading = false;
+    }, 500);
   }
 
 
