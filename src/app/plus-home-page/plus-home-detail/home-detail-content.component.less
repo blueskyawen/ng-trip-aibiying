@@ -56,6 +56,9 @@
               font-size: 14px;
               color: #666;
               font-weight: normal;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
             }
           }
         }
@@ -122,10 +125,13 @@
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
   .home-detail-content .home-content-item .content-item-body .list-item .home-img-item img {
-    height: 100px;
+    height: 95px;
   }
   .home-detail-content .home-content-item .home-divider {
     height: 280px;
+  }
+  .home-detail-content .home-content-item .content-item-body .list-item .fality-img-item div:first-of-type img {
+    height: 90px;
   }
 }
 /*小型桌面,平板*/

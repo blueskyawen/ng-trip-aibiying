@@ -33,7 +33,7 @@
            *ngFor="let fatyImg of homeData.falityImgs">
         <div class="fality-img-item">
           <div><img [src]="fatyImg.img" /></div>
-          <div>{{fatyImg.name}}</div>
+          <div [title]="fatyImg.name">{{fatyImg.name}}</div>
         </div>
       </div>
     </div>

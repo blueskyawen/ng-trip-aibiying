@@ -1,19 +1,19 @@
 <div class="home-detail-landord">
   <div class="home-landord-head">认识您的房东</div>
   <div class="home-landord-body">
-    <div class="landord-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-4 nc-xs-col-4">
+    <div class="landord-item nc-xl-col-3 nc-lg-col-3 nc-md-col-4 nc-sm-col-4 nc-xs-col-6">
       <div class="landord-img">
         <img [src]="homeData.owner.avatar" />
         <div>{{homeData.owner.name}}</div>
       </div>
     </div>
-    <div class="landord-item nc-xl-col-7 nc-lg-col-7 nc-md-col-4 nc-sm-col-4 nc-xs-col-4">
+    <div class="landord-item nc-xl-col-7 nc-lg-col-7 nc-md-col-4 nc-sm-col-4 nc-xs-col-6 nc-xs-display-none nc-sm-display-inline-block">
       <div>您好，我叫{{homeData.owner.name}}</div>
       <div class="nc-xs-display-none nc-sm-display-none nc-md-display-block">{{homeData.owner.text}}</div>
       <div>与房客的互动</div>
-      <div class="nc-xs-display-none">在入住期间，房东会安排人在您需要时前往房源提供帮助</div>
+      <div>在入住期间，房东会安排人在您需要时前往房源提供帮助</div>
     </div>
-    <div class="landord-item nc-xl-col-2 nc-lg-col-2 nc-md-col-4 nc-sm-col-4 nc-xs-col-4">
+    <div class="landord-item nc-xl-col-2 nc-lg-col-2 nc-md-col-4 nc-sm-col-4 nc-xs-col-6">
       <div>注册时间：{{homeData.owner.timeShow }}</div>
       <div>回复率：100%</div>
       <div>回复时间：1小时内</div>

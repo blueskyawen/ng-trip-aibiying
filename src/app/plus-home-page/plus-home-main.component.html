@@ -11,7 +11,7 @@
       </span>
     </div>
   </div>
-  <div class="plus-body nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-11 nc-xs-col-11">
+  <div *ngIf="!showLoading" class="plus-body nc-xl-col-11 nc-lg-col-11 nc-md-col-11 nc-sm-col-11 nc-xs-col-11">
     <div class="plus-item">
       <app-plus-dest-group></app-plus-dest-group>
     </div>
@@ -35,5 +35,8 @@
     <div class="plus-item">
       <app-plus-home-list></app-plus-home-list>
     </div>
+  </div>
+  <div class="list-loading" *ngIf="showLoading">
+    <nc-loading [type]="'horizontal'" [loadSize]="'min'"></nc-loading>
   </div>
 </div>
