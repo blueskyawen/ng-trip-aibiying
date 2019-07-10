@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { PageRegisterLoginService } from './page-register-login/page-register-login.service';
 import { HomePageService } from './home-page.service';
 
@@ -18,11 +18,13 @@ class CcyOption {
   templateUrl: './page-head.component.html',
   styleUrls: ['./home-page.less']
 })
-export class PageHeadComponent implements OnInit {
+export class PageHeadComponent implements OnInit, OnDestroy {
   @Input() type: string = 'loginOut';
   @Input() scene: string = 'home';
   @Input() showSearch: boolean = true;
   @Input() searchText = '';
+  @Input() scrollSwitch: boolean = false;
+  fixedTop: boolean = false;
   userImg: string = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551707882841&di=66ee26cdc981feac8194e697a58e220e&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201409%2F02%2F20140902122803_cjEEi.thumb.700_0.jpeg';
   selectedCCY: CcyOption;
   CCYOptions: CcyOption[] = [new CcyOption('人民币-¥','CNY',false),
@@ -42,8 +44,6 @@ export class PageHeadComponent implements OnInit {
   isShowRegister: boolean = false;
   isShowLogin: boolean = false;
   isShowUserMenu: boolean = false;
-  presentStyle : any = {};
-  operStyle : any = {};
   showLoginOffMsg: boolean = false;
   userInfo: any = {info: 0, notify: 0};
   constructor(public registerLoginService: PageRegisterLoginService,
@@ -52,14 +52,35 @@ export class PageHeadComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.presentStyle = {'color': this.scene === 'home' ? '#fff' : '#ff4d4d'};
-    this.operStyle = {'color': this.scene === 'home' ? '#fff' : '#666'};
     this.registerLoginService.getLoginUserStorage();
     this.checkLoginState();
     if (this.registerLoginService.isLogined)  {
       this.homePageService.getWishList().subscribe(res => {
         this.homePageService.wishList = res.wishList.slice(0, 3);
       });
+    }
+    if (this.scrollSwitch) {
+      window.addEventListener("scroll", this.checkWindowScroll);
+    }
+  }
+
+  checkWindowScroll() {
+    let that = this;
+    console.log(window.pageYOffset);
+    if(window.pageYOffset < 5) {
+      console.log('window.pageYOffset111');
+      that.scene = 'home';
+      that.fixedTop = false;
+    } else {
+      console.log('window.pageYOffset222');
+      that.scene = 'story';
+      that.fixedTop = true;
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.scrollSwitch) {
+      window.removeEventListener("scroll", this.checkWindowScroll);
     }
   }
 

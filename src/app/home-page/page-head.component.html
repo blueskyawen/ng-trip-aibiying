@@ -1,6 +1,6 @@
-<div class="page-head-container">
+<div class="page-head-container" [class.header-fixed]="fixedTop">
   <div class="nc-xl-col-5 nc-lg-col-5 nc-md-col-5 nc-sm-col-6 nc-xs-col-6 header-oper-left">
-    <span class="oper-item" [ngStyle]="presentStyle" [routerLink]="['/home']">
+    <span class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#ff4d4d'}" [routerLink]="['/home']">
       <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height:1em;width:1em;display:block;fill:currentColor"><path d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"></path></svg>
     </span>
     <div *ngIf="showSearch" class="nc-xl-col-10 nc-lg-col-10 nc-md-col-10 nc-sm-col-10 nc-xs-col-10 oper-item">
@@ -11,7 +11,7 @@
   <div class="nc-xl-col-7 nc-lg-col-7 nc-md-col-7 nc-sm-col-6 nc-xs-col-6 header-oper-right nc-xs-display-inline-flex nc-sm-display-inline-flex nc-md-display-none">
     <div class="user-menu user-menu-2" *ngIf="type === 'loginIn'">
       <nc-dropdown class="dropdown-user-Info" [subPlace]="'right'">
-        <div nc-dropdown-btn class="oper-item" [ngStyle]="operStyle">
+        <div nc-dropdown-btn class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}">
           <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
         </div>
         <div nc-dropdown-menu class="user-Info-list">
@@ -34,7 +34,7 @@
   </div>
   <div class="nc-xl-col-7 nc-lg-col-7 nc-md-col-7 nc-sm-col-6 nc-xs-col-6 header-oper-right nc-xs-display-none nc-sm-display-none nc-md-display-inline-flex">
     <nc-dropdown class="nc-md-display-none nc-lg-display-inline-block">
-      <span class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>{{selectedCCY.label}}</span>
+      <span class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" nc-dropdown-btn>{{selectedCCY.label}}</span>
       <ul nc-dropdown-menu class="dropdown-items">
         <li *ngFor="let CcyOption of CCYOptions" [class.selected]="selectedCCY.value === CcyOption.value" (click)="selectCCY(CcyOption)">
           <span>{{CcyOption.label}}</span>
@@ -42,7 +42,7 @@
       </ul>
     </nc-dropdown>
     <nc-dropdown class="nc-md-display-none nc-lg-display-inline-block">
-      <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>手机端</div>
+      <div class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" nc-dropdown-btn>手机端</div>
       <div nc-dropdown-menu class="dropdown-phone">
         <div class="app-image">
           <img src="https://z1.muscache.cn/airbnb/static/wechat/download_app_p1-d5a89ad77e2aa488af81f28cf870233e.png" alt="" width="160" height="160">
@@ -56,7 +56,7 @@
       </div>
     </nc-dropdown>
     <nc-dropdown>
-      <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>成为房东/体验达人</div>
+      <div class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" nc-dropdown-btn>成为房东/体验达人</div>
       <div nc-dropdown-menu class="dropdown-fd">
         <div class="dropdown-fd-item">
           <div class="item-f-head">房源</div>
@@ -82,10 +82,10 @@
         </div>
       </div>
     </nc-dropdown>
-    <div class="oper-item nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle"
+    <div class="oper-item nc-md-display-none nc-lg-display-inline-block" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}"
          [routerLink]="['/story/home']">故事</div>
     <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info">
-      <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>心愿单</div>
+      <div class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" nc-dropdown-btn>心愿单</div>
       <div nc-dropdown-menu class="user-notifys">
         <div class="user-notify-item" [routerLink]="['/selfCenter/wishs']">
           <div class="notify-item-head">
@@ -117,13 +117,14 @@
         </div>
       </div>
     </nc-dropdown>
-    <div class="oper-item nc-md-display-none nc-lg-display-inline-block" [ngStyle]="operStyle" *ngIf="type === 'loginIn'"
+    <div class="oper-item nc-md-display-none nc-lg-display-inline-block"
+         [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" *ngIf="type === 'loginIn'"
          [routerLink]="['/selfCenter/myJourney']">行程</div>
-    <div class="oper-item" [ngStyle]="operStyle" (click)="isShowHelp = true">帮助</div>
-    <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
-    <div class="oper-item" [ngStyle]="operStyle" *ngIf="type === 'loginOut'" (click)="isShowLogin = true">登录 </div>
+    <div class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" (click)="isShowHelp = true">帮助</div>
+    <div class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" *ngIf="type === 'loginOut'" (click)="isShowRegister = true">注册</div>
+    <div class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" *ngIf="type === 'loginOut'" (click)="isShowLogin = true">登录 </div>
     <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info" [subPlace]="'right'">
-      <div class="oper-item" [ngStyle]="operStyle" nc-dropdown-btn>消息</div>
+      <div class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}" nc-dropdown-btn>消息</div>
       <div nc-dropdown-menu class="user-notifys">
         <div class="user-notify-item" [routerLink]="['/selfCenter/infoBox']">
           <div class="notify-item-head">
@@ -140,7 +141,7 @@
       </div>
     </nc-dropdown>
     <nc-dropdown *ngIf="type === 'loginIn'" class="dropdown-user-Info" [subPlace]="'right'">
-      <div nc-dropdown-btn class="oper-item" [ngStyle]="operStyle">
+      <div nc-dropdown-btn class="oper-item" [ngStyle]="{'color': scene === 'home' ? '#fff' : '#666'}">
         <nc-avater [type]="'circle'" [size]="'small'" [imgSrc]="userImg"></nc-avater>
       </div>
       <div nc-dropdown-menu class="user-Info-list">

@@ -13,9 +13,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.events.subscribe(event => {
-      // @ts-ignore
-      window.pageYOffset = 0;
-    });
   }
 }
