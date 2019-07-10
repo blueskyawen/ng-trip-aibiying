@@ -15,7 +15,7 @@ export class PlusInpireGroupComponent implements OnInit {
     this.showLoading = true;
     this.plusPageService.getPlusInspireList().subscribe(res => {
       this.inpireList = res;
-      this.showLoading = false;
+      setTimeout(() => {this.showLoading = false;}, 200);
     });
   }
 

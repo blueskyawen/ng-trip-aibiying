@@ -17,7 +17,7 @@ export class PlusDestGroupComponent implements OnInit {
     this.showLoading = true;
     this.plusPageService.getPlusDestList().subscribe(res => {
       this.destList = res.slice(0, 6);
-      this.showLoading = false;
+      setTimeout(() => {this.showLoading = false;}, 200);
     });
   }
 

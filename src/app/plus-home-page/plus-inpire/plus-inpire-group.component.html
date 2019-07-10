@@ -2,7 +2,7 @@
   <div class="plus-item-head">
     <span>和爱彼迎Plus一起收获灵感</span>
   </div>
-  <div class="plus-item-content">
+  <div class="plus-item-content" *ngIf="!showLoading">
     <nc-list-group-horizontal [stepWidth]="240" [hideOper]="true">
       <ul class="nc-list-group nc-flex list-group-horizontal">
         <li *ngFor="let inpire of inpireList" [routerLink]="['/plus/inspire',inpire.id]"
@@ -11,6 +11,9 @@
         </li>
       </ul>
     </nc-list-group-horizontal>
+  </div>
+  <div class="plus-item-content" *ngIf="showLoading">
+    <app-page-waiting [size]="'min'"></app-page-waiting>
   </div>
 </div>
 

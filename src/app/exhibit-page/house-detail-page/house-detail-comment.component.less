@@ -13,7 +13,7 @@
       &:nth-of-type(2) {
         display: flex;
         justify-content: space-between;
-        span {
+        > span {
           &:first-of-type {
             display: inline-flex;
             align-items: center;
@@ -21,6 +21,9 @@
             span {
               margin-left: 10px;
             }
+          }
+          &:last-of-type {
+            width: 50%;
           }
         }
       }
@@ -71,6 +74,8 @@
         width: inherit;
         padding: 20px 0 10px 10px;
         color: #666;
+        box-sizing: border-box;
+        line-height: 20px;
       }
     }
     .comment-foot {

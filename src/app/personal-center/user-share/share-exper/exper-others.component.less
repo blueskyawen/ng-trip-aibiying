@@ -1,6 +1,7 @@
+@import "../../../app-common";
+
 .exper-others {
   width: 100%;
-  padding: 40px 0;
   section {
     width: 60%;
     color: #666;
@@ -29,4 +30,25 @@
       margin-bottom: 2px;
     }
   }
+}
+
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .exper-others section {
+    width: 80%;
+    margin: 5px auto 10px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
 }

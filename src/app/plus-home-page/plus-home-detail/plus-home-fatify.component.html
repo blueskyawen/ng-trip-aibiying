@@ -1,4 +1,4 @@
-<nc-dialog [header]="'便利设施'" [style]="'normal'" [(isShow)]="isDisplay">
+<nc-dialog [header]="'便利设施'" [style]="'normal'" [(isShow)]="isDisplay" (isShowChange)="showChange()">
   <div class="content fatify-content">
     <div class="fatify-items" *ngFor="let fatify of fatifyList">
       <div class="items-head">{{fatify.name}}</div>

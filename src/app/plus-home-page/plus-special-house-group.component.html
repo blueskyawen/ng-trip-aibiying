@@ -3,7 +3,7 @@
     <span>爱彼迎Plus特色房源</span>
     <span>因设计体贴周到而获得高评分的房源</span>
   </div>
-  <div class="plus-item-content">
+  <div class="plus-item-content" *ngIf="!showLoading">
     <nc-list-group-horizontal [stepWidth]="240" [hideOper]="true">
       <ul class="nc-list-group nc-flex list-group-horizontal">
         <li *ngFor="let house of houseList" (click)="goSpecialHouse(house)"
@@ -12,5 +12,8 @@
         </li>
       </ul>
     </nc-list-group-horizontal>
+  </div>
+  <div class="plus-item-content" *ngIf="showLoading">
+    <app-page-waiting [size]="'min'"></app-page-waiting>
   </div>
 </div>

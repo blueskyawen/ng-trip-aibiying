@@ -17,7 +17,7 @@ export class PlusSpecialHouseGroupComponent implements OnInit {
     this.showLoading = true;
     this.plusPageService.getPluSpecialHouseList().subscribe(res => {
       this.houseList = res;
-      this.showLoading = false;
+      setTimeout(() => {this.showLoading = false;}, 200);
     });
   }
 

@@ -3,7 +3,7 @@
     <span>爱彼迎Plus目的地精选</span>
     <span>浏览让您住得舒适，更舒心的超棒房源</span>
   </div>
-  <div class="plus-item-content">
+  <div class="plus-item-content" *ngIf="!showLoading">
     <nc-list-group-horizontal [stepWidth]="280" [hideOper]="true">
       <ul class="nc-list-group nc-flex list-group-horizontal">
         <li *ngFor="let plusDest of destList" (click)="goPlusDest(plusDest)"
@@ -12,6 +12,9 @@
         </li>
       </ul>
     </nc-list-group-horizontal>
+  </div>
+  <div class="plus-item-content" *ngIf="showLoading">
+    <app-page-waiting [size]="'min'"></app-page-waiting>
   </div>
   <div class="plus-item-foot">
     <span [routerLink]="['/plus/destination']">
