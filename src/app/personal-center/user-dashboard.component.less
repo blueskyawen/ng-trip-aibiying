@@ -215,12 +215,30 @@
   .nc-layout .nc-content .content-container .dashboard-body > div .dashboard-item .dashboard-item-content.dash-invite > span:last-child {
     margin-top: 10px;
   }
+  .nc-layout .lay-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px 0 #e6e6e6;
+  }
+  .nc-layout .nc-content {
+    padding-top: 80px;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
   .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
     width: 220px;
     height: 220px;
+  }
+  .nc-layout .lay-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px 0 #e6e6e6;
+  }
+  .nc-layout .nc-content {
+    padding-top: 80px;
   }
 }
 /*中型桌面屏幕*/
@@ -235,6 +253,13 @@
   .nc-layout .nc-content .content-container .dashboard-body > div.dashboard-left > div.dashboard-user img {
     width: 195px;
     height: 195px;
+  }
+  .nc-layout .lay-header {
+    position: relative;
+    box-shadow: none;
+  }
+  .nc-layout .nc-content {
+    padding-top: 10px;
   }
 }
 /*超大型桌面屏幕*/

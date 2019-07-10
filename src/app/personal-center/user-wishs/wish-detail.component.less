@@ -4,6 +4,7 @@
   .lay-header {
     background: #fff;
     z-index: 5;
+    position: relative;
     .layout-head {
       width: inherit;
       border-bottom: solid 1px #e6e6e6;
@@ -184,6 +185,15 @@
     padding: 15px 0;
     margin: 0 auto;
   }
+  .nc-layout .lay-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px 0 #e6e6e6;
+  }
+  .nc-layout .nc-content {
+    padding-top: 80px;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
@@ -192,6 +202,15 @@
   }
   .nc-layout .nc-content {
     max-height: 550px;
+  }
+  .nc-layout .lay-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px 0 #e6e6e6;
+  }
+  .nc-layout .nc-content {
+    padding-top: 80px;
   }
 }
 /*中型桌面屏幕*/
