@@ -1,8 +1,11 @@
+@import "../../app-common";
+
 .nc-layout {
   .lay-header {
     position: relative;
     width: 100%;
     border-bottom: solid 1px #e6e6e6;
+    background-color: #fff;
   }
   .nc-content {
     position: relative;
@@ -28,4 +31,47 @@
     bottom: 0;
     z-index: 5;
   }
+}
+/*超小型桌面,手机*/
+@media (max-width: @nc-screen-xs-min) {
+  .nc-layout .lay-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px 0 #e6e6e6;
+    z-index: 5;
+  }
+  .nc-layout .nc-content {
+    padding-top: 70px;
+  }
+}
+/*小型桌面,平板*/
+@media (min-width: @nc-screen-sm-min) {
+  .nc-layout .lay-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px 0 #e6e6e6;
+    z-index: 5;
+  }
+  .nc-layout .nc-content {
+    padding-top: 70px;
+  }
+}
+/*中型桌面屏幕*/
+@media (min-width: @nc-screen-md-min) {
+}
+/*大型桌面屏幕*/
+@media (min-width: @nc-screen-lg-min) {
+  .nc-layout .lay-header {
+    position: relative;
+    box-shadow: none;
+  }
+  .nc-layout .nc-content {
+    padding-top: 0;
+  }
+}
+/*超大型桌面屏幕*/
+@media (min-width: @nc-screen-xl-min) {
+  //width: 100%;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PageRegisterLoginService } from './page-register-login/page-register-login.service';
 import { HomePageService } from './home-page.service';
 
@@ -18,7 +18,7 @@ class CcyOption {
   templateUrl: './page-head.component.html',
   styleUrls: ['./home-page.less']
 })
-export class PageHeadComponent implements OnInit, OnDestroy {
+export class PageHeadComponent implements OnInit {
   @Input() type: string = 'loginOut';
   @Input() scene: string = 'home';
   @Input() showSearch: boolean = true;
@@ -60,27 +60,15 @@ export class PageHeadComponent implements OnInit, OnDestroy {
       });
     }
     if (this.scrollSwitch) {
-      window.addEventListener("scroll", this.checkWindowScroll);
-    }
-  }
-
-  checkWindowScroll() {
-    let that = this;
-    console.log(window.pageYOffset);
-    if(window.pageYOffset < 5) {
-      console.log('window.pageYOffset111');
-      that.scene = 'home';
-      that.fixedTop = false;
-    } else {
-      console.log('window.pageYOffset222');
-      that.scene = 'story';
-      that.fixedTop = true;
-    }
-  }
-
-  ngOnDestroy(): void {
-    if (this.scrollSwitch) {
-      window.removeEventListener("scroll", this.checkWindowScroll);
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset < 3) {
+          this.scene = 'home';
+          this.fixedTop = false;
+        } else {
+          this.scene = 'story';
+          this.fixedTop = true;
+        }
+      });
     }
   }
 

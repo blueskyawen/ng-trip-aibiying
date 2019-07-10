@@ -5,6 +5,7 @@
     position: fixed;
     background: #fff;
     z-index: 5;
+    box-shadow: 1px 1px 5px 0 #e6e6e6;
     .exhibit-head {
       width: inherit;
       border-bottom: solid 1px #e6e6e6;
@@ -39,12 +40,14 @@
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
   .nc-layout .nc-content {
-    padding-top: 150px;
+    padding-top: 120px;
   }
 }
 /*大型桌面屏幕*/
 @media (min-width: @nc-screen-lg-min) {
-  //width: 100%;
+  .nc-layout .nc-content {
+    padding-top: 150px;
+  }
 }
 /*超大型桌面屏幕*/
 @media (min-width: @nc-screen-xl-min) {

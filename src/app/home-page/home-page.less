@@ -37,14 +37,6 @@
   align-items: center;
   padding:15px;
   box-sizing: border-box;
-  &.header-fixed {
-    position: fixed;
-    left: 0;
-    z-index: 100;
-    background: #f8f8f8;
-    box-shadow: 1px 1px 8px 0 #e6e6e6;
-    border-bottom: solid 1px #e6e6e6;
-  }
   .header-oper-left {
     display: inline-flex;
     align-items: center;
@@ -401,6 +393,23 @@
   .nc-layout .nc-content .lay-body .lay-body-item {
     margin: 30px 0;
   }
+  .page-head-container.header-fixed {
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 1px 1px 6px 0 #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+  }
+  .page-head-container  .sceHome {
+    color: #fff !important;
+  }
+  .page-head-container .header-oper-left .sceStory {
+    color: #ff4d4d !important;
+  }
+  .page-head-container .header-oper-right .sceStory {
+    color: #666 !important;
+  }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
@@ -418,6 +427,23 @@
   }
   .nc-layout .nc-content .lay-body .lay-body-item {
     margin: 40px 0;
+  }
+  .page-head-container.header-fixed {
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 1px 1px 6px 0 #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+  }
+  .page-head-container .sceHome {
+    color: #fff !important;
+  }
+  .page-head-container .header-oper-left .sceStory {
+    color: #ff4d4d !important;
+  }
+  .page-head-container .header-oper-right .sceStory {
+    color: #666 !important;
   }
 }
 /*中型桌面屏幕*/
@@ -440,7 +466,23 @@
 }
 /*大型桌面屏幕*/
 @media (min-width: @nc-screen-lg-min) {
-  //width: 100%;
+  .page-head-container.header-fixed {
+    position: relative;
+    left: 0;
+    z-index: 100;
+    background: none;
+    box-shadow: none;
+    border-bottom: none;
+  }
+  .page-head-container.header-fixed .sceHome {
+    color: #fff !important;
+  }
+  .page-head-container.header-fixed .header-oper-left .sceStory {
+    color: #fff !important;
+  }
+  .page-head-container.header-fixed .header-oper-right .sceStory {
+    color: #fff !important;
+  }
 }
 /*超大型桌面屏幕*/
 @media (min-width: @nc-screen-xl-min) {
