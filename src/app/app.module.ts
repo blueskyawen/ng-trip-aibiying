@@ -11,6 +11,7 @@ import { PlusHomePageModule } from './plus-home-page/plus-home-page.module';
 import { ClassicCityPageModule } from './classic-city-page/classic-city-page.module';
 import { ExperiencePageModule } from './experience-page/experience-page.module';
 import { PersonalCenterModule } from './personal-center/personal-center.module';
+import { BaiduMapModule } from 'angular2-baidu-map';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found.component';
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './not-found.component';
   imports: [
     BrowserModule, CoreModule, ShareModule, HomePageModule, StoryPageModule,
     ExhibitPageModule, PlusHomePageModule, ClassicCityPageModule, ExperiencePageModule,
-    PersonalCenterModule, AppRoutingModule
+    PersonalCenterModule, AppRoutingModule,
+    BaiduMapModule.forRoot({ak:'je9h7EOx3mZk3HwLOUZBRr59yGpYUvY1'})
   ],
   providers: [],
   bootstrap: [AppComponent]

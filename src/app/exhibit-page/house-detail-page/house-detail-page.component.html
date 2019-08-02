@@ -43,11 +43,7 @@
             <app-house-detail-comment [comment]="houseData.comment"></app-house-detail-comment>
           </div>
           <div id="location" class="house-detail-item">
-            <div class="detail-location-head">位置</div>
-            <div class="detail-location-body">
-              <div>{{houseData.city}}市，{{houseData.country}}</div>
-              <div>{{houseData.text2}}</div>
-            </div>
+            <app-house-detail-site [houseData]="houseData"></app-house-detail-site>
           </div>
           <div id="notice" class="house-detail-item">
             <div class="notice-head">须知</div>

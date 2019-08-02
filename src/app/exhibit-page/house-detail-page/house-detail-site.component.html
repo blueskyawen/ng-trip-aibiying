@@ -1,0 +1,18 @@
+<div class="detail-site">
+  <div class="detail-location">
+    <div class="detail-location-head">位置</div>
+    <div class="detail-location-body">
+      <div>{{houseData.city}}市，{{houseData.country}}</div>
+      <div>{{houseData.text2}}</div>
+    </div>
+  </div>
+  <div class="detail-map">
+    <baidu-map [options]="options" (loaded)="mapLoaded($event)">
+      <control type="navigation" [options]="controlOpts"></control>
+      <control type="maptype" [options]="mapTypeOpts"></control>
+      <circle [center]="center" radius="150" [options]="circleOptions" (loaded)="circleLoaded($event)"></circle>
+      <marker *ngFor="let marker of markers" [point]="marker.point" [options]="marker.options"
+              (loaded)="markerLoaded($event)" ></marker>
+    </baidu-map>
+  </div>
+</div>
