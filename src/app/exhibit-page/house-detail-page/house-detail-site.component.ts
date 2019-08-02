@@ -62,7 +62,7 @@ export class HouseDetailSiteComponent implements OnInit {
   addCircle() {
     this.center = {
       lat: 30.3079558877,
-      lng: 120.0734048203,
+      lng: 120.0734048203
     };
 
     this.circleOptions = {
@@ -77,7 +77,7 @@ export class HouseDetailSiteComponent implements OnInit {
       {
         point: {
           lat: 30.3079558877,
-          lng: 120.0734048203,
+          lng: 120.0734048203
         }
       }
     ]

@@ -3,6 +3,7 @@ import { ShareModule } from '../../share/share.module';
 import { HomePageModule } from '../../home-page/home-page.module';
 import { ExhibitPageModule } from '../../exhibit-page/exhibit-page.module';
 import { ExperienceDetailPageRoutingModule } from './experience-detail-page-routing.module';
+import { BaiduMapModule } from 'angular2-baidu-map';
 
 import { ExperienceDetailComponent } from './experience-detail.component';
 import { ExperienceOverviewComponent } from './experience-overview.component';
@@ -19,7 +20,7 @@ import { ExperPhotoDrawerComponent } from './exper-photo-drawer.component';
     ExperienceLocationComponent, ExperienceOrderComponent, ExperienceAttentionComponent, ExperienceOthersComponent,
     ExperPhotoDrawerComponent],
   imports: [
-    ShareModule, HomePageModule, ExhibitPageModule, ExperienceDetailPageRoutingModule
+    ShareModule, HomePageModule, ExhibitPageModule, BaiduMapModule, ExperienceDetailPageRoutingModule
   ]
 })
 export class ExperienceDetailPageModule { }

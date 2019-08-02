@@ -4,9 +4,14 @@
     <div>{{homeData.site.name}}，{{homeData.site.city_zh}}，{{homeData.site.country_zh}}</div>
   </div>
   <div class="home-site-content">
-    <img alt="" src="https://restapi.amap.com/v3/staticmap?key=a7708a7c3c84313afa7ac50b3cdf0bf7&amp;location=104.05635,30.67094&amp;zoom=14&amp;size=1032*480" />
-    <span class="home-site">
-      <span class="fa fa-home"></span>
-    </span>
+    <div class="detail-map">
+      <baidu-map [options]="options" (loaded)="mapLoaded($event)">
+        <control type="navigation" [options]="controlOpts"></control>
+        <control type="maptype" [options]="mapTypeOpts"></control>
+        <circle [center]="center" radius="150" [options]="circleOptions" (loaded)="circleLoaded($event)"></circle>
+        <marker *ngFor="let marker of markers" [point]="marker.point" [options]="marker.options"
+                (loaded)="markerLoaded($event)" ></marker>
+      </baidu-map>
+    </div>
   </div>
 </div>

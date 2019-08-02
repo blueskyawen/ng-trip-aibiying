@@ -4,38 +4,26 @@
   width: 100%;
   padding: 15px 0;
   position: relative;
-  img {
+  .exper-map {
     width: inherit;
     height: 600px;
-  }
-  .exper-site {
-    display: inline-block;
-    height: 120px;
-    width: 120px;
-    border: solid 2px #008000;
-    background-color: #47d1d1;
-    opacity: 0.4;
-    border-radius: 50%;
-    position: absolute;
-    top: 150px;
-    left: 330px;
   }
 }
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-  .exper-detail-location img {
-    height: 300px;
+  .exper-detail-location .exper-map {
+    height: 360px;
   }
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
-  .exper-detail-location img {
+  .exper-detail-location .exper-map {
     height: 500px;
   }
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
-  .exper-detail-location img {
+  .exper-detail-location .exper-map {
     height: 600px;
   }
 }

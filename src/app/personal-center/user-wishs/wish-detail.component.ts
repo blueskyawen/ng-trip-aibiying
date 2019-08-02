@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { SelfCenterService } from '../self-center.service';
 import { HomePageService } from '../../home-page/home-page.service';
+import {
+  ControlAnchor, MapOptions, MapTypeControlOptions, MapTypeControlType,
+  NavigationControlOptions, NavigationControlType, MarkerOptions,
+  MapTypeEnum
+} from 'angular2-baidu-map'
 
 @Component({
   selector: 'app-wish-detail',
@@ -25,6 +30,11 @@ export class WishDetailComponent implements OnInit {
   showMsg: boolean = false;
   unpickHouse: any = {};
   isShowUnpick: boolean = false;
+  options: MapOptions;
+  mapInstance: any;
+  public controlOpts: NavigationControlOptions;
+  public mapTypeOpts: MapTypeControlOptions;
+
   constructor(private selfCenterService: SelfCenterService,
               public homePageService: HomePageService,
               private route: ActivatedRoute,
@@ -56,6 +66,7 @@ export class WishDetailComponent implements OnInit {
         });
       }
     });
+    this.initMap();
   }
 
   procProjectList() {
@@ -121,4 +132,37 @@ export class WishDetailComponent implements OnInit {
       this.homePageService.wishList = res.wishList.slice(0, 3);
     });
   }
+
+  initMap() {
+    this.options = {
+      centerAndZoom: {
+        lat: 31.2422050000,
+        lng: 121.5060110000,
+        zoom: 13
+      },
+      enableKeyboard: true
+    };
+    this.addNavigationControl();
+    this.addMapTypes();
+  }
+
+  mapLoaded(emap: any) {
+    this.mapInstance = emap;
+  }
+
+  addNavigationControl() {
+    this.controlOpts = {
+      anchor: ControlAnchor.BMAP_ANCHOR_TOP_LEFT,
+      type: NavigationControlType.BMAP_NAVIGATION_CONTROL_SMALL,
+      enableGeolocation: true
+    };
+  }
+
+  addMapTypes() {
+    this.mapTypeOpts = {
+      type: MapTypeControlType.BMAP_MAPTYPE_CONTROL_MAP,
+      mapTypes: [MapTypeEnum.BMAP_NORMAL_MAP, MapTypeEnum.BMAP_SATELLITE_MAP]
+    }
+  }
+
 }

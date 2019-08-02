@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="nc-content nc-flex" *ngIf="!showLoading">
-    <div class="wish-detail-container nc-xl-col-5 nc-lg-col-5 nc-md-col-6 nc-sm-col-6 nc-xs-col-12">
+    <div class="wish-detail-container nc-xl-col-4 nc-lg-col-5 nc-md-col-5 nc-sm-col-12 nc-xs-col-12">
       <div class="wish-detail-head">
           <span class="all-wishs" [routerLink]="['/selfCenter/hot-wishs']">
             <span class="fa fa-angle-left"></span>
@@ -38,7 +38,7 @@
         <div class="wish-project" *ngIf="wish.projects.length !== 0">
           <div class="project-head">{{wish.projects.length}}个房源</div>
           <div class="project-list">
-            <div class="project-item" *ngFor="let project of wish.projects">
+            <div class="project-item nc-md-col-12 nc-sm-col-8 nc-xs-col-8" *ngFor="let project of wish.projects">
               <app-play-card [playHouse]="project" [height]="'100%'" [pick]="project.picked"
                              [showUser]="true" [showLove]="true" (loveHouseChange)="pickTheHouse($event,project)"></app-play-card>
             </div>
@@ -51,7 +51,11 @@
       </div>
     </div>
 
-    <div class="wish-detail-map nc-xl-col-7 nc-lg-col-7 nc-md-col-6 nc-sm-col-6 nc-xs-col-12 nc-xs-display-none">
+    <div class="wish-detail-map nc-xl-col-8 nc-lg-col-7 nc-md-col-7 nc-md-display-block nc-sm-display-none nc-xs-display-none">
+      <baidu-map [options]="options" (loaded)="mapLoaded($event)">
+        <control type="navigation" [options]="controlOpts"></control>
+        <control type="maptype" [options]="mapTypeOpts"></control>
+      </baidu-map>
     </div>
   </div>
   <div class="nc-content" *ngIf="showLoading">

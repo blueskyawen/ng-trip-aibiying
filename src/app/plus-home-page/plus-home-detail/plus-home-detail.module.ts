@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ShareModule } from '../../share/share.module';
 import { HomePageModule } from '../../home-page/home-page.module';
+import { BaiduMapModule } from 'angular2-baidu-map';
 
 import { PlusHomeDetailRoutingModule } from './plus-home-detail-routing.module';
 
@@ -25,7 +26,7 @@ import { HomeOrderComponent } from './home-order.component';
     HomeDetailRuleComponent, HomeDetailLandordComponent, HomeDetailOthersComponent, PlusHomePhotoComponent,
     PlusHomeFatifyComponent, HomeDetailFootComponent, HomeOrderComponent],
   imports: [
-    ShareModule, HomePageModule,
+    ShareModule, HomePageModule, BaiduMapModule,
     PlusHomeDetailRoutingModule
   ]
 })
