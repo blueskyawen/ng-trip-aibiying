@@ -303,6 +303,9 @@ MIT
 @angular/forms
 MIT
 
+angular2-baidu-map
+GPL-3.0
+
 zone.js
 MIT
 The MIT License
