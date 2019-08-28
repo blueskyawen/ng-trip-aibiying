@@ -223,12 +223,12 @@
           position: relative;
           .house-get-container {
             width: 80%;
-            margin: 100px auto 20px;
+            margin: 100px 10px 20px auto;
             &.order-fixed {
               position: fixed;
               width: 375px;
               top: 0px;
-              right: 130px;
+              left: 63%;
               background: #fff;
               box-shadow: 2px 2px 5px 3px #f2f2f2, -2px -2px 5px 3px #f2f2f2;
               z-index: 100;
@@ -285,9 +285,6 @@
 
 /*超小型桌面,手机*/
 @media (max-width: @nc-screen-xs-min) {
-  .nc-layout .nc-content .house-detail-container .house-detail-info .house-get .house-get-container.order-fixed {
-    right:30px;
-  }
   .nc-layout .nc-content .house-photo-container .photos-container .photos-review .nc-thumb-picture {
     height: 125px;
   }
@@ -297,9 +294,6 @@
 }
 /*小型桌面,平板*/
 @media (min-width: @nc-screen-sm-min) {
-  .nc-layout .nc-content .house-detail-container .house-detail-info .house-get .house-get-container.order-fixed {
-    right:30px;
-  }
   .nc-layout .nc-content .house-photo-container .photos-container .photos-review .nc-thumb-picture {
     height: 190px;
   }
@@ -309,9 +303,6 @@
 }
 /*中型桌面屏幕*/
 @media (min-width: @nc-screen-md-min) {
-  .nc-layout .nc-content .house-detail-container .house-detail-info .house-get .house-get-container.order-fixed {
-    right:60px;
-  }
   .nc-layout .nc-content .house-photo-container .photos-container .photos-review .nc-thumb-picture {
     height: 240px;
   }
