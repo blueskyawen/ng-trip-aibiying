@@ -36,6 +36,9 @@ export class PageHotCityComponent implements OnInit, AfterViewInit {
     this.pageContentService.getHostCityList().subscribe((res: any) => {
       this.hostCityList = res;
       this.setCityList();
+      setTimeout(() => {
+        this.showLoading = false;
+      },200);
     });
   }
 
